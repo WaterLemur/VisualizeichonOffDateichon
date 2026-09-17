@@ -2,30 +2,37 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-
 public class DataBubble : MonoBehaviour
 {
-    [SerializeField] float size = 1.0f;
-    [SerializeField] Color color = Color.magenta;
-    [SerializeField] Image sprite;
-    [SerializeField] TextMeshProUGUI text;
+    [Header("Bubble")]
+    [SerializeField] private float size = 1.0f;
+    [SerializeField] private Color color = Color.magenta;
+    [SerializeField] private Image sprite;
+    [SerializeField] private TextMeshProUGUI text;
 
-
+    [Header("Size")]
     [SerializeField] private float minSize = 20f;
     [SerializeField] private float maxSize = 100f;
 
+    private RectTransform rectTransform;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
+    {
+        rectTransform = GetComponent<RectTransform>();
+    }
+
+    private void Start()
     {
         sprite.color = color;
         text.color = color;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetColor(Color newColor)
     {
-        
+        color = newColor;
+
+        sprite.color = color;
+        text.color = color;
     }
 
     public void SetCoordinates(float latitude, float longitude)
@@ -36,13 +43,18 @@ public class DataBubble : MonoBehaviour
 
     public void SetValue(float normalizedValue)
     {
-        float size = Mathf.Lerp(
+        normalizedValue = Mathf.Clamp01(normalizedValue);
+
+        float bubbleSize = Mathf.Lerp(
             minSize,
             maxSize,
             normalizedValue
         );
 
-        transform.localScale = Vector3.one * size;
+        rectTransform.sizeDelta = new Vector2(
+            bubbleSize,
+            bubbleSize
+        );
     }
 
     public void SetText(string value)
