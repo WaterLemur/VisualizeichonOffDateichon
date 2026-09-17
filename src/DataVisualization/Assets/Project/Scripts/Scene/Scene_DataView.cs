@@ -71,10 +71,7 @@ public class Scene_DataView : Scene
 
     public void ClickedBtn(GameObject btn)
     {
-        activeObject.SetActive(false);
-        
         btn.SetActive(true);
-        activeObject = btn;
     }
 
     // BUTTONS
