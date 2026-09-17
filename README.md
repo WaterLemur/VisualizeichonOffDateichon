@@ -2,10 +2,10 @@
 Data visualizacion interactive project (Unity)
 
 
-> [!NOTE]
+> [!IMPORTANT]
 > Unity version: 2023.2.22f1
 
-> [!IMPORTANT]
+> [!NOTE]
 > https://water-lemur.itch.io/datavisualization
 
 > [!WARNING]
