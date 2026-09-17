@@ -36,8 +36,9 @@ public class DataSet
 public class DataRecord
 {
     public int year;
+    public Position position;
     public string city;
-    public Dictionary <string, float> values;
+    public Dictionary<string, float> values = new();
 }
 
 [Serializable]
@@ -52,22 +53,6 @@ public class DataValue
 {
 
 }
-
-[Serializable]
-public class DataManager : MonoBehaviour
-{
-    public IDataSource dataSource;
-    public DataSet CurrentData { get; private set; }
-
-    public void Load()
-    {
-        dataSource.LoadData(data =>
-        {
-            CurrentData = data;
-        }); 
-    }
-}
-
 
 
 
@@ -92,4 +77,25 @@ public class Record
     public string country;
     public string category;
     public string value;
+}
+
+
+
+
+[Serializable]
+public class CityPosition
+{
+    public string city;
+    public float latitude;
+    public float longitude;
+}
+
+[Serializable]
+public class TimeDataRecord
+{
+    public int year;
+    public string city;
+
+    public Dictionary<string, float> values =
+        new Dictionary<string, float>();
 }
