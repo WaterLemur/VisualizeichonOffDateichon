@@ -9,39 +9,32 @@ public class MapCoordinateConverter : MonoBehaviour
     [SerializeField] private float minLongitude;
     [SerializeField] private float maxLongitude;
 
-    [Header("Map")]
-    [SerializeField] private RectTransform mapRect;
+    [Header("Coordinate Scale")]
+    [SerializeField] private float coordinateScale = 1f;
 
-    public Vector3 Convert(
-        float latitude,
-        float longitude)
+    [Header("Map Offset")]
+    [SerializeField] private float offsetX = 0f;
+    [SerializeField] private float offsetY = 0f;
+
+    public Vector2 Convert(float latitude, float longitude)
     {
-        float x01 = Mathf.InverseLerp(
-            minLongitude,
-            maxLongitude,
-            longitude
-        );
+        float centerLatitude =
+            (minLatitude + maxLatitude) * 0.5f;
 
-        float y01 = Mathf.InverseLerp(
-            minLatitude,
-            maxLatitude,
-            latitude
-        );
+        float centerLongitude =
+            (minLongitude + maxLongitude) * 0.5f;
 
         float x =
-            Mathf.Lerp(
-                mapRect.rect.xMin,
-                mapRect.rect.xMax,
-                x01
-            );
+            (longitude - centerLongitude) *
+            coordinateScale;
 
         float y =
-            Mathf.Lerp(
-                mapRect.rect.yMin,
-                mapRect.rect.yMax,
-                y01
-            );
+            (latitude - centerLatitude) *
+            coordinateScale;
 
-        return new Vector3(x, y, 0f);
+        x += offsetX;
+        y += offsetY;
+
+        return new Vector2(x, y);
     }
 }

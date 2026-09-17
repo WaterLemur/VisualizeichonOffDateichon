@@ -5,60 +5,61 @@ using TMPro;
 public class DataBubble : MonoBehaviour
 {
     [Header("Bubble")]
-    [SerializeField] private float size = 1.0f;
+    [SerializeField] private float size = 1f;
     [SerializeField] private Color color = Color.magenta;
     [SerializeField] private Image sprite;
     [SerializeField] private TextMeshProUGUI text;
 
-    [Header("Size")]
-    [SerializeField] private float minSize = 20f;
-    [SerializeField] private float maxSize = 100f;
-
-    private RectTransform rectTransform;
-
     private void Awake()
     {
-        rectTransform = GetComponent<RectTransform>();
+        ApplySize();
     }
 
     private void Start()
     {
-        sprite.color = color;
-        text.color = color;
+        SetColor(color);
+    }
+
+    public void SetSize(float newSize)
+    {
+        size = newSize;
+        ApplySize();
+    }
+
+    private void ApplySize()
+    {
+        if (sprite == null)
+            return;
+
+        sprite.transform.localScale =
+            Vector3.one * size;
     }
 
     public void SetColor(Color newColor)
     {
         color = newColor;
 
-        sprite.color = color;
-        text.color = color;
+        if (sprite != null)
+            sprite.color = color;
+
+        if (text != null)
+            text.color = color;
     }
 
-    public void SetCoordinates(float latitude, float longitude)
+    public void SetCoordinates(
+        float latitude,
+        float longitude)
     {
+        if (text == null)
+            return;
+
         text.text =
             $"LAT: {latitude:F4}\nLON: {longitude:F4}";
     }
 
-    public void SetValue(float normalizedValue)
-    {
-        normalizedValue = Mathf.Clamp01(normalizedValue);
-
-        float bubbleSize = Mathf.Lerp(
-            minSize,
-            maxSize,
-            normalizedValue
-        );
-
-        rectTransform.sizeDelta = new Vector2(
-            bubbleSize,
-            bubbleSize
-        );
-    }
-
     public void SetText(string value)
     {
-        text.text = value;
+        if (text != null)
+            text.text = value;
     }
 }

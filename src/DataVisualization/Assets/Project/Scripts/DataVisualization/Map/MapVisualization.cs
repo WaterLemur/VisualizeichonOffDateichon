@@ -9,6 +9,7 @@ public class MapVisualization : MonoBehaviour, IDataVisualizer
     [Header("Bubble")]
     [SerializeField] private GameObject bubblePrefab;
     [SerializeField] private Transform bubbleParent;
+    [SerializeField] private float bubbleSize = 60f;
 
     [Header("Map")]
     [SerializeField] private RectTransform mapRect;
@@ -19,16 +20,17 @@ public class MapVisualization : MonoBehaviour, IDataVisualizer
     [SerializeField] private Color urColor = Color.blue;
     [SerializeField] private Color urukColor = Color.green;
 
-    [Header("Value Range")]
-    [SerializeField] private float minValue = 0f;
-    [SerializeField] private float maxValue = 50000f;
-
     private readonly Dictionary<string, DataBubble> bubbles = new();
 
     private void OnEnable()
     {
-        if (dataSource != null)
-            dataSource.DataLoaded += OnDataLoaded;
+        if (dataSource == null)
+            return;
+
+        dataSource.DataLoaded += OnDataLoaded;
+
+        if (dataSource.IsLoaded)
+            OnDataLoaded();
     }
 
     private void OnDisable()
@@ -46,10 +48,39 @@ public class MapVisualization : MonoBehaviour, IDataVisualizer
     {
         ClearBubbles();
 
+        if (bubblePrefab == null)
+        {
+            Debug.LogError(
+                "MapVisualization: Bubble Prefab is not assigned."
+            );
+
+            return;
+        }
+
+        if (bubbleParent == null)
+        {
+            Debug.LogError(
+                "MapVisualization: Bubble Parent is not assigned."
+            );
+
+            return;
+        }
+
+        if (coordinateConverter == null)
+        {
+            Debug.LogError(
+                "MapVisualization: Coordinate Converter is not assigned."
+            );
+
+            return;
+        }
+
         foreach (CityPosition city in cities)
         {
-            GameObject bubbleObject =
-                Instantiate(bubblePrefab, bubbleParent);
+            GameObject bubbleObject = Instantiate(
+                bubblePrefab,
+                bubbleParent
+            );
 
             DataBubble bubble =
                 bubbleObject.GetComponent<DataBubble>();
@@ -57,20 +88,27 @@ public class MapVisualization : MonoBehaviour, IDataVisualizer
             if (bubble == null)
             {
                 Debug.LogError(
-                    "DataBubble prefab does not have a DataBubble component!"
+                    "MapVisualization: Bubble prefab does not have a DataBubble component!"
                 );
 
                 Destroy(bubbleObject);
                 continue;
             }
 
-            Vector3 position =
-                coordinateConverter.Convert(
-                    city.latitude,
-                    city.longitude
-                );
+            Vector2 position = coordinateConverter.Convert(
+                city.latitude,
+                city.longitude
+            );
 
-            bubbleObject.transform.localPosition = position;
+            RectTransform bubbleRect =
+                bubbleObject.GetComponent<RectTransform>();
+
+            if (bubbleRect != null)
+            {
+                bubbleRect.anchoredPosition = position;
+            }
+
+            bubble.SetSize(bubbleSize);
 
             bubble.SetCoordinates(
                 city.latitude,
@@ -82,15 +120,15 @@ public class MapVisualization : MonoBehaviour, IDataVisualizer
             );
 
             bubbles[city.city] = bubble;
-
-            Debug.Log(
-                $"Map: Created bubble for {city.city} at {position}"
-            );
+            bubbleObject.SetActive(false);
         }
     }
 
     public void RenderData(List<DataRecord> data)
     {
+        if (data == null)
+            return;
+
         foreach (DataRecord record in data)
         {
             if (!bubbles.TryGetValue(
@@ -107,14 +145,7 @@ public class MapVisualization : MonoBehaviour, IDataVisualizer
                 continue;
             }
 
-            float normalizedValue =
-                Mathf.InverseLerp(
-                    minValue,
-                    maxValue,
-                    value
-                );
-
-            bubble.SetValue(normalizedValue);
+            bubble.SetSize(bubbleSize);
 
             bubble.SetText(
                 $"{record.city}\n{value:N0}"
@@ -124,6 +155,9 @@ public class MapVisualization : MonoBehaviour, IDataVisualizer
 
     private Color GetCityColor(string city)
     {
+        if (string.IsNullOrEmpty(city))
+            return Color.white;
+
         switch (city.ToLower())
         {
             case "akkad":
@@ -149,5 +183,39 @@ public class MapVisualization : MonoBehaviour, IDataVisualizer
         }
 
         bubbles.Clear();
+    }
+
+
+
+
+    public void ToggleCity(string city)
+    {
+        if (!bubbles.TryGetValue(city, out DataBubble bubble))
+            return;
+
+        bubble.gameObject.SetActive(!bubble.gameObject.activeSelf);
+    }
+
+    public void SetCityActive(string city, bool active)
+    {
+        if (!bubbles.TryGetValue(city, out DataBubble bubble))
+            return;
+
+        bubble.gameObject.SetActive(active);
+    }
+
+    public void ToggleAkkad()
+    {
+        ToggleCity("Akkad");
+    }
+
+    public void ToggleUr()
+    {
+        ToggleCity("Ur");
+    }
+
+    public void ToggleUruk()
+    {
+        ToggleCity("Uruk");
     }
 }

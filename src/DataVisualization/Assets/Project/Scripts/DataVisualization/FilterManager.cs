@@ -158,7 +158,7 @@ public class FilterManager : MonoBehaviour
     private void OnSliderValueChanged(float value)
     {
         runtimeStates.currentYear = Mathf.RoundToInt(value);
-        if (yearDisplayLabel != null) yearDisplayLabel.text = $"Year: {runtimeStates.currentYear} A. de C.";
+        if (yearDisplayLabel != null) yearDisplayLabel.text = $"{runtimeStates.currentYear} A. de C.";
         UpdatePipeline();
     }
 
