@@ -1,3 +1,13 @@
+public enum SceneList
+{
+    Boot,
+    Intro,
+    Persistent,
+    DataView,
+    Options,
+    Info
+}
+
 public enum MainMenu
 {
     DataBases,

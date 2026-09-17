@@ -319,10 +319,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210037501}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fc59ac9e9009f8e59d95b93d92fdde4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e2b77935fac19e4d8986d30ffd32a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  info: 
+  _timerLogo: 1
 --- !u!1001 &1529125984
 PrefabInstance:
   m_ObjectHideFlags: 0

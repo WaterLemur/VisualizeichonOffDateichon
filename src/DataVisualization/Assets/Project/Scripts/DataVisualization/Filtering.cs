@@ -1,7 +1,16 @@
+using System.Collections.Generic;
+
+
 public interface IDataFilter
 {
     bool Matches(DataRecord record);
 }
+
+public interface IDataVisualizer
+{
+    void RenderData(List<DataRecord> filteredData);
+}
+
 
 
 

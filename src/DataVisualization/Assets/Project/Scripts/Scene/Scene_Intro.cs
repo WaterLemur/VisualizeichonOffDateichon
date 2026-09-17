@@ -1,17 +1,40 @@
 using UnityEngine;
 
 
-public class Scene_Intro : MonoBehaviour
+public class SceneIntro : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] float _timerLogo = 1.5f;
+    bool _isTimerLogo = false;
+
+
     void Start()
     {
-        
+        // Cursor
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
+
+        // Set current scene
+        //Game.Instance.LastScene =  Game.Instance.CurrentScene;
+        //Game.Instance.CurrentScene = SceneList.Intro;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        TimerLogo();
+    }
+    void TimerLogo()
+    {
+        if (_timerLogo > 0)
+        {
+            _timerLogo = _timerLogo - Time.deltaTime;
+        }
+        else if (_isTimerLogo == false)
+        {
+            _isTimerLogo = true;
+            ScenePersistent.Instance.LoadAndActivate(SceneList.DataView); 
+            ScenePersistent.Instance.Unload();
+            //ScriptPersistent.Instance.Unload(SceneList.Logo);
+        }
     }
 }
