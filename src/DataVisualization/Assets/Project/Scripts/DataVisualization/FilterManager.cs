@@ -185,4 +185,21 @@ public class FilterManager : MonoBehaviour
              (runtimeStates.showUruk && record.city.Equals("Uruk", StringComparison.OrdinalIgnoreCase)))
         ).ToList();
     }
+
+
+
+    public void ShowGraphsView()
+    {
+        SwitchMenu(MainMenu.Graphs);
+    }
+
+    public void ShowMapView()
+    {
+        SwitchMenu(MainMenu.Maps);
+    }
+
+    public void ShowDatabaseView()
+    {
+        SwitchMenu(MainMenu.DataBases);
+    }
 }
