@@ -29,15 +29,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _CityA: 40
-    - _CityB: 35
-    - _CityC: 25
+    - _CityA: 15000
+    - _CityB: 7000
+    - _CityC: 12000
     - _Gap: 0
-    - _InnerRadius: 0.55
-    - _OuterRadius: 0.95
+    - _InnerRadius: 0.56
+    - _OuterRadius: 1
     m_Colors:
     - _ColorA: {r: 0.3301887, g: 0, b: 0, a: 1}
-    - _ColorB: {r: 0, g: 0.3301887, b: 0, a: 1}
-    - _ColorC: {r: 0.027901389, g: 0.027901389, b: 0.5377358, a: 1}
+    - _ColorB: {r: 0.41568628, g: 0.11764706, b: 0.11764706, a: 1}
+    - _ColorC: {r: 0.50980395, g: 0.2509804, b: 0.2509804, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
