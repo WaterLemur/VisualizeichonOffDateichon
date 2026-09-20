@@ -4,7 +4,7 @@ using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase; // Fixes the ambiguous reference error
 
 [RequireComponent(typeof(Camera))]
-public class CameraController : MonoBehaviour
+public class MobileCameraController : MonoBehaviour
 {
     [Header("Panning Settings")]
     [Tooltip("Speed multiplier for camera panning.")]
