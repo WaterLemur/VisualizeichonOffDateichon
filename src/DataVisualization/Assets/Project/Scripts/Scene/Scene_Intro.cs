@@ -33,8 +33,8 @@ public class SceneIntro : MonoBehaviour
         {
             _isTimerLogo = true;
             ScenePersistent.Instance.LoadAndActivate(SceneList.DataView); 
-            ScenePersistent.Instance.Unload();
-            //ScriptPersistent.Instance.Unload(SceneList.Logo);
+            //ScenePersistent.Instance.Unload();
+            ScriptPersistent.Instance.Unload(SceneList.Intro);
         }
     }
 }

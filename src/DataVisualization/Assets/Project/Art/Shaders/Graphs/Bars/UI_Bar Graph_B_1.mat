@@ -31,7 +31,7 @@ Material:
     m_Floats:
     - _BorderSize: 0
     - _CornerRadius: 0
-    - _Value: 0.275
+    - _Value: 0.172
     m_Colors:
     - _BackgroundColor: {r: 0, g: 0.32941177, b: 0, a: 1}
     - _FillColor: {r: 0.41568628, g: 0.11764706, b: 0.11764706, a: 1}
