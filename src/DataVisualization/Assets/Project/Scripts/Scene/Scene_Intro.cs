@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 
 public class SceneIntro : MonoBehaviour
@@ -12,10 +14,6 @@ public class SceneIntro : MonoBehaviour
         // Cursor
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;
-
-        // Set current scene
-        //Game.Instance.LastScene =  Game.Instance.CurrentScene;
-        //Game.Instance.CurrentScene = SceneList.Intro;
     }
 
 
@@ -32,9 +30,8 @@ public class SceneIntro : MonoBehaviour
         else if (_isTimerLogo == false)
         {
             _isTimerLogo = true;
-            ScenePersistent.Instance.LoadAndActivate(SceneList.DataView); 
-            //ScenePersistent.Instance.Unload();
-            ScriptPersistent.Instance.Unload(SceneList.Intro);
+            SceneManager.LoadSceneAsync(SceneList.DataView.ToString(), LoadSceneMode.Additive);
+            SceneManager.UnloadSceneAsync(SceneList.Intro.ToString());
         }
     }
 }
