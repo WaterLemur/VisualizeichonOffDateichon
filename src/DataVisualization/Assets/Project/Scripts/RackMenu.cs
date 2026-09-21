@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RackMenu : MonoBehaviour
 {
@@ -22,6 +23,22 @@ public class RackMenu : MonoBehaviour
     [Header("Buttons")]
     [SerializeField] GameObject btnHelp;
     [SerializeField] GameObject btnInfo;
+    [Space(5)]
+
+    // UI
+    [SerializeField] Button uiHelp;
+    [SerializeField] Button uiInfo;
+    [Space(5)]
+    [SerializeField] Button uiAkkad;
+    [SerializeField] Button uiUr;
+    [SerializeField] Button uiUruk;
+    [Space(5)]
+
+    [SerializeField] Button uiBarley;
+    [SerializeField] Button uiSoldiers;
+    [Space(5)]
+    [SerializeField] Color uiBtnOff;
+    [SerializeField] Color uiBtnOn;
     [Space(5)]
 
     [SerializeField] GameObject btnAkkad;
@@ -99,7 +116,24 @@ public class RackMenu : MonoBehaviour
 
     private void Start()
     {
+        // Start all city/resource buttons OFF
+        SetButtonColor(uiAkkad, false);
+        SetButtonColor(uiUr, false);
+        SetButtonColor(uiUruk, false);
 
+        SetButtonColor(uiBarley, false);
+        SetButtonColor(uiSoldiers, false);
+
+        // Help and Info are intentionally not changed
+    }
+
+
+    private void SetButtonColor(Button button, bool isOn)
+    {
+        if (button != null)
+        {
+            button.image.color = isOn ? uiBtnOn : uiBtnOff;
+        }
     }
 
 
@@ -123,6 +157,8 @@ public class RackMenu : MonoBehaviour
 
         isAkkad = !isAkkad;
 
+        SetButtonColor(uiAkkad, isAkkad);
+
 
         //Map
         if(!mapAkkad.activeSelf) mapAkkad.SetActive(true);
@@ -143,6 +179,7 @@ public class RackMenu : MonoBehaviour
             if(!graph_tendencyA_akkad.activeSelf) graph_tendencyA_akkad.SetActive(true);
             else graph_tendencyA_akkad.SetActive(false);
         } 
+
         if (isSoldiers)
         {
             //Graph Bars A Grouped
@@ -166,6 +203,8 @@ public class RackMenu : MonoBehaviour
 
         isUr = !isUr;
 
+        SetButtonColor(uiUr, isUr);
+
 
         //Map
         if(!mapUr.activeSelf) mapUr.SetActive(true);
@@ -186,6 +225,7 @@ public class RackMenu : MonoBehaviour
             if(!graph_tendencyA_ur.activeSelf) graph_tendencyA_ur.SetActive(true);
             else graph_tendencyA_ur.SetActive(false);
         } 
+
         if (isSoldiers)
         {
             //Graph Bars A Grouped
@@ -209,6 +249,8 @@ public class RackMenu : MonoBehaviour
 
         isUruk = !isUruk;
 
+        SetButtonColor(uiUruk, isUruk);
+
 
         //Map
         if(!mapUruk.activeSelf) mapUruk.SetActive(true);
@@ -229,6 +271,7 @@ public class RackMenu : MonoBehaviour
             if(!graph_tendencyA_uruk.activeSelf) graph_tendencyA_uruk.SetActive(true);
             else graph_tendencyA_uruk.SetActive(false);
         } 
+
         if (isSoldiers)
         {
             //Graph Bars A Grouped
@@ -252,6 +295,8 @@ public class RackMenu : MonoBehaviour
 
         isBarley = !isBarley;
 
+        SetButtonColor(uiBarley, isBarley);
+
 
         if(isAkkad)
         {
@@ -267,6 +312,7 @@ public class RackMenu : MonoBehaviour
             if(!graph_tendencyA_akkad.activeSelf) graph_tendencyA_akkad.SetActive(true);
             else graph_tendencyA_akkad.SetActive(false);
         }
+
         if(isUr)
         {
             //Graph Bars A Grouped
@@ -281,6 +327,7 @@ public class RackMenu : MonoBehaviour
             if(!graph_tendencyA_ur.activeSelf) graph_tendencyA_ur.SetActive(true);
             else graph_tendencyA_ur.SetActive(false);
         }
+
         if(isUruk)
         {
             //Graph Bars A Grouped
@@ -304,6 +351,8 @@ public class RackMenu : MonoBehaviour
 
         isSoldiers = !isSoldiers;
 
+        SetButtonColor(uiSoldiers, isSoldiers);
+
 
         if(isAkkad)
         {
@@ -319,6 +368,7 @@ public class RackMenu : MonoBehaviour
             if(!graph_tendencyB_akkad.activeSelf) graph_tendencyB_akkad.SetActive(true);
             else graph_tendencyB_akkad.SetActive(false);
         }
+
         if(isUr)
         {
             //Graph Bars A Grouped
@@ -333,6 +383,7 @@ public class RackMenu : MonoBehaviour
             if(!graph_tendencyB_ur.activeSelf) graph_tendencyB_ur.SetActive(true);
             else graph_tendencyB_ur.SetActive(false);
         }
+
         if(isUruk)
         {
             //Graph Bars A Grouped
@@ -343,7 +394,7 @@ public class RackMenu : MonoBehaviour
             if(!graph_barsB_uruk.activeSelf) graph_barsB_uruk.SetActive(true);
             else graph_barsB_uruk.SetActive(false);
 
-            //Graph Tendency A Barley
+            //Graph Tendency B Barley
             if(!graph_tendencyB_uruk.activeSelf) graph_tendencyB_uruk.SetActive(true);
             else graph_tendencyB_uruk.SetActive(false);
         }
