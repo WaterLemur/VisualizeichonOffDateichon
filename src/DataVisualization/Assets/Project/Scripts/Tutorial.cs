@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using System.Runtime.ExceptionServices;
-using Unity.VisualScripting;
 using UnityEngine;
+
 
 public enum TutorialStage
 {
@@ -23,6 +19,7 @@ public class Tutorial : MonoBehaviour
     
     [Header("References")]
     [SerializeField] MobileCameraController mobileCamera;
+    [SerializeField] RackController rackController;
     [Space(5)]
 
     [SerializeField] GameObject background;
@@ -58,6 +55,7 @@ public class Tutorial : MonoBehaviour
 
         mobileCamera.canMove = false;
         cam.position = camPos.position;
+        rackController.CloseDoors();
     }
 
     public void BtnAccept()
@@ -109,6 +107,7 @@ public class Tutorial : MonoBehaviour
                 background.SetActive(false);
 
                 mobileCamera.canMove = true;
+                rackController.OpenDoors();
                 break;
         }
     }

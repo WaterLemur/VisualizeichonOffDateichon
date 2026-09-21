@@ -19,6 +19,8 @@ public class RackController : MonoBehaviour
     private bool isOpen;
     private bool isMoving;
 
+    [SerializeField] bool openOnStart = true;
+
     private void Awake()
     {
         leftClosedRotation = leftDoor.localRotation;
@@ -27,7 +29,7 @@ public class RackController : MonoBehaviour
         leftOpenRotation = leftClosedRotation * Quaternion.Euler(0f, -openingAngle, 0f);
         rightOpenRotation = rightClosedRotation * Quaternion.Euler(0f, openingAngle, 0f);
     
-        OpenDoors();
+        if(openOnStart) OpenDoors();
     }
 
     private void Update()
