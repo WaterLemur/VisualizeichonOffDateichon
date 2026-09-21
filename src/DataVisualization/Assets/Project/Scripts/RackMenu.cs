@@ -16,6 +16,9 @@ public class RackMenu : MonoBehaviour
 
     [Header("REFERENCES")]
 
+    [Header("Scripts")]
+    [SerializeField] Tutorial tutorial;
+
     [Header("Buttons")]
     [SerializeField] GameObject btnHelp;
     [SerializeField] GameObject btnInfo;
@@ -103,6 +106,8 @@ public class RackMenu : MonoBehaviour
     public void BtnHelp()
     {
         Debug.Log("Clicked: Help");
+
+        tutorial.TutorialSetup();
     }
 
 

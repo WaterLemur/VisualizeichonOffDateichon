@@ -20,6 +20,8 @@ public class MobileCameraController : MonoBehaviour
     [Tooltip("Maximum allowable size / Field of View.")]
     public float maxZoom = 20f;
 
+    public bool canMove = false;
+
     private Camera cam;
 
     void Awake()
@@ -40,6 +42,9 @@ public class MobileCameraController : MonoBehaviour
 
     void Update()
     {
+        if(!canMove) return;
+
+
         var activeTouches = Touch.activeTouches;
 
         // Handle 1-Finger Panning

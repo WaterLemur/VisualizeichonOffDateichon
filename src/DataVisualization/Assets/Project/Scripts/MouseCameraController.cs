@@ -23,6 +23,7 @@ public class MouseCameraController : MonoBehaviour
     [SerializeField] private Transform rightClickPosition;
 
     private Camera cam;
+    [SerializeField] MobileCameraController mobileCamera;
 
     private void Awake()
     {
@@ -31,6 +32,8 @@ public class MouseCameraController : MonoBehaviour
 
     private void Update()
     {
+        if(!mobileCamera.canMove) return;
+
         HandleEdgePanning();
         HandleMiddleMousePanning();
         HandleScrollZoom();
