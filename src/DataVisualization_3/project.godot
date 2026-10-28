@@ -15,6 +15,10 @@ run/main_scene="uid://rxti140wj33v"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://tools/godot/icon.svg"
 
+[autoload]
+
+ManagerScene="*uid://dgwbp80qvn5fk"
+
 [display]
 
 window/size/viewport_width=1080

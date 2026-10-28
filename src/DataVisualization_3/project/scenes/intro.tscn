@@ -8,6 +8,16 @@
 script = ExtResource("1_pxg1a")
 
 [node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_6os4l")]
+mouse_filter = 1
+
+[node name="Background" type="ColorRect" parent="UI" unique_id=1086510653]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [node name="Logo" type="TextureRect" parent="UI" unique_id=1831438745]
 layout_mode = 1

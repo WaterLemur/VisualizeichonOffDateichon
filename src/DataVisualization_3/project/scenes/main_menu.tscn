@@ -73,3 +73,5 @@ text = "Exit"
 
 [node name="Camera3D" type="Camera3D" parent="World" unique_id=1228084246]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[connection signal="pressed" from="UI/VBoxContainer/Button_Museum" to="." method="_on_button_museum_pressed"]

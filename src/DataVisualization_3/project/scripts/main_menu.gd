@@ -10,3 +10,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_button_museum_pressed() -> void:
+	print("MainMenu: Button = Museum")
+	#var scene_main_menu = load("res://project/scenes/main_menu.tscn")
