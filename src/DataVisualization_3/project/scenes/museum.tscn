@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://cii37hhyk0fuu"]
+
+[ext_resource type="Script" uid="uid://de5j3uwqtsyvw" path="res://project/scripts/museum.gd" id="1_beg0u"]
+[ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_wiwei"]
+[ext_resource type="Theme" uid="uid://ok88j7qigyr" path="res://project/art/themes/theme.tres" id="3_i7x40"]
+[ext_resource type="Texture2D" uid="uid://bgr445uynq7xw" path="res://tools/godot/icon.svg" id="3_wfvgn"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qt6b2"]
+
+[node name="Museum" type="Node" unique_id=2077953294]
+script = ExtResource("1_beg0u")
+
+[node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_wiwei")]
+
+[node name="Navigation" type="HBoxContainer" parent="UI" unique_id=1294204114]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.0
+offset_top = -64.0
+offset_right = 130.00146
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_i7x40")
+theme_type_variation = &"Navigation"
+alignment = 1
+
+[node name="TextureButton_Left" type="TextureButton" parent="UI/Navigation" unique_id=668461695]
+layout_mode = 2
+texture_normal = ExtResource("3_wfvgn")
+texture_pressed = ExtResource("3_wfvgn")
+texture_hover = ExtResource("3_wfvgn")
+
+[node name="TextureButton_Right" type="TextureButton" parent="UI/Navigation" unique_id=918057052]
+layout_mode = 2
+texture_normal = ExtResource("3_wfvgn")
+texture_pressed = ExtResource("3_wfvgn")
+texture_hover = ExtResource("3_wfvgn")
+
+[node name="World" type="Node3D" parent="." unique_id=1529691493]
+
+[node name="CameraRig" type="Node3D" parent="World" unique_id=829160146]
+
+[node name="Camera3D" type="Camera3D" parent="World/CameraRig" unique_id=1993890512]
+
+[node name="PosMuseum" type="Node3D" parent="World/CameraRig" unique_id=1283224432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="PosHistory" type="Node3D" parent="World/CameraRig/PosMuseum" unique_id=849555301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="PosArtifact" type="Node3D" parent="World/CameraRig/PosMuseum" unique_id=131910881]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="PosGraphs" type="Node3D" parent="World/CameraRig/PosMuseum" unique_id=908728399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="PosOptions" type="Node3D" parent="World/CameraRig" unique_id=930431605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="PosAudio" type="Node3D" parent="World/CameraRig/PosOptions" unique_id=59424584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="PosVideo" type="Node3D" parent="World/CameraRig/PosOptions" unique_id=1430253138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="PosInfo" type="Node3D" parent="World/CameraRig" unique_id=1559868338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="PosExit" type="Node3D" parent="World/CameraRig" unique_id=589115846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="Meshes" type="Node3D" parent="World" unique_id=1324747115]
+
+[node name="Background" type="Node3D" parent="World/Meshes" unique_id=891709840]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Meshes/Background" unique_id=695911509]
+mesh = SubResource("PlaneMesh_qt6b2")
+
+[node name="Museum" type="Node3D" parent="World/Meshes" unique_id=898381871]
+
+[node name="Options" type="Node3D" parent="World/Meshes" unique_id=4824085]
+
+[node name="Info" type="Node3D" parent="World/Meshes" unique_id=2112922655]
+
+[node name="Exit" type="Node3D" parent="World/Meshes" unique_id=467039694]
+
+[node name="Lights" type="Node3D" parent="World" unique_id=1265559525]
+
+[node name="Sun" type="DirectionalLight3D" parent="World/Lights" unique_id=1218066317]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="World/Lights" unique_id=1080329001]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="World/Lights" unique_id=130651291]

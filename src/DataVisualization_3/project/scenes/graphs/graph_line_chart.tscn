@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bfusyudoxexrl"]
+
+[ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="1_n6eeg"]
+
+[node name="GraphBars1" type="Node" unique_id=1027408463]
+
+[node name="UI" parent="." unique_id=58018528 instance=ExtResource("1_n6eeg")]

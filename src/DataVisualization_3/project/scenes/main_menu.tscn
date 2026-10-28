@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://bssmv084law14"]
+
+[ext_resource type="Script" uid="uid://dr0hf3frfkluv" path="res://project/scripts/main_menu.gd" id="1_wapgf"]
+[ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_hf4up"]
+[ext_resource type="Theme" uid="uid://ok88j7qigyr" path="res://project/art/themes/theme.tres" id="3_wk7yc"]
+
+[node name="MainMenu" type="Node" unique_id=1321058017]
+script = ExtResource("1_wapgf")
+
+[node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_hf4up")]
+
+[node name="Title" type="Label" parent="UI" unique_id=1008142225]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -432.0
+offset_top = 156.0
+offset_right = 432.0
+offset_bottom = 300.0
+grow_horizontal = 2
+theme = ExtResource("3_wk7yc")
+theme_type_variation = &"HeaderLarge"
+text = "El viaje de Uanna"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI" unique_id=1091356206]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -284.0
+offset_top = -276.0
+offset_right = 284.0
+offset_bottom = 276.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_wk7yc")
+alignment = 1
+
+[node name="Button_Museum" type="Button" parent="UI/VBoxContainer" unique_id=1304623960]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 2
+offset_transform_position = Vector2(0, -0.785)
+theme = ExtResource("3_wk7yc")
+text = "Museum"
+
+[node name="Button_Options" type="Button" parent="UI/VBoxContainer" unique_id=1596057111]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 2
+offset_transform_position = Vector2(0, -0.785)
+theme = ExtResource("3_wk7yc")
+text = "Options"
+
+[node name="Button_Info" type="Button" parent="UI/VBoxContainer" unique_id=1855918985]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 2
+offset_transform_position = Vector2(0, -0.785)
+theme = ExtResource("3_wk7yc")
+text = "Info"
+
+[node name="Button_Exit" type="Button" parent="UI/VBoxContainer" unique_id=1298650121]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 2
+offset_transform_position = Vector2(0, -0.785)
+theme = ExtResource("3_wk7yc")
+text = "Exit"
+
+[node name="World" type="Node3D" parent="." unique_id=366643053]
+
+[node name="Camera3D" type="Camera3D" parent="World" unique_id=1228084246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)

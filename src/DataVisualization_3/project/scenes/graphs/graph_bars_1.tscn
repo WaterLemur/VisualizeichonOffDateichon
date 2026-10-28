@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://4otoidk5816c"]
+
+[ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="1_a80a4"]
+
+[node name="GraphBars1" type="Node" unique_id=1027408463]
+
+[node name="UI" parent="." unique_id=58018528 instance=ExtResource("1_a80a4")]
+
+[node name="ProgressBar2" type="ProgressBar" parent="UI" unique_id=142082099]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.0
+offset_top = -185.0
+offset_right = 211.0
+offset_bottom = 185.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="UI" unique_id=313569670]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -24.0
+offset_top = -592.0
+offset_right = 24.0
+offset_bottom = -222.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VScrollBar" type="VScrollBar" parent="UI" unique_id=842420053]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="SpinBox" type="SpinBox" parent="UI" unique_id=417561683]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -257.0
+offset_top = 268.0
+offset_right = 257.0
+offset_bottom = 484.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSlider" type="VSlider" parent="UI" unique_id=844028670]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -85.0
+offset_top = -605.0
+offset_right = -69.0
+offset_bottom = 859.0
+grow_horizontal = 0
+grow_vertical = 2
