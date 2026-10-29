@@ -2,10 +2,15 @@
 extends Node
 
 
+var main_menu: String = "res://project/scenes/main_menu.tscn"
+var museum:    String = "res://project/scenes/museum.tscn"
+var options:   String = "res://project/scenes/options.tscn"
+var info:      String = "res://project/scenes/info.tscn"
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	Persistent.set_scene_label("Main Menu")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -14,12 +19,19 @@ func _process(delta: float) -> void:
 
 func _on_button_museum_pressed() -> void:
 	print("MainMenu: Button = Museum")
+	ManagerScene.scene_load(museum)
+	ManagerScene.scene_unload(main_menu)
 
 func _on_button_options_pressed() -> void:
 	print("MainMenu: Button = Options")
+	ManagerScene.scene_load(options)
+	ManagerScene.scene_unload(main_menu)
 
 func _on_button_info_pressed() -> void:
 	print("MainMenu: Button = Info")
+	ManagerScene.scene_load(info)
+	ManagerScene.scene_unload(main_menu)
 
 func _on_button_exit_pressed() -> void:
 	print("MainMenu: Button = Exit")
+	get_tree().quit()

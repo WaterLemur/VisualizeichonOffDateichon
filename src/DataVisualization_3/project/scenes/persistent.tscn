@@ -28,7 +28,7 @@ stream = ExtResource("3_qhlmt")
 volume_db = 10.0
 playback_type = 1
 
-[node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_kshmv")]
+[node name="UI" parent="." unique_id=1820701736 instance=ExtResource("2_kshmv")]
 
 [node name="Scene" type="Label" parent="UI" unique_id=1036022659]
 layout_mode = 1

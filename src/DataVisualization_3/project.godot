@@ -17,6 +17,7 @@ config/icon="res://tools/godot/icon.svg"
 
 [autoload]
 
+Persistent="*uid://jgnap6dax6ls"
 ManagerScene="*uid://dgwbp80qvn5fk"
 
 [display]

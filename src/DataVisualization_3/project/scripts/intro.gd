@@ -2,16 +2,16 @@
 extends Node
 
 
-var intro: String     = "res://project/scenes/intro.tscn"
-var main_menu: String = "res://project/scenes/main_menu.tscn"
-var timer: float = 0.7
+var intro:       String = "res://project/scenes/intro.tscn"
+var main_menu:   String = "res://project/scenes/main_menu.tscn"
+var timer:        float = 0.7
 var _timer_print: float = 20
-var timer_print: float = _timer_print
+var timer_print:  float = _timer_print
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Persistent.set_scene_label("")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
