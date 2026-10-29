@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://cjllxjsq0yf7h" path="res://project/art/sprites/map/map-waypoint-uruk.png" id="14_rp2ow"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_07rhc"]
-viewport_path = NodePath("World/Sprites/Graphs/SubViewport")
+viewport_path = NodePath("World/Sprites/Graphs/SVBar1")
 
 [node name="Museum" type="Node" unique_id=2077953294]
 script = ExtResource("1_beg0u")
@@ -190,17 +190,88 @@ texture = ExtResource("14_rp2ow")
 
 [node name="Graphs" type="Node3D" parent="World/Sprites" unique_id=681255558]
 
-[node name="SubViewport" type="SubViewport" parent="World/Sprites/Graphs" unique_id=958429834]
+[node name="SVBar1" type="SubViewport" parent="World/Sprites/Graphs" unique_id=958429834]
+transparent_bg = true
 
-[node name="GraphBar1" parent="World/Sprites/Graphs/SubViewport" unique_id=1118151370 instance=ExtResource("5_q6i48")]
+[node name="GraphBar1" parent="World/Sprites/Graphs/SVBar1" unique_id=1118151370 instance=ExtResource("5_q6i48")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Sprite3D" type="Sprite3D" parent="World/Sprites/Graphs" unique_id=995290408]
+[node name="SpriteBar1" type="Sprite3D" parent="World/Sprites/Graphs/SVBar1" unique_id=995290408]
 transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 12.245365, 4.8605757, -47.508965)
+texture = SubResource("ViewportTexture_07rhc")
+
+[node name="SVBar2" type="SubViewport" parent="World/Sprites/Graphs" unique_id=312477859]
+transparent_bg = true
+
+[node name="GraphBar2" parent="World/Sprites/Graphs/SVBar2" unique_id=685313108 instance=ExtResource("5_q6i48")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpriteBar2" type="Sprite3D" parent="World/Sprites/Graphs/SVBar2" unique_id=256685674]
+transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 12.2160225, 4.435898, -46.44489)
+texture = SubResource("ViewportTexture_07rhc")
+
+[node name="SVDonut1" type="SubViewport" parent="World/Sprites/Graphs" unique_id=1941249464]
+transparent_bg = true
+
+[node name="GraphDonut1" parent="World/Sprites/Graphs/SVDonut1" unique_id=48260213 instance=ExtResource("5_q6i48")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpriteDonut1" type="Sprite3D" parent="World/Sprites/Graphs/SVDonut1" unique_id=1536678108]
+transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 12.238128, 4.76669, -44.62936)
+texture = SubResource("ViewportTexture_07rhc")
+
+[node name="SVDonut2" type="SubViewport" parent="World/Sprites/Graphs" unique_id=341952163]
+transparent_bg = true
+
+[node name="GraphDonut2" parent="World/Sprites/Graphs/SVDonut2" unique_id=1813609300 instance=ExtResource("5_q6i48")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpriteDonut2" type="Sprite3D" parent="World/Sprites/Graphs/SVDonut2" unique_id=300090858]
+transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 12.22667, 4.601992, -43.54604)
+texture = SubResource("ViewportTexture_07rhc")
+
+[node name="SVTendency1" type="SubViewport" parent="World/Sprites/Graphs" unique_id=618545011]
+transparent_bg = true
+
+[node name="GraphTendency1" parent="World/Sprites/Graphs/SVTendency1" unique_id=1318298087 instance=ExtResource("5_q6i48")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpriteTendency1" type="Sprite3D" parent="World/Sprites/Graphs/SVTendency1" unique_id=1045789935]
+transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 12.22667, 4.601992, -43.54604)
+texture = SubResource("ViewportTexture_07rhc")
+
+[node name="SVTendency2" type="SubViewport" parent="World/Sprites/Graphs" unique_id=878421725]
+transparent_bg = true
+
+[node name="GraphTendency2" parent="World/Sprites/Graphs/SVTendency2" unique_id=544832394 instance=ExtResource("5_q6i48")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SpriteTendency2" type="Sprite3D" parent="World/Sprites/Graphs/SVTendency2" unique_id=2083258811]
+transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 12.22667, 4.601992, -43.54604)
 texture = SubResource("ViewportTexture_07rhc")
 
 [node name="Meshes" type="Node3D" parent="World" unique_id=1324747115]
