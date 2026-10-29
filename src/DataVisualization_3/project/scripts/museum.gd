@@ -2,8 +2,10 @@
 extends Node
 
 
+var main_menu: String = "res://project/scenes/main_menu.tscn"
+
 var cam_index = 0 as int
-@onready var camera = $World/CameraRig/Camera3D as Camera3D
+@onready var camera = $World/CameraRig/MainCamera as Camera3D
 
 @onready var cam_pos_main_menu = $World/CameraRig/PosMainMenu          as Node3D
 @onready var cam_pos_museum    = $World/CameraRig/PosMuseum            as Node3D
@@ -21,12 +23,19 @@ var cam_index = 0 as int
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Persistent.set_scene_label("Museum")
+	set_navigation(false)
+	_camera_pos_main_menu()
+	ManagerScene.scene_load(main_menu)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 
+func _camera_pos_main_menu() -> void:
+	camera.transform = cam_pos_main_menu.transform
+	
 func _camera_transition(left: bool) -> void:
 	if left: cam_index -= 1
 	else:    cam_index += 1
@@ -60,3 +69,7 @@ func _on_texture_button_left_pressed() -> void:
 func _on_texture_button_right_pressed() -> void:
 	print("Museum: Navigation = Right")
 	_camera_transition(false)
+
+
+func set_navigation(state : bool) -> void:
+	$UI.visible = state

@@ -3,7 +3,7 @@ extends Node
 
 
 var main_menu: String = "res://project/scenes/main_menu.tscn"
-var museum:    String = "res://project/scenes/museum.tscn"
+
 var options:   String = "res://project/scenes/options.tscn"
 var info:      String = "res://project/scenes/info.tscn"
 
@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 
 func _on_button_museum_pressed() -> void:
 	print("MainMenu: Button = Museum")
-	ManagerScene.scene_load(museum)
+	Museum.set_navigation(true)
 	ManagerScene.scene_unload(main_menu)
 
 func _on_button_options_pressed() -> void:
@@ -35,3 +35,4 @@ func _on_button_info_pressed() -> void:
 func _on_button_exit_pressed() -> void:
 	print("MainMenu: Button = Exit")
 	get_tree().quit()
+	

@@ -19,6 +19,7 @@ config/icon="res://tools/godot/icon.svg"
 
 ManagerScene="*uid://dgwbp80qvn5fk"
 Persistent="*uid://d4cx33mtllj5l"
+Museum="*uid://cii37hhyk0fuu"
 
 [display]
 

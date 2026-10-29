@@ -3,7 +3,6 @@ extends Node
 
 
 var intro:       String = "res://project/scenes/intro.tscn"
-var main_menu:   String = "res://project/scenes/main_menu.tscn"
 var timer:        float = 0.7
 var _timer_print: float = 20
 var timer_print:  float = _timer_print
@@ -25,7 +24,6 @@ func _check_timer(delta: float) -> void:
 	if timer_print <=0:
 		print(timer)
 		timer_print = _timer_print
-		
+	
 	if timer <= 0:
-		ManagerScene.scene_load(main_menu)
 		ManagerScene.scene_unload(intro)
