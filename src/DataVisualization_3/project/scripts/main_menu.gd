@@ -16,10 +16,10 @@ func _on_button_museum_pressed() -> void:
 	print("MainMenu: Button = Museum")
 
 func _on_button_options_pressed() -> void:
-	print("MainMenu: Button = Museum")
+	print("MainMenu: Button = Options")
 
 func _on_button_info_pressed() -> void:
-	print("MainMenu: Button = Museum")
+	print("MainMenu: Button = Info")
 
 func _on_button_exit_pressed() -> void:
-	print("MainMenu: Button = Museum")
+	print("MainMenu: Button = Exit")
