@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxuhjfubigs7q"
-path.s3tc="res://.godot/imported/arrow_menu.png-ea97b1376a086756fbae15e55473def2.s3tc.ctex"
+uid="uid://bc3omncab8des"
+path.s3tc="res://.godot/imported/map-waypoint-akkad.png-ebc216a1a9ffb73bd122a8cec5956138.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "618d93e3a621864fe5b910617e441b11"
-}
 
 [deps]
 
-source_file="res://project/art/meshes/arrow/arrow_menu.png"
-dest_files=["res://.godot/imported/arrow_menu.png-ea97b1376a086756fbae15e55473def2.s3tc.ctex"]
+source_file="res://project/art/sprites/map/map-waypoint-akkad.png"
+dest_files=["res://.godot/imported/map-waypoint-akkad.png-ebc216a1a9ffb73bd122a8cec5956138.s3tc.ctex"]
 
 [params]
 
