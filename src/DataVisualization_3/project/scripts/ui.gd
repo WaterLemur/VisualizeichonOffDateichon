@@ -1,4 +1,4 @@
-#!boot.gd
+#!ui.gd
 extends Control
 
 

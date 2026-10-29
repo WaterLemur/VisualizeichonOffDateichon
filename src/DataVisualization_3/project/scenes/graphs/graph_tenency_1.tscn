@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dd6cppals05k0"]
+
+[ext_resource type="Script" uid="uid://b7gqs7qnpxtcn" path="res://project/scripts/graphs/graph_tendency_1.gd" id="1_pegfd"]
+[ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_25wtx"]
+[ext_resource type="PackedScene" uid="uid://dlwq4kmdb3bhs" path="res://addons/easy_charts/control_charts/chart.tscn" id="3_r6gtf"]
+
+[node name="GraphTendency1" type="Control" unique_id=1118151370]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_pegfd")
+
+[node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_25wtx")]
+layout_mode = 1
+
+[node name="Chart" parent="UI" unique_id=2051527690 instance=ExtResource("3_r6gtf")]
+layout_mode = 1
+offset_left = 147.0
+offset_top = 661.0
+offset_right = -147.0
+offset_bottom = -661.0
+grow_horizontal = 2
+grow_vertical = 2

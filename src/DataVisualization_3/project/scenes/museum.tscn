@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://j7dbq71vh4sp" path="res://project/art/meshes/arrow/arrow.glb" id="5_2lc6c"]
 [ext_resource type="Texture2D" uid="uid://dm0mouyw08ntt" path="res://project/art/sprites/data_bases/frame-data-base-cities.png" id="5_4irpc"]
 [ext_resource type="PackedScene" uid="uid://dgigg2vupxg0x" path="res://project/art/meshes/calculating_machine/calculating_machine.glb" id="5_6gxoo"]
-[ext_resource type="PackedScene" uid="uid://bwsf2ol1u6pgb" path="res://project/scenes/graphs/graph.tscn" id="5_q6i48"]
 [ext_resource type="PackedScene" uid="uid://byrtbirj2ny4o" path="res://project/art/meshes/rack/rack_2.tscn" id="6_hv6mn"]
 [ext_resource type="Texture2D" uid="uid://dsekuwh8bh12h" path="res://project/art/sprites/data_bases/frame-data-base-resources.png" id="6_wj7eq"]
 [ext_resource type="PackedScene" uid="uid://botuthtd084ls" path="res://project/art/meshes/rack_b/rack_b.glb" id="7_hv6mn"]
@@ -21,9 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://bc3omncab8des" path="res://project/art/sprites/map/map-waypoint-akkad.png" id="12_t28hp"]
 [ext_resource type="Texture2D" uid="uid://b567ugqryp07r" path="res://project/art/sprites/map/map-waypoint-ur.png" id="13_xg8yu"]
 [ext_resource type="Texture2D" uid="uid://cjllxjsq0yf7h" path="res://project/art/sprites/map/map-waypoint-uruk.png" id="14_rp2ow"]
+[ext_resource type="PackedScene" uid="uid://exokrsvrs365" path="res://project/scenes/graphs/graph_bar_1.tscn" id="14_u6vr8"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_07rhc"]
-viewport_path = NodePath("World/Sprites/Graphs/SVBar1")
+[sub_resource type="ViewportTexture" id="ViewportTexture_o2eaj"]
+viewport_path = NodePath("World/Sprites/Graphs/Bars1/SVBar1")
 
 [node name="Museum" type="Node" unique_id=2077953294]
 script = ExtResource("1_beg0u")
@@ -146,7 +146,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosInfo" unique_id=825886247]
 
 [node name="PosExit" type="Node3D" parent="World/CameraRig" unique_id=589115846]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 31)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.995, 5, -44.634)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosExit" unique_id=61795898]
 
@@ -190,89 +190,18 @@ texture = ExtResource("14_rp2ow")
 
 [node name="Graphs" type="Node3D" parent="World/Sprites" unique_id=681255558]
 
-[node name="SVBar1" type="SubViewport" parent="World/Sprites/Graphs" unique_id=958429834]
+[node name="Bars1" type="Node3D" parent="World/Sprites/Graphs" unique_id=1641601821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.234562, 4.7715654, -47.535587)
+
+[node name="SVBar1" type="SubViewport" parent="World/Sprites/Graphs/Bars1" unique_id=958429834]
 transparent_bg = true
+render_target_update_mode = 4
 
-[node name="GraphBar1" parent="World/Sprites/Graphs/SVBar1" unique_id=1118151370 instance=ExtResource("5_q6i48")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="GraphBar1" parent="World/Sprites/Graphs/Bars1/SVBar1" unique_id=1614625529 instance=ExtResource("14_u6vr8")]
 
-[node name="SpriteBar1" type="Sprite3D" parent="World/Sprites/Graphs/SVBar1" unique_id=995290408]
-transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 12.245365, 4.8605757, -47.508965)
-texture = SubResource("ViewportTexture_07rhc")
-
-[node name="SVBar2" type="SubViewport" parent="World/Sprites/Graphs" unique_id=312477859]
-transparent_bg = true
-
-[node name="GraphBar2" parent="World/Sprites/Graphs/SVBar2" unique_id=685313108 instance=ExtResource("5_q6i48")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SpriteBar2" type="Sprite3D" parent="World/Sprites/Graphs/SVBar2" unique_id=256685674]
-transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 12.2160225, 4.435898, -46.44489)
-texture = SubResource("ViewportTexture_07rhc")
-
-[node name="SVDonut1" type="SubViewport" parent="World/Sprites/Graphs" unique_id=1941249464]
-transparent_bg = true
-
-[node name="GraphDonut1" parent="World/Sprites/Graphs/SVDonut1" unique_id=48260213 instance=ExtResource("5_q6i48")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SpriteDonut1" type="Sprite3D" parent="World/Sprites/Graphs/SVDonut1" unique_id=1536678108]
-transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 12.238128, 4.76669, -44.62936)
-texture = SubResource("ViewportTexture_07rhc")
-
-[node name="SVDonut2" type="SubViewport" parent="World/Sprites/Graphs" unique_id=341952163]
-transparent_bg = true
-
-[node name="GraphDonut2" parent="World/Sprites/Graphs/SVDonut2" unique_id=1813609300 instance=ExtResource("5_q6i48")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SpriteDonut2" type="Sprite3D" parent="World/Sprites/Graphs/SVDonut2" unique_id=300090858]
-transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 12.22667, 4.601992, -43.54604)
-texture = SubResource("ViewportTexture_07rhc")
-
-[node name="SVTendency1" type="SubViewport" parent="World/Sprites/Graphs" unique_id=618545011]
-transparent_bg = true
-
-[node name="GraphTendency1" parent="World/Sprites/Graphs/SVTendency1" unique_id=1318298087 instance=ExtResource("5_q6i48")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SpriteTendency1" type="Sprite3D" parent="World/Sprites/Graphs/SVTendency1" unique_id=1045789935]
-transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 12.22667, 4.601992, -43.54604)
-texture = SubResource("ViewportTexture_07rhc")
-
-[node name="SVTendency2" type="SubViewport" parent="World/Sprites/Graphs" unique_id=878421725]
-transparent_bg = true
-
-[node name="GraphTendency2" parent="World/Sprites/Graphs/SVTendency2" unique_id=544832394 instance=ExtResource("5_q6i48")]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="SpriteTendency2" type="Sprite3D" parent="World/Sprites/Graphs/SVTendency2" unique_id=2083258811]
-transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 12.22667, 4.601992, -43.54604)
-texture = SubResource("ViewportTexture_07rhc")
+[node name="SpriteBar1" type="Sprite3D" parent="World/Sprites/Graphs/Bars1" unique_id=995290408]
+transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 0, 0, 0)
+texture = SubResource("ViewportTexture_o2eaj")
 
 [node name="Meshes" type="Node3D" parent="World" unique_id=1324747115]
 
