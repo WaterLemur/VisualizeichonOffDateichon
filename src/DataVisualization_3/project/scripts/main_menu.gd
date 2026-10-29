@@ -14,4 +14,12 @@ func _process(delta: float) -> void:
 
 func _on_button_museum_pressed() -> void:
 	print("MainMenu: Button = Museum")
-	#var scene_main_menu = load("res://project/scenes/main_menu.tscn")
+
+func _on_button_options_pressed() -> void:
+	print("MainMenu: Button = Museum")
+
+func _on_button_info_pressed() -> void:
+	print("MainMenu: Button = Museum")
+
+func _on_button_exit_pressed() -> void:
+	print("MainMenu: Button = Museum")

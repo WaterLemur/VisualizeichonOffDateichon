@@ -75,3 +75,6 @@ text = "Exit"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 
 [connection signal="pressed" from="UI/VBoxContainer/Button_Museum" to="." method="_on_button_museum_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Button_Options" to="." method="_on_button_options_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Button_Info" to="." method="_on_button_info_pressed"]
+[connection signal="pressed" from="UI/VBoxContainer/Button_Exit" to="." method="_on_button_exit_pressed"]

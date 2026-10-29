@@ -3,8 +3,10 @@
 [ext_resource type="Script" uid="uid://jgnap6dax6ls" path="res://project/scripts/persistent.gd" id="1_tq1j0"]
 [ext_resource type="Script" uid="uid://dgwbp80qvn5fk" path="res://project/scripts/managers/manager_scene.gd" id="2_kfc1q"]
 [ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_kshmv"]
+[ext_resource type="Script" uid="uid://cb20tsbu8r0qk" path="res://project/scripts/managers/manager_audio.gd" id="3_dbhhd"]
 [ext_resource type="Theme" uid="uid://ok88j7qigyr" path="res://project/art/themes/theme.tres" id="3_gncwf"]
 [ext_resource type="AudioStream" uid="uid://desqje04a5ows" path="res://project/art/music/the_epic_of_gilgamesh.mp3" id="3_qhlmt"]
+[ext_resource type="AudioStream" uid="uid://bsx1vkvcjpi2q" path="res://project/art/music/hurrian_hymn_6.mp3" id="4_cr5m2"]
 
 [node name="Persistent" type="Node" unique_id=1682141015]
 script = ExtResource("1_tq1j0")
@@ -15,11 +17,16 @@ script = ExtResource("1_tq1j0")
 script = ExtResource("2_kfc1q")
 
 [node name="ManagerAudio" type="Node" parent="Managers" unique_id=1061775049]
-script = ExtResource("2_kfc1q")
+script = ExtResource("3_dbhhd")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Managers/ManagerAudio" unique_id=1734103534]
+[node name="MusicHymn" type="AudioStreamPlayer" parent="Managers/ManagerAudio" unique_id=1734103534]
+stream = ExtResource("4_cr5m2")
+playback_type = 1
+
+[node name="MusicGilgamesh" type="AudioStreamPlayer" parent="Managers/ManagerAudio" unique_id=889552220]
 stream = ExtResource("3_qhlmt")
-autoplay = true
+volume_db = 10.0
+playback_type = 1
 
 [node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_kshmv")]
 
@@ -51,3 +58,6 @@ theme_type_variation = &"PersistentInfo"
 text = "Visualizacion de datos - 2026"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[connection signal="finished" from="Managers/ManagerAudio/MusicHymn" to="Managers/ManagerAudio" method="_on_music_hymn_finished"]
+[connection signal="finished" from="Managers/ManagerAudio/MusicGilgamesh" to="Managers/ManagerAudio" method="_on_music_gilgamesh_finished"]
