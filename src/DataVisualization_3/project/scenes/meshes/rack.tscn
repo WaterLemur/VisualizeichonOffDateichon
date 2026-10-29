@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b1atggsyxor2"]
+
+[ext_resource type="PackedScene" uid="uid://c37nk0v68ed8p" path="res://project/art/meshes/rack/rack.fbx" id="1_ls3v6"]
+
+[node name="Rack" unique_id=753248207 instance=ExtResource("1_ls3v6")]
+
+[node name="floor" parent="." index="0" unique_id=1010659622]
+visible = false

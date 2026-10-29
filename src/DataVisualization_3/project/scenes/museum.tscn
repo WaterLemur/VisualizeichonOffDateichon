@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_wiwei"]
 [ext_resource type="Theme" uid="uid://ok88j7qigyr" path="res://project/art/themes/theme.tres" id="3_i7x40"]
 [ext_resource type="Texture2D" uid="uid://bgr445uynq7xw" path="res://tools/godot/icon.svg" id="3_wfvgn"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_qt6b2"]
+[ext_resource type="PackedScene" uid="uid://dgigg2vupxg0x" path="res://project/art/meshes/calculating_machine/calculating_machine.glb" id="5_6gxoo"]
+[ext_resource type="PackedScene" uid="uid://b1atggsyxor2" path="res://project/scenes/meshes/rack.tscn" id="5_vinbv"]
 
 [node name="Museum" type="Node" unique_id=2077953294]
 script = ExtResource("1_beg0u")
@@ -45,20 +45,36 @@ texture_hover = ExtResource("3_wfvgn")
 
 [node name="CameraRig" type="Node3D" parent="World" unique_id=829160146]
 
-[node name="Camera3D" type="Camera3D" parent="World/CameraRig" unique_id=1993890512]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 8)
+[node name="MainCamera" type="Camera3D" parent="World/CameraRig" unique_id=1993890512]
+current = true
+
+[node name="PosMainMenu" type="Node3D" parent="World/CameraRig" unique_id=922637394]
+transform = Transform3D(1, 0, 1.7484555e-07, -3.5252153e-08, 0.97946405, 0.2016188, -1.7125494e-07, -0.2016188, 0.97946405, 0, 11.167676, 65.980484)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMainMenu" unique_id=1301446958]
 
 [node name="PosMuseum" type="Node3D" parent="World/CameraRig" unique_id=1283224432]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum" unique_id=1119442698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, 26)
 
 [node name="PosHistory" type="Node3D" parent="World/CameraRig/PosMuseum" unique_id=849555301]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+transform = Transform3D(-2.9802322e-08, 0, 1, 0, 1, 0, -1, 0, -2.9802322e-08, -2, 9.804, -30)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum/PosHistory" unique_id=189691498]
 
 [node name="PosArtifact" type="Node3D" parent="World/CameraRig/PosMuseum" unique_id=131910881]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.1520157, -25.986635)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum/PosArtifact" unique_id=1559219473]
 
 [node name="PosGraphs" type="Node3D" parent="World/CameraRig/PosMuseum" unique_id=908728399]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 9.804, -30)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum/PosGraphs" unique_id=713218546]
+
+[node name="calculating_machine" parent="World/CameraRig/PosMuseum" unique_id=274704578 instance=ExtResource("5_6gxoo")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.9524641, 0, -44.052)
 
 [node name="PosOptions" type="Node3D" parent="World/CameraRig" unique_id=930431605]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
@@ -66,21 +82,36 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 [node name="PosAudio" type="Node3D" parent="World/CameraRig/PosOptions" unique_id=59424584]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
 
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosOptions/PosAudio" unique_id=1217378166]
+
 [node name="PosVideo" type="Node3D" parent="World/CameraRig/PosOptions" unique_id=1430253138]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosOptions/PosVideo" unique_id=553845358]
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosOptions" unique_id=1035660275]
 
 [node name="PosInfo" type="Node3D" parent="World/CameraRig" unique_id=1559868338]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
 
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosInfo" unique_id=825886247]
+
 [node name="PosExit" type="Node3D" parent="World/CameraRig" unique_id=589115846]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 31)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosExit" unique_id=61795898]
 
 [node name="Meshes" type="Node3D" parent="World" unique_id=1324747115]
 
 [node name="Background" type="Node3D" parent="World/Meshes" unique_id=891709840]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="World/Meshes/Background" unique_id=695911509]
-mesh = SubResource("PlaneMesh_qt6b2")
+[node name="Racks" type="Node3D" parent="World/Meshes/Background" unique_id=1007738466]
+
+[node name="RackHistory" parent="World/Meshes/Background/Racks" unique_id=753248207 instance=ExtResource("5_vinbv")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -17, 0, -30)
+
+[node name="RackGraphs" parent="World/Meshes/Background/Racks" unique_id=898085083 instance=ExtResource("5_vinbv")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 17, 0, -30)
 
 [node name="Museum" type="Node3D" parent="World/Meshes" unique_id=898381871]
 
@@ -93,6 +124,7 @@ mesh = SubResource("PlaneMesh_qt6b2")
 [node name="Lights" type="Node3D" parent="World" unique_id=1265559525]
 
 [node name="Sun" type="DirectionalLight3D" parent="World/Lights" unique_id=1218066317]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, -2, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="World/Lights" unique_id=1080329001]
 
