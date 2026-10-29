@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://d4cx33mtllj5l"]
 
 [ext_resource type="Script" uid="uid://jgnap6dax6ls" path="res://project/scripts/persistent.gd" id="1_tq1j0"]
+[ext_resource type="Script" uid="uid://dgwbp80qvn5fk" path="res://project/scripts/manager_scene.gd" id="2_kfc1q"]
 [ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_kshmv"]
 [ext_resource type="Theme" uid="uid://ok88j7qigyr" path="res://project/art/themes/theme.tres" id="3_gncwf"]
 
 [node name="Persistent" type="Node" unique_id=1682141015]
 script = ExtResource("1_tq1j0")
+
+[node name="ManagerScene" type="Node" parent="." unique_id=524326680]
+script = ExtResource("2_kfc1q")
 
 [node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_kshmv")]
 
