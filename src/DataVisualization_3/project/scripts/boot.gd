@@ -9,5 +9,5 @@ var intro: String = "res://project/scenes/intro.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("Boot")
-	add_child(persistent.instantiate())
+	#add_child(persistent.instantiate())
 	ManagerScene.scene_load(intro)

@@ -10,3 +10,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+
+func _on_texture_button_left_pressed() -> void:
+	print("Museum: Navigation = Left")
+
+func _on_texture_button_right_pressed() -> void:
+	print("Museum: Navigation = Right")
