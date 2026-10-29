@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bsyak4ml0hv4l"
-path="res://.godot/imported/rack_a.fbx-f2345fd2ae7ed8cd3fe648f7b2dd79e6.scn"
+uid="uid://cakged56oldtr"
+path="res://.godot/imported/stylus.glb-a724d50c9fc803cbadfb7b8dcbe22345.scn"
 
 [deps]
 
-source_file="res://project/art/meshes/rack/rack_a.fbx"
-dest_files=["res://.godot/imported/rack_a.fbx-f2345fd2ae7ed8cd3fe648f7b2dd79e6.scn"]
+source_file="res://project/art/meshes/stylus/stylus.glb"
+dest_files=["res://.godot/imported/stylus.glb-a724d50c9fc803cbadfb7b8dcbe22345.scn"]
 
 [params]
 
@@ -32,7 +32,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -40,7 +40,6 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
-fbx/naming_version=2
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ci8ta0tcorjqh"
-path="res://.godot/imported/rack_b.fbx-2fe50b4c2259fce107fbd04fdd22e202.scn"
+uid="uid://csv7vcoqrjjup"
+path="res://.godot/imported/lectern.glb-d6be8ee931c780400a8dd39144f69bd2.scn"
 
 [deps]
 
-source_file="res://project/art/meshes/rack/rack_b.fbx"
-dest_files=["res://.godot/imported/rack_b.fbx-2fe50b4c2259fce107fbd04fdd22e202.scn"]
+source_file="res://project/art/meshes/lectern/lectern.glb"
+dest_files=["res://.godot/imported/lectern.glb-d6be8ee931c780400a8dd39144f69bd2.scn"]
 
 [params]
 
@@ -32,7 +32,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -40,7 +40,6 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
-fbx/naming_version=2
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

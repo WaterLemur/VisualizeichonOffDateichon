@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://l4m0krx64pwy"
-path="res://.godot/imported/rack_b_artifacts.fbx-d684685f91818025ad3830c2ef14457c.scn"
+uid="uid://c1c4nipfojugn"
+path="res://.godot/imported/rack_a.glb-87cb4b7d2d64532943ae8d262c1c9db3.scn"
 
 [deps]
 
-source_file="res://project/art/meshes/rack/rack_b_artifacts.fbx"
-dest_files=["res://.godot/imported/rack_b_artifacts.fbx-d684685f91818025ad3830c2ef14457c.scn"]
+source_file="res://project/art/meshes/rack_a/rack_a.glb"
+dest_files=["res://.godot/imported/rack_a.glb-87cb4b7d2d64532943ae8d262c1c9db3.scn"]
 
 [params]
 
@@ -32,7 +32,7 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=true
+animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
@@ -40,7 +40,6 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={}
-fbx/importer=0
-fbx/allow_geometry_helper_nodes=false
-fbx/embedded_image_handling=1
-fbx/naming_version=2
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

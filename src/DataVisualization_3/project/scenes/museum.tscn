@@ -5,8 +5,10 @@
 [ext_resource type="Theme" uid="uid://ok88j7qigyr" path="res://project/art/themes/theme.tres" id="3_i7x40"]
 [ext_resource type="Texture2D" uid="uid://bgr445uynq7xw" path="res://tools/godot/icon.svg" id="3_wfvgn"]
 [ext_resource type="PackedScene" uid="uid://dgigg2vupxg0x" path="res://project/art/meshes/calculating_machine/calculating_machine.glb" id="5_6gxoo"]
-[ext_resource type="PackedScene" uid="uid://b1atggsyxor2" path="res://project/scenes/meshes/rack.tscn" id="5_vinbv"]
+[ext_resource type="PackedScene" uid="uid://bk2byq4iu0uqn" path="res://project/art/meshes/rack/rack.glb" id="6_0f1c2"]
 [ext_resource type="PackedScene" uid="uid://drvdd4pnuktls" path="res://project/art/meshes/museum/museum_2.glb" id="8_eelwi"]
+[ext_resource type="PackedScene" uid="uid://cakged56oldtr" path="res://project/art/meshes/stylus/stylus.glb" id="8_ntp17"]
+[ext_resource type="PackedScene" uid="uid://cp7jmspfqlgpg" path="res://project/art/meshes/lectern/lectern_2.tscn" id="8_qrkhr"]
 
 [node name="Museum" type="Node" unique_id=2077953294]
 script = ExtResource("1_beg0u")
@@ -106,19 +108,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 31)
 [node name="Meshes" type="Node3D" parent="World" unique_id=1324747115]
 
 [node name="Museum" parent="World/Meshes" unique_id=924389842 instance=ExtResource("8_eelwi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.217603, 0, 8.119158)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.15133, -1.9073486e-06, 8.041159)
 
 [node name="Racks" type="Node3D" parent="World/Meshes" unique_id=1007738466]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.769449)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45.530144)
 
-[node name="RackHistory" parent="World/Meshes/Racks" unique_id=753248207 instance=ExtResource("5_vinbv")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.19, 0, -30)
+[node name="RackHistory" parent="World/Meshes/Racks" unique_id=1604323055 instance=ExtResource("6_0f1c2")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12.488, 0, 0)
 
-[node name="RackGraphs" parent="World/Meshes/Racks" unique_id=898085083 instance=ExtResource("5_vinbv")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 9.19, 0, -30)
+[node name="RackGraphs" parent="World/Meshes/Racks" unique_id=1690209659 instance=ExtResource("6_0f1c2")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.488, 0, 0)
 
 [node name="Artifact" parent="World/Meshes" unique_id=274704578 instance=ExtResource("5_6gxoo")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.9524641, 0, -55.801888)
+
+[node name="lectern" parent="World/Meshes" unique_id=1779673043 instance=ExtResource("8_qrkhr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7177277, 0, -53.14185)
 
 [node name="Options" type="Node3D" parent="World/Meshes" unique_id=4824085]
 
@@ -137,6 +142,9 @@ transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.346637, 7.3847103, -30.360504)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="World/Lights" unique_id=130651291]
+
+[node name="stylus" parent="." unique_id=1821770177 instance=ExtResource("8_ntp17")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9551827, 2.1845849, -55.81129)
 
 [connection signal="pressed" from="UI/Navigation/TextureButton_Left" to="." method="_on_texture_button_left_pressed"]
 [connection signal="pressed" from="UI/Navigation/TextureButton_Right" to="." method="_on_texture_button_right_pressed"]

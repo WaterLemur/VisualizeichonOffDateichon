@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cp7jmspfqlgpg"]
+
+[ext_resource type="PackedScene" uid="uid://csv7vcoqrjjup" path="res://project/art/meshes/lectern/lectern.glb" id="1_5ofqj"]
+[ext_resource type="PackedScene" uid="uid://cakged56oldtr" path="res://project/art/meshes/stylus/stylus.glb" id="2_utay8"]
+
+[node name="lectern" unique_id=1779673043 instance=ExtResource("1_5ofqj")]
+
+[node name="sylus_lectern_body" parent="." index="0" unique_id=301832839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.3090916, 0)
+
+[node name="sylus_lectern_glass" parent="." index="1" unique_id=1025862796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.3090916, 0)
+
+[node name="stylus" parent="sylus_lectern_glass" index="0" unique_id=1821770177 instance=ExtResource("2_utay8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004559517, -0.3039813, 0)
