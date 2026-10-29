@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bgr445uynq7xw" path="res://tools/godot/icon.svg" id="3_wfvgn"]
 [ext_resource type="PackedScene" uid="uid://dgigg2vupxg0x" path="res://project/art/meshes/calculating_machine/calculating_machine.glb" id="5_6gxoo"]
 [ext_resource type="PackedScene" uid="uid://b1atggsyxor2" path="res://project/scenes/meshes/rack.tscn" id="5_vinbv"]
+[ext_resource type="PackedScene" uid="uid://du10ep4btbh3s" path="res://project/art/meshes/museum/museum.glb" id="7_0f1c2"]
 
 [node name="Museum" type="Node" unique_id=2077953294]
 script = ExtResource("1_beg0u")
@@ -133,6 +134,9 @@ transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70
 [node name="Audio3D" type="Node3D" parent="World" unique_id=2103957339]
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="World/Audio3D" unique_id=372836180]
+
+[node name="museum" parent="." unique_id=3199375 instance=ExtResource("7_0f1c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.217603, 0, 8.119158)
 
 [connection signal="pressed" from="UI/Navigation/TextureButton_Left" to="." method="_on_texture_button_left_pressed"]
 [connection signal="pressed" from="UI/Navigation/TextureButton_Right" to="." method="_on_texture_button_right_pressed"]
