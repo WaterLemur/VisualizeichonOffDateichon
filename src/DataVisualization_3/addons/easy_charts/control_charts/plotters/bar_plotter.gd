@@ -24,6 +24,12 @@ func _draw() -> void:
 	_draw_bars()
 
 func sample(x_sampled_domain: Dictionary, y_sampled_domain: Dictionary) -> void:
+	if not x_domain.has("lb") or not x_domain.has("ub"):
+		return
+
+	if not y_domain.has("lb") or not y_domain.has("ub"):
+		return
+
 	bars = []
 	bars_rects = []
 	for i in function.__x.size():

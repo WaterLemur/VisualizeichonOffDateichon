@@ -1,11 +1,15 @@
-#!graph_bar_mesopotamia.gd
 extends Control
 
+var show_akkad := true
+var show_ur := true
+var show_uruk := true
+
+var show_barley := true
+var show_soldiers := true
 
 var chart: Chart
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var chart_scene: PackedScene = load(
         "res://addons/easy_charts/control_charts/chart.tscn"
@@ -15,43 +19,66 @@ func _ready() -> void:
 	add_child(chart)
 
 	update_chart()
-	
-	var chart_properties := ChartProperties.new()
-	chart_properties.title = "Mesopotamian Conquest Resources"
-	chart_properties.show_legend = true
-	chart_properties.x_label = "City-States"
-	chart_properties.y_label = "Resource Volumes"
-	
-	# The X-Axis contains the cities
-	var cities: Array = ["Akkad", "Uruk", "Ur"]
-	
-	# Grounded Data Metrics: Barley in Gur vs. Active Soldiery Force
-	var barley_data: Array = [40000, 25000, 22000]
-	var soldier_data: Array = [15000, 12000, 7000]
-	
-	# 1. Barley Function Configuration (Green/Yellowish Tint)
-	var f_barley := Function.new(
-		cities,
-		barley_data,
-		"Barley (Gur)",
-		{
-			type = Function.Type.BAR,
-			marker = Function.Marker.CIRCLE,
-			color = Color("#9eb23b") # Historic Olive / Green-Yellowish Hex Color
-		}
-	)
-	
-	# 2. Soldiers Function Configuration (Strict Deep Red)
-	var f_soldiers := Function.new(
-		cities,
-		soldier_data,
-		"Soldiers",
-		{
-			type = Function.Type.BAR,
-			marker = Function.Marker.CIRCLE,
-			color = Color("#b33939") # Dark Crimson Red Hex Color
-		}
-	)
-	
-	# Plot both functions simultaneously on the chart array
-	chart.plot([f_barley, f_soldiers], chart_properties)
+
+
+func update_chart() -> void:
+	var properties := ChartProperties.new()
+
+	properties.title = "Mesopotamian Conquest Resources"
+	properties.show_legend = true
+	#properties.x_label = "City-States"
+	#properties.y_label = "Resource Volumes"
+
+	properties.interactive = true
+
+	var x: Array = []
+	var barley: Array = []
+	var soldiers: Array = []
+
+	# City data
+	var cities = [
+		["Akkad", 40000.0, 15000.0, show_akkad],
+		["Uruk", 25000.0, 12000.0, show_uruk],
+		["Ur", 22000.0, 7000.0, show_ur]
+	]
+
+	# Collect selected cities
+	for city in cities:
+		if city[3]:
+			x.append(city[0])
+			barley.append(city[1])
+			soldiers.append(city[2])
+
+	var functions: Array[Function] = []
+
+	# Barley
+	if show_barley and not x.is_empty():
+		functions.append(Function.new(
+			x,
+			barley,
+			"Barley (Gur)",
+			{
+				type = Function.Type.BAR,
+				bar_size = 5,
+				color = Color("#9eb23b")
+			}
+		))
+
+	# Soldiers
+	if show_soldiers and not x.is_empty():
+		functions.append(Function.new(
+			x,
+			soldiers,
+			"Soldiers",
+			{
+				type = Function.Type.BAR,
+				bar_size = 5,
+				color = Color("#b33939")
+			}
+		))
+
+	if functions.is_empty():
+		return
+
+	chart.plot(functions, properties)
+	chart.queue_redraw()
