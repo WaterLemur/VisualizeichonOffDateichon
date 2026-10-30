@@ -20,9 +20,10 @@ var year:     int = 0
 var year_min: int = 0
 var year_max: int = 0
 
-@onready var bar_1 = $"../../World/Sprites/Graphs/Bar1/SVBar1/GraphBar1"
-@onready var bar_2 = $"../../World/Sprites/Graphs/Bar2/SVBar2/GraphBar2"
-@onready var pie   = $"../../World/Sprites/Graphs/Pie/SVPie/GraphPie"
+@onready var bar_1      = $"../../World/Sprites/Graphs/Bar1/SVBar1/GraphBar1"
+@onready var bar_2      = $"../../World/Sprites/Graphs/Bar2/SVBar2/GraphBar2"
+@onready var pie        = $"../../World/Sprites/Graphs/Pie/SVPie/GraphPie"
+@onready var tendency   = $"../../World/Sprites/Graphs/Tendency/SVTendency/GraphTendency"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -52,6 +53,8 @@ func set_akkad() -> void:
 	bar_2.update_chart()
 	pie.show_akkad = akkad
 	pie.update_chart()
+	tendency.show_akkad = akkad
+	tendency.update_chart()
 	
 
 func set_ur() -> void:
@@ -65,6 +68,8 @@ func set_ur() -> void:
 	bar_2.update_chart()
 	pie.show_ur = ur
 	pie.update_chart()
+	tendency.show_ur = ur
+	tendency.update_chart()
 
 func set_uruk() -> void:
 	uruk = not uruk
@@ -77,6 +82,8 @@ func set_uruk() -> void:
 	bar_2.update_chart()
 	pie.show_uruk = uruk
 	pie.update_chart()
+	tendency.show_uruk = uruk
+	tendency.update_chart()
 	
 func set_barley() -> void:
 	barley = not barley
@@ -89,6 +96,8 @@ func set_barley() -> void:
 	bar_2.update_chart()
 	pie.show_barley = barley
 	pie.update_chart()
+	tendency.show_barley = barley
+	tendency.update_chart()
 
 func set_soldiers() -> void:
 	soldiers = not soldiers
@@ -101,6 +110,11 @@ func set_soldiers() -> void:
 	bar_2.update_chart()
 	pie.show_soldiers = soldiers
 	pie.update_chart()
+	tendency.show_soldiers = soldiers
+	tendency.update_chart()
+
+
+
 
 func set_year(new_year: int) -> void:
 	year = new_year

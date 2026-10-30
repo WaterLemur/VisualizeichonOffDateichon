@@ -16,21 +16,21 @@ var state_artifact: State_Artifact = State_Artifact.FULL
 
 @onready var camera = $"../../World/CameraRig/MainCamera" as Camera3D
 
-@onready var pos_main_menu      = $"../../World/CameraRig/PosMainMenu"                 as Node3D
-@onready var pos_museum         = $"../../World/CameraRig/PosMuseum"                   as Node3D
-@onready var pos_rack_a         = $"../../World/CameraRig/PosRackA"                    as Node3D
-@onready var pos_rack_b         = $"../../World/CameraRig/PosRackB"                    as Node3D
-@onready var pos_db             = $"../../World/CameraRig/PosRackB/PosDataBases"       as Node3D
-@onready var pos_map            = $"../../World/CameraRig/PosRackB/PosMap"             as Node3D
-@onready var pos_graph_bars     = $"../../World/CameraRig/PosRackB/PosGraphBars"       as Node3D
-@onready var pos_graph_pie      = $"../../World/CameraRig/PosRackB/PosGraphPies"       as Node3D
-@onready var pos_graph_tendency = $"../../World/CameraRig/PosRackB/PosGraphTendencies" as Node3D
-@onready var pos_artifact       = $"../../World/CameraRig/PosArtifact"                 as Node3D
-@onready var pos_art_weight     = $"../../World/CameraRig/PosArtifact/PosArtWeight"    as Node3D
-@onready var pos_art_amount     = $"../../World/CameraRig/PosArtifact/PosArtAmount"    as Node3D
-@onready var pos_options        = $"../../World/CameraRig/PosOptions"                  as Node3D
-@onready var pos_info           = $"../../World/CameraRig/PosInfo"                     as Node3D
-@onready var pos_exit           = $"../../World/CameraRig/PosExit"                     as Node3D
+@onready var pos_main_menu      = $"../../World/CameraRig/PosMainMenu"               as Node3D
+@onready var pos_museum         = $"../../World/CameraRig/PosMuseum"                 as Node3D
+@onready var pos_rack_a         = $"../../World/CameraRig/PosRackA"                  as Node3D
+@onready var pos_rack_b         = $"../../World/CameraRig/PosRackB"                  as Node3D
+@onready var pos_db             = $"../../World/CameraRig/PosRackB/PosDataBases"     as Node3D
+@onready var pos_map            = $"../../World/CameraRig/PosRackB/PosMap"           as Node3D
+@onready var pos_graph_bars     = $"../../World/CameraRig/PosRackB/PosGraphBars"     as Node3D
+@onready var pos_graph_pie      = $"../../World/CameraRig/PosRackB/PosGraphPies"     as Node3D
+@onready var pos_graph_tendency = $"../../World/CameraRig/PosRackB/PosGraphTendency" as Node3D
+@onready var pos_artifact       = $"../../World/CameraRig/PosArtifact"               as Node3D
+@onready var pos_art_weight     = $"../../World/CameraRig/PosArtifact/PosArtWeight"  as Node3D
+@onready var pos_art_amount     = $"../../World/CameraRig/PosArtifact/PosArtAmount"  as Node3D
+@onready var pos_options        = $"../../World/CameraRig/PosOptions"                as Node3D
+@onready var pos_info           = $"../../World/CameraRig/PosInfo"                   as Node3D
+@onready var pos_exit           = $"../../World/CameraRig/PosExit"                   as Node3D
 
 
 # Called when the node enters the scene tree for the first time.

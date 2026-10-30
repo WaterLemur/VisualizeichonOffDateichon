@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://b567ugqryp07r" path="res://project/art/sprites/map/map-waypoint-ur.png" id="13_xg8yu"]
 [ext_resource type="Texture2D" uid="uid://cjllxjsq0yf7h" path="res://project/art/sprites/map/map-waypoint-uruk.png" id="14_rp2ow"]
 [ext_resource type="PackedScene" uid="uid://ckvlidixrg4ls" path="res://project/scenes/graphs/graph_bar_1.tscn" id="15_2kqvi"]
-[ext_resource type="PackedScene" uid="uid://dd6cppals05k0" path="res://project/scenes/graphs/graph_tenency_1.tscn" id="16_t28hp"]
+[ext_resource type="PackedScene" uid="uid://dd6cppals05k0" path="res://project/scenes/graphs/graph_tenency.tscn" id="16_t28hp"]
 [ext_resource type="PackedScene" uid="uid://d3v8d83jspt6b" path="res://project/scenes/graphs/graph_bar_2.tscn" id="19_b58ac"]
 [ext_resource type="PackedScene" uid="uid://brlbcx20q64y0" path="res://project/scenes/graphs/graph_pie.tscn" id="19_x6ptw"]
 
@@ -39,7 +39,7 @@ viewport_path = NodePath("World/Sprites/Graphs/Bar2/SVBar2")
 viewport_path = NodePath("World/Sprites/Graphs/Pie/SVPie")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_u6vr8"]
-viewport_path = NodePath("World/Sprites/Graphs/Tendency1/SVTendency1")
+viewport_path = NodePath("World/Sprites/Graphs/Tendency/SVTendency")
 
 [node name="Museum" type="Node" unique_id=2077953294]
 script = ExtResource("1_beg0u")
@@ -333,10 +333,10 @@ transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 7.1054274e-15, 0, 1, 0
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphPies" unique_id=761568993]
 
-[node name="PosGraphTendencies" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=232674560]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.215, -6.14, -8.82)
+[node name="PosGraphTendency" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=232674560]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 7.1054274e-15, 0, 1, -1.3357048, -5.583998, -9.552996)
 
-[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphTendencies" unique_id=813011352]
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphTendency" unique_id=813011352]
 
 [node name="PosOptions" type="Node3D" parent="World/CameraRig" unique_id=930431605]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 8.540478, -33)
@@ -585,16 +585,16 @@ transform = Transform3D(-6.3381513e-09, 0, -0.145, 0, 0.145, 0, 0.145, 0, -6.338
 cast_shadow = 0
 texture = SubResource("ViewportTexture_07rhc")
 
-[node name="Tendency1" type="Node3D" parent="World/Sprites/Graphs" unique_id=768737517]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21085167, 0.18119311, -1.7336578)
+[node name="Tendency" type="Node3D" parent="World/Sprites/Graphs" unique_id=768737517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21085167, 0.18119311, -1.2741165)
 
-[node name="SVTendency1" type="SubViewport" parent="World/Sprites/Graphs/Tendency1" unique_id=1686177610]
+[node name="SVTendency" type="SubViewport" parent="World/Sprites/Graphs/Tendency" unique_id=1686177610]
 transparent_bg = true
 
-[node name="GraphTendency1" parent="World/Sprites/Graphs/Tendency1/SVTendency1" unique_id=974528778 instance=ExtResource("16_t28hp")]
+[node name="GraphTendency" parent="World/Sprites/Graphs/Tendency/SVTendency" unique_id=974528778 instance=ExtResource("16_t28hp")]
 
-[node name="SpriteTendency1" type="Sprite3D" parent="World/Sprites/Graphs/Tendency1" unique_id=54520687]
-transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 0, 0, 0)
+[node name="SpriteTendency" type="Sprite3D" parent="World/Sprites/Graphs/Tendency" unique_id=54520687]
+transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, 0, 0, 0)
 cast_shadow = 0
 texture = SubResource("ViewportTexture_u6vr8")
 
