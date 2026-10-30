@@ -2,6 +2,9 @@
 extends Node
 
 
+@onready var map = $Map
+
+
 var tutorial: bool = false
 var info:     bool = false
 
@@ -27,26 +30,31 @@ func _process(delta: float) -> void:
 	pass
 
 
-func set_tutorial(new_state: bool) -> void:
-	tutorial = new_state
+func set_tutorial() -> void:
+	tutorial = true
 
-func set_info(new_state: bool) -> void:
-	info = new_state
+func set_info() -> void:
+	info = true
 	
-func set_akkad(new_state: bool) -> void:
-	akkad = new_state
+func set_akkad() -> void:
+	akkad = not akkad
+	map.set_akkad(akkad)
 
-func set_ur(new_state: bool) -> void:
-	ur = new_state
+func set_ur() -> void:
+	ur = not akkad
+	map.set_ur(ur)
 
-func set_uruk(new_state: bool) -> void:
-	uruk = new_state
+func set_uruk() -> void:
+	uruk = not uruk
+	map.set_uruk(uruk)
 
-func set_barley(new_state: bool) -> void:
-	barley = new_state
+func set_barley() -> void:
+	barley = not barley
+	map.set_barley(barley)
 
-func set_soldiers(new_state: bool) -> void:
-	barley = new_state
+func set_soldiers() -> void:
+	soldiers = not soldiers
+	map.set_soldiers(soldiers)
 
 func set_year(new_year: int) -> void:
 	year = new_year
@@ -61,17 +69,18 @@ func set_year_max(new_max_year: int) -> void:
 # ============== MENU ======================
 # ==========================================
 func _on_tb_tutorial_pressed() -> void:
-	tutorial = true
-	print("Museum: Menu = Tutorial")
+	set_tutorial()
+	print("Museum: Menu = Tutorial > ", tutorial)
 
 func _on_tb_info_pressed() -> void:
-	info = true
-	print("Museum: Menu = Info")
+	set_info()
+	print("Museum: Menu = Info > ", info)
 	
 # -------------- Cities ----------------------
 func _on_tb_akkad_pressed() -> void:
-	akkad = not akkad
-	print("Museum: Menu = Akkad")
+	set_akkad()
+	
+	print("Museum: Menu = Akkad > ", akkad)
 
 func _on_tb_ur_pressed() -> void:
 	ur = not ur
@@ -92,5 +101,5 @@ func _on_tb_soldiers_pressed() -> void:
 
 # -------------- Timeline -----------------------
 func _on_timeline_value_changed(value: float) -> void:
-	year = value as int
+	set_year(value as int)
 	print("Museum: Menu = Timeline: %.0f" % value) 

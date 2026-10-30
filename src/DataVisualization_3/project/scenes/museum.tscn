@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_wiwei"]
 [ext_resource type="Script" uid="uid://cxls2om84puxh" path="res://project/scripts/menu.gd" id="3_u6vr8"]
 [ext_resource type="Texture2D" uid="uid://bgr445uynq7xw" path="res://tools/godot/icon.svg" id="3_wfvgn"]
+[ext_resource type="Script" uid="uid://c4254sdslwfva" path="res://project/scripts/graphs/map.gd" id="3_xg8yu"]
 [ext_resource type="PackedScene" uid="uid://j7dbq71vh4sp" path="res://project/art/meshes/arrow/arrow.glb" id="5_2lc6c"]
 [ext_resource type="Texture2D" uid="uid://dm0mouyw08ntt" path="res://project/art/sprites/data_bases/frame-data-base-cities.png" id="5_4irpc"]
 [ext_resource type="PackedScene" uid="uid://dgigg2vupxg0x" path="res://project/art/meshes/calculating_machine/calculating_machine.glb" id="5_6gxoo"]
@@ -41,6 +42,9 @@ script = ExtResource("1_beg0u")
 
 [node name="Menu" type="Node" parent="Scripts" unique_id=1817570172]
 script = ExtResource("3_u6vr8")
+
+[node name="Map" type="Node" parent="Scripts/Menu" unique_id=1394822183]
+script = ExtResource("3_xg8yu")
 
 [node name="Navigation" type="Node" parent="Scripts" unique_id=1364097148]
 script = ExtResource("2_t28hp")
