@@ -2,6 +2,8 @@
 extends Node
 
 
+@onready var slider   = $"../../../UI/Menu/Timeline/VSlider" as VSlider
+
 @onready var year     = $"../../../UI/Menu/Timeline/Year"    as Label
 @onready var year_min = $"../../../UI/Menu/Timeline/YearMin" as Label
 @onready var year_max = $"../../../UI/Menu/Timeline/YearMax" as Label
@@ -16,5 +18,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
+
+func set_slider(start_year: int) -> void:
+	slider.value = start_year
+	
 func set_year(new_year: int) -> void:
-	year.text = new_year
+	year.text = str(new_year) + " A.C."

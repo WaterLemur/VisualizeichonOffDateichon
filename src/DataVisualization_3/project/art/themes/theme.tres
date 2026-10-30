@@ -1,14 +1,19 @@
 [gd_resource type="Theme" format=3 uid="uid://ok88j7qigyr"]
 
+[ext_resource type="FontFile" uid="uid://8qd7n2hmra5a" path="res://project/art/fonts/playbaill/Playball-Regular.ttf" id="1_nhnfi"]
+
 [resource]
 Button/font_sizes/font_size = 61
 Button/fonts/font = null
+ClayTextNormal/base_type = &"Label"
+ClayTextNormal/font_sizes/font_size = 16
+ClayTextNormal/fonts/font = ExtResource("1_nhnfi")
 HeaderLarge/font_sizes/font_size = 105
 Navigation/base_type = &"HBoxContainer"
 Navigation/constants/separation = 643
 OptionSlider/base_type = &"HSlider"
-PersistentInfo/base_type = &"Label"
+PersistentInfo/base_type = &"ClayTextNormal"
 PersistentInfo/font_sizes/font_size = 20
-StandardTest/base_type = &"Label"
+StandardTest/base_type = &"ClayTextNormal"
 StandardTest/font_sizes/font_size = 36
 VBoxContainer/constants/separation = 29

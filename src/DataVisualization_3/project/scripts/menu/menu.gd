@@ -2,7 +2,8 @@
 extends Node
 
 
-@onready var map = $Map
+@onready var timeline = $Timeline
+@onready var map      = $Map
 
 
 var tutorial: bool = false
@@ -22,8 +23,8 @@ var year_max: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	set_year(year)
+	timeline.set_slider(year)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -50,14 +51,15 @@ func set_uruk() -> void:
 
 func set_barley() -> void:
 	barley = not barley
-	map.set_barley(barley)
+	#map.set_barley(barley)
 
 func set_soldiers() -> void:
 	soldiers = not soldiers
-	map.set_soldiers(soldiers)
+	#map.set_soldiers(soldiers)
 
 func set_year(new_year: int) -> void:
 	year = new_year
+	timeline.set_year(year)
 
 func set_year_min(new_min_year: int) -> void:
 	year_min = new_min_year

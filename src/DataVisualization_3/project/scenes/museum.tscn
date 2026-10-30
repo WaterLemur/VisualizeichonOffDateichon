@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cp7jmspfqlgpg" path="res://project/art/meshes/lectern/lectern_2.tscn" id="8_qrkhr"]
 [ext_resource type="Texture2D" uid="uid://d0pnaunlx2vby" path="res://project/art/sprites/map/map-wind-rose.png" id="9_fd4yj"]
 [ext_resource type="Texture2D" uid="uid://cofrrir7ironp" path="res://project/art/sprites/map/map-paths.png" id="10_2kqvi"]
+[ext_resource type="FontFile" uid="uid://8qd7n2hmra5a" path="res://project/art/fonts/playbaill/Playball-Regular.ttf" id="10_x6ptw"]
 [ext_resource type="Texture2D" uid="uid://bgorn5c8254j4" path="res://project/art/sprites/map/map-rivers.png" id="11_u6vr8"]
 [ext_resource type="Texture2D" uid="uid://bc3omncab8des" path="res://project/art/sprites/map/map-waypoint-akkad.png" id="12_t28hp"]
 [ext_resource type="Texture2D" uid="uid://b567ugqryp07r" path="res://project/art/sprites/map/map-waypoint-ur.png" id="13_xg8yu"]
@@ -337,10 +338,139 @@ transform = Transform3D(-1.2239188e-08, 0, -0.28, 0, 0.28, 0, 0.28, 0, -1.223918
 modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
 texture = ExtResource("5_4irpc")
 
+[node name="L3DCities" type="Label3D" parent="World/Sprites/DataBases/DBCities" unique_id=1846384244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6519623, 0.34594345, 0)
+modulate = Color(0.9615354, 0.84719783, 0.53045785, 1)
+text = " Ciudad	        Cebada        Soldados"
+font = ExtResource("10_x6ptw")
+font_size = 47
+horizontal_alignment = 0
+
+[node name="L3DAkkad" type="Label3D" parent="World/Sprites/DataBases/DBCities" unique_id=748685735]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4547424, 0.08054352, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "Akkad		                40000			                  3500"
+font = ExtResource("10_x6ptw")
+horizontal_alignment = 0
+
+[node name="L3DUr" type="Label3D" parent="World/Sprites/DataBases/DBCities" unique_id=1653529160]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3837585, -0.18013382, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "Ur				                   25000			                  9500"
+font = ExtResource("10_x6ptw")
+horizontal_alignment = 0
+
+[node name="L3DUruk" type="Label3D" parent="World/Sprites/DataBases/DBCities" unique_id=579592218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45961, -0.43424988, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "Uruk		                  10000		                   1000"
+font = ExtResource("10_x6ptw")
+horizontal_alignment = 0
+
 [node name="DBResources" type="Sprite3D" parent="World/Sprites/DataBases" unique_id=804622809]
 transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, 12.271649, 11.769903, -45.656555)
 modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
 texture = ExtResource("6_wj7eq")
+
+[node name="L3DResources" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=716691768]
+transform = Transform3D(1, 0, -4.973799e-14, 0, 1, 0, 4.973799e-14, 0, 1, -3.159912, 2.7148972, 0)
+modulate = Color(0.9615354, 0.84719783, 0.53045785, 1)
+text = " Year         Ciudad	        Cebada      Soldados"
+font = ExtResource("10_x6ptw")
+font_size = 69
+horizontal_alignment = 0
+
+[node name="L3DYears" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=890425281]
+transform = Transform3D(1, 0, -1.7763568e-14, 0, 1, 0, 1.7763568e-14, 0, 1, -3.0491638, 2.288765, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC"
+font = ExtResource("10_x6ptw")
+horizontal_alignment = 0
+vertical_alignment = 0
+line_spacing = 30.105
+
+[node name="L3DCities" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=1135722736]
+transform = Transform3D(1, 0, -3.1974423e-14, 0, 1, 0, 3.1974423e-14, 0, 1, -1.0818176, 2.288765, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "Akkad
+Ur
+Uruk
+Akkad
+Ur
+Uruk
+Akkad
+Ur
+Uruk
+Akkad
+Ur
+Uruk
+Akkad
+Ur
+Uruk"
+font = ExtResource("10_x6ptw")
+horizontal_alignment = 0
+vertical_alignment = 0
+line_spacing = 30.105
+
+[node name="L3DBarley" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=143442382]
+transform = Transform3D(1, 0, -4.6185278e-14, 0, 1, 0, 4.6185278e-14, 0, 1, 0.6855774, 2.288765, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "40,000
+40,000
+40,000
+40,000
+40,000
+40,000
+40,000
+40000
+40,000
+40,000
+40,000
+40,000
+40,000
+40,000
+40,000"
+font = ExtResource("10_x6ptw")
+horizontal_alignment = 0
+vertical_alignment = 0
+line_spacing = 30.105
+
+[node name="L3DSoldiers" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=85909481]
+transform = Transform3D(1, 0, -5.3290705e-14, 0, 1, 0, 5.3290705e-14, 0, 1, 2.4362793, 2.288765, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000"
+font = ExtResource("10_x6ptw")
+horizontal_alignment = 0
+vertical_alignment = 0
+line_spacing = 30.105
 
 [node name="Map" type="Node3D" parent="World/Sprites" unique_id=1678897081]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.73037, 8.306578, -45.4435)
@@ -362,7 +492,7 @@ texture = ExtResource("11_u6vr8")
 
 [node name="MapAkkad" type="Sprite3D" parent="World/Sprites/Map" unique_id=1666053697]
 transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
-modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+modulate = Color(0.7764706, 0.25882354, 0.2901961, 1)
 texture = ExtResource("12_t28hp")
 
 [node name="MapUr" type="Sprite3D" parent="World/Sprites/Map" unique_id=1674546393]
