@@ -9,7 +9,7 @@ func _ready() -> void:
 	add_child(chart)
 	
 	var chart_properties := ChartProperties.new()
-	chart_properties.title = "Example Pie Chart"
+	chart_properties.title = "Dona 1"
 	chart_properties.show_legend = true
 	
 	var function := Function.new(

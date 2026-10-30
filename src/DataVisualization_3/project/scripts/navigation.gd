@@ -46,51 +46,60 @@ func _process(delta: float) -> void:
 # ============== STATE MACHINE =============
 # ==========================================
 func camera_transition(nav: Nav) -> void:
-	print(state_rack)
 	match state_rack:
 		State_Rack.DATA_BASES:
 			if nav == Nav.LEFT:
 				state_rack = State_Rack.TENDENCY
 				set_camera_pos(pos_graph_tendency)
+				Persistent.set_scene_label("Tendencia")
 				return
 			if nav == Nav.RIGHT:
 				state_rack = State_Rack.MAP
 				set_camera_pos(pos_map)
+				Persistent.set_scene_label("Mapa")
 				return
 		State_Rack.MAP:
 			if nav == Nav.LEFT:
 				state_rack = State_Rack.DATA_BASES
 				set_camera_pos(pos_db)
+				Persistent.set_scene_label("Bases de datos")
 				return
 			if nav == Nav.RIGHT:
 				state_rack = State_Rack.BARS
 				set_camera_pos(pos_graph_bars)
+				Persistent.set_scene_label("Barras")
 				return
 		State_Rack.BARS:
 			if nav == Nav.LEFT:
 				state_rack = State_Rack.MAP
 				set_camera_pos(pos_map)
+				Persistent.set_scene_label("Mapa")
 				return
 			if nav == Nav.RIGHT:
-				state_rack = State_Rack.BARS
-				set_camera_pos(pos_graph_bars)
+				state_rack = State_Rack.PIE
+				set_camera_pos(pos_graph_pie)
+				Persistent.set_scene_label("Dona")
 				return
 		State_Rack.PIE:
 			if nav == Nav.LEFT:
 				state_rack = State_Rack.BARS
 				set_camera_pos(pos_graph_bars)
+				Persistent.set_scene_label("Barras")
 				return
 			if nav == Nav.RIGHT:
 				state_rack = State_Rack.TENDENCY
 				set_camera_pos(pos_graph_tendency)
+				Persistent.set_scene_label("Tendencia")
 				return
 		State_Rack.TENDENCY:
 			if nav == Nav.LEFT:
 				state_rack = State_Rack.PIE
 				set_camera_pos(pos_graph_pie)
+				Persistent.set_scene_label("Dona")
 				return
 			if nav == Nav.RIGHT:
 				state_rack = State_Rack.DATA_BASES
+				Persistent.set_scene_label("Base de datos")
 				set_camera_pos(pos_db)
 				return
 
