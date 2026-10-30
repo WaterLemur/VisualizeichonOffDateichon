@@ -21,6 +21,7 @@ var year_min: int = 0
 var year_max: int = 0
 
 @onready var bar_1 = $"../../World/Sprites/Graphs/Bar1/SVBar1/GraphBar1"
+@onready var bar_2 = $"../../World/Sprites/Graphs/Bar2/SVBar2/GraphBar2"
 @onready var pie   = $"../../World/Sprites/Graphs/Pie/SVPie/GraphPie"
 
 
@@ -47,6 +48,8 @@ func set_akkad() -> void:
 	
 	bar_1.show_akkad = akkad
 	bar_1.update_chart()
+	bar_2.show_akkad = akkad
+	bar_2.update_chart()
 	pie.show_akkad = akkad
 	pie.update_chart()
 	
@@ -58,6 +61,8 @@ func set_ur() -> void:
 	
 	bar_1.show_ur = ur
 	bar_1.update_chart()
+	bar_2.show_ur = ur
+	bar_2.update_chart()
 	pie.show_ur = ur
 	pie.update_chart()
 
@@ -68,6 +73,8 @@ func set_uruk() -> void:
 	
 	bar_1.show_uruk = uruk
 	bar_1.update_chart()
+	bar_2.show_uruk = uruk
+	bar_2.update_chart()
 	pie.show_uruk = uruk
 	pie.update_chart()
 	
@@ -78,6 +85,8 @@ func set_barley() -> void:
 	
 	bar_1.show_barley = barley
 	bar_1.update_chart()
+	bar_2.show_barley = barley
+	bar_2.update_chart()
 	pie.show_barley = barley
 	pie.update_chart()
 
@@ -88,6 +97,8 @@ func set_soldiers() -> void:
 	
 	bar_1.show_soldiers = soldiers
 	bar_1.update_chart()
+	bar_2.show_soldiers = soldiers
+	bar_2.update_chart()
 	pie.show_soldiers = soldiers
 	pie.update_chart()
 

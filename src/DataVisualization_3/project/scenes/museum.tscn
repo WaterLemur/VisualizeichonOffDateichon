@@ -26,10 +26,14 @@
 [ext_resource type="Texture2D" uid="uid://cjllxjsq0yf7h" path="res://project/art/sprites/map/map-waypoint-uruk.png" id="14_rp2ow"]
 [ext_resource type="PackedScene" uid="uid://ckvlidixrg4ls" path="res://project/scenes/graphs/graph_bar_1.tscn" id="15_2kqvi"]
 [ext_resource type="PackedScene" uid="uid://dd6cppals05k0" path="res://project/scenes/graphs/graph_tenency_1.tscn" id="16_t28hp"]
+[ext_resource type="PackedScene" uid="uid://d3v8d83jspt6b" path="res://project/scenes/graphs/graph_bar_2.tscn" id="19_b58ac"]
 [ext_resource type="PackedScene" uid="uid://brlbcx20q64y0" path="res://project/scenes/graphs/graph_pie.tscn" id="19_x6ptw"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_o2eaj"]
 viewport_path = NodePath("World/Sprites/Graphs/Bar1/SVBar1")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_b58ac"]
+viewport_path = NodePath("World/Sprites/Graphs/Bar2/SVBar2")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_07rhc"]
 viewport_path = NodePath("World/Sprites/Graphs/Pie/SVPie")
@@ -319,9 +323,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86, -6.665)
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosMap" unique_id=11808520]
 
 [node name="PosGraphBars" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=2056571179]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75, -4.025, -8.865)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.563, -4.025, -8.466)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphBars" unique_id=2061057445]
+transform = Transform3D(1, 0, -1.4210855e-14, 0, 1, 0, 1.0658141e-14, 0, 1, 0, 0, 0)
 
 [node name="PosGraphPies" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=1111515370]
 transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 7.1054274e-15, 0, 1, 0.703, -3.93, -9.335)
@@ -541,7 +546,7 @@ texture = ExtResource("14_rp2ow")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2504025, -5.074249, 0)
 
 [node name="Bar1" type="Node3D" parent="World/Sprites/Graphs" unique_id=1641601821]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19965458, 1.9509859, -2.0863075)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 1.755, -2.101)
 
 [node name="SVBar1" type="SubViewport" parent="World/Sprites/Graphs/Bar1" unique_id=958429834]
 transparent_bg = true
@@ -550,11 +555,21 @@ render_target_update_mode = 4
 [node name="GraphBar1" parent="World/Sprites/Graphs/Bar1/SVBar1" unique_id=1537714593 instance=ExtResource("15_2kqvi")]
 
 [node name="SpriteBar1" type="Sprite3D" parent="World/Sprites/Graphs/Bar1" unique_id=995290408]
-transform = Transform3D(-5.4639235e-09, 0, -0.125, 0, 0.125, 0, 0.125, 0, -5.4639235e-09, 0, -0.19616365, -0.015083313)
+transform = Transform3D(-5.4639235e-09, 0, -0.125, 0, 0.125, 0, 0.125, 0, -5.4639235e-09, 0, 0, 0)
 cast_shadow = 0
 texture = SubResource("ViewportTexture_o2eaj")
 
 [node name="Bar2" type="Node3D" parent="World/Sprites/Graphs" unique_id=1282151549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6818533, -1.2769737)
+
+[node name="SVBar2" type="SubViewport" parent="World/Sprites/Graphs/Bar2" unique_id=244128300]
+transparent_bg = true
+
+[node name="GraphBar2" parent="World/Sprites/Graphs/Bar2/SVBar2" unique_id=1530891687 instance=ExtResource("19_b58ac")]
+
+[node name="SpriteBar2" type="Sprite3D" parent="World/Sprites/Graphs/Bar2" unique_id=1167667898]
+transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e-09, 0.19570065, -0.061460495, 0.17401505)
+texture = SubResource("ViewportTexture_b58ac")
 
 [node name="Pie" type="Node3D" parent="World/Sprites/Graphs" unique_id=269983883]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19965458, 1.8756056, 0.79605484)

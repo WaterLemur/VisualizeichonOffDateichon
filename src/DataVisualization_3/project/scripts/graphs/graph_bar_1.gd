@@ -1,4 +1,6 @@
+#!graph_bar_1.gd
 extends Control
+
 
 var show_akkad := true
 var show_ur := true
