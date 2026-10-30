@@ -41,26 +41,44 @@ func set_info() -> void:
 	
 func set_akkad() -> void:
 	akkad = not akkad
+	
 	map.set_akkad(akkad)
+	
 	bar_1.show_akkad = akkad
 	bar_1.update_chart()
 	
 
 func set_ur() -> void:
 	ur = not ur
+	
 	map.set_ur(ur)
+	
+	bar_1.show_ur = ur
+	bar_1.update_chart()
 
 func set_uruk() -> void:
 	uruk = not uruk
+	
 	map.set_uruk(uruk)
-
+	
+	bar_1.show_uruk = uruk
+	bar_1.update_chart()
+	
 func set_barley() -> void:
 	barley = not barley
+	
 	#map.set_barley(barley)
+	
+	bar_1.show_barley = barley
+	bar_1.update_chart()
 
 func set_soldiers() -> void:
 	soldiers = not soldiers
+	
 	#map.set_soldiers(soldiers)
+	
+	bar_1.show_barley = barley
+	bar_1.update_chart()
 
 func set_year(new_year: int) -> void:
 	year = new_year
