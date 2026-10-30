@@ -19,7 +19,9 @@ func _process(delta: float) -> void:
 
 func _on_button_museum_pressed() -> void:
 	print("MainMenu: Button = Museum")
-	Museum.set_navigation(true)
+	Persistent.set_scene_label("Museum")
+	Museum.ui.visible = true
+	Museum.nav.set_camera_pos(Museum.nav.pos_museum)
 	ManagerScene.scene_unload(main_menu)
 
 func _on_button_options_pressed() -> void:
