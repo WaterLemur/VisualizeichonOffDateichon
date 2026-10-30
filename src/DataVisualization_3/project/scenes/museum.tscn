@@ -24,18 +24,14 @@
 [ext_resource type="Texture2D" uid="uid://bc3omncab8des" path="res://project/art/sprites/map/map-waypoint-akkad.png" id="12_t28hp"]
 [ext_resource type="Texture2D" uid="uid://b567ugqryp07r" path="res://project/art/sprites/map/map-waypoint-ur.png" id="13_xg8yu"]
 [ext_resource type="Texture2D" uid="uid://cjllxjsq0yf7h" path="res://project/art/sprites/map/map-waypoint-uruk.png" id="14_rp2ow"]
-[ext_resource type="PackedScene" uid="uid://brlbcx20q64y0" path="res://project/scenes/graphs/graph_bar_1.tscn" id="15_2kqvi"]
+[ext_resource type="PackedScene" uid="uid://brlbcx20q64y0" path="res://project/scenes/graphs/graph_pie.tscn" id="15_2kqvi"]
 [ext_resource type="PackedScene" uid="uid://dd6cppals05k0" path="res://project/scenes/graphs/graph_tenency_1.tscn" id="16_t28hp"]
-[ext_resource type="PackedScene" uid="uid://orjmk4ekcu85" path="res://project/scenes/graphs/graph_pie_2.tscn" id="20_b58ac"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_o2eaj"]
 viewport_path = NodePath("World/Sprites/Graphs/Bars1/SVBar1")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_07rhc"]
-viewport_path = NodePath("World/Sprites/Graphs/Pie1/SVPie1")
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_305r8"]
-viewport_path = NodePath("World/Sprites/Graphs/Pie2/SVPie2")
+viewport_path = NodePath("World/Sprites/Graphs/Pie/SVPie")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_u6vr8"]
 viewport_path = NodePath("World/Sprites/Graphs/Tendency1/SVTendency1")
@@ -550,37 +546,24 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19965458, 1.9509859, -2.086
 transparent_bg = true
 render_target_update_mode = 4
 
-[node name="GraphBar1" parent="World/Sprites/Graphs/Bars1/SVBar1" unique_id=1118151370 instance=ExtResource("15_2kqvi")]
-
 [node name="SpriteBar1" type="Sprite3D" parent="World/Sprites/Graphs/Bars1" unique_id=995290408]
 transform = Transform3D(-5.4639235e-09, 0, -0.125, 0, 0.125, 0, 0.125, 0, -5.4639235e-09, 0, -0.19616365, -0.015083313)
 cast_shadow = 0
 texture = SubResource("ViewportTexture_o2eaj")
 
-[node name="Pie1" type="Node3D" parent="World/Sprites/Graphs" unique_id=269983883]
+[node name="Pie" type="Node3D" parent="World/Sprites/Graphs" unique_id=269983883]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19965458, 1.8756056, 0.79605484)
 
-[node name="SVPie1" type="SubViewport" parent="World/Sprites/Graphs/Pie1" unique_id=820445402]
+[node name="SVPie" type="SubViewport" parent="World/Sprites/Graphs/Pie" unique_id=820445402]
 transparent_bg = true
 render_target_update_mode = 4
 
-[node name="SpritePie1" type="Sprite3D" parent="World/Sprites/Graphs/Pie1" unique_id=1606217453]
+[node name="GraphPie" parent="World/Sprites/Graphs/Pie/SVPie" unique_id=1118151370 instance=ExtResource("15_2kqvi")]
+
+[node name="SpritePie1" type="Sprite3D" parent="World/Sprites/Graphs/Pie" unique_id=1606217453]
 transform = Transform3D(-6.3381513e-09, 0, -0.145, 0, 0.145, 0, 0.145, 0, -6.3381513e-09, 0, 0, -0.014026642)
 cast_shadow = 0
 texture = SubResource("ViewportTexture_07rhc")
-
-[node name="Pie2" type="Node3D" parent="World/Sprites/Graphs" unique_id=396947625]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19406414, 1.8756056, 1.9259605)
-
-[node name="SVPie2" type="SubViewport" parent="World/Sprites/Graphs/Pie2" unique_id=645176068]
-transparent_bg = true
-render_target_update_mode = 4
-
-[node name="GraphPie2" parent="World/Sprites/Graphs/Pie2/SVPie2" unique_id=1103244100 instance=ExtResource("20_b58ac")]
-
-[node name="SpritePie2" type="Sprite3D" parent="World/Sprites/Graphs/Pie2" unique_id=212791117]
-transform = Transform3D(-5.6824803e-09, 0, -0.13, 0, 0.13, 0, 0.13, 0, -5.6824803e-09, 0, -0.086604595, -0.09021759)
-texture = SubResource("ViewportTexture_305r8")
 
 [node name="Tendency1" type="Node3D" parent="World/Sprites/Graphs" unique_id=768737517]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21085167, 0.18119311, -1.7336578)

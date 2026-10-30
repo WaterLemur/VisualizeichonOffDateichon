@@ -1,4 +1,4 @@
-#!graph_pie_2.gd
+#!graph_pie.gd
 extends Control
 
 # City filters

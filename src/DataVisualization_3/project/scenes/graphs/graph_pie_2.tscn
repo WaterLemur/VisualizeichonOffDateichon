@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://orjmk4ekcu85"]
 
-[ext_resource type="Script" uid="uid://b86jur3558l8o" path="res://project/scripts/graphs/graph_pie_2.gd" id="1_k7or6"]
+[ext_resource type="Script" uid="uid://b86jur3558l8o" path="res://project/scripts/graphs/graph_pie.gd" id="1_k7or6"]
 
 [node name="GraphPie2" type="Control" unique_id=1103244100]
 layout_mode = 3
