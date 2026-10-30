@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://de5j3uwqtsyvw" path="res://project/scripts/museum.gd" id="1_beg0u"]
 [ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_wiwei"]
-[ext_resource type="Theme" uid="uid://ok88j7qigyr" path="res://project/art/themes/theme.tres" id="3_i7x40"]
 [ext_resource type="Texture2D" uid="uid://bgr445uynq7xw" path="res://tools/godot/icon.svg" id="3_wfvgn"]
 [ext_resource type="PackedScene" uid="uid://j7dbq71vh4sp" path="res://project/art/meshes/arrow/arrow.glb" id="5_2lc6c"]
 [ext_resource type="Texture2D" uid="uid://dm0mouyw08ntt" path="res://project/art/sprites/data_bases/frame-data-base-cities.png" id="5_4irpc"]
@@ -38,45 +37,150 @@ script = ExtResource("1_beg0u")
 
 [node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_wiwei")]
 
-[node name="Navigation" type="HBoxContainer" parent="UI" unique_id=1294204114]
+[node name="Menu" type="Control" parent="UI" unique_id=1397914409]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 54.085
+offset_top = -392.31
+offset_right = 159.08505
+offset_bottom = 400.69006
+grow_vertical = 2
+
+[node name="Buttons" type="VBoxContainer" parent="UI/Menu" unique_id=1055906271]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -130.0
-offset_top = -64.0
-offset_right = 130.00146
-offset_bottom = 64.0
+offset_left = -52.500027
+offset_top = -385.37003
+offset_right = 75.49997
+offset_bottom = -117.370026
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_i7x40")
-theme_type_variation = &"Navigation"
-theme_override_constants/separation = 762
+scale = Vector2(0.78, 0.78)
+theme_override_constants/separation = 12
+
+[node name="TBTutorial" type="TextureButton" parent="UI/Menu/Buttons" unique_id=1118299861]
+layout_mode = 2
+texture_normal = ExtResource("3_wfvgn")
+texture_pressed = ExtResource("3_wfvgn")
+texture_hover = ExtResource("3_wfvgn")
+
+[node name="TBInfo" type="TextureButton" parent="UI/Menu/Buttons" unique_id=1651508616]
+layout_mode = 2
+texture_normal = ExtResource("3_wfvgn")
+texture_pressed = ExtResource("3_wfvgn")
+texture_hover = ExtResource("3_wfvgn")
+
+[node name="Toggles" type="VBoxContainer" parent="UI/Menu" unique_id=735974424]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.500027
+offset_top = -99.69504
+offset_right = 75.49997
+offset_bottom = 680.3071
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.61, 0.61)
+theme_override_constants/separation = 17
 alignment = 1
 
-[node name="TextureButton_Left" type="TextureButton" parent="UI/Navigation" unique_id=668461695]
+[node name="TBAkkad" type="TextureButton" parent="UI/Menu/Toggles" unique_id=725778729]
 layout_mode = 2
 texture_normal = ExtResource("3_wfvgn")
 texture_pressed = ExtResource("3_wfvgn")
 texture_hover = ExtResource("3_wfvgn")
 
-[node name="TextureButton_Right" type="TextureButton" parent="UI/Navigation" unique_id=918057052]
+[node name="TBUr" type="TextureButton" parent="UI/Menu/Toggles" unique_id=592826485]
 layout_mode = 2
 texture_normal = ExtResource("3_wfvgn")
 texture_pressed = ExtResource("3_wfvgn")
 texture_hover = ExtResource("3_wfvgn")
 
-[node name="Graphs" type="Control" parent="UI" unique_id=1210283972]
-visible = false
+[node name="TBUruk" type="TextureButton" parent="UI/Menu/Toggles" unique_id=343916323]
+layout_mode = 2
+texture_normal = ExtResource("3_wfvgn")
+texture_pressed = ExtResource("3_wfvgn")
+texture_hover = ExtResource("3_wfvgn")
+
+[node name="HSeparator" type="HSeparator" parent="UI/Menu/Toggles" unique_id=33874552]
+layout_mode = 2
+theme_override_constants/separation = 55
+
+[node name="TBBarley" type="TextureButton" parent="UI/Menu/Toggles" unique_id=576554986]
+layout_mode = 2
+texture_normal = ExtResource("3_wfvgn")
+texture_pressed = ExtResource("3_wfvgn")
+texture_hover = ExtResource("3_wfvgn")
+
+[node name="TBSoldiers" type="TextureButton" parent="UI/Menu/Toggles" unique_id=1249429907]
+layout_mode = 2
+texture_normal = ExtResource("3_wfvgn")
+texture_pressed = ExtResource("3_wfvgn")
+texture_hover = ExtResource("3_wfvgn")
+
+[node name="Timeline" type="VSlider" parent="UI/Menu" unique_id=1167255864]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 56.41498
+offset_top = -389.19
+offset_right = 75.00096
+offset_bottom = 389.19003
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
+scale = Vector2(3.635, 1)
+
+[node name="Navigation" type="VBoxContainer" parent="UI" unique_id=749086871]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -159.0
+offset_top = -281.115
+offset_right = -31.0
+offset_bottom = 281.885
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 17
+alignment = 1
+
+[node name="TBLeft" type="TextureButton" parent="UI/Navigation" unique_id=668461695]
+layout_mode = 2
+texture_normal = ExtResource("3_wfvgn")
+texture_pressed = ExtResource("3_wfvgn")
+texture_hover = ExtResource("3_wfvgn")
+
+[node name="TBRight" type="TextureButton" parent="UI/Navigation" unique_id=918057052]
+layout_mode = 2
+texture_normal = ExtResource("3_wfvgn")
+texture_pressed = ExtResource("3_wfvgn")
+texture_hover = ExtResource("3_wfvgn")
+
+[node name="TBUp" type="TextureButton" parent="UI/Navigation" unique_id=1925678347]
+layout_mode = 2
+texture_normal = ExtResource("3_wfvgn")
+texture_pressed = ExtResource("3_wfvgn")
+texture_hover = ExtResource("3_wfvgn")
+
+[node name="TBDown" type="TextureButton" parent="UI/Navigation" unique_id=852745475]
+layout_mode = 2
+texture_normal = ExtResource("3_wfvgn")
+texture_pressed = ExtResource("3_wfvgn")
+texture_hover = ExtResource("3_wfvgn")
 
 [node name="Sprites" type="Node2D" parent="." unique_id=83180973]
 
@@ -97,11 +201,17 @@ mouse_filter = 2
 [node name="MainCamera" type="Camera3D" parent="World/CameraRig" unique_id=1993890512]
 current = true
 
-[node name="ArrowLeft" parent="World/CameraRig/MainCamera" unique_id=812024413 instance=ExtResource("5_2lc6c")]
-transform = Transform3D(0.315, 0, 0, 0, 0.555, 0, 0, 0, 0.555, -7.227, 0, -20.383)
-
 [node name="ArrowRight" parent="World/CameraRig/MainCamera" unique_id=1382031811 instance=ExtResource("5_2lc6c")]
-transform = Transform3D(-0.315, 0, -4.851964e-08, 0, 0.555, 0, 2.7538174e-08, 0, -0.555, 7.227, 0, -20.383)
+transform = Transform3D(-0.255, 0, -6.764612e-08, 0, 0.448, 0, 3.8503927e-08, 0, -0.448, 7.227, 3.4438725, -20.383)
+
+[node name="ArrowLeft" parent="World/CameraRig/MainCamera" unique_id=812024413 instance=ExtResource("5_2lc6c")]
+transform = Transform3D(0.255, 0, 0, 0, 0.448, 0, 0, 0, 0.448, 7.227, 1.1844187, -20.383)
+
+[node name="ArrowUp" parent="World/CameraRig/MainCamera" unique_id=1747620774 instance=ExtResource("5_2lc6c")]
+transform = Transform3D(-1.1146404e-08, 0.448, 0, -0.255, -1.9582702e-08, 0, 0, 0, 0.448, 7.227, -1.1329451, -20.383)
+
+[node name="ArrowDown" parent="World/CameraRig/MainCamera" unique_id=1390477441 instance=ExtResource("5_2lc6c")]
+transform = Transform3D(4.9650332e-08, -0.448, 0, 0.255, 8.722882e-08, 0, 0, 0, 0.448, 7.227, -3.5089345, -20.383)
 
 [node name="PosMainMenu" type="Node3D" parent="World/CameraRig" unique_id=922637394]
 transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -8.478, 3.711, 11.668)
@@ -282,5 +392,15 @@ omni_range = 8.0961075
 [node name="stylus" parent="." unique_id=1821770177 instance=ExtResource("8_ntp17")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9551827, 2.1845849, -55.81129)
 
-[connection signal="pressed" from="UI/Navigation/TextureButton_Left" to="." method="_on_texture_button_left_pressed"]
-[connection signal="pressed" from="UI/Navigation/TextureButton_Right" to="." method="_on_texture_button_right_pressed"]
+[connection signal="pressed" from="UI/Menu/Buttons/TBTutorial" to="." method="_on_tb_tutorial_pressed"]
+[connection signal="pressed" from="UI/Menu/Buttons/TBInfo" to="." method="_on_tb_info_pressed"]
+[connection signal="pressed" from="UI/Menu/Toggles/TBAkkad" to="." method="_on_tb_akkad_pressed"]
+[connection signal="pressed" from="UI/Menu/Toggles/TBUr" to="." method="_on_tb_ur_pressed"]
+[connection signal="pressed" from="UI/Menu/Toggles/TBUruk" to="." method="_on_tb_uruk_pressed"]
+[connection signal="pressed" from="UI/Menu/Toggles/TBBarley" to="." method="_on_tb_barley_pressed"]
+[connection signal="pressed" from="UI/Menu/Toggles/TBSoldiers" to="." method="_on_tb_soldiers_pressed"]
+[connection signal="value_changed" from="UI/Menu/Timeline" to="." method="_on_timeline_value_changed"]
+[connection signal="pressed" from="UI/Navigation/TBLeft" to="." method="_on_texture_button_left_pressed"]
+[connection signal="pressed" from="UI/Navigation/TBRight" to="." method="_on_texture_button_right_pressed"]
+[connection signal="pressed" from="UI/Navigation/TBUp" to="." method="_on_tb_up_pressed"]
+[connection signal="pressed" from="UI/Navigation/TBDown" to="." method="_on_tb_down_pressed"]

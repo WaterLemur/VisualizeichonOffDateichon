@@ -33,6 +33,10 @@ func _process(delta: float) -> void:
 	pass
 
 
+func set_navigation(state : bool) -> void:
+	$UI.visible = state
+	
+	
 func _camera_pos_main_menu() -> void:
 	camera.transform = cam_pos_main_menu.transform
 	
@@ -61,7 +65,9 @@ func _camera_transition(left: bool) -> void:
 func _camera_smooth_transition(delta: float) -> void:
 	pass
 
-
+# ==========================================
+# ============== NAVIGATION ================
+# ==========================================
 func _on_texture_button_left_pressed() -> void:
 	print("Museum: Navigation = Left")
 	_camera_transition(true)
@@ -69,7 +75,39 @@ func _on_texture_button_left_pressed() -> void:
 func _on_texture_button_right_pressed() -> void:
 	print("Museum: Navigation = Right")
 	_camera_transition(false)
+	
+func _on_tb_up_pressed() -> void:
+	print("Museum: Navigation = Up")
+	
+func _on_tb_down_pressed() -> void:
+	print("Museum: Navigation = Down")
 
+# ==========================================
+# ============== MENU ======================
+# ==========================================
+func _on_tb_tutorial_pressed() -> void:
+	print("Museum: Menu = Tutorial")
 
-func set_navigation(state : bool) -> void:
-	$UI.visible = state
+func _on_tb_info_pressed() -> void:
+	print("Museum: Menu = Info")
+	
+# -------------- Cities ----------------------
+func _on_tb_akkad_pressed() -> void:
+	print("Museum: Menu = Akkad")
+
+func _on_tb_ur_pressed() -> void:
+	print("Museum: Menu = Ur")
+
+func _on_tb_uruk_pressed() -> void:
+	print("Museum: Menu = Uruk")
+	
+# -------------- Resources ----------------------
+func _on_tb_barley_pressed() -> void:
+	print("Museum: Menu = Barley")
+
+func _on_tb_soldiers_pressed() -> void:
+	print("Museum: Menu = Soldiers")
+
+# -------------- Timeline -----------------------
+func _on_timeline_value_changed(value: float) -> void:
+	print("Museum: Menu = Timeline: %.0f" % value) 
