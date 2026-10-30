@@ -4,7 +4,7 @@ extends Node
 
 enum Nav { LEFT, RIGHT, UP, DOWN }
 
-enum State_Main     { MAIN_MENU, GRAPHS, ARTIFACT, OPTIONS, EXIT }
+enum State_Main     { MAIN_MENU, MUSEUM, GRAPHS, ARTIFACT, OPTIONS, EXIT }
 enum State_Graph    { OFF, DATA_BASES, MAP, BARS, PIE, TENDENCY }
 enum State_Artifact { OFF, FULL, WEIGHT, AMMOUNT, STYLUS }
 
@@ -36,7 +36,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	"a"
 
 
 # ==========================================
@@ -45,6 +45,9 @@ func _process(delta: float) -> void:
 func camera_transition(nav: Nav) -> void:
 	match state_main:
 		State_Main.MAIN_MENU: pass
+		State_Main.MUSEUM:
+			if nav == Nav.LEFT:
+				set_camera_pos(pos_rack_a)
 		State_Main.GRAPHS:
 			match state_graph:
 				State_Graph.DATA_BASES:
@@ -65,7 +68,7 @@ func _camera_smooth_transition(delta: float) -> void:
 # ============== NAVIGATION ================
 # ==========================================
 func _on_texture_button_left_pressed() -> void:
-	print("Museum: Navigation = Left")
+	print("Museum: Navigation = Left", state_main)
 	camera_transition(Nav.LEFT)
 
 func _on_texture_button_right_pressed() -> void:
