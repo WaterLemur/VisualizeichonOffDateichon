@@ -4,15 +4,15 @@ extends Node
 
 enum Nav { LEFT, RIGHT, UP, DOWN }
 
-enum State_Main     { MAIN_MENU, MUSEUM, GRAPHS, ARTIFACT, OPTIONS, EXIT }
-enum State_Graph    { OFF, DATA_BASES, MAP, BARS, PIE, TENDENCY }
-enum State_Artifact { OFF, FULL, WEIGHT, AMMOUNT, STYLUS }
+enum State_Main     { MAIN_MENU, HISTORY, MUSEUM, GRAPHS, ARTIFACT, OPTIONS, EXIT }
+enum State_Rack    { DATA_BASES, MAP, BARS, PIE, TENDENCY }
+enum State_Artifact { FULL, WEIGHT, AMMOUNT, STYLUS }
 
 var cam_index = 0 as int
 
 var state_main:     State_Main     = State_Main.MAIN_MENU
-var state_graph:    State_Graph    = State_Graph.OFF
-var state_artifact: State_Artifact = State_Artifact.OFF
+var state_rack:     State_Rack     = State_Rack.DATA_BASES
+var state_artifact: State_Artifact = State_Artifact.FULL
 
 @onready var camera = $"../../World/CameraRig/MainCamera" as Camera3D
 
@@ -25,6 +25,9 @@ var state_artifact: State_Artifact = State_Artifact.OFF
 @onready var pos_graph_bars     = $"../../World/CameraRig/PosRackB/PosGraphBars"       as Node3D
 @onready var pos_graph_pie      = $"../../World/CameraRig/PosRackB/PosGraphPies"       as Node3D
 @onready var pos_graph_tendency = $"../../World/CameraRig/PosRackB/PosGraphTendencies" as Node3D
+@onready var pos_artifact       = $"../../World/CameraRig/PosArtifact"                 as Node3D
+@onready var pos_art_weight     = $"../../World/CameraRig/PosArtifact/PosArtWeight"    as Node3D
+@onready var pos_art_amount     = $"../../World/CameraRig/PosArtifact/PosArtAmount"    as Node3D
 @onready var pos_options        = $"../../World/CameraRig/PosOptions"                  as Node3D
 @onready var pos_info           = $"../../World/CameraRig/PosInfo"                     as Node3D
 @onready var pos_exit           = $"../../World/CameraRig/PosExit"                     as Node3D
@@ -47,12 +50,36 @@ func camera_transition(nav: Nav) -> void:
 		State_Main.MAIN_MENU: pass
 		State_Main.MUSEUM:
 			if nav == Nav.LEFT:
+				state_main = State_Main.HISTORY
 				set_camera_pos(pos_rack_a)
+				return
+			elif nav == Nav.UP:
+				state_main = State_Main.ARTIFACT
+				set_camera_pos(pos_artifact)
+				return
+			elif nav == Nav.RIGHT:
+				state_main = State_Main.GRAPHS
+				set_camera_pos(pos_rack_b)
+				return
 		State_Main.GRAPHS:
-			match state_graph:
-				State_Graph.DATA_BASES:
-					state_graph = State_Graph.MAP
-					set_camera_pos(pos_map)
+			match state_rack:
+				State_Rack.DATA_BASES:
+					if nav == Nav.LEFT:
+						state_rack = State_Rack.TENDENCY
+						set_camera_pos(pos_graph_tendency)
+						return
+					elif nav == Nav.RIGHT:
+						state_rack = State_Rack.MAP
+						set_camera_pos(pos_map)
+						return
+				State_Rack.MAP:
+					if nav == Nav.LEFT:
+						state_rack = State_Rack.DATA_BASES
+						set_camera_pos(pos_db)
+						return
+					elif nav == Nav.RIGHT:
+						state_rack = State_Rack.BARS
+						set_camera_pos(pos_graph_bars)
 					
 
 func set_camera_pos(new_pos: Node3D) -> void:
@@ -68,7 +95,7 @@ func _camera_smooth_transition(delta: float) -> void:
 # ============== NAVIGATION ================
 # ==========================================
 func _on_texture_button_left_pressed() -> void:
-	print("Museum: Navigation = Left", state_main)
+	print("Museum: Navigation = Left")
 	camera_transition(Nav.LEFT)
 
 func _on_texture_button_right_pressed() -> void:
