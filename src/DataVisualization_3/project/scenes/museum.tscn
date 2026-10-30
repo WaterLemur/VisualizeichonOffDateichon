@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://cii37hhyk0fuu"]
 
 [ext_resource type="Script" uid="uid://de5j3uwqtsyvw" path="res://project/scripts/museum.gd" id="1_beg0u"]
+[ext_resource type="Script" uid="uid://oaswic1dwq75" path="res://project/scripts/navigation.gd" id="2_t28hp"]
 [ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_wiwei"]
+[ext_resource type="Script" uid="uid://cxls2om84puxh" path="res://project/scripts/menu.gd" id="3_u6vr8"]
 [ext_resource type="Texture2D" uid="uid://bgr445uynq7xw" path="res://tools/godot/icon.svg" id="3_wfvgn"]
 [ext_resource type="PackedScene" uid="uid://j7dbq71vh4sp" path="res://project/art/meshes/arrow/arrow.glb" id="5_2lc6c"]
 [ext_resource type="Texture2D" uid="uid://dm0mouyw08ntt" path="res://project/art/sprites/data_bases/frame-data-base-cities.png" id="5_4irpc"]
@@ -35,6 +37,14 @@ viewport_path = NodePath("World/Sprites/Graphs/Tendency1/SVTendency1")
 [node name="Museum" type="Node" unique_id=2077953294]
 script = ExtResource("1_beg0u")
 
+[node name="Scripts" type="Node" parent="." unique_id=2126725658]
+
+[node name="Menu" type="Node" parent="Scripts" unique_id=1817570172]
+script = ExtResource("3_u6vr8")
+
+[node name="Navigation" type="Node" parent="Scripts" unique_id=1364097148]
+script = ExtResource("2_t28hp")
+
 [node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_wiwei")]
 
 [node name="Menu" type="Control" parent="UI" unique_id=1397914409]
@@ -42,24 +52,20 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 54.085
+offset_left = 22.0
 offset_top = -392.31
-offset_right = 159.08505
+offset_right = 200.0
 offset_bottom = 400.69006
 grow_vertical = 2
 
 [node name="Buttons" type="VBoxContainer" parent="UI/Menu" unique_id=1055906271]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -52.500027
-offset_top = -385.37003
-offset_right = 75.49997
-offset_bottom = -117.370026
-grow_horizontal = 2
+offset_top = -396.50003
+offset_right = 128.0
+offset_bottom = -128.50003
 grow_vertical = 2
 scale = Vector2(0.78, 0.78)
 theme_override_constants/separation = 12
@@ -78,16 +84,12 @@ texture_hover = ExtResource("3_wfvgn")
 
 [node name="Toggles" type="VBoxContainer" parent="UI/Menu" unique_id=735974424]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = 4
 anchor_top = 0.5
-anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -52.500027
-offset_top = -99.69504
-offset_right = 75.49997
-offset_bottom = 680.3071
-grow_horizontal = 2
+offset_top = -94.32504
+offset_right = 128.0
+offset_bottom = 685.67773
 grow_vertical = 2
 scale = Vector2(0.61, 0.61)
 theme_override_constants/separation = 17
@@ -127,68 +129,88 @@ texture_normal = ExtResource("3_wfvgn")
 texture_pressed = ExtResource("3_wfvgn")
 texture_hover = ExtResource("3_wfvgn")
 
-[node name="Timeline" type="VSlider" parent="UI/Menu" unique_id=1167255864]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 56.41498
-offset_top = -389.19
-offset_right = 75.00096
-offset_bottom = 389.19003
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(3.635, 1)
-
-[node name="Navigation" type="VBoxContainer" parent="UI" unique_id=749086871]
+[node name="Timeline" type="Control" parent="UI/Menu" unique_id=1019585773]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -159.0
-offset_top = -281.115
-offset_right = -31.0
-offset_bottom = 281.885
+offset_left = -71.76
+offset_top = -388.65503
+offset_right = 9.239685
+offset_bottom = 388.655
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Year" type="Label" parent="UI/Menu/Timeline" unique_id=1803228664]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.040005
+offset_top = -27.75
+offset_right = 46.5
+offset_bottom = -4.75
+grow_horizontal = 2
+text = "[Year] BC"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSlider" type="VSlider" parent="UI/Menu/Timeline" unique_id=1167255864]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.5
+offset_top = -388.65503
+offset_right = -13.5
+offset_bottom = 389.72498
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.635, 1)
+
+[node name="Navigation" type="VBoxContainer" parent="UI/Menu" unique_id=749086871]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 721.0
+offset_top = -285.30502
+offset_right = 849.0
+offset_bottom = 277.69498
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_constants/separation = 17
 alignment = 1
 
-[node name="TBLeft" type="TextureButton" parent="UI/Navigation" unique_id=668461695]
+[node name="TBLeft" type="TextureButton" parent="UI/Menu/Navigation" unique_id=668461695]
 layout_mode = 2
 texture_normal = ExtResource("3_wfvgn")
 texture_pressed = ExtResource("3_wfvgn")
 texture_hover = ExtResource("3_wfvgn")
 
-[node name="TBRight" type="TextureButton" parent="UI/Navigation" unique_id=918057052]
+[node name="TBRight" type="TextureButton" parent="UI/Menu/Navigation" unique_id=918057052]
 layout_mode = 2
 texture_normal = ExtResource("3_wfvgn")
 texture_pressed = ExtResource("3_wfvgn")
 texture_hover = ExtResource("3_wfvgn")
 
-[node name="TBUp" type="TextureButton" parent="UI/Navigation" unique_id=1925678347]
+[node name="TBUp" type="TextureButton" parent="UI/Menu/Navigation" unique_id=1925678347]
 layout_mode = 2
 texture_normal = ExtResource("3_wfvgn")
 texture_pressed = ExtResource("3_wfvgn")
 texture_hover = ExtResource("3_wfvgn")
 
-[node name="TBDown" type="TextureButton" parent="UI/Navigation" unique_id=852745475]
+[node name="TBDown" type="TextureButton" parent="UI/Menu/Navigation" unique_id=852745475]
 layout_mode = 2
 texture_normal = ExtResource("3_wfvgn")
 texture_pressed = ExtResource("3_wfvgn")
 texture_hover = ExtResource("3_wfvgn")
-
-[node name="Sprites" type="Node2D" parent="." unique_id=83180973]
-
-[node name="DataBases" type="Node2D" parent="Sprites" unique_id=556050449]
-
-[node name="Sprite2D" type="Sprite2D" parent="Sprites/DataBases" unique_id=1885226675]
-
-[node name="Graphs" type="Node2D" parent="Sprites" unique_id=391366892]
 
 [node name="World" type="Node3D" parent="." unique_id=1529691493]
 
@@ -399,8 +421,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9551827, 2.1845849, -55.81
 [connection signal="pressed" from="UI/Menu/Toggles/TBUruk" to="." method="_on_tb_uruk_pressed"]
 [connection signal="pressed" from="UI/Menu/Toggles/TBBarley" to="." method="_on_tb_barley_pressed"]
 [connection signal="pressed" from="UI/Menu/Toggles/TBSoldiers" to="." method="_on_tb_soldiers_pressed"]
-[connection signal="value_changed" from="UI/Menu/Timeline" to="." method="_on_timeline_value_changed"]
-[connection signal="pressed" from="UI/Navigation/TBLeft" to="." method="_on_texture_button_left_pressed"]
-[connection signal="pressed" from="UI/Navigation/TBRight" to="." method="_on_texture_button_right_pressed"]
-[connection signal="pressed" from="UI/Navigation/TBUp" to="." method="_on_tb_up_pressed"]
-[connection signal="pressed" from="UI/Navigation/TBDown" to="." method="_on_tb_down_pressed"]
+[connection signal="value_changed" from="UI/Menu/Timeline/VSlider" to="." method="_on_timeline_value_changed"]
+[connection signal="pressed" from="UI/Menu/Navigation/TBLeft" to="Scripts/Navigation" method="_on_texture_button_left_pressed"]
+[connection signal="pressed" from="UI/Menu/Navigation/TBRight" to="Scripts/Navigation" method="_on_texture_button_right_pressed"]
+[connection signal="pressed" from="UI/Menu/Navigation/TBUp" to="Scripts/Navigation" method="_on_tb_up_pressed"]
+[connection signal="pressed" from="UI/Menu/Navigation/TBDown" to="Scripts/Navigation" method="_on_tb_down_pressed"]
