@@ -20,7 +20,8 @@ var year:     int = 0
 var year_min: int = 0
 var year_max: int = 0
 
-@onready var pie = $"../../World/Sprites/Graphs/Pie/SVPie/GraphPie"
+@onready var bar_1 = $"../../World/Sprites/Graphs/Bars1/SVBar1/GraphBar1"
+@onready var pie   = $"../../World/Sprites/Graphs/Pie/SVPie/GraphPie"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -44,6 +45,8 @@ func set_akkad() -> void:
 	
 	map.set_akkad(akkad)
 	
+	bar_1.show_akkad = akkad
+	bar_1.update_chart()
 	pie.show_akkad = akkad
 	pie.update_chart()
 	
@@ -53,6 +56,8 @@ func set_ur() -> void:
 	
 	map.set_ur(ur)
 	
+	bar_1.show_ur = ur
+	bar_1.update_chart()
 	pie.show_ur = ur
 	pie.update_chart()
 
@@ -61,6 +66,8 @@ func set_uruk() -> void:
 	
 	map.set_uruk(uruk)
 	
+	bar_1.show_uruk = uruk
+	bar_1.update_chart()
 	pie.show_uruk = uruk
 	pie.update_chart()
 	
@@ -69,6 +76,8 @@ func set_barley() -> void:
 	
 	#map.set_barley(barley)
 	
+	bar_1.show_barley = barley
+	bar_1.update_chart()
 	pie.show_barley = barley
 	pie.update_chart()
 
@@ -77,6 +86,8 @@ func set_soldiers() -> void:
 	
 	#map.set_soldiers(soldiers)
 	
+	bar_1.show_soldiers = soldiers
+	bar_1.update_chart()
 	pie.show_soldiers = soldiers
 	pie.update_chart()
 
