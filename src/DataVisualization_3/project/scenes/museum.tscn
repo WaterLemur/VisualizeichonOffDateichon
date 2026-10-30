@@ -303,29 +303,30 @@ transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.245366
 texture = ExtResource("6_wj7eq")
 
 [node name="Map" type="Node3D" parent="World/Sprites" unique_id=1678897081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.73037, 8.306578, -45.4435)
 
 [node name="MapWindRose" type="Sprite3D" parent="World/Sprites/Map" unique_id=1027725095]
-transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 11.73037, 8.306578, -45.4435)
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
 texture = ExtResource("9_fd4yj")
 
 [node name="MapPaths" type="Sprite3D" parent="World/Sprites/Map" unique_id=801594742]
-transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 11.73037, 8.306578, -45.4435)
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
 texture = ExtResource("10_2kqvi")
 
 [node name="MapRivers" type="Sprite3D" parent="World/Sprites/Map" unique_id=1037401454]
-transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 11.73037, 8.306578, -45.4435)
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
 texture = ExtResource("11_u6vr8")
 
 [node name="MapAkkad" type="Sprite3D" parent="World/Sprites/Map" unique_id=1666053697]
-transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 11.73037, 8.306578, -45.4435)
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
 texture = ExtResource("12_t28hp")
 
 [node name="MapUr" type="Sprite3D" parent="World/Sprites/Map" unique_id=1674546393]
-transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 11.73037, 8.306578, -45.4435)
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
 texture = ExtResource("13_xg8yu")
 
 [node name="MapUruk" type="Sprite3D" parent="World/Sprites/Map" unique_id=1946468231]
-transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 11.73037, 8.306578, -45.4435)
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
 texture = ExtResource("14_rp2ow")
 
 [node name="Graphs" type="Node3D" parent="World/Sprites" unique_id=681255558]
@@ -414,14 +415,14 @@ omni_range = 8.0961075
 [node name="stylus" parent="." unique_id=1821770177 instance=ExtResource("8_ntp17")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9551827, 2.1845849, -55.81129)
 
-[connection signal="pressed" from="UI/Menu/Buttons/TBTutorial" to="." method="_on_tb_tutorial_pressed"]
-[connection signal="pressed" from="UI/Menu/Buttons/TBInfo" to="." method="_on_tb_info_pressed"]
-[connection signal="pressed" from="UI/Menu/Toggles/TBAkkad" to="." method="_on_tb_akkad_pressed"]
-[connection signal="pressed" from="UI/Menu/Toggles/TBUr" to="." method="_on_tb_ur_pressed"]
-[connection signal="pressed" from="UI/Menu/Toggles/TBUruk" to="." method="_on_tb_uruk_pressed"]
-[connection signal="pressed" from="UI/Menu/Toggles/TBBarley" to="." method="_on_tb_barley_pressed"]
-[connection signal="pressed" from="UI/Menu/Toggles/TBSoldiers" to="." method="_on_tb_soldiers_pressed"]
-[connection signal="value_changed" from="UI/Menu/Timeline/VSlider" to="." method="_on_timeline_value_changed"]
+[connection signal="pressed" from="UI/Menu/Buttons/TBTutorial" to="Scripts/Menu" method="_on_tb_tutorial_pressed"]
+[connection signal="pressed" from="UI/Menu/Buttons/TBInfo" to="Scripts/Menu" method="_on_tb_info_pressed"]
+[connection signal="pressed" from="UI/Menu/Toggles/TBAkkad" to="Scripts/Menu" method="_on_tb_akkad_pressed"]
+[connection signal="pressed" from="UI/Menu/Toggles/TBUr" to="Scripts/Menu" method="_on_tb_ur_pressed"]
+[connection signal="pressed" from="UI/Menu/Toggles/TBUruk" to="Scripts/Menu" method="_on_tb_uruk_pressed"]
+[connection signal="pressed" from="UI/Menu/Toggles/TBBarley" to="Scripts/Menu" method="_on_tb_barley_pressed"]
+[connection signal="pressed" from="UI/Menu/Toggles/TBSoldiers" to="Scripts/Menu" method="_on_tb_soldiers_pressed"]
+[connection signal="value_changed" from="UI/Menu/Timeline/VSlider" to="Scripts/Menu" method="_on_timeline_value_changed"]
 [connection signal="pressed" from="UI/Menu/Navigation/TBLeft" to="Scripts/Navigation" method="_on_texture_button_left_pressed"]
 [connection signal="pressed" from="UI/Menu/Navigation/TBRight" to="Scripts/Navigation" method="_on_texture_button_right_pressed"]
 [connection signal="pressed" from="UI/Menu/Navigation/TBUp" to="Scripts/Navigation" method="_on_tb_up_pressed"]
