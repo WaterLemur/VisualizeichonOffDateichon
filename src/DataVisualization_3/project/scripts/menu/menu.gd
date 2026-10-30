@@ -104,3 +104,4 @@ func _on_tb_soldiers_pressed() -> void:
 func _on_timeline_value_changed(value: float) -> void:
 	set_year(value as int)
 	print("Museum: Menu = Timeline: %.0f" % value) 
+	

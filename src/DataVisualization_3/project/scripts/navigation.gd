@@ -46,46 +46,75 @@ func _process(delta: float) -> void:
 # ============== STATE MACHINE =============
 # ==========================================
 func camera_transition(nav: Nav) -> void:
-	match state_main:
-		State_Main.MAIN_MENU: pass
-		State_Main.MUSEUM:
+	print(state_rack)
+	match state_rack:
+		State_Rack.DATA_BASES:
 			if nav == Nav.LEFT:
-				state_main = State_Main.HISTORY
-				set_camera_pos(pos_rack_a)
+				state_rack = State_Rack.TENDENCY
+				set_camera_pos(pos_graph_tendency)
 				return
-			elif nav == Nav.UP:
-				state_main = State_Main.ARTIFACT
-				set_camera_pos(pos_artifact)
+			if nav == Nav.RIGHT:
+				state_rack = State_Rack.MAP
+				set_camera_pos(pos_map)
 				return
-			elif nav == Nav.RIGHT:
-				state_main = State_Main.GRAPHS
-				set_camera_pos(pos_rack_b)
+		State_Rack.MAP:
+			if nav == Nav.LEFT:
+				state_rack = State_Rack.DATA_BASES
+				set_camera_pos(pos_db)
 				return
-		State_Main.GRAPHS:
-			match state_rack:
-				State_Rack.DATA_BASES:
-					if nav == Nav.LEFT:
-						state_rack = State_Rack.TENDENCY
-						set_camera_pos(pos_graph_tendency)
-						return
-					elif nav == Nav.RIGHT:
-						state_rack = State_Rack.MAP
-						set_camera_pos(pos_map)
-						return
-				State_Rack.MAP:
-					if nav == Nav.LEFT:
-						state_rack = State_Rack.DATA_BASES
-						set_camera_pos(pos_db)
-						return
-					elif nav == Nav.RIGHT:
-						state_rack = State_Rack.BARS
-						set_camera_pos(pos_graph_bars)
-					
+			if nav == Nav.RIGHT:
+				state_rack = State_Rack.BARS
+				set_camera_pos(pos_graph_bars)
+				return
+		State_Rack.BARS:
+			if nav == Nav.LEFT:
+				state_rack = State_Rack.MAP
+				set_camera_pos(pos_map)
+				return
+			if nav == Nav.RIGHT:
+				state_rack = State_Rack.BARS
+				set_camera_pos(pos_graph_bars)
+				return
+		State_Rack.PIE:
+			if nav == Nav.LEFT:
+				state_rack = State_Rack.BARS
+				set_camera_pos(pos_graph_bars)
+				return
+			if nav == Nav.RIGHT:
+				state_rack = State_Rack.TENDENCY
+				set_camera_pos(pos_graph_tendency)
+				return
+		State_Rack.TENDENCY:
+			if nav == Nav.LEFT:
+				state_rack = State_Rack.PIE
+				set_camera_pos(pos_graph_pie)
+				return
+			if nav == Nav.RIGHT:
+				state_rack = State_Rack.DATA_BASES
+				set_camera_pos(pos_db)
+				return
+
+#	match state_main:
+#		State_Main.MAIN_MENU: pass
+#		State_Main.MUSEUM:
+#			if nav == Nav.LEFT:
+#				state_main = State_Main.HISTORY
+#				set_camera_pos(pos_rack_a)
+#				return
+#			elif nav == Nav.UP:
+#				state_main = State_Main.ARTIFACT
+#				set_camera_pos(pos_artifact)
+#				return
+#			elif nav == Nav.RIGHT:
+#				state_main = State_Main.GRAPHS
+#				set_camera_pos(pos_rack_b)
+#				return
+		
 
 func set_camera_pos(new_pos: Node3D) -> void:
 	print(camera.position)
-	camera.position = new_pos.position
-	print(camera.position)
+	camera.global_transform = new_pos.global_transform
+	print(camera.global_transform)
 	
 
 func _camera_smooth_transition(delta: float) -> void:
@@ -101,11 +130,13 @@ func _on_texture_button_left_pressed() -> void:
 func _on_texture_button_right_pressed() -> void:
 	print("Museum: Navigation = Right")
 	camera_transition(Nav.RIGHT)
+	print(state_rack)
+	print(state_main)
 	
-func _on_tb_up_pressed() -> void:
+func _on_btn_up_pressed() -> void:
 	print("Museum: Navigation = Up")
-	camera_transition(Nav.UP)
+	camera_transition(Nav.LEFT)
 	
-func _on_tb_down_pressed() -> void:
+func _on_btn_down_pressed() -> void:
 	print("Museum: Navigation = Down")
-	camera_transition(Nav.DOWN)
+	camera_transition(Nav.RIGHT)
