@@ -26,8 +26,8 @@ func update_chart() -> void:
 
 	properties.title = "Mesopotamian Conquest Resources"
 	properties.show_legend = true
-	#properties.x_label = "City-States"
-	#properties.y_label = "Resource Volumes"
+	properties.x_label = "City-States"
+	properties.y_label = "Resource Volumes"
 
 	properties.interactive = true
 

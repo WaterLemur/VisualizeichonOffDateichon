@@ -20,7 +20,7 @@ var year:     int = 0
 var year_min: int = 0
 var year_max: int = 0
 
-@onready var bar_1 = $"../../World/Sprites/Graphs/Bars1/SVBar1/GraphBar1"
+@onready var bar_1 = $"../../World/Sprites/Graphs/Bar1/SVBar1/GraphBar1"
 @onready var pie   = $"../../World/Sprites/Graphs/Pie/SVPie/GraphPie"
 
 

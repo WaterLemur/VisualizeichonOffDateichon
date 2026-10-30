@@ -29,7 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://brlbcx20q64y0" path="res://project/scenes/graphs/graph_pie.tscn" id="19_x6ptw"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_o2eaj"]
-viewport_path = NodePath("World/Sprites/Graphs/Bars1/SVBar1")
+viewport_path = NodePath("World/Sprites/Graphs/Bar1/SVBar1")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_07rhc"]
 viewport_path = NodePath("World/Sprites/Graphs/Pie/SVPie")
@@ -540,19 +540,21 @@ texture = ExtResource("14_rp2ow")
 [node name="Graphs" type="Node3D" parent="World/Sprites" unique_id=1173887309]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2504025, -5.074249, 0)
 
-[node name="Bars1" type="Node3D" parent="World/Sprites/Graphs" unique_id=1641601821]
+[node name="Bar1" type="Node3D" parent="World/Sprites/Graphs" unique_id=1641601821]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19965458, 1.9509859, -2.0863075)
 
-[node name="SVBar1" type="SubViewport" parent="World/Sprites/Graphs/Bars1" unique_id=958429834]
+[node name="SVBar1" type="SubViewport" parent="World/Sprites/Graphs/Bar1" unique_id=958429834]
 transparent_bg = true
 render_target_update_mode = 4
 
-[node name="GraphBar1" parent="World/Sprites/Graphs/Bars1/SVBar1" unique_id=1537714593 instance=ExtResource("15_2kqvi")]
+[node name="GraphBar1" parent="World/Sprites/Graphs/Bar1/SVBar1" unique_id=1537714593 instance=ExtResource("15_2kqvi")]
 
-[node name="SpriteBar1" type="Sprite3D" parent="World/Sprites/Graphs/Bars1" unique_id=995290408]
+[node name="SpriteBar1" type="Sprite3D" parent="World/Sprites/Graphs/Bar1" unique_id=995290408]
 transform = Transform3D(-5.4639235e-09, 0, -0.125, 0, 0.125, 0, 0.125, 0, -5.4639235e-09, 0, -0.19616365, -0.015083313)
 cast_shadow = 0
 texture = SubResource("ViewportTexture_o2eaj")
+
+[node name="Bar2" type="Node3D" parent="World/Sprites/Graphs" unique_id=1282151549]
 
 [node name="Pie" type="Node3D" parent="World/Sprites/Graphs" unique_id=269983883]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19965458, 1.8756056, 0.79605484)
