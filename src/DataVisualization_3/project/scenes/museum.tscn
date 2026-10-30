@@ -326,7 +326,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51, -5.46, -8.57)
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphTendencies" unique_id=813011352]
 
 [node name="PosOptions" type="Node3D" parent="World/CameraRig" unique_id=930431605]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -33)
 
 [node name="PosAudio" type="Node3D" parent="World/CameraRig/PosOptions" unique_id=59424584]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
@@ -341,7 +341,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosOptions" unique_id=1035660275]
 
 [node name="PosInfo" type="Node3D" parent="World/CameraRig" unique_id=1559868338]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -33)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosInfo" unique_id=825886247]
 
@@ -350,12 +350,14 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.9
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosExit" unique_id=61795898]
 
-[node name="Sprites" type="Node3D" parent="World" unique_id=1015552300]
+[node name="Sprites" type="Node3D" parent="World" unique_id=1978008293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.784505, 7.8948283, -45.44928)
 
-[node name="DataBases" type="Node3D" parent="World/Sprites" unique_id=464219424]
+[node name="DataBases" type="Node3D" parent="World/Sprites" unique_id=693877026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4870672, 3.919743, -1.0691757)
 
 [node name="DBCities" type="Sprite3D" parent="World/Sprites/DataBases" unique_id=310705921]
-transform = Transform3D(-1.2239188e-08, 0, -0.28, 0, 0.28, 0, 0.28, 0, -1.2239188e-08, 12.27748, 12.099207, -47.087357)
+transform = Transform3D(-1.2239188e-08, 0, -0.28, 0, 0.28, 0, 0.28, 0, -1.2239188e-08, 0, 0.285, -0.569)
 modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
 texture = ExtResource("5_4irpc")
 
@@ -389,7 +391,7 @@ font = ExtResource("10_x6ptw")
 horizontal_alignment = 0
 
 [node name="DBResources" type="Sprite3D" parent="World/Sprites/DataBases" unique_id=804622809]
-transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, 12.271649, 11.769903, -45.656555)
+transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, 0, -0.045, 0.862)
 modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
 texture = ExtResource("6_wj7eq")
 
@@ -494,7 +496,7 @@ vertical_alignment = 0
 line_spacing = 30.105
 
 [node name="Map" type="Node3D" parent="World/Sprites" unique_id=1678897081]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.73037, 8.306578, -45.4435)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9458647, 0.41174936, 0.0057792664)
 
 [node name="MapWindRose" type="Sprite3D" parent="World/Sprites/Map" unique_id=1027725095]
 transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
@@ -526,10 +528,11 @@ transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.027
 modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
 texture = ExtResource("14_rp2ow")
 
-[node name="Graphs" type="Node3D" parent="World/Sprites" unique_id=681255558]
+[node name="Graphs" type="Node3D" parent="World/Sprites" unique_id=1173887309]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2504025, -5.074249, 0)
 
 [node name="Bars1" type="Node3D" parent="World/Sprites/Graphs" unique_id=1641601821]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.234562, 4.7715654, -47.535587)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19965458, 1.9509859, -2.0863075)
 
 [node name="SVBar1" type="SubViewport" parent="World/Sprites/Graphs/Bars1" unique_id=958429834]
 transparent_bg = true
@@ -542,7 +545,7 @@ transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.835
 texture = SubResource("ViewportTexture_o2eaj")
 
 [node name="Pie1" type="Node3D" parent="World/Sprites/Graphs" unique_id=269983883]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.234562, 4.696185, -44.653225)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19965458, 1.8756056, 0.79605484)
 
 [node name="SVPie1" type="SubViewport" parent="World/Sprites/Graphs/Pie1" unique_id=820445402]
 transparent_bg = true
@@ -555,7 +558,7 @@ transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.835
 texture = SubResource("ViewportTexture_07rhc")
 
 [node name="Tendency1" type="Node3D" parent="World/Sprites/Graphs" unique_id=768737517]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.245759, 3.0017726, -47.182938)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21085167, 0.18119311, -1.7336578)
 
 [node name="SVTendency1" type="SubViewport" parent="World/Sprites/Graphs/Tendency1" unique_id=1686177610]
 transparent_bg = true
