@@ -1,6 +1,15 @@
-[gd_scene format=3 uid="uid://exokrsvrs365"]
+[gd_scene format=3 uid="uid://by4xm3hrpkuhd"]
 
 [ext_resource type="Script" uid="uid://beux0yrilahog" path="res://project/scripts/graphs/graph_bar_1.gd" id="1_y0tni"]
+[ext_resource type="PackedScene" uid="uid://dlwq4kmdb3bhs" path="res://addons/easy_charts/control_charts/chart.tscn" id="2_j1vum"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1rxe"]
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+draw_center = false
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
 
 [node name="GraphBar1" type="Control" unique_id=1614625529]
 layout_mode = 3
@@ -10,3 +19,29 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_y0tni")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=146912517]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer" unique_id=346894617]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+text = "Start Relatime Plotting"
+
+[node name="Chart" parent="VBoxContainer" unique_id=1803072976 instance=ExtResource("2_j1vum")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=299110463]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_q1rxe")
+text = "Try to scale the window!"
