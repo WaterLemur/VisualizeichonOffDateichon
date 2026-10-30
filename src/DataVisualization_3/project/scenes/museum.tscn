@@ -294,15 +294,35 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.1520157, -25.986635)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum/PosArtifact" unique_id=1559219473]
 
-[node name="PosGraphs" type="Node3D" parent="World/CameraRig/PosMuseum" unique_id=908728399]
+[node name="PosRackB" type="Node3D" parent="World/CameraRig/PosMuseum" unique_id=908728399]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.71, 8.224, -45.395)
 
-[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum/PosGraphs" unique_id=713218546]
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum/PosRackB" unique_id=713218546]
 
-[node name="PosDataBases" type="Node3D" parent="World/CameraRig/PosMuseum/PosGraphs" unique_id=981028479]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 4.57, -5.125)
+[node name="PosDataBases" type="Node3D" parent="World/CameraRig/PosMuseum/PosRackB" unique_id=981028479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.035, 4.57, -7.7)
 
-[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum/PosGraphs/PosDataBases" unique_id=1627573802]
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum/PosRackB/PosDataBases" unique_id=1627573802]
+
+[node name="PosMap" type="Node3D" parent="World/CameraRig/PosMuseum/PosRackB" unique_id=1810803901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86, -6.665)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum/PosRackB/PosMap" unique_id=11808520]
+
+[node name="PosGraphBars" type="Node3D" parent="World/CameraRig/PosMuseum/PosRackB" unique_id=2056571179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51, -2.82, -8.225)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum/PosRackB/PosGraphBars" unique_id=2061057445]
+
+[node name="PosGraphPies" type="Node3D" parent="World/CameraRig/PosMuseum/PosRackB" unique_id=1111515370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.21, -2.82, -8.48)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum/PosRackB/PosGraphPies" unique_id=761568993]
+
+[node name="PosGraphTendencies" type="Node3D" parent="World/CameraRig/PosMuseum/PosRackB" unique_id=232674560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51, -5.46, -8.57)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum/PosRackB/PosGraphTendencies" unique_id=813011352]
 
 [node name="PosOptions" type="Node3D" parent="World/CameraRig" unique_id=930431605]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)

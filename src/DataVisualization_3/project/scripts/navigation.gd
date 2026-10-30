@@ -2,7 +2,15 @@
 extends Node
 
 
+enum State_Main     { MAIN_MENU, GRAPHS, ARTIFACT, OPTIONS, EXIT }
+enum State_Graph    { OFF, DATA_BASES, MAP, BARS, PIE, TENDENCY }
+enum State_Artifact { OFF, FULL, WEIGHT, AMMOUNT, STYLUS }
+
 var cam_index = 0 as int
+var state_main:     State_Main     = State_Main.MAIN_MENU
+var state_graph:    State_Graph    = State_Graph.OFF
+var state_artifact: State_Artifact = State_Artifact.OFF
+
 @onready var camera = $"../../World/CameraRig/MainCamera" as Camera3D
 
 @onready var cam_pos_main_menu = $"../../World/CameraRig/PosMainMenu"          as Node3D
@@ -25,6 +33,26 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+	
+# ==========================================
+# ============== STATE MACHINE =============
+# ==========================================
+func _state_machine() -> void:
+	if(state_main   == State_Main.MAIN_MENU): pass
+	elif(state_main == State_Main.GRAPHS):
+		if(state_graph == State_Graph.DATA_BASES): pass
+		elif(state_graph == State_Graph.MAP): pass
+		elif(state_graph == State_Graph.BARS): pass
+		elif(state_graph == State_Graph.PIE): pass
+		elif(state_graph == State_Graph.TENDENCY): pass
+	elif(state_main == State_Main.ARTIFACT):
+		if(state_artifact == State_Artifact.FULL): pass
+		elif(state_artifact == State_Artifact.WEIGHT): pass
+		elif(state_artifact ==  State_Artifact.AMMOUNT): pass
+		elif(state_artifact == State_Artifact.STYLUS): pass
+	elif(state_main == State_Main.OPTIONS):   pass
+	elif(state_main == State_Main.EXIT):      pass
 
 
 func _camera_pos_main_menu() -> void:
