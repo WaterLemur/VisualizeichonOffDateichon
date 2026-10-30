@@ -2,9 +2,6 @@
 extends Control
 
 
-#@onready var chart = $UI/Chart
-
-
 func _ready() -> void:
 	var chart_scene: PackedScene = load("res://addons/easy_charts/control_charts/chart.tscn")
 	var chart: Chart = chart_scene.instantiate()
