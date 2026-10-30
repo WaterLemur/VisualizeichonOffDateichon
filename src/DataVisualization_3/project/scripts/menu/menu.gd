@@ -8,12 +8,12 @@ extends Node
 var tutorial: bool = false
 var info:     bool = false
 
-var akkad:    bool = false
-var ur:       bool = false
-var uruk:     bool = false
+var akkad:    bool = true
+var ur:       bool = true
+var uruk:     bool = true
 
-var barley:   bool = false
-var soldiers: bool = false
+var barley:   bool = true
+var soldiers: bool = true
 
 var year:     int = 0
 var year_min: int = 0
@@ -41,7 +41,7 @@ func set_akkad() -> void:
 	map.set_akkad(akkad)
 
 func set_ur() -> void:
-	ur = not akkad
+	ur = not ur
 	map.set_ur(ur)
 
 func set_uruk() -> void:
@@ -79,24 +79,23 @@ func _on_tb_info_pressed() -> void:
 # -------------- Cities ----------------------
 func _on_tb_akkad_pressed() -> void:
 	set_akkad()
-	
 	print("Museum: Menu = Akkad > ", akkad)
 
 func _on_tb_ur_pressed() -> void:
-	ur = not ur
-	print("Museum: Menu = Ur")
+	set_ur()
+	print("Museum: Menu = Ur > ", ur)
 
 func _on_tb_uruk_pressed() -> void:
-	uruk = not uruk
-	print("Museum: Menu = Uruk")
+	set_uruk()
+	print("Museum: Menu = Uruk > ", uruk)
 	
 # -------------- Resources ----------------------
 func _on_tb_barley_pressed() -> void:
-	barley = not barley
+	set_barley()
 	print("Museum: Menu = Barley")
 
 func _on_tb_soldiers_pressed() -> void:
-	soldiers = not soldiers
+	set_soldiers()
 	print("Museum: Menu = Soldiers")
 
 # -------------- Timeline -----------------------
