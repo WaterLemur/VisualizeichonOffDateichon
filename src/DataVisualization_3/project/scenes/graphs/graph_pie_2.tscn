@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://orjmk4ekcu85"]
 
-[ext_resource type="PackedScene" uid="uid://dlwq4kmdb3bhs" path="res://addons/easy_charts/control_charts/chart.tscn" id="1_62v0h"]
 [ext_resource type="Script" uid="uid://b86jur3558l8o" path="res://project/scripts/graphs/graph_pie_2.gd" id="1_k7or6"]
 
 [node name="GraphPie2" type="Control" unique_id=1103244100]
@@ -11,10 +10,3 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_k7or6")
-
-[node name="Chart" parent="." unique_id=189083755 instance=ExtResource("1_62v0h")]
-layout_mode = 1
-offset_top = 444.0
-offset_bottom = -444.0
-grow_horizontal = 2
-grow_vertical = 2

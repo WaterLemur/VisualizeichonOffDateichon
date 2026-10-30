@@ -1,4 +1,4 @@
-#!graph_bar_1.gd
+#!graph_pie_1.gd
 extends Control
 
 
@@ -9,24 +9,41 @@ func _ready() -> void:
 	add_child(chart)
 	
 	var chart_properties := ChartProperties.new()
-	chart_properties.title = "Example Bar Chart"
+	chart_properties.title = "Mesopotamian Conquest Resources"
 	chart_properties.show_legend = true
-	chart_properties.x_label = "Categories"
-	chart_properties.y_label = "Values"
+	chart_properties.x_label = "City-States"
+	chart_properties.y_label = "Resource Volumes"
 	
-	# Explicitly assigning arrays to clean variables ensures perfect signature alignment
-	var x_labels: Array = ["Zero", "One", "Two", "Three", "Four", "Five", "Six"]
-	var y_values: Array = [4, 8, 2, 9, 7, 8, 12]
-	var function_name: String = "First function"
+	# The X-Axis contains the cities
+	var cities: Array = ["Akkad", "Uruk", "Ur"]
 	
-	var function := Function.new(
-		x_labels,
-		y_values,
-		function_name,
+	# Grounded Data Metrics: Barley in Gur vs. Active Soldiery Force
+	var barley_data: Array = [40000, 25000, 22000]
+	var soldier_data: Array = [15000, 12000, 7000]
+	
+	# 1. Barley Function Configuration (Green/Yellowish Tint)
+	var f_barley := Function.new(
+		cities,
+		barley_data,
+		"Barley (Gur)",
 		{
 			type = Function.Type.BAR,
 			marker = Function.Marker.CIRCLE,
-			color = Color("#36a2eb"),
+			color = Color("#9eb23b") # Historic Olive / Green-Yellowish Hex Color
 		}
 	)
-	chart.plot([function], chart_properties)
+	
+	# 2. Soldiers Function Configuration (Strict Deep Red)
+	var f_soldiers := Function.new(
+		cities,
+		soldier_data,
+		"Soldiers",
+		{
+			type = Function.Type.BAR,
+			marker = Function.Marker.CIRCLE,
+			color = Color("#b33939") # Dark Crimson Red Hex Color
+		}
+	)
+	
+	# Plot both functions simultaneously on the chart array
+	chart.plot([f_barley, f_soldiers], chart_properties)
