@@ -2,12 +2,12 @@
 extends Control
 
 
-@onready var chart = $UI/Chart
+#@onready var chart = $UI/Chart
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	add_child(chart)
+	#add_child(chart)
 	
 	var chart_properties := ChartProperties.new()
 	chart_properties.title = "Example Pie Chart"
@@ -23,4 +23,4 @@ func _ready() -> void:
 			color = Color("#36a2eb"),        
 		}
 	)
-	chart.plot([function], chart_properties)
+	#chart.plot([function], chart_properties)

@@ -2,10 +2,12 @@
 extends Control
 
 
-@onready var chart = $UI/Chart
+#@onready var chart = $UI/Chart
 
 
 func _ready() -> void:
+	var chart_scene: PackedScene = load("res://addons/easy_charts/control_charts/chart.tscn")
+	var chart: Chart = chart_scene.instantiate()
 	add_child(chart)
 	
 	var function := Function.new(
@@ -25,4 +27,4 @@ func _ready() -> void:
 	chart_properties.title = "Example chart"
 	chart_properties.show_legend = true
 
-	#chart.plot([function], chart_properties)
+	chart.plot([function], chart_properties)

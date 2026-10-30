@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://b567ugqryp07r" path="res://project/art/sprites/map/map-waypoint-ur.png" id="13_xg8yu"]
 [ext_resource type="Texture2D" uid="uid://cjllxjsq0yf7h" path="res://project/art/sprites/map/map-waypoint-uruk.png" id="14_rp2ow"]
 [ext_resource type="PackedScene" uid="uid://exokrsvrs365" path="res://project/scenes/graphs/graph_bar_1.tscn" id="14_u6vr8"]
+[ext_resource type="PackedScene" uid="uid://brlbcx20q64y0" path="res://project/scenes/graphs/graph_pie_1.tscn" id="15_2kqvi"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_o2eaj"]
 viewport_path = NodePath("World/Sprites/Graphs/Bars1/SVBar1")
@@ -198,8 +199,25 @@ transparent_bg = true
 render_target_update_mode = 4
 
 [node name="GraphBar1" parent="World/Sprites/Graphs/Bars1/SVBar1" unique_id=1614625529 instance=ExtResource("14_u6vr8")]
+process_mode = 4
 
 [node name="SpriteBar1" type="Sprite3D" parent="World/Sprites/Graphs/Bars1" unique_id=995290408]
+transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 0, 0, 0)
+texture = SubResource("ViewportTexture_o2eaj")
+
+[node name="Pie1" type="Node3D" parent="World/Sprites/Graphs" unique_id=269983883]
+process_mode = 4
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.234562, 4.696185, -44.653225)
+
+[node name="SVPie1" type="SubViewport" parent="World/Sprites/Graphs/Pie1" unique_id=820445402]
+transparent_bg = true
+render_target_update_mode = 4
+
+[node name="GraphPie1" parent="World/Sprites/Graphs/Pie1/SVPie1" unique_id=1118151370 instance=ExtResource("15_2kqvi")]
+process_mode = 4
+visible = false
+
+[node name="SpritePie1" type="Sprite3D" parent="World/Sprites/Graphs/Pie1" unique_id=1155044531]
 transform = Transform3D(-9.8350625e-09, 0, -0.225, 0, 0.225, 0, 0.225, 0, -9.8350625e-09, 0, 0, 0)
 texture = SubResource("ViewportTexture_o2eaj")
 
