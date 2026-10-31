@@ -33,7 +33,7 @@ func update_chart() -> void:
 	properties.interactive = true
 	properties.colors.text = Color("#D9A441")
 
-	var x: Array = [0.0, 1.0, 2.0]
+	var x: Array = []
 	var barley: Array = []
 	var soldiers: Array = []
 
@@ -42,7 +42,7 @@ func update_chart() -> void:
 		["Ur", 22000.0, 7000.0, show_ur, 1.0],
 		["Uruk", 25000.0, 12000.0, show_uruk, 2.0]
 	]
-	
+
 	for city in cities:
 		if city[3]:
 			x.append(city[4])
@@ -77,8 +77,9 @@ func update_chart() -> void:
 			}
 		))
 
-	if functions.is_empty():
-		return
+	if functions.is_empty(): return
+		
+		
 
 	chart.plot(functions, properties)
 	chart.queue_redraw()
