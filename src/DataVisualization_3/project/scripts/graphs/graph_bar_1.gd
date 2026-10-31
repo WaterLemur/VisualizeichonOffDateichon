@@ -82,8 +82,5 @@ func update_chart() -> void:
 			}
 		))
 
-	if functions.is_empty():
-		return
-
 	chart.plot(functions, properties)
 	chart.queue_redraw()

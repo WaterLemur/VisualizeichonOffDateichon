@@ -100,8 +100,8 @@ func set_barley() -> void:
 	
 	bar_1.show_barley = barley
 	bar_1.update_chart()
-	bar_2.show_barley = barley
-	bar_2.update_chart()
+	#bar_2.show_barley = barley
+	#bar_2.update_chart()
 	pie.show_barley = barley
 	pie.update_chart()
 	tendency.show_barley = barley
@@ -114,8 +114,8 @@ func set_soldiers() -> void:
 	
 	bar_1.show_soldiers = soldiers
 	bar_1.update_chart()
-	bar_2.show_soldiers = soldiers
-	bar_2.update_chart()
+	#bar_2.show_soldiers = soldiers
+	#bar_2.update_chart()
 	pie.show_soldiers = soldiers
 	pie.update_chart()
 	tendency.show_soldiers = soldiers

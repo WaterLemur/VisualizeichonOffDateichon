@@ -33,8 +33,15 @@ func sample(x_sampled_domain: Dictionary, y_sampled_domain: Dictionary) -> void:
 	bars = []
 	bars_rects = []
 	for i in function.__x.size():
+		var x_position: float
+
+		if x_domain.lb == x_domain.ub:
+			x_position = (x_sampled_domain.lb + x_sampled_domain.ub) / 2.0
+		else:
+			x_position = ECUtilities._map_domain(i, x_domain, x_sampled_domain)
+
 		var top: Vector2 = Vector2(
-			ECUtilities._map_domain(i, x_domain, x_sampled_domain) + function.props.get("bar_offset", 0.0),
+			x_position + function.props.get("bar_offset", 0.0),
 			ECUtilities._map_domain(function.__y[i], y_domain, y_sampled_domain)
 		)
 		var base: Vector2 = Vector2(top.x, ECUtilities._map_domain(0.0, y_domain, y_sampled_domain))
