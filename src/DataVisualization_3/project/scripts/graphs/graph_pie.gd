@@ -13,9 +13,9 @@ var show_soldiers := true
 var chart: Chart
 
 const CITY_DATA = {
-	"Akkad": {"Barley": 120, "Soldiers": 45},
-	"Ur":    {"Barley": 85,  "Soldiers": 70},
-	"Uruk":  {"Barley": 150, "Soldiers": 55}
+	"Akkad": {"Cebada": 55000, "Soldados": 25000},
+	"Ur":    {"Cebada": 60000, "Soldados": 30000},
+	"Uruk":  {"Cebada": 65000, "Soldados": 35000}
 }
 
 
@@ -54,12 +54,12 @@ func update_chart() -> void:
 
 	for city in selected_cities:
 		if show_barley:
-			values.append(CITY_DATA[city]["Barley"])
-			labels.append(city + " Barley")
+			values.append(CITY_DATA[city]["Cebada"])
+			labels.append(city + " Cebada")
 
 		if show_soldiers:
-			values.append(CITY_DATA[city]["Soldiers"])
-			labels.append(city + " Soldiers")
+			values.append(CITY_DATA[city]["Soldados"])
+			labels.append(city + " Soldados")
 
 	var properties := ChartProperties.new()
 	properties.title = ""

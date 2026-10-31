@@ -143,9 +143,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -89.0
-offset_top = 5.154907
+offset_top = -566.0
 offset_right = 19.0
-offset_bottom = 28.154907
+offset_bottom = -543.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "0,000 BC"
@@ -159,9 +159,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -87.49985
-offset_top = -38.535034
+offset_top = 534.0
 offset_right = 20.500153
-offset_bottom = -15.535034
+offset_bottom = 557.0
 grow_horizontal = 2
 text = "0,000 BC"
 label_settings = SubResource("LabelSettings_xbnxe")
@@ -235,9 +235,10 @@ flat = true
 [node name="RangeSliderV" parent="UI/Menu" unique_id=1382023044 instance=ExtResource("8_8jx6j")]
 layout_mode = 0
 offset_left = 61.0
-offset_top = 51.0
+offset_top = 578.24
 offset_right = 91.0
-offset_bottom = 576.0
+offset_bottom = 1103.2402
+scale = Vector2(1, -1)
 
 [node name="TBAkkad" type="TextureButton" parent="UI/Menu" unique_id=725778729]
 layout_mode = 0
@@ -627,6 +628,15 @@ font = ExtResource("10_x6ptw")
 font_size = 55
 outline_size = 7
 
+[node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1/L3DTitle" unique_id=1744151827]
+transform = Transform3D(1.0000027, 0, -1.3500312e-13, 0, 1.000004, 0, -6.750156e-14, 0, 1, 0, -0.37674713, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.542, 0.463, 0.244, 1)
+text = "(2600AC)"
+font = ExtResource("10_x6ptw")
+font_size = 55
+outline_size = 7
+
 [node name="L3DOrigin" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=774242018]
 transform = Transform3D(1.0000011, 3.504493e-14, -4.0749626e-10, -8.200083e-14, 1.000001, -8.458842e-15, 4.0720494e-10, 2.4868986e-14, 0.9999968, -1.9119263, -2.0522003, 0)
 modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
@@ -744,9 +754,10 @@ modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 outline_modulate = Color(0.542, 0.463, 0.244, 1)
 text = "Distribución de recursos 
 en la 
-Antigua Mesopotamia"
+Antigua Mesopotamia
+2,550 A.C,"
 font = ExtResource("10_x6ptw")
-font_size = 55
+font_size = 48
 outline_size = 7
 
 [node name="Tendency" type="Node3D" parent="World/Sprites/Graphs" unique_id=768737517]
