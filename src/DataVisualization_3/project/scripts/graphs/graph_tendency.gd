@@ -28,58 +28,64 @@ func update_chart() -> void:
 
 	properties.title = "Recursos a travéz del tiempo"
 	properties.show_legend = true
-	properties.x_label = "Año"
-	properties.y_label = "Cantidad"
+	properties.x_label = ""
+	properties.y_label = ""
 	properties.interactive = true
 	properties.colors.text = Color("#D9A441")
 
-	var x: Array = []
-	var barley: Array = []
-	var soldiers: Array = []
+	var functions: Array[Function] = []
 
 	var cities = [
-		["Akkad", 40000.0, 15000.0, show_akkad, 0.0],
-		["Ur", 22000.0, 7000.0, show_ur, 1.0],
-		["Uruk", 25000.0, 12000.0, show_uruk, 2.0]
+		["Akkad", show_akkad],
+		["Ur", show_ur],
+		["Uruk", show_uruk]
+	]
+
+	var resources = [
+		[2, show_barley, "Cebada (gur)", Color("f7d37eff")],
+		[3, show_soldiers, "Soldados", Color("604914ff")]
 	]
 
 	for city in cities:
-		if city[3]:
-			x.append(city[4])
-			barley.append(city[1])
-			soldiers.append(city[2])
+		if not city[1]:
+			continue
 
-	var functions: Array[Function] = []
+		for resource in resources:
+			if not resource[1]:
+				continue
 
-	# Barley
-	if show_barley and not x.is_empty():
-		functions.append(Function.new(
-			x,
-			barley,
-			"Cebada (gur)",
-			{
-				type = Function.Type.LINE,
-				marker = Function.Marker.SQUARE,
-				color = Color("f7d37eff")
-			}
-		))
+			var x: Array = []
+			var y: Array = []
 
-	# Soldiers
-	if show_soldiers and not x.is_empty():
-		functions.append(Function.new(
-			x,
-			soldiers,
-			"Soldados",
-			{
-				type = Function.Type.LINE,
-				marker = Function.Marker.SQUARE,
-				color = Color("604914ff")
-			}
-		))
+			for row in DataBase.DATABASE:
+				if row[1] != city[0]:
+					continue
 
-	if functions.is_empty(): return
-		
-		
+				var value = row[resource[0]]
+
+				# Ignore missing database values
+				if value == null:
+					continue
+
+				x.append(float(row[0]))
+				y.append(value)
+
+			if x.is_empty():
+				continue
+
+			functions.append(Function.new(
+				x,
+				y,
+				city[0] + " - " + resource[2],
+				{
+					type = Function.Type.LINE,
+					marker = Function.Marker.SQUARE,
+					color = resource[3]
+				}
+			))
+
+	if functions.is_empty():
+		return
 
 	chart.plot(functions, properties)
 	chart.queue_redraw()

@@ -10,7 +10,7 @@ static func _map_domain(value: float, from_domain: Dictionary, to_domain: Dictio
 	return remap(value, from_domain.lb, from_domain.ub, to_domain.lb, to_domain.ub) 
 
 static func _format_value(value: float, is_decimal: bool) -> String:
-	return ("%.2f" if is_decimal else "%s") % snapped(value, 0.01) 
+	return str(roundi(value)) 
 
 ### Utility Inner functions ###
 

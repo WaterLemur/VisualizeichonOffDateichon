@@ -604,7 +604,7 @@ texture = ExtResource("14_rp2ow")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2504025, -5.074249, 0)
 
 [node name="Bar1" type="Node3D" parent="World/Sprites/Graphs" unique_id=1641601821]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.647, -2.04)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22017574, 1.6851354, -2.094715)
 
 [node name="SVBar1" type="SubViewport" parent="World/Sprites/Graphs/Bar1" unique_id=958429834]
 transparent_bg = true
@@ -613,14 +613,28 @@ render_target_update_mode = 4
 [node name="GraphBar1" parent="World/Sprites/Graphs/Bar1/SVBar1" unique_id=1537714593 instance=ExtResource("15_2kqvi")]
 
 [node name="SpriteBar1" type="Sprite3D" parent="World/Sprites/Graphs/Bar1" unique_id=995290408]
-transform = Transform3D(-4.152582e-09, 0, -0.103, 0, 0.087, 0, 0.095, 0, -4.5022728e-09, 0, 0, 0)
+transform = Transform3D(-4.808253e-09, 0, -0.12, 0, 0.1, 0, 0.11, 0, -5.2453664e-09, -0.008708954, 0, -0.010875702)
 cast_shadow = 0
 texture = SubResource("ViewportTexture_o2eaj")
 
+[node name="L3DOrigin" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=774242018]
+transform = Transform3D(1.000001, 3.5044928e-14, -4.074927e-10, -8.2000826e-14, 1.0000008, -8.458841e-15, 4.0721204e-10, 2.4868986e-14, 0.9999967, -2.3912048, -2.0522003, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "0"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+
 [node name="L3DAmount" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=13206303]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.519, -0.795, 0)
+transform = Transform3D(-4.3711378e-08, -1.0000004, 4.0316323e-08, 1.0000001, -4.3711392e-08, -4.0316326e-08, 4.0316316e-08, 4.0316355e-08, 0.99999976, -2.422, -1.007, 0)
 modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Cantidad"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+
+[node name="L3DCities" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=909230109]
+transform = Transform3D(1.0000005, 1.5446574e-14, -2.0375168e-10, -4.2294212e-14, 1.0000005, -4.92537e-15, 2.0361668e-10, 1.42108395e-14, 0.9999985, -1.912, -2.322, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Ciudades"
 font = ExtResource("10_x6ptw")
 outline_size = 0
 
@@ -691,9 +705,24 @@ transparent_bg = true
 [node name="GraphTendency" parent="World/Sprites/Graphs/Tendency/SVTendency" unique_id=974528778 instance=ExtResource("16_t28hp")]
 
 [node name="SpriteTendency" type="Sprite3D" parent="World/Sprites/Graphs/Tendency" unique_id=54520687]
-transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, 0, 0, 0)
+transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, 0, -0.032443523, -0.104660034)
 cast_shadow = 0
 texture = SubResource("ViewportTexture_u6vr8")
+
+[node name="L3DAmount" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=601278048]
+transform = Transform3D(-4.3711385e-08, -1, 4.371137e-08, 1, -4.371139e-08, -4.371145e-08, 4.371145e-08, 4.371137e-08, 1, -2.4728394, -0.900053, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Cantidad"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+autowrap_mode = 1
+
+[node name="L3DYear" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=420604535]
+transform = Transform3D(1, 0, -5.684342e-14, 0, 1, 0, 5.684342e-14, 0, 1, -1.6141052, -2.4546661, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "años"
+font = ExtResource("10_x6ptw")
+outline_size = 0
 
 [node name="Meshes" type="Node3D" parent="World" unique_id=1324747115]
 
