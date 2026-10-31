@@ -8,7 +8,6 @@
 [ext_resource type="Script" uid="uid://c4254sdslwfva" path="res://project/scripts/menu/map.gd" id="3_xg8yu"]
 [ext_resource type="Script" uid="uid://b36q7grkg5jn4" path="res://project/scripts/menu/timeline.gd" id="4_rp2ow"]
 [ext_resource type="Texture2D" uid="uid://dm0mouyw08ntt" path="res://project/art/sprites/data_bases/frame-data-base-cities.png" id="5_4irpc"]
-[ext_resource type="PackedScene" uid="uid://dgigg2vupxg0x" path="res://project/art/meshes/calculating_machine/calculating_machine.glb" id="5_6gxoo"]
 [ext_resource type="PackedScene" uid="uid://byrtbirj2ny4o" path="res://project/art/meshes/rack/rack_2.tscn" id="6_hv6mn"]
 [ext_resource type="Texture2D" uid="uid://dsekuwh8bh12h" path="res://project/art/sprites/data_bases/frame-data-base-resources.png" id="6_wj7eq"]
 [ext_resource type="Texture2D" uid="uid://dblucle4wn4xg" path="res://project/art/sprites/menu/menu.png" id="7_htdm8"]
@@ -40,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://pew53j8gdq72" path="res://project/art/sprites/icons/icon-soldier.png" id="19_mygyo"]
 [ext_resource type="PackedScene" uid="uid://brlbcx20q64y0" path="res://project/scenes/graphs/graph_pie.tscn" id="19_x6ptw"]
 [ext_resource type="PackedScene" uid="uid://lot84ohkitwv" path="res://project/art/meshes/rack_a/rack_a_m.tscn" id="31_qhkwt"]
+[ext_resource type="PackedScene" uid="uid://brcaf5lrvrhg" path="res://project/art/meshes/calculating_machine/calculating_machine_m.tscn" id="38_kfoow"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xbnxe"]
 font = ExtResource("9_6rj13")
@@ -884,7 +884,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.4
 [node name="rack_a" parent="World/Meshes/Racks/RackGraph" unique_id=285852217 instance=ExtResource("7_qrkhr")]
 visible = false
 
-[node name="Artifact" parent="World/Meshes" unique_id=274704578 instance=ExtResource("5_6gxoo")]
+[node name="Artifact" parent="World/Meshes" unique_id=274704578 instance=ExtResource("38_kfoow")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.9524641, 0, -55.801888)
 
 [node name="lectern" parent="World/Meshes" unique_id=1779673043 instance=ExtResource("8_qrkhr")]
