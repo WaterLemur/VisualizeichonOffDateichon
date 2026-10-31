@@ -20,13 +20,15 @@ func _ready() -> void:
 	chart = chart_scene.instantiate()
 	add_child(chart)
 
+	# ----- THEMING -----------
+
 	update_chart()
 
 
 func update_chart() -> void:
 	var properties := ChartProperties.new()
 
-	properties.title = "Mesopotamian Conquest Resources"
+	properties.title = "Barras 1"
 	properties.show_legend = true
 	properties.x_label = "City-States"
 	properties.y_label = "Resource Volumes"
