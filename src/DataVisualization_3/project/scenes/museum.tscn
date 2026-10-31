@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dsekuwh8bh12h" path="res://project/art/sprites/data_bases/frame-data-base-resources.png" id="6_wj7eq"]
 [ext_resource type="PackedScene" uid="uid://botuthtd084ls" path="res://project/art/meshes/rack_b/rack_b.glb" id="7_hv6mn"]
 [ext_resource type="PackedScene" uid="uid://c1c4nipfojugn" path="res://project/art/meshes/rack_a/rack_a.glb" id="7_qrkhr"]
+[ext_resource type="PackedScene" uid="uid://bmmi80m00t211" path="res://tools/infinity_ga8es/range_slider/range_slider_v.tscn" id="8_8jx6j"]
 [ext_resource type="PackedScene" uid="uid://drvdd4pnuktls" path="res://project/art/meshes/museum/museum_2.glb" id="8_eelwi"]
 [ext_resource type="PackedScene" uid="uid://cakged56oldtr" path="res://project/art/meshes/stylus/stylus.glb" id="8_ntp17"]
 [ext_resource type="PackedScene" uid="uid://cp7jmspfqlgpg" path="res://project/art/meshes/lectern/lectern_2.tscn" id="8_qrkhr"]
@@ -143,7 +144,6 @@ texture_pressed = ExtResource("3_wfvgn")
 texture_hover = ExtResource("3_wfvgn")
 
 [node name="Timeline" type="Control" parent="UI/Menu" unique_id=1019585773]
-visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -156,19 +156,6 @@ offset_right = 9.239685
 offset_bottom = 388.655
 grow_horizontal = 0
 grow_vertical = 2
-
-[node name="Year" type="Label" parent="UI/Menu/Timeline" unique_id=1441891333]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 40.260166
-offset_top = 756.46497
-offset_right = 148.26016
-offset_bottom = 779.46497
-grow_horizontal = 2
-text = "[Year] BC"
-vertical_alignment = 1
 
 [node name="YearMin" type="Label" parent="UI/Menu/Timeline" unique_id=1116717828]
 layout_mode = 1
@@ -183,7 +170,7 @@ offset_right = 54.000004
 offset_bottom = 28.154907
 grow_horizontal = 2
 grow_vertical = 0
-text = "[Year Max] BC"
+text = "[Year Min] BC"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -202,6 +189,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VSlider" type="VSlider" parent="UI/Menu/Timeline" unique_id=1167255864]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -250,6 +238,13 @@ offset_bottom = 553.31006
 rotation = 6.2831855
 icon = ExtResource("3_wfvgn")
 flat = true
+
+[node name="RangeSliderV" parent="UI/Menu" unique_id=1382023044 instance=ExtResource("8_8jx6j")]
+layout_mode = 0
+offset_left = 131.0
+offset_top = 10.0
+offset_right = 161.0
+offset_bottom = 786.0
 
 [node name="World" type="Node3D" parent="." unique_id=1529691493]
 
@@ -654,3 +649,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9551827, 2.1845849, -55.81
 [connection signal="value_changed" from="UI/Menu/Timeline/VSlider" to="Scripts/Menu" method="_on_timeline_value_changed"]
 [connection signal="pressed" from="UI/Menu/BtnUp" to="Scripts/Navigation" method="_on_btn_up_pressed"]
 [connection signal="pressed" from="UI/Menu/BtnDown" to="Scripts/Navigation" method="_on_btn_down_pressed"]
+[connection signal="range_changed" from="UI/Menu/RangeSliderV" to="Scripts/Menu" method="_on_range_slider_v_range_changed"]

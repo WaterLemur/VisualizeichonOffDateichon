@@ -16,7 +16,6 @@ var uruk:     bool = true
 var barley:   bool = true
 var soldiers: bool = true
 
-var year:     int = 0
 var year_min: int = 0
 var year_max: int = 0
 
@@ -28,8 +27,8 @@ var year_max: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	set_year(year)
-	timeline.set_slider(year)
+	timeline.set_year_min(year_min)
+	timeline.set_year_max(year_max)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -113,19 +112,6 @@ func set_soldiers() -> void:
 	tendency.show_soldiers = soldiers
 	tendency.update_chart()
 
-
-
-
-func set_year(new_year: int) -> void:
-	year = new_year
-	timeline.set_year(year)
-
-func set_year_min(new_min_year: int) -> void:
-	year_min = new_min_year
-	
-func set_year_max(new_max_year: int) -> void:
-	year_max = new_max_year
-
 # ==========================================
 # ============== MENU ======================
 # ==========================================
@@ -160,7 +146,11 @@ func _on_tb_soldiers_pressed() -> void:
 	print("Museum: Menu = Soldiers")
 
 # -------------- Timeline -----------------------
-func _on_timeline_value_changed(value: float) -> void:
-	set_year(value as int)
-	print("Museum: Menu = Timeline: %.0f" % value) 
+func _on_range_slider_v_range_changed(min_value: float, max_value: float) -> void:
+	year_min = min_value
+	timeline.set_year_min(year_min)
+	print("Museum: Menu = Timeline Min: %.0f" % min_value)
 	
+	year_max = max_value
+	timeline.set_year_max(year_max)
+	print("Museum: Menu = Timeline Max: %.0f" % max_value) 

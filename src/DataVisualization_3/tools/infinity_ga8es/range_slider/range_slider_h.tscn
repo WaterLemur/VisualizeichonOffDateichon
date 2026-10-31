@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://crhjrk2euvqbi"]
+
+[ext_resource type="Script" uid="uid://c8yt67tbkotu5" path="res://tools/infinity_ga8es/range_slider/range_slider_h.gd" id="1_q0j5l"]
+
+[node name="RSliderH" type="Control" unique_id=1945698393]
+custom_minimum_size = Vector2(250, 30)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q0j5l")
+metadata/_custom_type_script = "uid://c8yt67tbkotu5"
+
+[connection signal="range_changed" from="." to="." method="_on_range_changed"]
