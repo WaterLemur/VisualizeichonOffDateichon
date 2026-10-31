@@ -598,7 +598,7 @@ texture = ExtResource("14_rp2ow")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2504025, -5.074249, 0)
 
 [node name="Bar1" type="Node3D" parent="World/Sprites/Graphs" unique_id=1641601821]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999981, 1.7523732, -2.075138)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.647, -2.04)
 
 [node name="SVBar1" type="SubViewport" parent="World/Sprites/Graphs/Bar1" unique_id=958429834]
 transparent_bg = true
@@ -607,16 +607,32 @@ render_target_update_mode = 4
 [node name="GraphBar1" parent="World/Sprites/Graphs/Bar1/SVBar1" unique_id=1537714593 instance=ExtResource("15_2kqvi")]
 
 [node name="SpriteBar1" type="Sprite3D" parent="World/Sprites/Graphs/Bar1" unique_id=995290408]
-transform = Transform3D(-5.4639235e-09, 0, -0.125, 0, 0.125, 0, 0.125, 0, -5.4639235e-09, 0, 0, 0)
+transform = Transform3D(-4.152582e-09, 0, -0.103, 0, 0.087, 0, 0.095, 0, -4.5022728e-09, 0, 0, 0)
 cast_shadow = 0
 texture = SubResource("ViewportTexture_o2eaj")
 
-[node name="Label3D" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=13206303]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4036255, -0.6354408, 0)
+[node name="L3DAmount" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=13206303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.519, -0.795, 0)
 modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Cantidad"
 font = ExtResource("10_x6ptw")
 outline_size = 0
+
+[node name="L3DLegend" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=212080489]
+transform = Transform3D(1.0000001, 0, 3.5527137e-15, 0, 1.0000001, 0, -3.5527137e-15, 0, 1, 1.371, -2.36, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+text = "Cebada (gur)"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+
+[node name="L3DLegend2" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1/L3DLegend" unique_id=811357634]
+transform = Transform3D(1.0000001, 0, 3.5527137e-15, 0, 1.0000001, 0, -3.5527137e-15, 0, 1, 1.105, 0, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Cebada (gur)"
+font = ExtResource("10_x6ptw")
+outline_size = 1
 
 [node name="Bar2" type="Node3D" parent="World/Sprites/Graphs" unique_id=1282151549]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1960001, 1.6210003, -1.3133011)
@@ -629,6 +645,22 @@ transparent_bg = true
 [node name="SpriteBar2" type="Sprite3D" parent="World/Sprites/Graphs/Bar2" unique_id=1167667898]
 transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e-09, 0, 0, 0)
 texture = SubResource("ViewportTexture_b58ac")
+
+[node name="L3DLegend" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=1564194620]
+transform = Transform3D(1.0000001, 0, -3.5527137e-15, 0, 1.0000001, 0, 7.1054274e-15, 0, 1, -2.6705322, -2.3600006, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+text = "Cebada (gur)"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+
+[node name="L3DLegend2" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2/L3DLegend" unique_id=453797482]
+transform = Transform3D(1.0000001, 0, 3.5527137e-15, 0, 1.0000001, 0, -3.5527137e-15, 0, 1, 1.105, 0, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Cebada (gur)"
+font = ExtResource("10_x6ptw")
+outline_size = 1
 
 [node name="Pie" type="Node3D" parent="World/Sprites/Graphs" unique_id=269983883]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19965458, 1.8756056, 0.79605484)
