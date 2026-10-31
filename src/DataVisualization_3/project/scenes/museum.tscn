@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://drvdd4pnuktls" path="res://project/art/meshes/museum/museum_2.glb" id="8_eelwi"]
 [ext_resource type="PackedScene" uid="uid://cakged56oldtr" path="res://project/art/meshes/stylus/stylus.glb" id="8_ntp17"]
 [ext_resource type="PackedScene" uid="uid://cp7jmspfqlgpg" path="res://project/art/meshes/lectern/lectern_2.tscn" id="8_qrkhr"]
+[ext_resource type="FontFile" uid="uid://6lt8q2h5lfv7" path="res://tools/infinity_ga8es/fonts/OCR-A Regular.otf" id="9_6rj13"]
 [ext_resource type="Texture2D" uid="uid://d0pnaunlx2vby" path="res://project/art/sprites/map/map-wind-rose.png" id="9_fd4yj"]
 [ext_resource type="Texture2D" uid="uid://cofrrir7ironp" path="res://project/art/sprites/map/map-paths.png" id="10_2kqvi"]
 [ext_resource type="Texture2D" uid="uid://b07g73rwx7qhr" path="res://project/art/sprites/menu/arrow_up.png" id="10_6rj13"]
@@ -33,6 +34,9 @@
 [ext_resource type="PackedScene" uid="uid://dd6cppals05k0" path="res://project/scenes/graphs/graph_tenency.tscn" id="16_t28hp"]
 [ext_resource type="PackedScene" uid="uid://d3v8d83jspt6b" path="res://project/scenes/graphs/graph_bar_2.tscn" id="19_b58ac"]
 [ext_resource type="PackedScene" uid="uid://brlbcx20q64y0" path="res://project/scenes/graphs/graph_pie.tscn" id="19_x6ptw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xbnxe"]
+font = ExtResource("9_6rj13")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_o2eaj"]
 viewport_path = NodePath("World/Sprites/Graphs/Bar1/SVBar1")
@@ -137,14 +141,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -53.999996
+offset_left = -89.0
 offset_top = 5.154907
-offset_right = 54.000004
+offset_right = 19.0
 offset_bottom = 28.154907
 grow_horizontal = 2
 grow_vertical = 0
-text = "[Year Min] BC"
-horizontal_alignment = 1
+text = "0,000 BC"
+label_settings = SubResource("LabelSettings_xbnxe")
+horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="YearMax" type="Label" parent="UI/Menu/Timeline" unique_id=1803228664]
@@ -152,13 +157,14 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -53.27
+offset_left = -87.49985
 offset_top = -38.535034
-offset_right = 54.73
+offset_right = 20.500153
 offset_bottom = -15.535034
 grow_horizontal = 2
-text = "[Year Max] BC"
-horizontal_alignment = 1
+text = "0,000 BC"
+label_settings = SubResource("LabelSettings_xbnxe")
+horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="VSlider" type="VSlider" parent="UI/Menu/Timeline" unique_id=1167255864]

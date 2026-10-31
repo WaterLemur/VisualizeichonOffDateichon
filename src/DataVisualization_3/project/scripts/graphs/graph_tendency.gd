@@ -56,7 +56,7 @@ func update_chart() -> void:
 		functions.append(Function.new(
 			x,
 			barley,
-			"Cebada (Gur)",
+			"Cebada (gur)",
 			{
 				type = Function.Type.LINE,
 				marker = Function.Marker.SQUARE,

@@ -3,6 +3,12 @@
 [ext_resource type="FontFile" uid="uid://8qd7n2hmra5a" path="res://project/art/fonts/playbaill/Playball-Regular.ttf" id="1_nhnfi"]
 
 [resource]
+Button/colors/font_color = Color(0.92156863, 0.78431374, 0.3764706, 1)
+Button/colors/font_hover_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
+Button/colors/font_pressed_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
+Button/colors/icon_hover_color = Color(0.542, 0.463, 0.244, 1)
+Button/colors/icon_normal_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
+Button/colors/icon_pressed_color = Color(0.542, 0.463, 0.244, 1)
 Button/font_sizes/font_size = 61
 Button/fonts/font = null
 ClayTextNormal/base_type = &"Label"
