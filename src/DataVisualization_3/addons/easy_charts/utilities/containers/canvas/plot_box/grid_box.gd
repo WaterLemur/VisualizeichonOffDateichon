@@ -96,7 +96,7 @@ func _draw_vertical_grid() -> void:
 				get_parent().chart_properties.font, 
 				_get_vertical_tick_label_pos(bottom, tick_lbl),
 				tick_lbl,HORIZONTAL_ALIGNMENT_CENTER, -1, ThemeDB.fallback_font_size,
-				get_parent().chart_properties.colors.text, TextServer.JUSTIFICATION_NONE, TextServer.DIRECTION_AUTO,
+				Color(0.542, 0.463, 0.244, 1.0), TextServer.JUSTIFICATION_NONE, TextServer.DIRECTION_AUTO,
 				TextServer.ORIENTATION_HORIZONTAL
 			)
 	
@@ -142,7 +142,7 @@ func _draw_horizontal_grid() -> void:
 				tick_lbl,
 				HORIZONTAL_ALIGNMENT_CENTER,
 				-1, ThemeDB.fallback_font_size,
-				get_parent().chart_properties.colors.text,
+				Color(0.542, 0.463, 0.244, 1.0),
 				TextServer.JUSTIFICATION_NONE, TextServer.DIRECTION_AUTO, TextServer.ORIENTATION_HORIZONTAL
 			)
 	

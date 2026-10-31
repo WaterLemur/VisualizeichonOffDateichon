@@ -18,6 +18,7 @@ const CITY_DATA = {
 	"Uruk":  {"Barley": 150, "Soldiers": 55}
 }
 
+
 func _ready() -> void:
 	var chart_scene: PackedScene = load(
         "res://addons/easy_charts/control_charts/chart.tscn"
@@ -30,6 +31,14 @@ func _ready() -> void:
 
 
 func update_chart() -> void:
+	var base_color := Color("886f23ff")
+
+	var gradient := Gradient.new()
+	gradient.set_color(0, base_color.darkened(0.33))
+	gradient.set_color(1, base_color.lightened(0.33))
+	
+	
+	
 	var values: Array = []
 	var labels: Array = []
 
@@ -52,8 +61,9 @@ func update_chart() -> void:
 			labels.append(city + " Soldiers")
 
 	var chart_properties := ChartProperties.new()
-	chart_properties.title = "Mesopotamian City Records"
+	chart_properties.title = "Distribución de recursos en la Antigua Mesopotamia"
 	chart_properties.show_legend = true
+	chart_properties.colors.text = Color("#D9A441")
 
 	# Rebuild the chart using the selected data
 	var function := Function.new(
@@ -63,7 +73,7 @@ func update_chart() -> void:
 		{
 			type = Function.Type.PIE,
 			marker = Function.Marker.CIRCLE,
-			color = Color("#A6B83B")
+			gradient = gradient
 		}
 	)
 

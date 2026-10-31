@@ -15,6 +15,9 @@ var slices_dirs: PackedVector2Array = []
 
 var focused_point: Point
 
+var my_color = Color(0.922, 0.784, 0.376, 1.0) as Color
+
+
 func _init(function: Function) -> void:
 	super(function)
 	pass
@@ -62,7 +65,7 @@ func sample(radius: float, center: Vector2, total: float, ratios: PackedFloat32A
 	
 	for slice in slices:
 		var mid_point: Vector2 = (slice[-1] + slice[1]) / 2
-		draw_circle(mid_point, 5, Color.WHITE)
+		draw_circle(mid_point, 5, my_color)
 		slices_dirs.append(center.direction_to(mid_point))
 
 func _calc_circle_arc_poly(center: Vector2, radius: float, angle_from: float, angle_to: float) -> PackedVector2Array:
@@ -79,7 +82,7 @@ func _calc_circle_arc_poly(center: Vector2, radius: float, angle_from: float, an
 func _draw_pie() -> void:
 	for i in slices.size():
 		draw_colored_polygon(slices[i], function.get_gradient().sample(float(i) / float(slices.size() - 1)))
-		draw_polyline(slices[i], Color.WHITE, 2.0, true)
+		draw_polyline(slices[i], my_color, 2.0, true)
 
 func _draw_labels(radius: float, center: Vector2, ratios: PackedFloat32Array) -> void:
 	for i in slices_dirs.size():
@@ -95,7 +98,7 @@ func _draw_labels(radius: float, center: Vector2, ratios: PackedFloat32Array) ->
 			HORIZONTAL_ALIGNMENT_CENTER,
 			ratio_lbl_size.x,
 			16,
-			Color.WHITE,
+			my_color,
 			3,
 			TextServer.DIRECTION_AUTO,
 			TextServer.ORIENTATION_HORIZONTAL
@@ -107,7 +110,7 @@ func _draw_labels(radius: float, center: Vector2, ratios: PackedFloat32Array) ->
 			HORIZONTAL_ALIGNMENT_CENTER,
 			value_lbl_size.x,
 			16,
-			Color.WHITE,
+			my_color,
 			3,TextServer.DIRECTION_AUTO,TextServer.ORIENTATION_HORIZONTAL
 		)
 

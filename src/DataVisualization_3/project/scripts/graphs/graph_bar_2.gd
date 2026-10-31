@@ -59,12 +59,12 @@ func update_chart() -> void:
 		functions.append(Function.new(
 			x,
 			barley,
-			"Barley (Gur)",
+			"Cebada (Gur)",
 			{
 				type = Function.Type.BAR,
 				bar_size = BAR_SIZE,
 				bar_offset = -BAR_SIZE if both_visible else 0.0,
-				color = Color("#9eb23b")
+				color = Color("ebc860ff")
 			}
 		))
 
@@ -72,12 +72,12 @@ func update_chart() -> void:
 		functions.append(Function.new(
 			x,
 			soldiers,
-			"Soldiers",
+			"Soldados",
 			{
 				type = Function.Type.BAR,
 				bar_size = BAR_SIZE,
 				bar_offset = BAR_SIZE if both_visible else 0.0,
-				color = Color("#b33939")
+				color = Color("604914ff")
 			}
 		))
 
