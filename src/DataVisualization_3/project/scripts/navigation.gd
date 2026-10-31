@@ -5,7 +5,7 @@ extends Node
 enum Nav { LEFT, RIGHT, UP, DOWN }
 
 enum State_Main     { MAIN_MENU, HISTORY, MUSEUM, GRAPHS, ARTIFACT, OPTIONS, EXIT }
-enum State_Rack    { DATA_BASES, MAP, BARS, PIE, TENDENCY }
+enum State_Rack    { ARTIFACT, DATA_BASES, MAP, BARS, PIE, TENDENCY }
 enum State_Artifact { FULL, WEIGHT, AMMOUNT, STYLUS }
 
 var cam_index = 0 as int
@@ -49,9 +49,9 @@ func camera_transition(nav: Nav) -> void:
 	match state_rack:
 		State_Rack.DATA_BASES:
 			if nav == Nav.LEFT:
-				state_rack = State_Rack.TENDENCY
-				set_camera_pos(pos_graph_tendency)
-				Persistent.set_scene_label("Tendencia")
+				state_rack = State_Rack.ARTIFACT
+				set_camera_pos(pos_artifact)
+				Persistent.set_scene_label("Artefacto")
 				return
 			if nav == Nav.RIGHT:
 				state_rack = State_Rack.MAP
@@ -62,7 +62,7 @@ func camera_transition(nav: Nav) -> void:
 			if nav == Nav.LEFT:
 				state_rack = State_Rack.DATA_BASES
 				set_camera_pos(pos_db)
-				Persistent.set_scene_label("Bases de datos")
+				Persistent.set_scene_label("Base de datos")
 				return
 			if nav == Nav.RIGHT:
 				state_rack = State_Rack.BARS
@@ -98,9 +98,19 @@ func camera_transition(nav: Nav) -> void:
 				Persistent.set_scene_label("Dona")
 				return
 			if nav == Nav.RIGHT:
+				state_rack = State_Rack.ARTIFACT
+				Persistent.set_scene_label("Artefacto")
+				set_camera_pos(pos_artifact)
+				return
+		State_Rack.ARTIFACT:
+			if nav == Nav.LEFT:
+				state_rack = State_Rack.TENDENCY
+				set_camera_pos(pos_graph_tendency)
+				Persistent.set_scene_label("Tendencia")
+			if nav == Nav.RIGHT:
 				state_rack = State_Rack.DATA_BASES
-				Persistent.set_scene_label("Base de datos")
 				set_camera_pos(pos_db)
+				Persistent.set_scene_label("Base de datos")
 				return
 
 #	match state_main:
