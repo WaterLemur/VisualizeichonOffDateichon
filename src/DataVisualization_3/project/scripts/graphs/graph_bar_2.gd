@@ -38,9 +38,9 @@ func update_chart() -> void:
 	var soldiers: Array = []
 
 	var cities = [
-		["Akkad", 40000.0, 15000.0, show_akkad],
-		["Ur", 22000.0, 7000.0, show_ur],
-		["Uruk", 25000.0, 12000.0, show_uruk]
+		["Akkad", 20000, 65000, show_akkad],
+		["Ur",    25000, 70000, show_ur],
+		["Uruk",  30000, 75000, show_uruk]
 	]
 
 	for city in cities:

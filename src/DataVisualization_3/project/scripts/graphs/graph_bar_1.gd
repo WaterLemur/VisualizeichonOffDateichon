@@ -42,17 +42,19 @@ func update_chart() -> void:
 
 	# City data
 	var cities = [
-		["Akkad", 40000.0, 15000.0, show_akkad],
-		["Uruk", 25000.0, 12000.0, show_uruk],
-		["Ur", 22000.0, 7000.0, show_ur]
+		["Akkad", 40000.0, 10000.0, show_akkad],
+		["Uruk",  45000.0, 15000.0, show_uruk],
+		["Ur",    50000.0, 20000.0, show_ur]
 	]
 
-	# Collect selected cities
 	for city in cities:
 		if city[3]:
+			var total: float = city[1] + city[2]
+
 			x.append(city[0])
-			barley.append(city[1])
-			soldiers.append(city[2])
+			barley.append(city[1] / total * 100.0)
+			soldiers.append(city[2] / total * 100.0)
+			
 
 	var functions: Array[Function] = []
 

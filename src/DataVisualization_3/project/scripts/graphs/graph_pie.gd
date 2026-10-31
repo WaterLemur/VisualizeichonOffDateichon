@@ -18,7 +18,6 @@ const CITY_DATA = {
 	"Uruk":  {"Cebada": 65000, "Soldados": 35000}
 }
 
-
 func _ready() -> void:
 	var chart_scene: PackedScene = load(
         "res://addons/easy_charts/control_charts/chart.tscn"

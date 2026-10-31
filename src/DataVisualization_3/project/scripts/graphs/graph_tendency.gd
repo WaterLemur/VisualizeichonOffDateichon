@@ -14,6 +14,18 @@ var show_soldiers := true
 var chart: Chart
 
 
+@export_group("Chart Colors")
+
+@export var akkad_barley_color: Color = Color("81631eff")
+@export var akkad_soldiers_color: Color = Color("604914ff")
+
+@export var ur_barley_color: Color = Color("8a763eff")
+@export var ur_soldiers_color: Color = Color("6c5c2eff")
+
+@export var uruk_barley_color: Color = Color("ebc860ff")
+@export var uruk_soldiers_color: Color = Color("b19231ff")
+
+
 func _ready() -> void:
 	var chart_scene: PackedScene = load(
 		"res://addons/easy_charts/control_charts/chart.tscn"
@@ -38,16 +50,14 @@ func update_chart() -> void:
 	var functions: Array[Function] = []
 
 	var cities = [
-		["Akkad", show_akkad],
-		["Ur", show_ur],
-		["Uruk", show_uruk]
+		["Akkad", show_akkad, akkad_barley_color, akkad_soldiers_color],
+		["Ur", show_ur, ur_barley_color, ur_soldiers_color],
+		["Uruk", show_uruk, uruk_barley_color, uruk_soldiers_color]
 	]
-	
-	
 
 	var resources = [
-		[2, show_barley, "Cebada (gur)", Color("f7d37eff")],
-		[3, show_soldiers, "Soldados", Color("604914ff")]
+		[2, show_barley, "Cebada (gur)", 2],
+		[3, show_soldiers, "Soldados", 3]
 	]
 
 	for city in cities:
@@ -89,7 +99,7 @@ func update_chart() -> void:
 				{
 					type = Function.Type.LINE,
 					marker = Function.Marker.SQUARE,
-					color = resource[3]
+					color = city[resource[3]]
 				}
 			))
 
