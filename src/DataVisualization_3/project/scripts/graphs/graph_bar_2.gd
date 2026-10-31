@@ -26,10 +26,10 @@ func _ready() -> void:
 func update_chart() -> void:
 	var properties := ChartProperties.new()
 
-	properties.title = "Mesopotamian Conquest Resources"
-	properties.show_legend = true
-	properties.x_label = "City-States"
-	properties.y_label = "Resource Volumes"
+	properties.title = "Comparación recursos por ciudad"
+	properties.show_legend = false
+	properties.x_label = ""
+	properties.y_label = ""
 	properties.interactive = true
 	properties.colors.text = Color("#D9A441")
 

@@ -30,7 +30,7 @@ func update_chart() -> void:
 
 	properties.title = "Relación (%) de cebada y soldados"
 	properties.show_legend = false
-	properties.x_label = "Ciudades"
+	properties.x_label = ""
 	#properties.y_label = "Cantidad\nrecursos"
 	properties.colors.text = Color("#D9A441")
 

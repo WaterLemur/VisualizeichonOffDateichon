@@ -67,6 +67,7 @@ func update_chart() -> void:
 	properties.colors.text = Color("#D9A441")
 	properties.draw_vertical_grid = false
 	properties.draw_horizontal_grid = false
+	properties.show_tick_labels = false
 
 	# Rebuild the chart using the selected data
 	var function := Function.new(
