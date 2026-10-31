@@ -885,7 +885,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.4
 visible = false
 
 [node name="Artifact" parent="World/Meshes" unique_id=274704578 instance=ExtResource("38_kfoow")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.9524641, 0, -55.801888)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.952466, -0.018393993, -55.785454)
 
 [node name="lectern" parent="World/Meshes" unique_id=1779673043 instance=ExtResource("8_qrkhr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7177277, 0, -53.14185)
