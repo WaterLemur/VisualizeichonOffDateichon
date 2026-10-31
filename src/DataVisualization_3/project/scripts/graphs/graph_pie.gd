@@ -39,6 +39,7 @@ func update_chart() -> void:
 	
 	
 	
+	
 	var values: Array = []
 	var labels: Array = []
 
@@ -60,10 +61,12 @@ func update_chart() -> void:
 			values.append(CITY_DATA[city]["Soldiers"])
 			labels.append(city + " Soldiers")
 
-	var chart_properties := ChartProperties.new()
-	chart_properties.title = "Distribución de recursos en la Antigua Mesopotamia"
-	chart_properties.show_legend = true
-	chart_properties.colors.text = Color("#D9A441")
+	var properties := ChartProperties.new()
+	properties.title = "Distribución de recursos en la Antigua Mesopotamia"
+	properties.show_legend = true
+	properties.colors.text = Color("#D9A441")
+	properties.draw_vertical_grid = false
+	properties.draw_horizontal_grid = false
 
 	# Rebuild the chart using the selected data
 	var function := Function.new(
@@ -77,4 +80,4 @@ func update_chart() -> void:
 		}
 	)
 
-	chart.plot([function], chart_properties)
+	chart.plot([function], properties)
