@@ -734,8 +734,16 @@ transform = Transform3D(-4.152582e-09, 0, -0.095, 0, 0.095, 0, 0.095, 0, -4.1525
 cast_shadow = 0
 texture = SubResource("ViewportTexture_u6vr8")
 
+[node name="L3DOrigin" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=1857378684]
+transform = Transform3D(1.0000014, 0, -3.907985e-14, 0, 1.0000014, 0, 3.907985e-14, 0, 1.0000014, -3.8630981, -2.0033855, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "0"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+autowrap_mode = 1
+
 [node name="L3DAmount" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=601278048]
-transform = Transform3D(-4.3711385e-08, -1, 4.371137e-08, 1, -4.371139e-08, -4.371145e-08, 4.371145e-08, 4.371137e-08, 1, -2.4728394, -0.900053, 0)
+transform = Transform3D(-4.3711385e-08, -1.0000007, 4.3711378e-08, 1.0000007, -4.37114e-08, -4.3711456e-08, 4.3711506e-08, 4.3711378e-08, 1.0000007, -4.194702, -2.338602, 0)
 modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Cantidad"
 font = ExtResource("10_x6ptw")
@@ -743,9 +751,9 @@ outline_size = 0
 autowrap_mode = 1
 
 [node name="L3DYear" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=420604535]
-transform = Transform3D(1, 0, -5.684342e-14, 0, 1, 0, 5.684342e-14, 0, 1, -1.6141052, -2.4546661, 0)
+transform = Transform3D(1.0000004, 0, -6.3948846e-14, 0, 1.0000004, 0, 6.3948846e-14, 0, 1.0000004, -0.5828552, -2.4546642, 0)
 modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
-text = "años"
+text = "Años"
 font = ExtResource("10_x6ptw")
 outline_size = 0
 
