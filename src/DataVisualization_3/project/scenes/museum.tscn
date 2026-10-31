@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://dd6cppals05k0" path="res://project/scenes/graphs/graph_tenency.tscn" id="16_t28hp"]
 [ext_resource type="PackedScene" uid="uid://d3v8d83jspt6b" path="res://project/scenes/graphs/graph_bar_2.tscn" id="19_b58ac"]
 [ext_resource type="PackedScene" uid="uid://brlbcx20q64y0" path="res://project/scenes/graphs/graph_pie.tscn" id="19_x6ptw"]
+[ext_resource type="PackedScene" uid="uid://lot84ohkitwv" path="res://project/art/meshes/rack_a/rack_a_m.tscn" id="31_qhkwt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xbnxe"]
 font = ExtResource("9_6rj13")
@@ -351,7 +352,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86, -6.665)
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosMap" unique_id=11808520]
 
 [node name="PosGraphBars" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=2056571179]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.563, -4.025, -8.466)
+transform = Transform3D(0.99999934, 0, 0, 0, 0.99999934, 0, 2.842171e-14, 0, 1, -1.8721657, -4.024995, -9.172645)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphBars" unique_id=2061057445]
 transform = Transform3D(1, 0, -2.4868996e-14, 0, 1, 0, 2.1316282e-14, 0, 1, -0.11236191, 0, -0.364707)
@@ -655,7 +656,7 @@ font = ExtResource("10_x6ptw")
 outline_size = 1
 
 [node name="Bar2" type="Node3D" parent="World/Sprites/Graphs" unique_id=1282151549]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1960001, 1.6210003, -1.3133011)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1960001, 1.6433282, -1.4491043)
 
 [node name="SVBar2" type="SubViewport" parent="World/Sprites/Graphs/Bar2" unique_id=244128300]
 transparent_bg = true
@@ -697,15 +698,16 @@ cast_shadow = 0
 texture = SubResource("ViewportTexture_07rhc")
 
 [node name="Tendency" type="Node3D" parent="World/Sprites/Graphs" unique_id=768737517]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21085167, 0.18119311, -1.2741165)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.211, 0.181, -1.284)
 
 [node name="SVTendency" type="SubViewport" parent="World/Sprites/Graphs/Tendency" unique_id=1686177610]
 transparent_bg = true
+size = Vector2i(902, 512)
 
 [node name="GraphTendency" parent="World/Sprites/Graphs/Tendency/SVTendency" unique_id=974528778 instance=ExtResource("16_t28hp")]
 
 [node name="SpriteTendency" type="Sprite3D" parent="World/Sprites/Graphs/Tendency" unique_id=54520687]
-transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, 0, -0.032443523, -0.104660034)
+transform = Transform3D(-4.152582e-09, 0, -0.095, 0, 0.095, 0, 0.095, 0, -4.152582e-09, 0, -0.032, 0)
 cast_shadow = 0
 texture = SubResource("ViewportTexture_u6vr8")
 
@@ -740,7 +742,10 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12.
 [node name="RackGraph" parent="World/Meshes/Racks" unique_id=2039546496 instance=ExtResource("6_hv6mn")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.488, 0, 0)
 
-[node name="rack_a" parent="World/Meshes/Racks/RackGraph" unique_id=1997434165 instance=ExtResource("7_qrkhr")]
+[node name="rack_a_m" parent="World/Meshes/Racks/RackGraph" unique_id=1997434165 instance=ExtResource("31_qhkwt")]
+
+[node name="rack_a" parent="World/Meshes/Racks/RackGraph" unique_id=285852217 instance=ExtResource("7_qrkhr")]
+visible = false
 
 [node name="Artifact" parent="World/Meshes" unique_id=274704578 instance=ExtResource("5_6gxoo")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.9524641, 0, -55.801888)
