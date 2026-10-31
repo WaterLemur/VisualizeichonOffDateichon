@@ -78,7 +78,7 @@ func camera_transition(nav: Nav) -> void:
 			if nav == Nav.RIGHT:
 				state_rack = State_Rack.PIE
 				set_camera_pos(pos_graph_pie)
-				Persistent.set_scene_label("Dona")
+				Persistent.set_scene_label("Torta")
 				return
 		State_Rack.PIE:
 			if nav == Nav.LEFT:

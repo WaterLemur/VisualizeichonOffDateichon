@@ -31,8 +31,13 @@
 [ext_resource type="Texture2D" uid="uid://b567ugqryp07r" path="res://project/art/sprites/map/map-waypoint-ur.png" id="13_xg8yu"]
 [ext_resource type="Texture2D" uid="uid://cjllxjsq0yf7h" path="res://project/art/sprites/map/map-waypoint-uruk.png" id="14_rp2ow"]
 [ext_resource type="PackedScene" uid="uid://ckvlidixrg4ls" path="res://project/scenes/graphs/graph_bar_1.tscn" id="15_2kqvi"]
+[ext_resource type="Texture2D" uid="uid://1pc5ehqdqtx7" path="res://project/art/sprites/icons/icon-akkad.png" id="15_kfoow"]
 [ext_resource type="PackedScene" uid="uid://dd6cppals05k0" path="res://project/scenes/graphs/graph_tenency.tscn" id="16_t28hp"]
+[ext_resource type="Texture2D" uid="uid://bsai1wsxu4ikv" path="res://project/art/sprites/icons/icon-ur.png" id="16_wyfxm"]
+[ext_resource type="Texture2D" uid="uid://bitf8tmekbtgt" path="res://project/art/sprites/icons/icon-uruk.png" id="17_8jyag"]
+[ext_resource type="Texture2D" uid="uid://djfk3k80hqw4p" path="res://project/art/sprites/icons/icon-barley.png" id="18_1fo8m"]
 [ext_resource type="PackedScene" uid="uid://d3v8d83jspt6b" path="res://project/scenes/graphs/graph_bar_2.tscn" id="19_b58ac"]
+[ext_resource type="Texture2D" uid="uid://pew53j8gdq72" path="res://project/art/sprites/icons/icon-soldier.png" id="19_mygyo"]
 [ext_resource type="PackedScene" uid="uid://brlbcx20q64y0" path="res://project/scenes/graphs/graph_pie.tscn" id="19_x6ptw"]
 [ext_resource type="PackedScene" uid="uid://lot84ohkitwv" path="res://project/art/meshes/rack_a/rack_a_m.tscn" id="31_qhkwt"]
 
@@ -251,6 +256,16 @@ texture_normal = ExtResource("11_33223")
 texture_pressed = ExtResource("11_33223")
 texture_hover = ExtResource("10_k7b5t")
 
+[node name="TextureRect" type="TextureRect" parent="UI/Menu/TBAkkad" unique_id=608506031]
+modulate = Color(0.52073187, 0.81612015, 0.9601012, 1)
+layout_mode = 0
+offset_left = -18.000002
+offset_top = -12.666667
+offset_right = 110.0
+offset_bottom = 115.333336
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("15_kfoow")
+
 [node name="TBUr" type="TextureButton" parent="UI/Menu" unique_id=592826485]
 layout_mode = 0
 offset_left = 119.0
@@ -261,6 +276,16 @@ scale = Vector2(1.5, 1.5)
 texture_normal = ExtResource("11_33223")
 texture_pressed = ExtResource("11_33223")
 texture_hover = ExtResource("10_k7b5t")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Menu/TBUr" unique_id=1428229336]
+modulate = Color(0.52073187, 0.81612015, 0.9601012, 1)
+layout_mode = 0
+offset_left = -18.000002
+offset_top = -12.666667
+offset_right = 110.0
+offset_bottom = 115.333336
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("16_wyfxm")
 
 [node name="TBUruk" type="TextureButton" parent="UI/Menu" unique_id=343916323]
 layout_mode = 0
@@ -273,6 +298,16 @@ texture_normal = ExtResource("11_33223")
 texture_pressed = ExtResource("11_33223")
 texture_hover = ExtResource("10_k7b5t")
 
+[node name="TextureRect" type="TextureRect" parent="UI/Menu/TBUruk" unique_id=1016302682]
+modulate = Color(0.52073187, 0.81612015, 0.9601012, 1)
+layout_mode = 0
+offset_left = -18.000002
+offset_top = -12.666667
+offset_right = 110.0
+offset_bottom = 115.333336
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("17_8jyag")
+
 [node name="TBBarley" type="TextureButton" parent="UI/Menu" unique_id=576554986]
 layout_mode = 0
 offset_left = 119.0
@@ -284,6 +319,16 @@ texture_normal = ExtResource("11_33223")
 texture_pressed = ExtResource("11_33223")
 texture_hover = ExtResource("10_k7b5t")
 
+[node name="TextureRect" type="TextureRect" parent="UI/Menu/TBBarley" unique_id=151978357]
+modulate = Color(0.52073187, 0.81612015, 0.9601012, 1)
+layout_mode = 0
+offset_left = -18.000002
+offset_top = -12.666667
+offset_right = 110.0
+offset_bottom = 115.333336
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("18_1fo8m")
+
 [node name="TBSoldiers" type="TextureButton" parent="UI/Menu" unique_id=1249429907]
 layout_mode = 0
 offset_left = 119.0
@@ -294,6 +339,16 @@ scale = Vector2(1.5, 1.5)
 texture_normal = ExtResource("11_33223")
 texture_pressed = ExtResource("11_33223")
 texture_hover = ExtResource("10_k7b5t")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Menu/TBSoldiers" unique_id=897798606]
+modulate = Color(0.52073187, 0.81612015, 0.9601012, 1)
+layout_mode = 0
+offset_left = -18.000002
+offset_top = -12.666667
+offset_right = 110.0
+offset_bottom = 115.333336
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("19_mygyo")
 
 [node name="World" type="Node3D" parent="." unique_id=1529691493]
 
@@ -620,7 +675,7 @@ cast_shadow = 0
 texture = SubResource("ViewportTexture_o2eaj")
 
 [node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=1370845813]
-transform = Transform3D(1.0000027, 0, -1.2079227e-13, 0, 1.0000039, 0, -8.1712415e-14, 0, 1, 0.07965088, 2.423336, 0)
+transform = Transform3D(1.0000027, 0, -1.3500312e-13, 0, 1.0000042, 0, -8.1712415e-14, 0, 1, 0.07965088, 2.7467232, 0)
 modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 outline_modulate = Color(0.542, 0.463, 0.244, 1)
 text = "Relación (%) de cebada y soldados"
@@ -629,10 +684,10 @@ font_size = 55
 outline_size = 7
 
 [node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1/L3DTitle" unique_id=1744151827]
-transform = Transform3D(1.0000027, 0, -1.3500312e-13, 0, 1.000004, 0, -6.750156e-14, 0, 1, 0, -0.37674713, 0)
+transform = Transform3D(1.0000027, 0, -1.3500312e-13, 0, 1.000004, 0, -4.6185278e-14, 0, 1, 1.1538086, -0.37674713, 0)
 modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 outline_modulate = Color(0.542, 0.463, 0.244, 1)
-text = "(2600AC)"
+text = "(2600 AC)"
 font = ExtResource("10_x6ptw")
 font_size = 55
 outline_size = 7
@@ -687,16 +742,18 @@ transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e
 texture = SubResource("ViewportTexture_b58ac")
 
 [node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=2048669155]
-transform = Transform3D(1.0000026, 0, -1.2434498e-13, 0, 1.0000039, 0, -7.460699e-14, 0, 1, 0.07965088, 2.4233322, 0)
+transform = Transform3D(1.0000026, 0, -1.314504e-13, 0, 1.0000039, 0, -7.1054274e-14, 0, 1, -2.1662598, 2.682293, 0)
 modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 outline_modulate = Color(0.542, 0.463, 0.244, 1)
-text = "Comparación recursos por ciudad"
+text = "Comparación recursos por ciudad
+(2400 AC)"
 font = ExtResource("10_x6ptw")
 font_size = 55
 outline_size = 7
+horizontal_alignment = 0
 
 [node name="L3DLegend" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=1564194620]
-transform = Transform3D(1.0000001, 0, -3.5527137e-15, 0, 1.0000001, 0, 3.1974423e-14, 0, 1, 1.7982178, 1.9464264, 0)
+transform = Transform3D(1.0000001, 0, -3.5527137e-15, 0, 1.0000001, 0, 8.1712415e-14, 0, 1, 1.8079834, 2.5246773, 0)
 modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 outline_modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
 text = "Cebada (gur)"
