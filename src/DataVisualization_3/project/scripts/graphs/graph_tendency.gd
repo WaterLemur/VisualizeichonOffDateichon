@@ -26,7 +26,7 @@ func _ready() -> void:
 func update_chart() -> void:
 	var properties := ChartProperties.new()
 
-	properties.title = "Recursos a travéz del tiempo"
+	properties.title = ""
 	properties.show_legend = true
 	properties.x_label = ""
 	properties.y_label = ""

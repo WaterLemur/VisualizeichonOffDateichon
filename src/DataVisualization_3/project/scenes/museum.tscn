@@ -763,6 +763,15 @@ transform = Transform3D(-4.152582e-09, 0, -0.095, 0, 0.095, 0, 0.095, 0, -4.1525
 cast_shadow = 0
 texture = SubResource("ViewportTexture_u6vr8")
 
+[node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=1358727701]
+transform = Transform3D(1.0000037, 0, -1.563194e-13, 0, 1.0000042, 0, 3.5527137e-15, 0, 1.0000007, -0.5593262, 2.598505, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.542, 0.463, 0.244, 1)
+text = "Recursos a travéz del tiempo"
+font = ExtResource("10_x6ptw")
+font_size = 73
+outline_size = 7
+
 [node name="L3DOrigin" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=1857378684]
 transform = Transform3D(1.0000014, 0, -3.907985e-14, 0, 1.0000014, 0, 3.907985e-14, 0, 1.0000014, -3.8630981, -2.0033855, 0)
 modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
