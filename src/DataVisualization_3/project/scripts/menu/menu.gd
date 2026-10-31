@@ -24,6 +24,15 @@ var year_max: int = 0
 @onready var pie        = $"../../World/Sprites/Graphs/Pie/SVPie/GraphPie"
 @onready var tendency   = $"../../World/Sprites/Graphs/Tendency/SVTendency/GraphTendency"
 
+@onready var tb_akkad    = $"../../UI/Menu/TBAkkad"    as TextureButton
+@onready var tb_ur       = $"../../UI/Menu/TBUr"       as TextureButton
+@onready var tb_uruk     = $"../../UI/Menu/TBUruk"     as TextureButton
+@onready var tb_barley   = $"../../UI/Menu/TBBarley"   as TextureButton
+@onready var tb_soldiers = $"../../UI/Menu/TBSoldiers" as TextureButton
+
+@onready var button_green: Texture2D = load("res://project/art/sprites/menu/button_green.png")
+@onready var button_red:   Texture2D = load("res://project/art/sprites/menu/button_red.png")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -126,25 +135,37 @@ func _on_tb_info_pressed() -> void:
 # -------------- Cities ----------------------
 func _on_tb_akkad_pressed() -> void:
 	set_akkad()
+	_set_btn_texture(tb_akkad, akkad)
 	print("Museum: Menu = Akkad > ", akkad)
 
 func _on_tb_ur_pressed() -> void:
 	set_ur()
+	_set_btn_texture(tb_ur, ur)
 	print("Museum: Menu = Ur > ", ur)
 
 func _on_tb_uruk_pressed() -> void:
 	set_uruk()
+	_set_btn_texture(tb_uruk, uruk)
 	print("Museum: Menu = Uruk > ", uruk)
 	
 # -------------- Resources ----------------------
 func _on_tb_barley_pressed() -> void:
 	set_barley()
+	_set_btn_texture(tb_barley, barley)
 	print("Museum: Menu = Barley")
 
 func _on_tb_soldiers_pressed() -> void:
 	set_soldiers()
+	_set_btn_texture(tb_soldiers, soldiers)
 	print("Museum: Menu = Soldiers")
 
+func _set_btn_texture(tx_btn: TextureButton, state: bool) -> void:
+	if state:
+		tx_btn.texture_normal = button_green
+		tx_btn.texture_hover = button_green
+	else:
+		tx_btn.texture_normal = button_red
+		tx_btn.texture_hover = button_red
 # -------------- Timeline -----------------------
 func _on_range_slider_v_range_changed(min_value: float, max_value: float) -> void:
 	year_min = min_value

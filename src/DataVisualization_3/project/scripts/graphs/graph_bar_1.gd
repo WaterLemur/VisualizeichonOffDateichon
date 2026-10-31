@@ -64,7 +64,7 @@ func update_chart() -> void:
 			{
 				type = Function.Type.BAR,
 				bar_size = 5,
-				color = Color("#9eb23b")
+				color = Color("5b591bff")
 			}
 		))
 
@@ -77,7 +77,7 @@ func update_chart() -> void:
 			{
 				type = Function.Type.BAR,
 				bar_size = 5,
-				color = Color("#b33939")
+				color = Color("521414ff")
 			}
 		))
 
