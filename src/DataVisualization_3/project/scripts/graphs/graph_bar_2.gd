@@ -26,7 +26,7 @@ func _ready() -> void:
 func update_chart() -> void:
 	var properties := ChartProperties.new()
 
-	properties.title = "Comparación recursos por ciudad"
+	properties.title = ""
 	properties.show_legend = false
 	properties.x_label = ""
 	properties.y_label = ""

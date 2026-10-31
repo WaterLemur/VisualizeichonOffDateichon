@@ -618,6 +618,15 @@ transform = Transform3D(-4.808253e-09, 0, -0.12, 0, 0.1, 0, 0.11, 0, -5.2453664e
 cast_shadow = 0
 texture = SubResource("ViewportTexture_o2eaj")
 
+[node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=1370845813]
+transform = Transform3D(1.0000027, 0, -1.2079227e-13, 0, 1.0000039, 0, -8.1712415e-14, 0, 1, 0.07965088, 2.423336, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.542, 0.463, 0.244, 1)
+text = "Relación (%) de cebada y soldados"
+font = ExtResource("10_x6ptw")
+font_size = 55
+outline_size = 7
+
 [node name="L3DOrigin" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=774242018]
 transform = Transform3D(1.0000011, 3.504493e-14, -4.0749626e-10, -8.200083e-14, 1.000001, -8.458842e-15, 4.0720494e-10, 2.4868986e-14, 0.9999968, -1.9119263, -2.0522003, 0)
 modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
@@ -666,6 +675,15 @@ transparent_bg = true
 [node name="SpriteBar2" type="Sprite3D" parent="World/Sprites/Graphs/Bar2" unique_id=1167667898]
 transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e-09, 0, 0, -0.053836823)
 texture = SubResource("ViewportTexture_b58ac")
+
+[node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=2048669155]
+transform = Transform3D(1.0000026, 0, -1.2434498e-13, 0, 1.0000039, 0, -7.460699e-14, 0, 1, 0.07965088, 2.4233322, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.542, 0.463, 0.244, 1)
+text = "Comparación recursos por ciudad"
+font = ExtResource("10_x6ptw")
+font_size = 55
+outline_size = 7
 
 [node name="L3DLegend" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=1564194620]
 transform = Transform3D(1.0000001, 0, -3.5527137e-15, 0, 1.0000001, 0, 3.1974423e-14, 0, 1, 1.7982178, 1.9464264, 0)
@@ -719,6 +737,17 @@ render_target_update_mode = 4
 transform = Transform3D(-6.3381513e-09, 0, -0.145, 0, 0.145, 0, 0.145, 0, -6.3381513e-09, 0, 0, -0.014026642)
 cast_shadow = 0
 texture = SubResource("ViewportTexture_07rhc")
+
+[node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Pie/SpritePie1" unique_id=1236100612]
+transform = Transform3D(1.0000033, 0, -1.1723955e-13, 0, 1.000004, 0, -4.973799e-14, 0, 1.0000004, -0.7979126, 2.7477036, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.542, 0.463, 0.244, 1)
+text = "Distribución de recursos 
+en la 
+Antigua Mesopotamia"
+font = ExtResource("10_x6ptw")
+font_size = 55
+outline_size = 7
 
 [node name="Tendency" type="Node3D" parent="World/Sprites/Graphs" unique_id=768737517]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.211, 0.181, -1.284)

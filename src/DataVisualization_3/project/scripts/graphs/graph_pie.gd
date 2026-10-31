@@ -62,7 +62,7 @@ func update_chart() -> void:
 			labels.append(city + " Soldiers")
 
 	var properties := ChartProperties.new()
-	properties.title = "Distribución de recursos en la Antigua Mesopotamia"
+	properties.title = ""
 	properties.show_legend = true
 	properties.colors.text = Color("#D9A441")
 	properties.draw_vertical_grid = false

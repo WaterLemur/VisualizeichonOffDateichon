@@ -28,7 +28,7 @@ func _ready() -> void:
 func update_chart() -> void:
 	var properties := ChartProperties.new()
 
-	properties.title = "Relación (%) de cebada y soldados"
+	properties.title = ""
 	properties.show_legend = false
 	properties.x_label = ""
 	#properties.y_label = "Cantidad\nrecursos"
