@@ -26,11 +26,12 @@ func _ready() -> void:
 func update_chart() -> void:
 	var properties := ChartProperties.new()
 
-	properties.title = "Mesopotamian Conquest Resources"
+	properties.title = "Recursos a travéz del tiempo"
 	properties.show_legend = true
-	properties.x_label = "City-States"
-	properties.y_label = "Resource Volumes"
+	properties.x_label = "Año"
+	properties.y_label = "Cantidad"
 	properties.interactive = true
+	properties.colors.text = Color("#D9A441")
 
 	var x: Array = [0.0, 1.0, 2.0]
 	var barley: Array = []
@@ -55,11 +56,11 @@ func update_chart() -> void:
 		functions.append(Function.new(
 			x,
 			barley,
-			"Barley (Gur)",
+			"Cebada (Gur)",
 			{
 				type = Function.Type.LINE,
 				marker = Function.Marker.SQUARE,
-				color = Color("#9eb23b")
+				color = Color("f7d37eff")
 			}
 		))
 
@@ -68,11 +69,11 @@ func update_chart() -> void:
 		functions.append(Function.new(
 			x,
 			soldiers,
-			"Soldiers",
+			"Soldados",
 			{
 				type = Function.Type.LINE,
 				marker = Function.Marker.SQUARE,
-				color = Color("#b33939")
+				color = Color("604914ff")
 			}
 		))
 

@@ -31,6 +31,7 @@ func update_chart() -> void:
 	properties.x_label = "City-States"
 	properties.y_label = "Resource Volumes"
 	properties.interactive = true
+	properties.colors.text = Color("#D9A441")
 
 	var x: Array = []
 	var barley: Array = []

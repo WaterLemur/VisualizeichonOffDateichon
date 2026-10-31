@@ -14,7 +14,7 @@ var chart: Chart
 
 func _ready() -> void:
 	var chart_scene: PackedScene = load(
-        "res://addons/easy_charts/control_charts/chart.tscn"
+        "res://addons/easy_charts/control_charts/chart_left.tscn"
 	)
 
 	chart = chart_scene.instantiate()
@@ -28,10 +28,11 @@ func _ready() -> void:
 func update_chart() -> void:
 	var properties := ChartProperties.new()
 
-	properties.title = "Barras 1"
-	properties.show_legend = true
-	properties.x_label = "City-States"
-	properties.y_label = "Resource Volumes"
+	properties.title = "Relación (%) de cebada y soldados"
+	properties.show_legend = false
+	properties.x_label = "Ciudades"
+	#properties.y_label = "Cantidad\nrecursos"
+	properties.colors.text = Color("#D9A441")
 
 	properties.interactive = true
 
@@ -60,7 +61,7 @@ func update_chart() -> void:
 		functions.append(Function.new(
 			x,
 			barley,
-			"Barley (Gur)",
+			"Cebada (Gur)",
 			{
 				type = Function.Type.BAR,
 				bar_size = 5,
@@ -73,7 +74,7 @@ func update_chart() -> void:
 		functions.append(Function.new(
 			x,
 			soldiers,
-			"Soldiers",
+			"Soldados",
 			{
 				type = Function.Type.BAR,
 				bar_size = 5,

@@ -403,6 +403,7 @@ modulate = Color(0.9615354, 0.84719783, 0.53045785, 1)
 text = " Ciudad	        Cebada        Soldados"
 font = ExtResource("10_x6ptw")
 font_size = 47
+outline_size = 3
 horizontal_alignment = 0
 
 [node name="L3DAkkad" type="Label3D" parent="World/Sprites/DataBases/DBCities" unique_id=748685735]
@@ -410,6 +411,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4547424, 0.08054352, 0)
 modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
 text = "Akkad		                40000			                  3500"
 font = ExtResource("10_x6ptw")
+outline_size = 3
 horizontal_alignment = 0
 
 [node name="L3DUr" type="Label3D" parent="World/Sprites/DataBases/DBCities" unique_id=1653529160]
@@ -417,6 +419,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3837585, -0.18013382, 0)
 modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
 text = "Ur				                   25000			                  9500"
 font = ExtResource("10_x6ptw")
+outline_size = 3
 horizontal_alignment = 0
 
 [node name="L3DUruk" type="Label3D" parent="World/Sprites/DataBases/DBCities" unique_id=579592218]
@@ -424,6 +427,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45961, -0.43424988, 0)
 modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
 text = "Uruk		                  10000		                   1000"
 font = ExtResource("10_x6ptw")
+outline_size = 3
 horizontal_alignment = 0
 
 [node name="DBResources" type="Sprite3D" parent="World/Sprites/DataBases" unique_id=804622809]
@@ -431,12 +435,27 @@ transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.245366
 modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
 texture = ExtResource("6_wj7eq")
 
+[node name="L3DData" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=2147416083]
+transform = Transform3D(8.333334, 0, -1.1368684e-13, 0, 8.333334, 0, 1.1368684e-13, 0, 8.333334, -9.040253, 1.1861801, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Bases de"
+font = ExtResource("10_x6ptw")
+outline_size = 2
+
+[node name="L3DBases" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=1802967270]
+transform = Transform3D(8.333002, 0, -4.5474735e-13, 0, 8.333002, 0, 4.5474735e-13, 0, 8.333002, -2.2176514, 4.2557907, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "datos"
+font = ExtResource("10_x6ptw")
+outline_size = 2
+
 [node name="L3DResources" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=716691768]
 transform = Transform3D(1, 0, -4.973799e-14, 0, 1, 0, 4.973799e-14, 0, 1, -3.159912, 2.7148972, 0)
 modulate = Color(0.9615354, 0.84719783, 0.53045785, 1)
 text = " Year         Ciudad	        Cebada      Soldados"
 font = ExtResource("10_x6ptw")
 font_size = 69
+outline_size = 1
 horizontal_alignment = 0
 
 [node name="L3DYears" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=890425281]
@@ -458,6 +477,7 @@ text = "3500 AC
 3500 AC
 3500 AC"
 font = ExtResource("10_x6ptw")
+outline_size = 1
 horizontal_alignment = 0
 vertical_alignment = 0
 line_spacing = 30.105
@@ -481,6 +501,7 @@ Akkad
 Ur
 Uruk"
 font = ExtResource("10_x6ptw")
+outline_size = 1
 horizontal_alignment = 0
 vertical_alignment = 0
 line_spacing = 30.105
@@ -504,6 +525,7 @@ text = "40,000
 40,000
 40,000"
 font = ExtResource("10_x6ptw")
+outline_size = 1
 horizontal_alignment = 0
 vertical_alignment = 0
 line_spacing = 30.105
@@ -527,12 +549,20 @@ text = "15,000
 15,000
 15,000"
 font = ExtResource("10_x6ptw")
+outline_size = 1
 horizontal_alignment = 0
 vertical_alignment = 0
 line_spacing = 30.105
 
 [node name="Map" type="Node3D" parent="World/Sprites" unique_id=1678897081]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9458647, 0.41174936, 0.0057792664)
+
+[node name="L3DMap" type="Label3D" parent="World/Sprites/Map" unique_id=2061468207]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.2338696, 1.1170387)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Mapa"
+font = ExtResource("10_x6ptw")
+outline_size = 2
 
 [node name="MapWindRose" type="Sprite3D" parent="World/Sprites/Map" unique_id=1027725095]
 transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
@@ -568,7 +598,7 @@ texture = ExtResource("14_rp2ow")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2504025, -5.074249, 0)
 
 [node name="Bar1" type="Node3D" parent="World/Sprites/Graphs" unique_id=1641601821]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999981, 1.7550001, -2.040638)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19999981, 1.7523732, -2.075138)
 
 [node name="SVBar1" type="SubViewport" parent="World/Sprites/Graphs/Bar1" unique_id=958429834]
 transparent_bg = true
@@ -580,6 +610,13 @@ render_target_update_mode = 4
 transform = Transform3D(-5.4639235e-09, 0, -0.125, 0, 0.125, 0, 0.125, 0, -5.4639235e-09, 0, 0, 0)
 cast_shadow = 0
 texture = SubResource("ViewportTexture_o2eaj")
+
+[node name="Label3D" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=13206303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4036255, -0.6354408, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Cantidad"
+font = ExtResource("10_x6ptw")
+outline_size = 0
 
 [node name="Bar2" type="Node3D" parent="World/Sprites/Graphs" unique_id=1282151549]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1960001, 1.6210003, -1.3133011)
