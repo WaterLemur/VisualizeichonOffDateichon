@@ -2,6 +2,8 @@
 extends Control
 
 
+@onready var menu = $"../../../../../../Scripts/Menu"
+
 var show_akkad := true
 var show_ur := true
 var show_uruk := true
@@ -40,6 +42,8 @@ func update_chart() -> void:
 		["Ur", show_ur],
 		["Uruk", show_uruk]
 	]
+	
+	
 
 	var resources = [
 		[2, show_barley, "Cebada (gur)", Color("f7d37eff")],
@@ -61,13 +65,18 @@ func update_chart() -> void:
 				if row[1] != city[0]:
 					continue
 
+				var year: int = int(row[0])
+
+				if year < menu.year_min or year > menu.year_max:
+					continue
+
 				var value = row[resource[0]]
 
 				# Ignore missing database values
 				if value == null:
 					continue
 
-				x.append(float(row[0]))
+				x.append(float(year))
 				y.append(value)
 
 			if x.is_empty():

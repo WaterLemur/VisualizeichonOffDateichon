@@ -3,11 +3,11 @@ class_name RSliderV
 
 signal range_changed(min_value: float, max_value: float)
 
-@export var min_limit: float = 0.0
-@export var max_limit: float = 100.0
+@export var min_limit: float = 2400.0
+@export var max_limit: float = 2600.0
 
-@export var min_value: float = 20.0
-@export var max_value: float = 80.0
+@export var min_value: float = min_limit
+@export var max_value: float = max_limit
 
 @export var step: float = 1.0
 
