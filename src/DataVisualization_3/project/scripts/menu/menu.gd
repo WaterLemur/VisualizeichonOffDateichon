@@ -16,8 +16,8 @@ var uruk:     bool = true
 var barley:   bool = true
 var soldiers: bool = true
 
-var year_min: int = 0
-var year_max: int = 0
+var year_min: int = 2400
+var year_max: int = 2600
 
 @onready var bar_1      = $"../../World/Sprites/Graphs/Bar1/SVBar1/GraphBar1"
 @onready var bar_2      = $"../../World/Sprites/Graphs/Bar2/SVBar2/GraphBar2"
@@ -170,8 +170,10 @@ func _set_btn_texture(tx_btn: TextureButton, state: bool) -> void:
 func _on_range_slider_v_range_changed(min_value: float, max_value: float) -> void:
 	year_min = min_value
 	timeline.set_year_min(year_min)
+	tendency.update_chart()
 	print("Museum: Menu = Timeline Min: %.0f" % min_value)
 	
 	year_max = max_value
 	timeline.set_year_max(year_max)
+	tendency.update_chart()
 	print("Museum: Menu = Timeline Max: %.0f" % max_value) 

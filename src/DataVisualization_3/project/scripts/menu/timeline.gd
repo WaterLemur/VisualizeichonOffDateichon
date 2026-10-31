@@ -21,4 +21,3 @@ func set_year_min(new_min: int) -> void:
 
 func set_year_max(new_max: int) -> void:
 	year_max.text = str(new_max) + " A.C."
-	
