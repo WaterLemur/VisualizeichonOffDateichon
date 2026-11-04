@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://bfmdekhdnattk"]
+
+[ext_resource type="Script" uid="uid://b8uthvlbel8qr" path="res://project/scripts/tutorial.gd" id="1_63300"]
+[ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_a4bcd"]
+[ext_resource type="Theme" uid="uid://ok88j7qigyr" path="res://project/art/themes/theme.tres" id="3_a4bcd"]
+
+[node name="Tutorial" type="Node" unique_id=473301153]
+script = ExtResource("1_63300")
+
+[node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_a4bcd")]
+
+[node name="Images" type="Control" parent="UI" unique_id=463231296]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="1" type="TextureRect" parent="UI/Images" unique_id=441711666]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -166.0
+offset_top = -855.0
+offset_right = 166.0
+offset_bottom = -571.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="UI" unique_id=1501524338]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = 449.5
+offset_right = 240.0
+offset_bottom = 534.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_a4bcd")
+text = "Next"
+
+[node name="Label" type="Label" parent="UI" unique_id=566321745]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -375.0
+offset_top = -333.0
+offset_right = 375.0
+offset_bottom = 333.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_a4bcd")
+theme_type_variation = &"StandardText"
+text = "adasdasd"
+horizontal_alignment = 1
+vertical_alignment = 1

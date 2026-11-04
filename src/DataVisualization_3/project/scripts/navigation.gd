@@ -9,6 +9,11 @@ enum State_Rack    { ARTIFACT, DATA_BASES, MAP, BARS, PIE, TENDENCY }
 enum State_Artifact { FULL, WEIGHT, AMMOUNT, STYLUS }
 
 var cam_index = 0 as int
+var cam_target: Transform3D
+var cam_move = false as bool
+var cam_snap_time: float = 1.15
+var cam_elapsed: float = 0.0
+var cam_start: Transform3D
 
 var state_main:     State_Main     = State_Main.MAIN_MENU
 var state_rack:     State_Rack     = State_Rack.DATA_BASES
@@ -39,7 +44,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	"a"
+	if cam_move:
+		_camera_smooth_transition(delta, )
 
 
 # ==========================================
@@ -130,14 +136,37 @@ func camera_transition(nav: Nav) -> void:
 #				return
 		
 
-func set_camera_pos(new_pos: Node3D) -> void:
-	print(camera.position)
-	camera.global_transform = new_pos.global_transform
-	print(camera.global_transform)
+func set_camera_pos(new_target: Node3D) -> void:
+	#camera.global_transform = new_pos.global_transform
 	
+	cam_start = camera.global_transform
+	cam_target = new_target.global_transform
+	cam_elapsed = 0.0
+	cam_move = true
 
 func _camera_smooth_transition(delta: float) -> void:
-	pass
+	cam_elapsed += delta
+
+	var weight = clampf(cam_elapsed / cam_snap_time, 0.0, 1.0)
+
+	# Position
+	camera.global_position = cam_start.origin.lerp(
+		cam_target.origin,
+		weight
+	)
+
+	# Rotation
+	var start_rotation = cam_start.basis.get_rotation_quaternion()
+	var target_rotation = cam_target.basis.get_rotation_quaternion()
+
+	camera.global_transform.basis = Basis(
+		start_rotation.slerp(target_rotation, weight)
+	)
+
+	# Finish
+	if weight >= 1.0:
+		camera.global_transform = cam_target
+		cam_move = false
 
 # ==========================================
 # ============== NAVIGATION ================
