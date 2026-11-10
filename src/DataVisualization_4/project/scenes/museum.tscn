@@ -38,6 +38,12 @@
 [ext_resource type="PackedScene" uid="uid://d3v8d83jspt6b" path="res://project/scenes/graphs/graph_bar_2.tscn" id="19_b58ac"]
 [ext_resource type="Texture2D" uid="uid://pew53j8gdq72" path="res://project/art/sprites/icons/icon-soldier.png" id="19_mygyo"]
 [ext_resource type="PackedScene" uid="uid://brlbcx20q64y0" path="res://project/scenes/graphs/graph_pie.tscn" id="19_x6ptw"]
+[ext_resource type="Texture2D" uid="uid://y0avdbrvbuy4" path="res://project/art/sprites/map/map-legend-akkad.png" id="23_1fo8m"]
+[ext_resource type="Texture2D" uid="uid://bq8be63qspci" path="res://project/art/sprites/map/map-legend-ur.png" id="25_mygyo"]
+[ext_resource type="Texture2D" uid="uid://6dej8eta56px" path="res://project/art/sprites/map/map-legend-uruk.png" id="27_mygyo"]
+[ext_resource type="Texture2D" uid="uid://cm0mcdasfseby" path="res://project/art/sprites/map/map-legend-barley.png" id="29_wlswi"]
+[ext_resource type="Texture2D" uid="uid://bvwkp5jwl3f67" path="res://project/art/sprites/map/map-circle-big.png" id="29_wyfxm"]
+[ext_resource type="Texture2D" uid="uid://djumdmfnqeo2e" path="res://project/art/sprites/map/map-legend-soldiers.png" id="30_8vk3a"]
 [ext_resource type="PackedScene" uid="uid://lot84ohkitwv" path="res://project/art/meshes/rack_a/rack_a_m.tscn" id="31_qhkwt"]
 [ext_resource type="PackedScene" uid="uid://brcaf5lrvrhg" path="res://project/art/meshes/calculating_machine/calculating_machine_m.tscn" id="38_kfoow"]
 
@@ -627,6 +633,58 @@ text = "Mapa"
 font = ExtResource("10_x6ptw")
 outline_size = 2
 
+[node name="Legend" type="Node3D" parent="World/Sprites/Map" unique_id=1280545231]
+
+[node name="AkkadLabel" type="Sprite3D" parent="World/Sprites/Map/Legend" unique_id=910573194]
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 1.8666496, 0.7136612)
+modulate = Color(0.7764706, 0.25882354, 0.2901961, 1)
+texture = ExtResource("23_1fo8m")
+
+[node name="AkkadSymbol" type="Sprite3D" parent="World/Sprites/Map/Legend" unique_id=877828870]
+transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, 0, 1.7430258, 0.63653564)
+modulate = Color(0.7764706, 0.25882354, 0.2901961, 1)
+texture = ExtResource("12_t28hp")
+
+[node name="UrLabel" type="Sprite3D" parent="World/Sprites/Map/Legend" unique_id=1940291560]
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 1.776329, 0.7136612)
+modulate = Color(0.35686275, 0.52156866, 0.21960784, 1)
+texture = ExtResource("25_mygyo")
+
+[node name="UrSymbol" type="Sprite3D" parent="World/Sprites/Map/Legend" unique_id=253423501]
+transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, 0, 2.004692, 0.45705032)
+modulate = Color(0.35686275, 0.52156866, 0.21960784, 1)
+texture = ExtResource("13_xg8yu")
+
+[node name="UrukLabel" type="Sprite3D" parent="World/Sprites/Map/Legend" unique_id=1225589055]
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 1.6821318, 0.7136612)
+modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
+texture = ExtResource("27_mygyo")
+
+[node name="UrukSymbol" type="Sprite3D" parent="World/Sprites/Map/Legend" unique_id=1795628542]
+transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, 0, 1.7341833, 0.30992508)
+modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
+texture = ExtResource("14_rp2ow")
+
+[node name="BarleyLabel" type="Sprite3D" parent="World/Sprites/Map/Legend" unique_id=954878744]
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 1.311595, 0.7136612)
+modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
+texture = ExtResource("29_wlswi")
+
+[node name="BarleySymbol" type="Sprite3D" parent="World/Sprites/Map/Legend" unique_id=1152105135]
+transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, 0, 1.4087095, 0.47971344)
+modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
+texture = ExtResource("18_1fo8m")
+
+[node name="SoldiersLabel" type="Sprite3D" parent="World/Sprites/Map/Legend" unique_id=1854252135]
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 1.2835445, 0.7136612)
+modulate = Color(0.7764706, 0.25882354, 0.2901961, 1)
+texture = ExtResource("30_8vk3a")
+
+[node name="SoldiersSymbol" type="Sprite3D" parent="World/Sprites/Map/Legend" unique_id=218036067]
+transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, 0, 1.2738838, 0.47971344)
+modulate = Color(0.7764706, 0.25882354, 0.2901961, 1)
+texture = ExtResource("19_mygyo")
+
 [node name="MapWindRose" type="Sprite3D" parent="World/Sprites/Map" unique_id=1027725095]
 transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
 modulate = Color(0.7883661, 0.64957726, 0.236258, 1)
@@ -643,19 +701,52 @@ modulate = Color(0.13333334, 0.44313726, 0.57254905, 1)
 texture = ExtResource("11_u6vr8")
 
 [node name="MapAkkad" type="Sprite3D" parent="World/Sprites/Map" unique_id=1666053697]
-transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, -0.03, 0, 0)
 modulate = Color(0.7764706, 0.25882354, 0.2901961, 1)
 texture = ExtResource("12_t28hp")
 
 [node name="MapUr" type="Sprite3D" parent="World/Sprites/Map" unique_id=1674546393]
-transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
-modulate = Color(0.35592264, 0.5216066, 0.21832317, 1)
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, -0.03, 0, 0)
+modulate = Color(0.35686275, 0.52156866, 0.21960784, 1)
 texture = ExtResource("13_xg8yu")
 
 [node name="MapUruk" type="Sprite3D" parent="World/Sprites/Map" unique_id=1946468231]
-transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, -0.03, 0, 0)
 modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
 texture = ExtResource("14_rp2ow")
+
+[node name="ResourceCircles" type="Node3D" parent="World/Sprites/Map" unique_id=191972253]
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
+
+[node name="AkkadCircleSoldiers" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=1235870374]
+transform = Transform3D(0.505, 0, -1.7763568e-15, 0, 0.505, 0, 1.7763568e-15, 0, 0.505, -1.369, 1.797, 0.02)
+modulate = Color(0.7764706, 0.25882354, 0.2901961, 1)
+texture = ExtResource("29_wyfxm")
+
+[node name="AkkadCircleBarley" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=1078446049]
+transform = Transform3D(1, 0, -3.5527137e-15, 0, 1, 0, 3.5527137e-15, 0, 1, -1.369, 1.797, 0.01)
+modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
+texture = ExtResource("29_wyfxm")
+
+[node name="UrCircleSoldiers" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=909684366]
+transform = Transform3D(0.505, 0, -1.7763568e-15, 0, 0.505, 0, 1.7763568e-15, 0, 0.505, 1.576, -1.09, 0.02)
+modulate = Color(0.7764706, 0.25882354, 0.2901961, 1)
+texture = ExtResource("29_wyfxm")
+
+[node name="UrCircleBarley" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=1067893859]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, 1.576, -1.09, 0.01)
+modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
+texture = ExtResource("29_wyfxm")
+
+[node name="UrukCircleSoldiers" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=1854919709]
+transform = Transform3D(0.505, 0, -1.7763568e-15, 0, 0.505, 0, 1.7763568e-15, 0, 0.505, 0.249, -1.912, 0.02)
+modulate = Color(0.7764706, 0.25882354, 0.2901961, 1)
+texture = ExtResource("29_wyfxm")
+
+[node name="UrukCircleBarley" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=1644682605]
+transform = Transform3D(1, 0, -1.0658141e-14, 0, 1, 0, 1.0658141e-14, 0, 1, 0.249, -1.912, 0.01)
+modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
+texture = ExtResource("29_wyfxm")
 
 [node name="Graphs" type="Node3D" parent="World/Sprites" unique_id=1173887309]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2504025, -5.074249, 0)
