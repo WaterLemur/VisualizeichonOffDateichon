@@ -46,6 +46,7 @@
 [ext_resource type="Texture2D" uid="uid://djumdmfnqeo2e" path="res://project/art/sprites/map/map-legend-soldiers.png" id="30_8vk3a"]
 [ext_resource type="PackedScene" uid="uid://lot84ohkitwv" path="res://project/art/meshes/rack_a/rack_a_m.tscn" id="31_qhkwt"]
 [ext_resource type="PackedScene" uid="uid://brcaf5lrvrhg" path="res://project/art/meshes/calculating_machine/calculating_machine_m.tscn" id="38_kfoow"]
+[ext_resource type="PackedScene" uid="uid://bp5hefhfg5evq" path="res://project/scenes/sumer.tscn" id="46_lmagj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xbnxe"]
 font = ExtResource("9_6rj13")
@@ -1185,6 +1186,7 @@ visible = false
 
 [node name="Artifact" parent="World/Meshes" unique_id=274704578 instance=ExtResource("38_kfoow")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.952466, -0.018393993, -55.785454)
+visible = false
 
 [node name="lectern" parent="World/Meshes" unique_id=1779673043 instance=ExtResource("8_qrkhr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7177277, 0, -53.14185)
@@ -1207,6 +1209,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.15536, 8.718365, -45.41277)
 omni_range = 8.0961075
 
 [node name="SpotLight3D" type="SpotLight3D" parent="World/Lights" unique_id=130651291]
+
+[node name="Sumer" parent="." unique_id=1395858333 instance=ExtResource("46_lmagj")]
 
 [node name="stylus" parent="." unique_id=1821770177 instance=ExtResource("8_ntp17")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9551827, 2.1845849, -55.81129)

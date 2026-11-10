@@ -15,6 +15,8 @@ var state_rack:     State_Rack     = State_Rack.DATA_BASES
 var state_artifact: State_Artifact = State_Artifact.FULL
 
 @onready var camera = $"../../World/CameraRig/MainCamera" as Camera3D
+@onready var museum = $"../../World" as Node3D
+@onready var sumer  = $"../../Sumer" as Sumer
 
 @onready var pos_main_menu      = $"../../World/CameraRig/PosMainMenu"               as Node3D
 @onready var pos_museum         = $"../../World/CameraRig/PosMuseum"                 as Node3D
@@ -103,6 +105,9 @@ func camera_transition(nav: Nav) -> void:
 				set_camera_pos(pos_artifact)
 				return
 		State_Rack.ARTIFACT:
+			museum.visible = false
+			sumer.hide(false)
+			
 			if nav == Nav.LEFT:
 				state_rack = State_Rack.TENDENCY
 				set_camera_pos(pos_graph_tendency)
