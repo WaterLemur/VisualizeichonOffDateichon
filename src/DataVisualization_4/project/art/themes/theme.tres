@@ -1,0 +1,29 @@
+[gd_resource type="Theme" format=3 uid="uid://ok88j7qigyr"]
+
+[ext_resource type="FontFile" uid="uid://8qd7n2hmra5a" path="res://project/art/fonts/playbaill/Playball-Regular.ttf" id="1_nhnfi"]
+
+[resource]
+Button/colors/font_color = Color(0.92156863, 0.78431374, 0.3764706, 1)
+Button/colors/font_hover_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
+Button/colors/font_pressed_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
+Button/colors/icon_hover_color = Color(0.542, 0.463, 0.244, 1)
+Button/colors/icon_normal_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
+Button/colors/icon_pressed_color = Color(0.542, 0.463, 0.244, 1)
+Button/font_sizes/font_size = 61
+Button/fonts/font = ExtResource("1_nhnfi")
+ClayTextNormal/base_type = &"Label"
+ClayTextNormal/font_sizes/font_size = 16
+ClayTextNormal/fonts/font = ExtResource("1_nhnfi")
+HeaderLarge/font_sizes/font_size = 105
+Navigation/base_type = &"HBoxContainer"
+Navigation/constants/separation = 643
+OptionSlider/base_type = &"HSlider"
+PersistentInfo/base_type = &"Label"
+PersistentInfo/colors/font_color = Color(0.92156863, 0.78431374, 0.3764706, 1)
+PersistentInfo/colors/font_outline_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
+PersistentInfo/constants/outline_size = 8
+PersistentInfo/font_sizes/font_size = 41
+PersistentInfo/fonts/font = ExtResource("1_nhnfi")
+StandardTest/base_type = &"ClayTextNormal"
+StandardTest/font_sizes/font_size = 36
+VBoxContainer/constants/separation = 29

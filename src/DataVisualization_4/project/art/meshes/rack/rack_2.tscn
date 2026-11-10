@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://byrtbirj2ny4o"]
+
+[ext_resource type="PackedScene" uid="uid://bk2byq4iu0uqn" path="res://project/art/meshes/rack/rack.glb" id="1_80ixk"]
+[ext_resource type="Material" uid="uid://kvhqknd7ax7n" path="res://project/art/materials/mat_glass.tres" id="2_jtaq2"]
+
+[node name="rack" unique_id=1604323055 instance=ExtResource("1_80ixk")]
+
+[node name="rack_glass_l" parent="." index="1" unique_id=2084679418]
+visible = false
+surface_material_override/0 = ExtResource("2_jtaq2")
+
+[node name="rack_glass_r" parent="." index="2" unique_id=207541561]
+visible = false
+surface_material_override/0 = ExtResource("2_jtaq2")

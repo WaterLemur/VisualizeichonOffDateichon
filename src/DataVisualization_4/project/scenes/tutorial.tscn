@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bfmdekhdnattk"]
+
+[ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="1_lcewr"]
+
+[node name="Tutorial" type="Node" unique_id=1698571596]
+
+[node name="UI" parent="." unique_id=58018528 instance=ExtResource("1_lcewr")]
+
+[node name="1" type="Control" parent="UI" unique_id=1952103231]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

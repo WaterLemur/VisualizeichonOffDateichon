@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c0ajrldn88mi"]
+
+[ext_resource type="Script" uid="uid://bld6in3iiiqk0" path="res://project/scripts/options.gd" id="1_3cl3y"]
+[ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_g7u8e"]
+[ext_resource type="Theme" uid="uid://ok88j7qigyr" path="res://project/art/themes/theme.tres" id="3_2pxb5"]
+
+[node name="Options" type="Node" unique_id=1382374062]
+script = ExtResource("1_3cl3y")
+
+[node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_g7u8e")]
+
+[node name="Menu" type="VBoxContainer" parent="UI" unique_id=1136559909]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -417.0
+offset_top = -154.0
+offset_right = 417.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelMusic" type="Label" parent="UI/Menu" unique_id=170539068]
+layout_mode = 2
+theme = ExtResource("3_2pxb5")
+theme_type_variation = &"StandardTest"
+text = "Music"
+
+[node name="HSliderMusic" type="HSlider" parent="UI/Menu" unique_id=382952773]
+layout_mode = 2
+theme = ExtResource("3_2pxb5")
+theme_type_variation = &"OptionSlider"
+value = 80.0
+
+[node name="HSeparator" type="HSeparator" parent="UI/Menu" unique_id=2031359959]
+custom_minimum_size = Vector2(0, 47.405)
+layout_mode = 2
+
+[node name="LabelFX" type="Label" parent="UI/Menu" unique_id=1016237879]
+layout_mode = 2
+theme = ExtResource("3_2pxb5")
+theme_type_variation = &"StandardTest"
+text = "FX"
+
+[node name="HSliderFX" type="HSlider" parent="UI/Menu" unique_id=2024861659]
+layout_mode = 2
+theme = ExtResource("3_2pxb5")
+theme_type_variation = &"OptionSlider"
+value = 80.0

@@ -1,0 +1,1133 @@
+[gd_scene format=3 uid="uid://cii37hhyk0fuu"]
+
+[ext_resource type="Script" uid="uid://de5j3uwqtsyvw" path="res://project/scripts/museum.gd" id="1_beg0u"]
+[ext_resource type="Script" uid="uid://oaswic1dwq75" path="res://project/scripts/navigation.gd" id="2_t28hp"]
+[ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_wiwei"]
+[ext_resource type="Script" uid="uid://cxls2om84puxh" path="res://project/scripts/menu/menu.gd" id="3_u6vr8"]
+[ext_resource type="Texture2D" uid="uid://bgr445uynq7xw" path="res://tools/godot/icon.svg" id="3_wfvgn"]
+[ext_resource type="Script" uid="uid://c4254sdslwfva" path="res://project/scripts/menu/map.gd" id="3_xg8yu"]
+[ext_resource type="Script" uid="uid://b36q7grkg5jn4" path="res://project/scripts/menu/timeline.gd" id="4_rp2ow"]
+[ext_resource type="Texture2D" uid="uid://dm0mouyw08ntt" path="res://project/art/sprites/data_bases/frame-data-base-cities.png" id="5_4irpc"]
+[ext_resource type="PackedScene" uid="uid://byrtbirj2ny4o" path="res://project/art/meshes/rack/rack_2.tscn" id="6_hv6mn"]
+[ext_resource type="Texture2D" uid="uid://dsekuwh8bh12h" path="res://project/art/sprites/data_bases/frame-data-base-resources.png" id="6_wj7eq"]
+[ext_resource type="Texture2D" uid="uid://dblucle4wn4xg" path="res://project/art/sprites/menu/menu.png" id="7_htdm8"]
+[ext_resource type="PackedScene" uid="uid://botuthtd084ls" path="res://project/art/meshes/rack_b/rack_b.glb" id="7_hv6mn"]
+[ext_resource type="PackedScene" uid="uid://c1c4nipfojugn" path="res://project/art/meshes/rack_a/rack_a.glb" id="7_qrkhr"]
+[ext_resource type="PackedScene" uid="uid://bmmi80m00t211" path="res://tools/infinity_ga8es/range_slider/range_slider_v.tscn" id="8_8jx6j"]
+[ext_resource type="PackedScene" uid="uid://drvdd4pnuktls" path="res://project/art/meshes/museum/museum_2.glb" id="8_eelwi"]
+[ext_resource type="PackedScene" uid="uid://cakged56oldtr" path="res://project/art/meshes/stylus/stylus.glb" id="8_ntp17"]
+[ext_resource type="PackedScene" uid="uid://cp7jmspfqlgpg" path="res://project/art/meshes/lectern/lectern_2.tscn" id="8_qrkhr"]
+[ext_resource type="FontFile" uid="uid://6lt8q2h5lfv7" path="res://tools/infinity_ga8es/fonts/OCR-A Regular.otf" id="9_6rj13"]
+[ext_resource type="Texture2D" uid="uid://d0pnaunlx2vby" path="res://project/art/sprites/map/map-wind-rose.png" id="9_fd4yj"]
+[ext_resource type="Texture2D" uid="uid://cofrrir7ironp" path="res://project/art/sprites/map/map-paths.png" id="10_2kqvi"]
+[ext_resource type="Texture2D" uid="uid://b07g73rwx7qhr" path="res://project/art/sprites/menu/arrow_up.png" id="10_6rj13"]
+[ext_resource type="Texture2D" uid="uid://fm3u461fudxa" path="res://project/art/sprites/menu/button_blue.png" id="10_k7b5t"]
+[ext_resource type="FontFile" uid="uid://8qd7n2hmra5a" path="res://project/art/fonts/playbaill/Playball-Regular.ttf" id="10_x6ptw"]
+[ext_resource type="Texture2D" uid="uid://c8qvv40udq8oh" path="res://project/art/sprites/menu/button_green.png" id="11_33223"]
+[ext_resource type="Texture2D" uid="uid://bvimnmg23cnwa" path="res://project/art/sprites/menu/arrow_down.png" id="11_qhkwt"]
+[ext_resource type="Texture2D" uid="uid://bgorn5c8254j4" path="res://project/art/sprites/map/map-rivers.png" id="11_u6vr8"]
+[ext_resource type="Texture2D" uid="uid://bc3omncab8des" path="res://project/art/sprites/map/map-waypoint-akkad.png" id="12_t28hp"]
+[ext_resource type="Texture2D" uid="uid://b567ugqryp07r" path="res://project/art/sprites/map/map-waypoint-ur.png" id="13_xg8yu"]
+[ext_resource type="Texture2D" uid="uid://cjllxjsq0yf7h" path="res://project/art/sprites/map/map-waypoint-uruk.png" id="14_rp2ow"]
+[ext_resource type="PackedScene" uid="uid://ckvlidixrg4ls" path="res://project/scenes/graphs/graph_bar_1.tscn" id="15_2kqvi"]
+[ext_resource type="Texture2D" uid="uid://1pc5ehqdqtx7" path="res://project/art/sprites/icons/icon-akkad.png" id="15_kfoow"]
+[ext_resource type="PackedScene" uid="uid://dd6cppals05k0" path="res://project/scenes/graphs/graph_tenency.tscn" id="16_t28hp"]
+[ext_resource type="Texture2D" uid="uid://bsai1wsxu4ikv" path="res://project/art/sprites/icons/icon-ur.png" id="16_wyfxm"]
+[ext_resource type="Texture2D" uid="uid://bitf8tmekbtgt" path="res://project/art/sprites/icons/icon-uruk.png" id="17_8jyag"]
+[ext_resource type="Texture2D" uid="uid://djfk3k80hqw4p" path="res://project/art/sprites/icons/icon-barley.png" id="18_1fo8m"]
+[ext_resource type="PackedScene" uid="uid://d3v8d83jspt6b" path="res://project/scenes/graphs/graph_bar_2.tscn" id="19_b58ac"]
+[ext_resource type="Texture2D" uid="uid://pew53j8gdq72" path="res://project/art/sprites/icons/icon-soldier.png" id="19_mygyo"]
+[ext_resource type="PackedScene" uid="uid://brlbcx20q64y0" path="res://project/scenes/graphs/graph_pie.tscn" id="19_x6ptw"]
+[ext_resource type="PackedScene" uid="uid://lot84ohkitwv" path="res://project/art/meshes/rack_a/rack_a_m.tscn" id="31_qhkwt"]
+[ext_resource type="PackedScene" uid="uid://brcaf5lrvrhg" path="res://project/art/meshes/calculating_machine/calculating_machine_m.tscn" id="38_kfoow"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xbnxe"]
+font = ExtResource("9_6rj13")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_o2eaj"]
+viewport_path = NodePath("World/Sprites/Graphs/Bar1/SVBar1")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_b58ac"]
+viewport_path = NodePath("World/Sprites/Graphs/Bar2/SVBar2")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_07rhc"]
+viewport_path = NodePath("World/Sprites/Graphs/Pie/SVPie")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_u6vr8"]
+viewport_path = NodePath("World/Sprites/Graphs/Tendency/SVTendency")
+
+[node name="Museum" type="Node" unique_id=2077953294]
+script = ExtResource("1_beg0u")
+
+[node name="Scripts" type="Node" parent="." unique_id=2126725658]
+
+[node name="Menu" type="Node" parent="Scripts" unique_id=1817570172]
+script = ExtResource("3_u6vr8")
+
+[node name="Map" type="Node" parent="Scripts/Menu" unique_id=1394822183]
+script = ExtResource("3_xg8yu")
+
+[node name="Timeline" type="Node" parent="Scripts/Menu" unique_id=254018081]
+script = ExtResource("4_rp2ow")
+
+[node name="Navigation" type="Node" parent="Scripts" unique_id=1364097148]
+script = ExtResource("2_t28hp")
+
+[node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_wiwei")]
+
+[node name="Menu" type="Control" parent="UI" unique_id=1397914409]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 22.0
+offset_top = 98.0
+offset_right = 211.0
+offset_bottom = 891.0
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="UI/Menu" unique_id=445560314]
+layout_mode = 0
+offset_right = 191.0
+offset_bottom = 794.0
+texture = ExtResource("7_htdm8")
+
+[node name="Buttons" type="VBoxContainer" parent="UI/Menu" unique_id=1055906271]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 123.12
+offset_top = -327.56
+offset_right = 251.12
+offset_bottom = -296.8305
+grow_vertical = 2
+scale = Vector2(0.425, 0.425)
+theme_override_constants/separation = 63
+
+[node name="TBInfo" type="TextureButton" parent="UI/Menu/Buttons" unique_id=1651508616]
+visible = false
+layout_mode = 2
+texture_normal = ExtResource("3_wfvgn")
+texture_pressed = ExtResource("3_wfvgn")
+texture_hover = ExtResource("3_wfvgn")
+
+[node name="Toggles" type="VBoxContainer" parent="UI/Menu" unique_id=735974424]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 115.515
+offset_top = -96.215
+offset_right = 243.515
+offset_bottom = 683.79114
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Timeline" type="Control" parent="UI/Menu" unique_id=1019585773]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -127.000305
+offset_top = -343.5
+offset_right = -100.0
+offset_bottom = 183.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="YearMin" type="Label" parent="UI/Menu/Timeline" unique_id=1116717828]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -89.0
+offset_top = -566.0
+offset_right = 19.0
+offset_bottom = -543.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0,000 BC"
+label_settings = SubResource("LabelSettings_xbnxe")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="YearMax" type="Label" parent="UI/Menu/Timeline" unique_id=1803228664]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -87.49985
+offset_top = 534.0
+offset_right = 20.500153
+offset_bottom = 557.0
+grow_horizontal = 2
+text = "0,000 BC"
+label_settings = SubResource("LabelSettings_xbnxe")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="VSlider" type="VSlider" parent="UI/Menu/Timeline" unique_id=1167255864]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.5
+offset_top = -388.65503
+offset_right = -13.5
+offset_bottom = 389.72498
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.635, 1)
+
+[node name="Navigation" type="VBoxContainer" parent="UI/Menu" unique_id=749086871]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 721.0
+offset_top = -285.30502
+offset_right = 849.0
+offset_bottom = 277.69498
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 17
+alignment = 1
+
+[node name="TBTutorial" type="TextureButton" parent="UI/Menu" unique_id=1118299861]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 64.0
+offset_right = 146.0
+offset_bottom = 86.0
+scale = Vector2(2.245, 2.245)
+texture_normal = ExtResource("10_k7b5t")
+texture_pressed = ExtResource("10_k7b5t")
+texture_hover = ExtResource("10_k7b5t")
+
+[node name="BtnUp" type="Button" parent="UI/Menu" unique_id=534288493]
+layout_mode = 0
+offset_left = 907.0
+offset_top = 187.99994
+offset_right = 985.0
+offset_bottom = 250.99994
+scale = Vector2(1.615, 1.615)
+icon = ExtResource("10_6rj13")
+flat = true
+
+[node name="BtnDown" type="Button" parent="UI/Menu" unique_id=888703439]
+layout_mode = 0
+offset_left = 888.0
+offset_top = 289.00003
+offset_right = 984.0
+offset_bottom = 361.00003
+rotation = 6.2831855
+scale = Vector2(1.615, 1.615)
+icon = ExtResource("11_qhkwt")
+flat = true
+
+[node name="RangeSliderV" parent="UI/Menu" unique_id=1382023044 instance=ExtResource("8_8jx6j")]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 578.24
+offset_right = 91.0
+offset_bottom = 1103.2402
+scale = Vector2(1, -1)
+
+[node name="TBAkkad" type="TextureButton" parent="UI/Menu" unique_id=725778729]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 302.0
+offset_right = 140.0
+offset_bottom = 324.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("11_33223")
+texture_pressed = ExtResource("11_33223")
+texture_hover = ExtResource("10_k7b5t")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Menu/TBAkkad" unique_id=608506031]
+modulate = Color(0.52073187, 0.81612015, 0.9601012, 1)
+layout_mode = 0
+offset_left = -18.000002
+offset_top = -12.666667
+offset_right = 110.0
+offset_bottom = 115.333336
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("15_kfoow")
+
+[node name="TBUr" type="TextureButton" parent="UI/Menu" unique_id=592826485]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 346.0
+offset_right = 140.0
+offset_bottom = 368.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("11_33223")
+texture_pressed = ExtResource("11_33223")
+texture_hover = ExtResource("10_k7b5t")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Menu/TBUr" unique_id=1428229336]
+modulate = Color(0.52073187, 0.81612015, 0.9601012, 1)
+layout_mode = 0
+offset_left = -18.000002
+offset_top = -12.666667
+offset_right = 110.0
+offset_bottom = 115.333336
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("16_wyfxm")
+
+[node name="TBUruk" type="TextureButton" parent="UI/Menu" unique_id=343916323]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 390.0
+offset_right = 140.0
+offset_bottom = 412.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("11_33223")
+texture_pressed = ExtResource("11_33223")
+texture_hover = ExtResource("10_k7b5t")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Menu/TBUruk" unique_id=1016302682]
+modulate = Color(0.52073187, 0.81612015, 0.9601012, 1)
+layout_mode = 0
+offset_left = -18.000002
+offset_top = -12.666667
+offset_right = 110.0
+offset_bottom = 115.333336
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("17_8jyag")
+
+[node name="TBBarley" type="TextureButton" parent="UI/Menu" unique_id=576554986]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 486.0
+offset_right = 140.0
+offset_bottom = 508.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("11_33223")
+texture_pressed = ExtResource("11_33223")
+texture_hover = ExtResource("10_k7b5t")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Menu/TBBarley" unique_id=151978357]
+modulate = Color(0.52073187, 0.81612015, 0.9601012, 1)
+layout_mode = 0
+offset_left = -18.000002
+offset_top = -12.666667
+offset_right = 110.0
+offset_bottom = 115.333336
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("18_1fo8m")
+
+[node name="TBSoldiers" type="TextureButton" parent="UI/Menu" unique_id=1249429907]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 529.0
+offset_right = 140.0
+offset_bottom = 551.0
+scale = Vector2(1.5, 1.5)
+texture_normal = ExtResource("11_33223")
+texture_pressed = ExtResource("11_33223")
+texture_hover = ExtResource("10_k7b5t")
+
+[node name="TextureRect" type="TextureRect" parent="UI/Menu/TBSoldiers" unique_id=897798606]
+modulate = Color(0.52073187, 0.81612015, 0.9601012, 1)
+layout_mode = 0
+offset_left = -18.000002
+offset_top = -12.666667
+offset_right = 110.0
+offset_bottom = 115.333336
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("19_mygyo")
+
+[node name="World" type="Node3D" parent="." unique_id=1529691493]
+
+[node name="Audio3D" type="Node3D" parent="World" unique_id=2103957339]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="World/Audio3D" unique_id=372836180]
+
+[node name="CameraRig" type="Node3D" parent="World" unique_id=829160146]
+
+[node name="MainCamera" type="Camera3D" parent="World/CameraRig" unique_id=1993890512]
+current = true
+
+[node name="PosMainMenu" type="Node3D" parent="World/CameraRig" unique_id=922637394]
+transform = Transform3D(1, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, -8.478, 3.711, 11.668)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMainMenu" unique_id=1301446958]
+
+[node name="PosMuseum" type="Node3D" parent="World/CameraRig" unique_id=1283224432]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 4)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosMuseum" unique_id=1119442698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, 26)
+
+[node name="PosRackA" type="Node3D" parent="World/CameraRig" unique_id=849555301]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.71, 8.224, -45.395)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA" unique_id=189691498]
+
+[node name="PosArtifact" type="Node3D" parent="World/CameraRig" unique_id=131910881]
+transform = Transform3D(1, 0, 0, 0, 1.19, 0, 0, 0, 1, -1.82, 3.612, -35.442)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifact" unique_id=1559219473]
+
+[node name="PosArtWeight" type="Node3D" parent="World/CameraRig/PosArtifact" unique_id=1492997709]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0, 5.1520157, -20.648876)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifact/PosArtWeight" unique_id=111637791]
+
+[node name="PosArtAmount" type="Node3D" parent="World/CameraRig/PosArtifact" unique_id=1468788138]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.9999998, 0, 10.304032, -10.748337)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifact/PosArtAmount" unique_id=103011689]
+
+[node name="PosRackB" type="Node3D" parent="World/CameraRig" unique_id=908728399]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.99999994, 0, 0.99999994, 0, -4.3711385e-08, 1.71, 8.223999, -45.394997)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB" unique_id=713218546]
+
+[node name="PosDataBases" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=981028479]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.065, 2.86, -7.89)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosDataBases" unique_id=1627573802]
+
+[node name="PosMap" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=1810803901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86, -6.665)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosMap" unique_id=11808520]
+
+[node name="PosGraphBars" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=2056571179]
+transform = Transform3D(0.99999934, 0, 0, 0, 0.99999934, 0, 2.842171e-14, 0, 1, -1.8721657, -4.024995, -9.172645)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphBars" unique_id=2061057445]
+transform = Transform3D(1, 0, -2.4868996e-14, 0, 1, 0, 2.1316282e-14, 0, 1, -0.11236191, 0, -0.364707)
+
+[node name="PosGraphPies" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=1111515370]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 7.1054274e-15, 0, 1, 0.703, -3.93, -9.335)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphPies" unique_id=761568993]
+
+[node name="PosGraphTendency" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=232674560]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 7.1054274e-15, 0, 1, -1.3357048, -5.583998, -9.552996)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphTendency" unique_id=813011352]
+
+[node name="PosOptions" type="Node3D" parent="World/CameraRig" unique_id=930431605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 8.540478, -33)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosOptions" unique_id=1035660275]
+
+[node name="PosAudio" type="Node3D" parent="World/CameraRig/PosOptions" unique_id=59424584]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.0582933, -2)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosOptions/PosAudio" unique_id=1217378166]
+
+[node name="PosVideo" type="Node3D" parent="World/CameraRig/PosOptions" unique_id=1430253138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.317696, 2)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosOptions/PosVideo" unique_id=553845358]
+
+[node name="PosInfo" type="Node3D" parent="World/CameraRig" unique_id=1559868338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -4.033125, -33)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosInfo" unique_id=825886247]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.092566, 0)
+
+[node name="PosExit" type="Node3D" parent="World/CameraRig" unique_id=589115846]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.669999, 2.9235048, 3.7806625)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosExit" unique_id=61795898]
+
+[node name="Sprites" type="Node3D" parent="World" unique_id=1978008293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.784505, 7.8948283, -45.44928)
+
+[node name="DataBases" type="Node3D" parent="World/Sprites" unique_id=693877026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4870672, 3.919743, -1.0691757)
+
+[node name="DBCities" type="Sprite3D" parent="World/Sprites/DataBases" unique_id=310705921]
+transform = Transform3D(-1.2239188e-08, 0, -0.28, 0, 0.28, 0, 0.28, 0, -1.2239188e-08, 0, -0.23173428, -0.5197334)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+texture = ExtResource("5_4irpc")
+
+[node name="L3DCities" type="Label3D" parent="World/Sprites/DataBases/DBCities" unique_id=1846384244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6519623, 0.34594345, 0)
+modulate = Color(0.9615354, 0.84719783, 0.53045785, 1)
+text = " Ciudad	        Cebada        Soldados"
+font = ExtResource("10_x6ptw")
+font_size = 47
+outline_size = 3
+horizontal_alignment = 0
+
+[node name="L3DAkkad" type="Label3D" parent="World/Sprites/DataBases/DBCities" unique_id=748685735]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4547424, 0.08054352, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "Akkad		                40000			                  3500"
+font = ExtResource("10_x6ptw")
+outline_size = 3
+horizontal_alignment = 0
+
+[node name="L3DUr" type="Label3D" parent="World/Sprites/DataBases/DBCities" unique_id=1653529160]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3837585, -0.18013382, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "Ur				                   25000			                  9500"
+font = ExtResource("10_x6ptw")
+outline_size = 3
+horizontal_alignment = 0
+
+[node name="L3DUruk" type="Label3D" parent="World/Sprites/DataBases/DBCities" unique_id=579592218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45961, -0.43424988, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "Uruk		                  10000		                   1000"
+font = ExtResource("10_x6ptw")
+outline_size = 3
+horizontal_alignment = 0
+
+[node name="DBResources" type="Sprite3D" parent="World/Sprites/DataBases" unique_id=804622809]
+transform = Transform3D(-5.2453664e-09, 0, -0.12, 0, 0.12, 0, 0.12, 0, -5.2453664e-09, 0, -0.045000076, 0.7677727)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+texture = ExtResource("6_wj7eq")
+
+[node name="L3DData" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=2147416083]
+transform = Transform3D(8.333334, 0, -1.1368684e-13, 0, 8.333334, 0, 1.1368684e-13, 0, 8.333334, -9.040253, 1.1861801, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Bases de"
+font = ExtResource("10_x6ptw")
+outline_size = 2
+
+[node name="L3DBases" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=1802967270]
+transform = Transform3D(8.333002, 0, -4.5474735e-13, 0, 8.333002, 0, 4.5474735e-13, 0, 8.333002, -2.2176514, 4.2557907, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "datos"
+font = ExtResource("10_x6ptw")
+outline_size = 2
+
+[node name="L3DResources" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=716691768]
+transform = Transform3D(1, 0, -4.973799e-14, 0, 1, 0, 4.973799e-14, 0, 1, -3.159912, 2.7148972, 0)
+modulate = Color(0.9615354, 0.84719783, 0.53045785, 1)
+text = " Year         Ciudad	        Cebada      Soldados"
+font = ExtResource("10_x6ptw")
+font_size = 69
+outline_size = 1
+horizontal_alignment = 0
+
+[node name="L3DYears" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=890425281]
+transform = Transform3D(1, 0, -1.7763568e-14, 0, 1, 0, 1.7763568e-14, 0, 1, -3.0491638, 2.288765, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC
+3500 AC"
+font = ExtResource("10_x6ptw")
+outline_size = 1
+horizontal_alignment = 0
+vertical_alignment = 0
+line_spacing = 30.105
+
+[node name="L3DCities" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=1135722736]
+transform = Transform3D(1, 0, -3.1974423e-14, 0, 1, 0, 3.1974423e-14, 0, 1, -1.0818176, 2.288765, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "Akkad
+Ur
+Uruk
+Akkad
+Ur
+Uruk
+Akkad
+Ur
+Uruk
+Akkad
+Ur
+Uruk
+Akkad
+Ur
+Uruk"
+font = ExtResource("10_x6ptw")
+outline_size = 1
+horizontal_alignment = 0
+vertical_alignment = 0
+line_spacing = 30.105
+
+[node name="L3DBarley" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=143442382]
+transform = Transform3D(1, 0, -4.6185278e-14, 0, 1, 0, 4.6185278e-14, 0, 1, 0.6855774, 2.288765, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "40,000
+40,000
+40,000
+40,000
+40,000
+40,000
+40,000
+40000
+40,000
+40,000
+40,000
+40,000
+40,000
+40,000
+40,000"
+font = ExtResource("10_x6ptw")
+outline_size = 1
+horizontal_alignment = 0
+vertical_alignment = 0
+line_spacing = 30.105
+
+[node name="L3DSoldiers" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=85909481]
+transform = Transform3D(1, 0, -5.3290705e-14, 0, 1, 0, 5.3290705e-14, 0, 1, 2.4362793, 2.288765, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+text = "15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000
+15,000"
+font = ExtResource("10_x6ptw")
+outline_size = 1
+horizontal_alignment = 0
+vertical_alignment = 0
+line_spacing = 30.105
+
+[node name="Map" type="Node3D" parent="World/Sprites" unique_id=1678897081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9458647, 0.41174936, 0.0057792664)
+
+[node name="L3DMap" type="Label3D" parent="World/Sprites/Map" unique_id=2061468207]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.2338696, 1.1170387)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Mapa"
+font = ExtResource("10_x6ptw")
+outline_size = 2
+
+[node name="MapWindRose" type="Sprite3D" parent="World/Sprites/Map" unique_id=1027725095]
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
+modulate = Color(0.7883661, 0.64957726, 0.236258, 1)
+texture = ExtResource("9_fd4yj")
+
+[node name="MapPaths" type="Sprite3D" parent="World/Sprites/Map" unique_id=801594742]
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
+modulate = Color(0.7882353, 0.6509804, 0.23529412, 1)
+texture = ExtResource("10_2kqvi")
+
+[node name="MapRivers" type="Sprite3D" parent="World/Sprites/Map" unique_id=1037401454]
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
+modulate = Color(0.13333334, 0.44313726, 0.57254905, 1)
+texture = ExtResource("11_u6vr8")
+
+[node name="MapAkkad" type="Sprite3D" parent="World/Sprites/Map" unique_id=1666053697]
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
+modulate = Color(0.7764706, 0.25882354, 0.2901961, 1)
+texture = ExtResource("12_t28hp")
+
+[node name="MapUr" type="Sprite3D" parent="World/Sprites/Map" unique_id=1674546393]
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
+modulate = Color(0.35592264, 0.5216066, 0.21832317, 1)
+texture = ExtResource("13_xg8yu")
+
+[node name="MapUruk" type="Sprite3D" parent="World/Sprites/Map" unique_id=1946468231]
+transform = Transform3D(-1.0272176e-08, 0, -0.235, 0, 0.235, 0, 0.235, 0, -1.0272176e-08, 0, 0, 0)
+modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
+texture = ExtResource("14_rp2ow")
+
+[node name="Graphs" type="Node3D" parent="World/Sprites" unique_id=1173887309]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2504025, -5.074249, 0)
+
+[node name="Bar1" type="Node3D" parent="World/Sprites/Graphs" unique_id=1641601821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22017574, 1.6851354, -2.094715)
+
+[node name="SVBar1" type="SubViewport" parent="World/Sprites/Graphs/Bar1" unique_id=958429834]
+transparent_bg = true
+render_target_update_mode = 4
+
+[node name="GraphBar1" parent="World/Sprites/Graphs/Bar1/SVBar1" unique_id=1537714593 instance=ExtResource("15_2kqvi")]
+
+[node name="SpriteBar1" type="Sprite3D" parent="World/Sprites/Graphs/Bar1" unique_id=995290408]
+transform = Transform3D(-4.808253e-09, 0, -0.12, 0, 0.1, 0, 0.11, 0, -5.2453664e-09, -0.008708954, 0, -0.010875702)
+cast_shadow = 0
+texture = SubResource("ViewportTexture_o2eaj")
+
+[node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=1370845813]
+transform = Transform3D(1.0000027, 0, -1.3500312e-13, 0, 1.0000042, 0, -8.1712415e-14, 0, 1, 0.07965088, 2.7467232, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.542, 0.463, 0.244, 1)
+text = "Relación (%) de cebada y soldados"
+font = ExtResource("10_x6ptw")
+font_size = 55
+outline_size = 7
+
+[node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1/L3DTitle" unique_id=1744151827]
+transform = Transform3D(1.0000027, 0, -1.3500312e-13, 0, 1.000004, 0, -4.6185278e-14, 0, 1, 1.1538086, -0.37674713, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.542, 0.463, 0.244, 1)
+text = "(2600 AC)"
+font = ExtResource("10_x6ptw")
+font_size = 55
+outline_size = 7
+
+[node name="L3DOrigin" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=774242018]
+transform = Transform3D(1.0000011, 3.504493e-14, -4.0749626e-10, -8.200083e-14, 1.000001, -8.458842e-15, 4.0720494e-10, 2.4868986e-14, 0.9999968, -1.9119263, -2.0522003, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "0"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+
+[node name="L3DAmount" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=13206303]
+transform = Transform3D(-4.3711378e-08, -1.0000004, 4.0316323e-08, 1.0000001, -4.3711392e-08, -4.0316326e-08, 4.0316316e-08, 4.0316355e-08, 0.99999976, -2.422, -1.007, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Cantidad"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+
+[node name="L3DCities" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=909230109]
+transform = Transform3D(1.000001, 1.5446574e-14, -2.0376945e-10, -4.2294232e-14, 1.000001, -4.925372e-15, 2.0360957e-10, 1.4210843e-14, 0.99999875, -1.0576172, -2.3219948, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Ciudades"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+
+[node name="L3DLegend" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=212080489]
+transform = Transform3D(1.0000004, 0, -3.5527137e-15, 0, 1.0000004, 0, -1.0658141e-14, 0, 1, 1.3710022, -2.313282, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+text = "Cebada (gur)"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+
+[node name="L3DLegend2" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1/L3DLegend" unique_id=811357634]
+transform = Transform3D(1.0000001, 0, 3.5527137e-15, 0, 1.0000001, 0, -3.5527137e-15, 0, 1, 1.105, 0, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Cebada (gur)"
+font = ExtResource("10_x6ptw")
+outline_size = 1
+
+[node name="Bar2" type="Node3D" parent="World/Sprites/Graphs" unique_id=1282151549]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1960001, 1.6433282, -1.4491043)
+
+[node name="SVBar2" type="SubViewport" parent="World/Sprites/Graphs/Bar2" unique_id=244128300]
+transparent_bg = true
+
+[node name="GraphBar2" parent="World/Sprites/Graphs/Bar2/SVBar2" unique_id=1530891687 instance=ExtResource("19_b58ac")]
+
+[node name="SpriteBar2" type="Sprite3D" parent="World/Sprites/Graphs/Bar2" unique_id=1167667898]
+transform = Transform3D(-3.496911e-09, 0, -0.08, 0, 0.08, 0, 0.08, 0, -3.496911e-09, 0, 0, -0.053836823)
+texture = SubResource("ViewportTexture_b58ac")
+
+[node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=2048669155]
+transform = Transform3D(1.0000026, 0, -1.314504e-13, 0, 1.0000039, 0, -7.1054274e-14, 0, 1, -2.1662598, 2.682293, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.542, 0.463, 0.244, 1)
+text = "Comparación recursos por ciudad
+(2400 AC)"
+font = ExtResource("10_x6ptw")
+font_size = 55
+outline_size = 7
+horizontal_alignment = 0
+
+[node name="L3DLegend" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=1564194620]
+transform = Transform3D(1.0000001, 0, -3.5527137e-15, 0, 1.0000001, 0, 8.1712415e-14, 0, 1, 1.8079834, 2.5246773, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+text = "Cebada (gur)"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+
+[node name="L3DLegend2" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2/L3DLegend" unique_id=453797482]
+transform = Transform3D(1.0000001, 0, 3.5527137e-15, 0, 1.0000001, 0, 0, 0, 1, 0.003112793, -0.27601624, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Cebada (gur)"
+font = ExtResource("10_x6ptw")
+outline_size = 1
+
+[node name="L3DOrigin" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=1361310412]
+transform = Transform3D(1, 0, -3.5527137e-15, 0, 1, 0, 3.5527137e-15, 0, 1, -1.94281, -2.0895424, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "0"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+autowrap_mode = 1
+
+[node name="L3DAmount" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=222984634]
+transform = Transform3D(-4.3711385e-08, -1, 4.371136e-08, 1, -4.371139e-08, -4.371145e-08, 4.371145e-08, 4.371136e-08, 1, -2.4242554, -0.1426239, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Cantidad"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+autowrap_mode = 1
+
+[node name="L3DYear" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=1883411313]
+transform = Transform3D(1, 0, -5.684342e-14, 0, 1, 0, 5.684342e-14, 0, 1, 0.34887695, -2.338543, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Ciudades"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+
+[node name="Pie" type="Node3D" parent="World/Sprites/Graphs" unique_id=269983883]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19965458, 1.8756056, 0.79605484)
+
+[node name="SVPie" type="SubViewport" parent="World/Sprites/Graphs/Pie" unique_id=820445402]
+transparent_bg = true
+render_target_update_mode = 4
+
+[node name="GraphPie" parent="World/Sprites/Graphs/Pie/SVPie" unique_id=1118151370 instance=ExtResource("19_x6ptw")]
+
+[node name="SpritePie1" type="Sprite3D" parent="World/Sprites/Graphs/Pie" unique_id=1606217453]
+transform = Transform3D(-6.3381513e-09, 0, -0.145, 0, 0.145, 0, 0.145, 0, -6.3381513e-09, 0, 0, -0.014026642)
+cast_shadow = 0
+texture = SubResource("ViewportTexture_07rhc")
+
+[node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Pie/SpritePie1" unique_id=1236100612]
+transform = Transform3D(1.0000033, 0, -1.1723955e-13, 0, 1.000004, 0, -4.973799e-14, 0, 1.0000004, -0.7979126, 2.7477036, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.542, 0.463, 0.244, 1)
+text = "Distribución de recursos 
+en la 
+Antigua Mesopotamia
+2,550 A.C,"
+font = ExtResource("10_x6ptw")
+font_size = 48
+outline_size = 7
+
+[node name="Tendency" type="Node3D" parent="World/Sprites/Graphs" unique_id=768737517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.211, 0.181, -1.284)
+
+[node name="SVTendency" type="SubViewport" parent="World/Sprites/Graphs/Tendency" unique_id=1686177610]
+transparent_bg = true
+size = Vector2i(902, 512)
+
+[node name="GraphTendency" parent="World/Sprites/Graphs/Tendency/SVTendency" unique_id=974528778 instance=ExtResource("16_t28hp")]
+
+[node name="SpriteTendency" type="Sprite3D" parent="World/Sprites/Graphs/Tendency" unique_id=54520687]
+transform = Transform3D(-4.152582e-09, 0, -0.095, 0, 0.095, 0, 0.095, 0, -4.152582e-09, 0, -0.032, 0)
+cast_shadow = 0
+texture = SubResource("ViewportTexture_u6vr8")
+
+[node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=1358727701]
+transform = Transform3D(1.0000037, 0, -1.563194e-13, 0, 1.0000042, 0, 3.5527137e-15, 0, 1.0000007, -0.5593262, 2.598505, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_modulate = Color(0.542, 0.463, 0.244, 1)
+text = "Recursos a travéz del tiempo"
+font = ExtResource("10_x6ptw")
+font_size = 73
+outline_size = 7
+
+[node name="L3DOrigin" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=1857378684]
+transform = Transform3D(1.0000014, 0, -3.907985e-14, 0, 1.0000014, 0, 3.907985e-14, 0, 1.0000014, -3.8630981, -2.0033855, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "0"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+autowrap_mode = 1
+
+[node name="L3DAmount" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=601278048]
+transform = Transform3D(-4.3711385e-08, -1.0000007, 4.3711378e-08, 1.0000007, -4.37114e-08, -4.3711456e-08, 4.3711506e-08, 4.3711378e-08, 1.0000007, -4.194702, -2.338602, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Cantidad"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+autowrap_mode = 1
+
+[node name="L3DYear" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=420604535]
+transform = Transform3D(1.0000004, 0, -6.3948846e-14, 0, 1.0000004, 0, 6.3948846e-14, 0, 1.0000004, -0.5828552, -2.4546642, 0)
+modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Años"
+font = ExtResource("10_x6ptw")
+outline_size = 0
+
+[node name="Meshes" type="Node3D" parent="World" unique_id=1324747115]
+
+[node name="Museum" parent="World/Meshes" unique_id=924389842 instance=ExtResource("8_eelwi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.290178, -1.9073486e-06, 8.041159)
+
+[node name="Racks" type="Node3D" parent="World/Meshes" unique_id=1007738466]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45.530144)
+
+[node name="RackHistory" parent="World/Meshes/Racks" unique_id=1604323055 instance=ExtResource("6_hv6mn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12.488, 0, 0)
+
+[node name="rack_b" parent="World/Meshes/Racks/RackHistory" unique_id=539835948 instance=ExtResource("7_hv6mn")]
+
+[node name="Text" type="Node3D" parent="World/Meshes/Racks/RackHistory" unique_id=1892785296]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.48751736)
+
+[node name="Beginning" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=1879219627]
+transform = Transform3D(0.41214386, -0.04860488, -1.2484547e-10, 0.04860488, 0.41214386, 2.1245867e-09, -1.2484574e-10, -2.1245867e-09, 0.415, -0.160923, 12.4393425, 0)
+text = "La Antigua Sumeria era un lugar fascinante donde comenzó la civilización humana, 
+wpero sólo recientemente hemos tenido la suerte de descubrir su existencia. 
+Un grupo de arqueólogos encontró unas ruinas, en lo que es hoy en día Irak. 
+Encontraron una enorme cantidad de tabletas de arcilla en un lenguaje hasta el momento desconocido. 
+Este lenguaje es el Cuneiforme y pertenece a la primera ciudad de la historia.
+"
+font = ExtResource("10_x6ptw")
+font_size = 34
+outline_size = 5
+
+[node name="Beginning2" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=2106144921]
+transform = Transform3D(0.31779766, -0.03747846, -9.626639e-11, 0.03747846, 0.31779766, 1.6382355e-09, -9.62666e-11, -1.6382355e-09, 0.32, 1.0153961, 12.102977, 0)
+text = "En la región como la Creciente Fértil, 
+pequeños asentamientos se fueron convirtiéndose en ciudades que no sólo 
+brindaban protección sino que permitían construir y generar cultura. 
+Las primeras ciudades intercambiaban las unas con las otras. 
+Lo que una región carecía, lo podía obtener de otra.
+
+"
+font = ExtResource("10_x6ptw")
+font_size = 34
+outline_size = 5
+
+[node name="Middle" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=429238187]
+transform = Transform3D(0.66743225, -0.058601964, -1.1224057e-10, 0.058601964, 0.66743225, 2.5615732e-09, -1.1223916e-10, -2.5615734e-09, 0.67, -0.89899445, 10.336073, 0)
+text = "Uruk fue la primera ciudad, 
+brindando protección frente a los Gutianos 
+(tribus caníbales y bandidos).
+"
+font = ExtResource("10_x6ptw")
+font_size = 34
+outline_size = 5
+
+[node name="Middle2" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=1442673590]
+transform = Transform3D(0.41351762, -0.15034352, -1.1575843e-09, 0.15034352, 0.41351762, 6.571724e-09, -1.1575843e-09, -6.571724e-09, 0.44, 0.42033768, 9.9116535, 0)
+text = "Ur, al estar conectada al río Éufrates su puerto brindaba grandes 
+riquezas, le permitía conectarse de manera fácil y rápida con distintas regiones 
+de la Creciente Fértil.
+"
+font = ExtResource("10_x6ptw")
+font_size = 34
+outline_size = 5
+
+[node name="Middle6" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=431337704]
+transform = Transform3D(0.5294679, 0.07673865, -2.4181918e-10, -0.07673865, 0.5294679, -3.3543528e-09, -2.418187e-10, 3.3543528e-09, 0.535, -1.343914, 9.627903, 0)
+text = "Kish fue la primera 
+ciudad en tener un 
+rey, mostrando hegemonía 
+sobre gran parte de la 
+Antigua Sumeria.
+"
+font = ExtResource("10_x6ptw")
+font_size = 34
+outline_size = 5
+
+[node name="Middle4" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=906777742]
+transform = Transform3D(0.34098223, 0.09877304, -6.1273653e-10, -0.09877304, 0.34098223, -4.317506e-09, -6.1273475e-10, 4.317506e-09, 0.355, 1.6709824, 9.863196, 0)
+text = "Lagash, la primera potencia militar que 
+tuvo el primer conflicto registrado de la
+ historia contra Umma, Aunque no fue una 
+guerra con grandes pérdidas para sus participantes, 
+dejó al descubierto las tácticas de la guerra entre ciudades.
+"
+font = ExtResource("10_x6ptw")
+font_size = 34
+outline_size = 5
+
+[node name="Middle5" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=1325874142]
+transform = Transform3D(0.3642013, 0.024133291, -3.4914058e-11, -0.024133291, 0.3642013, -1.0548996e-09, -3.4910835e-11, 1.0548997e-09, 0.365, 1.1234055, 9.435285, 0)
+text = "Akkad no pertenecía a la Antigua Sumeria. Era una ciudad 
+completamente diferente, con otra cultura e incluso idioma 
+y sin escritura. Al estar tan alejado no disfruta de las comodidades 
+que tienen las ciudades de Sumeria, como intercambios, viajes
+ cortos entre regiones. Unidad y pluralidad de cultura al mismo tiempo."
+font = ExtResource("10_x6ptw")
+font_size = 34
+outline_size = 5
+
+[node name="End" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=436673852]
+transform = Transform3D(0.3944267, -0.021273535, -2.505868e-11, 0.021273535, 0.3944267, 9.2989566e-10, -2.5059123e-11, -9.298956e-10, 0.395, -1.2209282, 7.329685, 0)
+text = "Algunas de las tabletas cuentan
+ la historia de Uanna, desde joven
+ aprendió a escribir y tuvo gran 
+influencia en la región. Otras 
+tablas son simplemente
+registros de soldados 
+y granos de cebada. 
+siendo este último la forma 
+más común de pago por pago 
+del estado en esa época. 
+También hay tabletas con 
+mensajes y recados enviados
+entre ciudades, pidiendo 
+favores o quejándose 
+por un mal producto.
+"
+font = ExtResource("10_x6ptw")
+font_size = 34
+outline_size = 5
+
+[node name="End2" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=537932826]
+transform = Transform3D(0.3636094, 0.03183099, -6.0785155e-11, -0.03183099, 0.3636094, -1.3913766e-09, -6.0785155e-11, 1.3913767e-09, 0.36499998, 0.21556091, 7.410394, 0)
+text = "Uanna nació en la ciudad de Uruk, en el año 2,500 a.C. 
+Su padre, Engar-dug, era granjero. Su madre, Ushar, 
+trabajaba fabricando y esculpiendo vasijas de arcilla.
+ Tenía un hermano mayor y otro menor. 
+Cuando Uruk entró en guerra con Ur, Engar-dug fue 
+solicitado como soldado y la familia se quedó sin su 
+mayor fuente de ingresos. La madre tuvo que vender 
+a sus hijos como esclavos.  Uanna fue comprado por 
+un misterioso anciano cubierto de telas. 
+Su hermano mayor se enlistó como soldado y el
+ menor fue vendido a un granjero. Al poco tiempo, 
+Uanna se enteró que su padre Engar-dug había 
+muerto defendiendo a Uruk en la primera oleada.
+
+"
+font = ExtResource("10_x6ptw")
+font_size = 34
+outline_size = 5
+
+[node name="End3" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=1032851752]
+transform = Transform3D(0.30838412, 0.11747019, -9.448611e-10, -0.11747019, 0.30838412, -5.1347855e-09, -9.448611e-10, 5.1347855e-09, 0.33, 1.6165314, 7.2081685, 0)
+text = "Al norte de la región, muy 
+distante y no considerado 
+como parte de la antigua 
+Sumeria se encuentra
+ Akkad. Posee otro 
+lenguaje y su rey 
+Sargón de Akkad 
+es un tirano que 
+solo busca poder. 
+Ha tenido suerte 
+últimamente con 
+sus campañas 
+y se encuentra 
+en una posición 
+muy estable 
+en cuanto 
+a control, 
+poder y 
+recursos.
+"
+font = ExtResource("10_x6ptw")
+font_size = 34
+outline_size = 5
+
+[node name="PlotTwist1" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=144162357]
+transform = Transform3D(0.415, 0, 0, 0, 0.415, 0, 0, 0, 0.415, -0.00850296, 3.4429884, 0.24104118)
+text = "En el año 2,487 a.C., Sargón de Akkad planeaba conquistar toda Sumeria  Le hace plegarias, tributos y 
+sacrificios sin precedentes a Ishtar, la diosa de Akkad y reúne un gran ejército para iniciar su ofensiva.
+
+Un ataque a esta escala requiere gran cantidad de recursos, no solo en soldados sino también en comida así que
+ en el año 2,486 a.C, como inicio de su ofensiva, Sargón de Akkad conquistó Kish para acumular cebada para 
+abastecer su invasión. Llevar a cabo una invasión de esta escala requeriría al menos 100 gur por día (1 gur 
+equivalía a 300 silas y 1 sila era aproximadamente 1 litro).  Uanna se entera que su hermano mayor era soldado 
+en Kish y murió en el ataque Akkadiano. En el mismo año, Sargón de Akkad conquistó Umma con el fin de 
+reclutar soldados para soportar su campaña. Muchos de sus soldados morían, \"no se puede perder el factor 
+sorpresa y permitirle a los enemigos aliarse y organizarse.\" escribia Sargon de Akkad frecuentemente en los mensajes 
+para sus generales. Mientras la conquista sucedía, en el año 2,485 a.C, Uanna tuvo la suerte de ser comprado 
+por un misterioso comerciante, el cual lo trato bien y le dio una cama digna. Cuando Uanna acabó sus estudios 
+básicos, el comerciante le entregó un estilete mágico, le enseñó a escribir en cuneiforme y, finalmente, le devolvió su 
+libertad. Esta sería el momento clave en la vida de Uanna, en que pasó de ser un simple esclavo para convertirse en un 
+escritor gran capacidad y habilidad. A los pocos días, Uanna se enteró que su hermano menor murió cuando Akkad 
+atacó la granja en la que vivía para capturar su cebada. La única familia que le quedaba es su madre.
+
+Por otro lado, en el año 2,484 a.C, Sargón de Akkad conquistó Uruk para acumular cobre y estaño para reparar y
+ construir potentes armas. El cobre y el estaño no eran muy buenos, pero el de Uruk es el mejor de toda la región. 
+Esta conquista aumentaría el poder de daño del ejército Akkadiano.
+
+Dos años después , en 2,483 a.C, Uanna, por su misteriosa habilidad para escribir con claridad y gran rapidez, consiguió 
+trabajo registrando la cantidad de reservas de cebada y el número de soldados que poseía Uruk, haciendo estos registros, 
+se dio cuenta de que su padre había muerto de una enfermedad desconocida para la época.
+
+El nuevo rey del mundo conocido era Sargon de Akkad. Decidió dejar solo en pie las ciudades más significativas y grandes, 
+las que tenían recursos exóticos o producían algún material en gran cantidad. Entre sus favoritas estaban: 
+Akkad, Ur, Uruk y Lagash.
+ El resto fueron destruidas sin compasión. Sus habitantes llenos con gran pesar porque los antiguos creían que su dios vivía 
+en la ciudad, si esta era destruida, su dios moría con ella o los abandonaba.
+
+Sargon quería conquistar Ur porque poseía textiles hermosos y alfarería única. Un imperio no solo se basa en el control, 
+también tiene una imagen y apariencia que fabricar y definir. Un nuevo estilo que trasciende a través del tiempo. 
+Un estilo que es reconocido o distinguido.
+
+Quería conquistar Lagash por su preciado lapislázuli. En este punto de la campaña no había nadie que pudiera parar al ejército 
+Akkadiano. Sargón de Akkad decidió construir las más bellas estatuas utilizando los materiales más raros y exóticos.
+
+Cuando Sargón de Akkad conquistó Sumeria en el año 2,479 a.C, convocó a los mejores escribas de cada ciudad para 
+escribir la historia de su nuevo imperio. Los que tuvieran la letra más clara, el pulso más firme, que cometieron menos errores, 
+los que producían las palabras más bellas y los escritos más asombrosos.
+
+Uanna se entera y sabe que esta es la mejor oportunidad para demostrar su habilidad. Tras un largo y peligroso viaje cruzando
+Sumeria de sur a norte y esquivando múltiples emboscadas de bandidos, Uanna rápidamente sobresale y se convierte en la mano 
+derecha de Sargón de Akkad y en el escritor principal del nuevo imperio Akkadiano.
+
+Esta es solo una de tantas historias que fueron descubiertas en las antiguas ruinas. 
+Algunas incluso poseen información de la localización de otras ciudades antiguas, 
+las cuales pueden guardar gran cantidad de historias fascinantes esperando por ser descubiertas.
+"
+font = ExtResource("10_x6ptw")
+font_size = 34
+outline_size = 5
+
+[node name="RackGraph" parent="World/Meshes/Racks" unique_id=2039546496 instance=ExtResource("6_hv6mn")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.488, 0, 0)
+
+[node name="rack_a_m" parent="World/Meshes/Racks/RackGraph" unique_id=1997434165 instance=ExtResource("31_qhkwt")]
+
+[node name="rack_a" parent="World/Meshes/Racks/RackGraph" unique_id=285852217 instance=ExtResource("7_qrkhr")]
+visible = false
+
+[node name="Artifact" parent="World/Meshes" unique_id=274704578 instance=ExtResource("38_kfoow")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.952466, -0.018393993, -55.785454)
+
+[node name="lectern" parent="World/Meshes" unique_id=1779673043 instance=ExtResource("8_qrkhr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7177277, 0, -53.14185)
+
+[node name="Options" type="Node3D" parent="World/Meshes" unique_id=4824085]
+
+[node name="Info" type="Node3D" parent="World/Meshes" unique_id=2112922655]
+
+[node name="Exit" type="Node3D" parent="World/Meshes" unique_id=467039694]
+
+[node name="Lights" type="Node3D" parent="World" unique_id=1265559525]
+
+[node name="Sun" type="DirectionalLight3D" parent="World/Lights" unique_id=1218066317]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, -2, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="World/Lights" unique_id=1080329001]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="World/Lights/OmniLight3D" unique_id=330984763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.15536, 8.718365, -45.41277)
+omni_range = 8.0961075
+
+[node name="SpotLight3D" type="SpotLight3D" parent="World/Lights" unique_id=130651291]
+
+[node name="stylus" parent="." unique_id=1821770177 instance=ExtResource("8_ntp17")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9551827, 2.1845849, -55.81129)
+
+[connection signal="pressed" from="UI/Menu/Buttons/TBInfo" to="Scripts/Menu" method="_on_tb_info_pressed"]
+[connection signal="value_changed" from="UI/Menu/Timeline/VSlider" to="Scripts/Menu" method="_on_timeline_value_changed"]
+[connection signal="pressed" from="UI/Menu/TBTutorial" to="Scripts/Menu" method="_on_tb_tutorial_pressed"]
+[connection signal="pressed" from="UI/Menu/BtnUp" to="Scripts/Navigation" method="_on_btn_up_pressed"]
+[connection signal="pressed" from="UI/Menu/BtnDown" to="Scripts/Navigation" method="_on_btn_down_pressed"]
+[connection signal="range_changed" from="UI/Menu/RangeSliderV" to="Scripts/Menu" method="_on_range_slider_v_range_changed"]
+[connection signal="pressed" from="UI/Menu/TBAkkad" to="Scripts/Menu" method="_on_tb_akkad_pressed"]
+[connection signal="pressed" from="UI/Menu/TBUr" to="Scripts/Menu" method="_on_tb_ur_pressed"]
+[connection signal="pressed" from="UI/Menu/TBUruk" to="Scripts/Menu" method="_on_tb_uruk_pressed"]
+[connection signal="pressed" from="UI/Menu/TBBarley" to="Scripts/Menu" method="_on_tb_barley_pressed"]
+[connection signal="pressed" from="UI/Menu/TBSoldiers" to="Scripts/Menu" method="_on_tb_soldiers_pressed"]

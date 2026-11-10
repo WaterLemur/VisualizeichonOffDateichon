@@ -32,6 +32,7 @@ var year_max: int = 2600
 
 @onready var button_green: Texture2D = load("res://project/art/sprites/menu/button_green.png")
 @onready var button_red:   Texture2D = load("res://project/art/sprites/menu/button_red.png")
+@onready var button_blue:  Texture2D = load("res://project/art/sprites/menu/button_blue.png")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -159,13 +160,17 @@ func _on_tb_soldiers_pressed() -> void:
 	_set_btn_texture(tb_soldiers, soldiers)
 	print("Museum: Menu = Soldiers")
 
-func _set_btn_texture(tx_btn: TextureButton, state: bool) -> void:
-	if state:
-		tx_btn.texture_normal = button_green
-		tx_btn.texture_hover = button_green
-	else:
-		tx_btn.texture_normal = button_red
-		tx_btn.texture_hover = button_red
+func _set_btn_texture(tx_btn: TextureButton, state: int) -> void:
+	match state:
+		-1:
+			tx_btn.texture_normal = button_blue
+			tx_btn.texture_hover  = button_blue
+		0:
+			tx_btn.texture_normal = button_red
+			tx_btn.texture_hover = button_red
+		1:
+			tx_btn.texture_normal = button_green
+			tx_btn.texture_hover = button_green
 # -------------- Timeline -----------------------
 func _on_range_slider_v_range_changed(min_value: float, max_value: float) -> void:
 	year_min = min_value
@@ -177,3 +182,22 @@ func _on_range_slider_v_range_changed(min_value: float, max_value: float) -> voi
 	timeline.set_year_max(year_max)
 	tendency.update_chart()
 	print("Museum: Menu = Timeline Max: %.0f" % max_value) 
+
+# -------------- Hover -----------------------
+func _on_tb_akkad_mouse_entered() -> void:
+	# set_akkad
+	#map.set_akkad(akkad)
+	
+	#bar_1.show_akkad = akkad
+	#bar_1.update_chart()
+	#bar_2.show_akkad = akkad
+	#bar_2.update_chart()
+	#pie.show_akkad = akkad
+	#pie.update_chart()
+	#tendency.show_akkad = akkad
+	#tendency.update_chart()
+	 
+	_set_btn_texture(tb_akkad, -1)
+
+func _on_tb_akkad_mouse_exited() -> void:
+	_set_btn_texture(tb_akkad, akkad)

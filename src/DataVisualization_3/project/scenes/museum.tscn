@@ -918,6 +918,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9551827, 2.1845849, -55.81
 [connection signal="pressed" from="UI/Menu/BtnUp" to="Scripts/Navigation" method="_on_btn_up_pressed"]
 [connection signal="pressed" from="UI/Menu/BtnDown" to="Scripts/Navigation" method="_on_btn_down_pressed"]
 [connection signal="range_changed" from="UI/Menu/RangeSliderV" to="Scripts/Menu" method="_on_range_slider_v_range_changed"]
+[connection signal="mouse_entered" from="UI/Menu/TBAkkad" to="Scripts/Menu" method="_on_tb_akkad_mouse_entered"]
+[connection signal="mouse_exited" from="UI/Menu/TBAkkad" to="Scripts/Menu" method="_on_tb_akkad_mouse_exited"]
 [connection signal="pressed" from="UI/Menu/TBAkkad" to="Scripts/Menu" method="_on_tb_akkad_pressed"]
 [connection signal="pressed" from="UI/Menu/TBUr" to="Scripts/Menu" method="_on_tb_ur_pressed"]
 [connection signal="pressed" from="UI/Menu/TBUruk" to="Scripts/Menu" method="_on_tb_uruk_pressed"]

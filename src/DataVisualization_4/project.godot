@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="DataVisualization"
+run/main_scene="uid://rxti140wj33v"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="res://tools/godot/icon.svg"
+
+[autoload]
+
+ManagerScene="*uid://dgwbp80qvn5fk"
+Persistent="*uid://d4cx33mtllj5l"
+Museum="*uid://cii37hhyk0fuu"
+DataBase="*uid://cdc1ay6guapiq"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

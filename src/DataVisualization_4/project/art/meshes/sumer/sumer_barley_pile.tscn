@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dgdnrdutso5fo"]
+
+[ext_resource type="PackedScene" uid="uid://1l46cuw7qjbq" path="res://project/art/meshes/sumer/sumer_barley_pile.glb" id="1_kti2l"]
+
+[node name="sumer_barley_pile" unique_id=520369305 instance=ExtResource("1_kti2l")]

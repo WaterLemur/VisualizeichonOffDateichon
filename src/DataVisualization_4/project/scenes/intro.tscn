@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://c8mfqicn0p4vu"]
+
+[ext_resource type="Script" uid="uid://c0iqowtn1o7j2" path="res://project/scripts/intro.gd" id="1_pxg1a"]
+[ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_6os4l"]
+[ext_resource type="Texture2D" uid="uid://bgr445uynq7xw" path="res://tools/godot/icon.svg" id="3_syf2p"]
+
+[node name="Intro" type="Node" unique_id=532195650]
+script = ExtResource("1_pxg1a")
+
+[node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_6os4l")]
+visible = false
+mouse_filter = 1
+
+[node name="Background" type="ColorRect" parent="UI" unique_id=1086510653]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Logo" type="TextureRect" parent="UI" unique_id=1831438745]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_syf2p")
+
+[node name="Name" type="Label" parent="UI" unique_id=910333516]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = 82.0
+offset_right = 135.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Infinity Ga8es"
+horizontal_alignment = 1
+vertical_alignment = 1

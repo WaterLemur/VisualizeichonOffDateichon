@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://brcaf5lrvrhg"]
+
+[ext_resource type="PackedScene" uid="uid://dgigg2vupxg0x" path="res://project/art/meshes/calculating_machine/calculating_machine.glb" id="1_fupne"]
+[ext_resource type="Material" uid="uid://bg0ufrhfm546q" path="res://project/art/materials/mat_rope.tres" id="2_0igt6"]
+[ext_resource type="Script" uid="uid://hveso25h7jg8" path="res://project/scripts/calculating_machine.gd" id="2_h274h"]
+[ext_resource type="Material" uid="uid://cd8lahr4aejrr" path="res://project/art/materials/mat_barley.tres" id="4_sf4vo"]
+
+[node name="calculating_machine" unique_id=274704578 instance=ExtResource("1_fupne")]
+script = ExtResource("2_h274h")
+
+[node name="BézierCircle" parent="." index="8" unique_id=201406657]
+material_override = ExtResource("2_0igt6")
+
+[node name="cog_big" parent="." index="10" unique_id=1260437626]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.381891, 4.78868, -2.8378162)
+
+[node name="cog_small" parent="." index="11" unique_id=1679834802]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0.381891, 4.78868, 3.1201963)
+
+[node name="pot_grain_0" parent="." index="24" unique_id=1008065808]
+material_override = ExtResource("4_sf4vo")
+
+[node name="pot_l_f" parent="." index="28" unique_id=1495621506]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 0, 1.5901948, 5.829616)

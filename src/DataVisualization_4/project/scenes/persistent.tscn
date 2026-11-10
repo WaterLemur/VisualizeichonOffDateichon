@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://d4cx33mtllj5l"]
+
+[ext_resource type="Script" uid="uid://jgnap6dax6ls" path="res://project/scripts/persistent.gd" id="1_tq1j0"]
+[ext_resource type="Script" uid="uid://dgwbp80qvn5fk" path="res://project/scripts/managers/manager_scene.gd" id="2_kfc1q"]
+[ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_kshmv"]
+[ext_resource type="Script" uid="uid://cb20tsbu8r0qk" path="res://project/scripts/managers/manager_audio.gd" id="3_dbhhd"]
+[ext_resource type="Theme" uid="uid://ok88j7qigyr" path="res://project/art/themes/theme.tres" id="3_gncwf"]
+[ext_resource type="AudioStream" uid="uid://desqje04a5ows" path="res://project/art/music/the_epic_of_gilgamesh.mp3" id="3_qhlmt"]
+[ext_resource type="AudioStream" uid="uid://bsx1vkvcjpi2q" path="res://project/art/music/hurrian_hymn_6.mp3" id="4_cr5m2"]
+
+[node name="Persistent" type="Node" unique_id=1682141015]
+script = ExtResource("1_tq1j0")
+
+[node name="Managers" type="Node" parent="." unique_id=413182891]
+
+[node name="ManagerScene" type="Node" parent="Managers" unique_id=524326680]
+script = ExtResource("2_kfc1q")
+
+[node name="ManagerAudio" type="Node" parent="Managers" unique_id=1061775049]
+script = ExtResource("3_dbhhd")
+
+[node name="MusicHymn" type="AudioStreamPlayer" parent="Managers/ManagerAudio" unique_id=1734103534]
+stream = ExtResource("4_cr5m2")
+playback_type = 1
+
+[node name="MusicGilgamesh" type="AudioStreamPlayer" parent="Managers/ManagerAudio" unique_id=889552220]
+stream = ExtResource("3_qhlmt")
+volume_db = 10.0
+playback_type = 1
+
+[node name="UI" parent="." unique_id=1820701736 instance=ExtResource("2_kshmv")]
+
+[node name="Scene" type="Label" parent="UI" unique_id=1036022659]
+layout_mode = 1
+offset_left = 49.0
+offset_top = 31.0
+offset_right = 955.0
+offset_bottom = 71.0
+theme = ExtResource("3_gncwf")
+theme_type_variation = &"PersistentInfo"
+text = "[Scene]"
+
+[node name="Info" type="Label" parent="UI" unique_id=1553657734]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -502.0
+offset_top = -67.0
+offset_right = 502.0
+offset_bottom = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_gncwf")
+theme_type_variation = &"PersistentInfo"
+text = "Visualizacion de datos - 2026"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[connection signal="finished" from="Managers/ManagerAudio/MusicHymn" to="Managers/ManagerAudio" method="_on_music_hymn_finished"]
+[connection signal="finished" from="Managers/ManagerAudio/MusicGilgamesh" to="Managers/ManagerAudio" method="_on_music_gilgamesh_finished"]

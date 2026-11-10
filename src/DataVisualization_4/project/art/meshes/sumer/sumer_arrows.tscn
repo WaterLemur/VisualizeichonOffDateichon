@@ -1,0 +1,55 @@
+[gd_scene format=4 uid="uid://cf6rgfoutear0"]
+
+[ext_resource type="PackedScene" uid="uid://clliio4t11aah" path="res://project/art/meshes/sumer/sumer_arrows.glb" id="1_vxga1"]
+[ext_resource type="Material" uid="uid://fostqr34x724" path="res://project/art/materials/mat_arrow.tres" id="2_1uydx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dib1j"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_rsumu"]
+_surfaces = [{
+"aabb": AABB(0.8892038, 0, -4, 47.97501, 1e-05, 4),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAQAEAAIAAQAFAAQABQAGAAQABQAHAAYABwAIAAYACQAIAAcACQAKAAgACwAIAAoA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AADCZ///AABGlQAA/98AAEaVwmf//wAAAAAAAP/fAADynwAA//8AAPKfAAD/fwAATMUAAP//AABMxQAA/38AAKXiAAD//wAATMUAAAAAAACl4gAA/38AAP//AAD//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gmpu4"]
+resource_name = "sumer_arrows_arrow_light_2"
+_surfaces = [{
+"aabb": AABB(0.8892038, 0, -4, 47.97501, 1e-05, 4),
+"attribute_data": PackedByteArray("AAD/////AAD/////AAAAAP///////wAA////////AAAAAP//AAD//wAA//8AAP//"),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAQAEAAIAAQAFAAQABQAGAAQABQAHAAYABwAIAAYACQAIAAcACQAKAAgACwAIAAoA"),
+"material": SubResource("StandardMaterial3D_dib1j"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 12,
+"vertex_data": PackedByteArray("AADCZ////79GlQAA/9//v0aVwmf///+/AAAAAP/f/7/ynwAA////v/KfAAD/f/+/TMUAAP//AABMxQAA/38AAKXiAAD//wAATMUAAAAA/7+l4gAA/3//v///AAD///+/////f////3////9/////f////3////9//3//v/9//7//f/+/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_rsumu")
+
+[node name="sumer_arrows" unique_id=766834395 instance=ExtResource("1_vxga1")]
+
+[node name="arrow_barley_pile" parent="." index="0" unique_id=1343619156]
+material_override = ExtResource("2_1uydx")
+
+[node name="arrow_barley_vase" parent="." index="1" unique_id=1101035211]
+material_override = ExtResource("2_1uydx")
+
+[node name="arrow_light_1" parent="." index="2" unique_id=155850047]
+material_override = ExtResource("2_1uydx")
+
+[node name="arrow_light_2" parent="." index="3" unique_id=1775602255]
+material_override = ExtResource("2_1uydx")
+
+[node name="arrow_light_3_r" type="MeshInstance3D" parent="." index="4" unique_id=938605075]
+transform = Transform3D(1, 0, 0, 0, -1, -8.742278e-08, 0, 8.742278e-08, -1, 1.135788, 0.42930928, 0)
+material_override = ExtResource("2_1uydx")
+mesh = SubResource("ArrayMesh_gmpu4")

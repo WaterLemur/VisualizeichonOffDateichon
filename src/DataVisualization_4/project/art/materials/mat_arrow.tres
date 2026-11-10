@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://fostqr34x724"]
+
+[resource]
+transparency = 1
+cull_mode = 2
+specular_mode = 1
+albedo_color = Color(5.686428, 0, 0, 1)
+emission = Color(3.851815, 0, 0, 1)

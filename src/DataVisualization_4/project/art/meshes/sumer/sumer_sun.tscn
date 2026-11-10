@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ccvdpt7qyyg1f"]
+
+[ext_resource type="PackedScene" uid="uid://be6bpnoakrkq2" path="res://project/art/meshes/sumer/sumer_sun.glb" id="1_3dg40"]
+[ext_resource type="Material" uid="uid://dg0t7i2knhpf4" path="res://project/art/shaders/sm_sun.tres" id="2_eqg8i"]
+
+[node name="sumer_sun" unique_id=353604116 instance=ExtResource("1_3dg40")]
+
+[node name="sun" parent="." index="0" unique_id=1939727332]
+material_override = ExtResource("2_eqg8i")

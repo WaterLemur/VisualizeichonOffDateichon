@@ -11,7 +11,7 @@ enum State_Artifact { FULL, WEIGHT, AMMOUNT, STYLUS }
 var cam_index = 0 as int
 var cam_target: Transform3D
 var cam_move = false as bool
-var cam_snap_time: float = 1.15
+var cam_snap_time: float = 0.33
 var cam_elapsed: float = 0.0
 var cam_start: Transform3D
 
