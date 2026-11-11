@@ -6,6 +6,8 @@ extends Node
 @export_category("References")
 @export var plus_1: Label3D
 
+var counted: bool = false
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

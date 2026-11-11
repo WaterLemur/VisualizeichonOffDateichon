@@ -9,17 +9,15 @@ extends Node
 @export var max_angle_pi: float = 0.80 #0.75
 @export var min_angle_pi: float = 0.01 #0.0
 
-@export var label_cuneiform: Label
-@export var label_arabic:    Label
-
 var counter: int = 0
 var rot_angle: float
 
 @export_group("Collision")
-@export var pos_col_left:  Node3D
-@export var pos_col_right: Node3D
 @export var collision_left: Node3D
 @export var collision_right: Node3D
+
+@export var area_left:  Area3D
+@export var area_right: Area3D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -30,40 +28,41 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
 
 func set_left(normalized: float) -> void:
-	rot_angle = lerp(0.0, max_angle_pi, normalized)
+	rot_angle = lerp(min_angle_pi, max_angle_pi, normalized)
 	arrow_left.rotation.y = rot_angle
 	collision_left.scale.z = normalized
-	
+
 func set_right(normalized: float) -> void:
-	rot_angle = lerp(0.0, max_angle_pi, normalized)
+	rot_angle = lerp(min_angle_pi, max_angle_pi, normalized)
 	arrow_right.rotation.y = -rot_angle
 	collision_right.scale.z = normalized
 
-
-func _on_area_3d_area_entered(area: Area3D) -> void:
-	var soldier := area.get_parent() as Soldier
-	if soldier:
-		if arrow_left.rotation.y == 0 && arrow_right.rotation.y == 0: return
-		soldier.plus_1.visible = true
-		counter += 1
-		_update_labels()
-		
-func _on_area_3d_area_exited(area: Area3D) -> void:
-	var soldier := area.get_parent() as Soldier
-	if soldier:
-		soldier.plus_1.visible = false
-		counter -= 1
-		_update_labels()
-		
-func _update_labels() ->void:
+func update_labels() -> void:
 	Persistent.label_cuneiform.text = _translate(counter)
 	Persistent.label_arabic.text = str(counter)
+	
+func _on_area_3d_area_entered(area: Area3D) -> void:
+	var soldier := area.get_parent() as Soldier
+	if soldier && !soldier.counted:
+		soldier.counted = true
+		counter += 1
+		update_labels()
+
+func _on_area_3d_area_exited(area: Area3D) -> void:
+	var soldier := area.get_parent() as Soldier
+	if soldier && soldier.counted:
+		soldier.counted = false
+		counter -= 1
+		if counter < 0: counter == 0
+		update_labels()
+
 
 func _translate(arabic: int) -> String:
 	match arabic:
-		0: return ""
+		0: return "𒎎"
 		1: return "𒁹"
 		2: return "𒁹𒁹"
 		3: return "𒁹𒁹𒁹"
