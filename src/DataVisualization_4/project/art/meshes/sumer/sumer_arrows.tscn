@@ -54,9 +54,11 @@ collision_left = NodePath("CollisionL")
 collision_right = NodePath("CollisionR")
 
 [node name="arrow_barley_pile" parent="." index="0" unique_id=1343619156]
+visible = false
 material_override = ExtResource("2_1uydx")
 
 [node name="arrow_barley_vase" parent="." index="1" unique_id=1101035211]
+visible = false
 material_override = ExtResource("2_1uydx")
 
 [node name="arrow_light_1" parent="." index="2" unique_id=155850047]
