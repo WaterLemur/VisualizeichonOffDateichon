@@ -223,27 +223,6 @@ texture_normal = ExtResource("10_k7b5t")
 texture_pressed = ExtResource("10_k7b5t")
 texture_hover = ExtResource("10_k7b5t")
 
-[node name="BtnUp" type="Button" parent="UI/Menu" unique_id=534288493]
-layout_mode = 0
-offset_left = 907.0
-offset_top = 187.99994
-offset_right = 985.0
-offset_bottom = 250.99994
-scale = Vector2(1.615, 1.615)
-icon = ExtResource("10_6rj13")
-flat = true
-
-[node name="BtnDown" type="Button" parent="UI/Menu" unique_id=888703439]
-layout_mode = 0
-offset_left = 888.0
-offset_top = 289.00003
-offset_right = 984.0
-offset_bottom = 361.00003
-rotation = 6.2831855
-scale = Vector2(1.615, 1.615)
-icon = ExtResource("11_qhkwt")
-flat = true
-
 [node name="RangeSliderV" parent="UI/Menu" unique_id=1382023044 instance=ExtResource("8_8jx6j")]
 layout_mode = 0
 offset_left = 61.0
@@ -357,6 +336,36 @@ offset_bottom = 115.333336
 scale = Vector2(0.165, 0.165)
 texture = ExtResource("19_mygyo")
 
+[node name="Navigation" type="Control" parent="UI" unique_id=62483364]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BtnUp" type="Button" parent="UI/Navigation" unique_id=534288493]
+layout_mode = 0
+offset_left = 929.0
+offset_top = 1246.0
+offset_right = 1007.0
+offset_bottom = 1309.0
+scale = Vector2(1.615, 1.615)
+icon = ExtResource("10_6rj13")
+flat = true
+
+[node name="BtnDown" type="Button" parent="UI/Navigation" unique_id=888703439]
+layout_mode = 0
+offset_left = 910.0
+offset_top = 1347.0
+offset_right = 1006.0
+offset_bottom = 1419.0
+rotation = 6.2831855
+scale = Vector2(1.615, 1.615)
+icon = ExtResource("11_qhkwt")
+flat = true
+
 [node name="World" type="Node3D" parent="." unique_id=1529691493]
 
 [node name="Audio3D" type="Node3D" parent="World" unique_id=2103957339]
@@ -399,6 +408,36 @@ transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.9999998, 0, 10.304032
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifact/PosArtAmount" unique_id=103011689]
 
+[node name="PosArtifactPrev" type="Node3D" parent="World/CameraRig" unique_id=621854005]
+transform = Transform3D(-0.9299059, 0, -0.3677975, 0, 1.19, 0, 0.3677975, 0, -0.9299059, -36.16979, 22.195824, -94.31883)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactPrev" unique_id=1926655727]
+
+[node name="PosArtWeight" type="Node3D" parent="World/CameraRig/PosArtifactPrev" unique_id=1431317015]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0, 5.1520157, -20.648876)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactPrev/PosArtWeight" unique_id=1345452230]
+
+[node name="PosArtAmount" type="Node3D" parent="World/CameraRig/PosArtifactPrev" unique_id=1024058943]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.9999998, 0, 10.304032, -10.748337)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactPrev/PosArtAmount" unique_id=93695623]
+
+[node name="PosArtifactTutorial" type="Node3D" parent="World/CameraRig" unique_id=770764113]
+transform = Transform3D(-4.263584e-08, 0.262357, -0.9753942, 9.636967e-09, 1.1607192, 0.22046806, 1, 0, -4.3711395e-08, -138.39192, 98.02403, -60.82949)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactTutorial" unique_id=1283766165]
+
+[node name="PosArtWeight" type="Node3D" parent="World/CameraRig/PosArtifactTutorial" unique_id=80438979]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0, 5.1520157, -20.648876)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactTutorial/PosArtWeight" unique_id=1825489937]
+
+[node name="PosArtAmount" type="Node3D" parent="World/CameraRig/PosArtifactTutorial" unique_id=492891721]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.9999998, 0, 10.304032, -10.748337)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactTutorial/PosArtAmount" unique_id=1498453607]
+
 [node name="PosRackB" type="Node3D" parent="World/CameraRig" unique_id=908728399]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.99999994, 0, 0.99999994, 0, -4.3711385e-08, 1.71, 8.223999, -45.394997)
 
@@ -429,6 +468,7 @@ transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 7.1054274e-15, 0, 1, 0
 transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 7.1054274e-15, 0, 1, -1.3357048, -5.583998, -9.552996)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphTendency" unique_id=813011352]
+transform = Transform3D(1.0000002, 0, -1.4210855e-14, 0, 1.0000002, 0, 0, 0, 1, 0.00011062622, 0.0018854141, 0.00018596649)
 
 [node name="PosOptions" type="Node3D" parent="World/CameraRig" unique_id=930431605]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 8.540478, -33)
@@ -507,14 +547,16 @@ texture = ExtResource("6_wj7eq")
 
 [node name="L3DData" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=2147416083]
 transform = Transform3D(8.333334, 0, -1.1368684e-13, 0, 8.333334, 0, 1.1368684e-13, 0, 8.333334, -9.040253, 1.1861801, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Bases de"
 font = ExtResource("10_x6ptw")
 outline_size = 2
 
 [node name="L3DBases" type="Label3D" parent="World/Sprites/DataBases/DBResources" unique_id=1802967270]
 transform = Transform3D(8.333002, 0, -4.5474735e-13, 0, 8.333002, 0, 4.5474735e-13, 0, 8.333002, -2.2176514, 4.2557907, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "datos"
 font = ExtResource("10_x6ptw")
 outline_size = 2
@@ -629,7 +671,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9458647, 0.41174936, 0.0057
 
 [node name="L3DMap" type="Label3D" parent="World/Sprites/Map" unique_id=2061468207]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.2338696, 1.1170387)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Mapa"
 font = ExtResource("10_x6ptw")
 outline_size = 2
@@ -768,8 +811,8 @@ texture = SubResource("ViewportTexture_o2eaj")
 
 [node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=1370845813]
 transform = Transform3D(1.0000027, 0, -1.3500312e-13, 0, 1.0000042, 0, -8.1712415e-14, 0, 1, 0.07965088, 2.7467232, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
-outline_modulate = Color(0.542, 0.463, 0.244, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Relación (%) de cebada y soldados"
 font = ExtResource("10_x6ptw")
 font_size = 55
@@ -777,8 +820,8 @@ outline_size = 7
 
 [node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1/L3DTitle" unique_id=1744151827]
 transform = Transform3D(1.0000027, 0, -1.3500312e-13, 0, 1.000004, 0, -4.6185278e-14, 0, 1, 1.1538086, -0.37674713, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
-outline_modulate = Color(0.542, 0.463, 0.244, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "(2600 AC)"
 font = ExtResource("10_x6ptw")
 font_size = 55
@@ -786,21 +829,21 @@ outline_size = 7
 
 [node name="L3DOrigin" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=774242018]
 transform = Transform3D(1.0000011, 3.504493e-14, -4.0749626e-10, -8.200083e-14, 1.000001, -8.458842e-15, 4.0720494e-10, 2.4868986e-14, 0.9999968, -1.9119263, -2.0522003, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
 text = "0"
 font = ExtResource("10_x6ptw")
 outline_size = 0
 
 [node name="L3DAmount" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=13206303]
 transform = Transform3D(-4.3711378e-08, -1.0000004, 4.0316323e-08, 1.0000001, -4.3711392e-08, -4.0316326e-08, 4.0316316e-08, 4.0316355e-08, 0.99999976, -2.422, -1.007, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
 text = "Cantidad"
 font = ExtResource("10_x6ptw")
 outline_size = 0
 
 [node name="L3DCities" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1" unique_id=909230109]
 transform = Transform3D(1.000001, 1.5446574e-14, -2.0376945e-10, -4.2294232e-14, 1.000001, -4.925372e-15, 2.0360957e-10, 1.4210843e-14, 0.99999875, -1.0576172, -2.3219948, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
 text = "Ciudades"
 font = ExtResource("10_x6ptw")
 outline_size = 0
@@ -811,7 +854,7 @@ modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 outline_modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
 text = "Cebada (gur)"
 font = ExtResource("10_x6ptw")
-outline_size = 0
+outline_size = 1
 
 [node name="L3DLegend2" type="Label3D" parent="World/Sprites/Graphs/Bar1/SpriteBar1/L3DLegend" unique_id=811357634]
 transform = Transform3D(1.0000001, 0, 3.5527137e-15, 0, 1.0000001, 0, -3.5527137e-15, 0, 1, 1.105, 0, 0)
@@ -835,8 +878,8 @@ texture = SubResource("ViewportTexture_b58ac")
 
 [node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=2048669155]
 transform = Transform3D(1.0000026, 0, -1.314504e-13, 0, 1.0000039, 0, -7.1054274e-14, 0, 1, -2.1662598, 2.682293, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
-outline_modulate = Color(0.542, 0.463, 0.244, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Comparación recursos por ciudad
 (2400 AC)"
 font = ExtResource("10_x6ptw")
@@ -850,7 +893,7 @@ modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 outline_modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
 text = "Cebada (gur)"
 font = ExtResource("10_x6ptw")
-outline_size = 0
+outline_size = 1
 
 [node name="L3DLegend2" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2/L3DLegend" unique_id=453797482]
 transform = Transform3D(1.0000001, 0, 3.5527137e-15, 0, 1.0000001, 0, 0, 0, 1, 0.003112793, -0.27601624, 0)
@@ -862,7 +905,7 @@ outline_size = 1
 
 [node name="L3DOrigin" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=1361310412]
 transform = Transform3D(1, 0, -3.5527137e-15, 0, 1, 0, 3.5527137e-15, 0, 1, -1.94281, -2.0895424, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
 text = "0"
 font = ExtResource("10_x6ptw")
 outline_size = 0
@@ -870,7 +913,7 @@ autowrap_mode = 1
 
 [node name="L3DAmount" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=222984634]
 transform = Transform3D(-4.3711385e-08, -1, 4.371136e-08, 1, -4.371139e-08, -4.371145e-08, 4.371145e-08, 4.371136e-08, 1, -2.4242554, -0.1426239, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
 text = "Cantidad"
 font = ExtResource("10_x6ptw")
 outline_size = 0
@@ -878,7 +921,8 @@ autowrap_mode = 1
 
 [node name="L3DYear" type="Label3D" parent="World/Sprites/Graphs/Bar2/SpriteBar2" unique_id=1883411313]
 transform = Transform3D(1, 0, -5.684342e-14, 0, 1, 0, 5.684342e-14, 0, 1, 0.34887695, -2.338543, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Ciudades"
 font = ExtResource("10_x6ptw")
 outline_size = 0
@@ -899,8 +943,8 @@ texture = SubResource("ViewportTexture_07rhc")
 
 [node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Pie/SpritePie1" unique_id=1236100612]
 transform = Transform3D(1.0000033, 0, -1.1723955e-13, 0, 1.000004, 0, -4.973799e-14, 0, 1.0000004, -0.7979126, 2.7477036, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
-outline_modulate = Color(0.542, 0.463, 0.244, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Distribución de recursos 
 en la 
 Antigua Mesopotamia
@@ -925,8 +969,8 @@ texture = SubResource("ViewportTexture_u6vr8")
 
 [node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=1358727701]
 transform = Transform3D(1.0000037, 0, -1.563194e-13, 0, 1.0000042, 0, 3.5527137e-15, 0, 1.0000007, -0.5593262, 2.598505, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
-outline_modulate = Color(0.542, 0.463, 0.244, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Recursos a travéz del tiempo"
 font = ExtResource("10_x6ptw")
 font_size = 73
@@ -934,7 +978,8 @@ outline_size = 7
 
 [node name="L3DOrigin" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=1857378684]
 transform = Transform3D(1.0000014, 0, -3.907985e-14, 0, 1.0000014, 0, 3.907985e-14, 0, 1.0000014, -3.8630981, -2.0033855, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "0"
 font = ExtResource("10_x6ptw")
 outline_size = 0
@@ -942,7 +987,8 @@ autowrap_mode = 1
 
 [node name="L3DAmount" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=601278048]
 transform = Transform3D(-4.3711385e-08, -1.0000007, 4.3711378e-08, 1.0000007, -4.37114e-08, -4.3711456e-08, 4.3711506e-08, 4.3711378e-08, 1.0000007, -4.194702, -2.338602, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Cantidad"
 font = ExtResource("10_x6ptw")
 outline_size = 0
@@ -950,7 +996,8 @@ autowrap_mode = 1
 
 [node name="L3DYear" type="Label3D" parent="World/Sprites/Graphs/Tendency/SpriteTendency" unique_id=420604535]
 transform = Transform3D(1.0000004, 0, -6.3948846e-14, 0, 1.0000004, 0, 6.3948846e-14, 0, 1.0000004, -0.5828552, -2.4546642, 0)
-modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Años"
 font = ExtResource("10_x6ptw")
 outline_size = 0
@@ -1202,13 +1249,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7177277, 0, -53.14185)
 [node name="Sun" type="DirectionalLight3D" parent="World/Lights" unique_id=1218066317]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, -2, 0)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="World/Lights" unique_id=1080329001]
+[node name="LightDataBases" type="SpotLight3D" parent="World/Lights" unique_id=116253877]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.2397375, 11.413475, -46.32795)
+light_energy = 5.507
+spot_range = 5.091324
+spot_angle = 34.714718
 
-[node name="OmniLight3D" type="OmniLight3D" parent="World/Lights/OmniLight3D" unique_id=330984763]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.15536, 8.718365, -45.41277)
-omni_range = 8.0961075
+[node name="LightMap" type="SpotLight3D" parent="World/Lights" unique_id=130651291]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.487597, 8.154154, -45.298782)
+light_energy = 14.522
+spot_angle = 34.714718
 
-[node name="SpotLight3D" type="SpotLight3D" parent="World/Lights" unique_id=130651291]
+[node name="LightBars" type="SpotLight3D" parent="World/Lights" unique_id=1577810535]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.921042, 4.7851634, -47.23963)
+light_energy = 2.804
+spot_range = 1.9578487
+spot_angle = 41.408833
+
+[node name="LightPie" type="SpotLight3D" parent="World/Lights" unique_id=196460770]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.921042, 4.8039207, -44.56545)
+light_energy = 3.255
+spot_range = 1.9578487
+spot_angle = 41.408833
+
+[node name="LightTendency" type="SpotLight3D" parent="World/Lights" unique_id=2141039133]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.921042, 2.8284497, -46.609188)
+light_energy = 3.479
+spot_range = 1.9578487
+spot_angle = 41.408833
+
+[node name="OmniLight3D" type="OmniLight3D" parent="World/Lights" unique_id=1798087589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2337494, 7.12442, -46.33705)
+omni_range = 26.798342
 
 [node name="Sumer" parent="." unique_id=1395858333 instance=ExtResource("46_lmagj")]
 
@@ -1218,11 +1290,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9551827, 2.1845849, -55.81
 [connection signal="pressed" from="UI/Menu/Buttons/TBInfo" to="Scripts/Menu" method="_on_tb_info_pressed"]
 [connection signal="value_changed" from="UI/Menu/Timeline/VSlider" to="Scripts/Menu" method="_on_timeline_value_changed"]
 [connection signal="pressed" from="UI/Menu/TBTutorial" to="Scripts/Menu" method="_on_tb_tutorial_pressed"]
-[connection signal="pressed" from="UI/Menu/BtnUp" to="Scripts/Navigation" method="_on_btn_up_pressed"]
-[connection signal="pressed" from="UI/Menu/BtnDown" to="Scripts/Navigation" method="_on_btn_down_pressed"]
 [connection signal="range_changed" from="UI/Menu/RangeSliderV" to="Scripts/Menu" method="_on_range_slider_v_range_changed"]
 [connection signal="pressed" from="UI/Menu/TBAkkad" to="Scripts/Menu" method="_on_tb_akkad_pressed"]
 [connection signal="pressed" from="UI/Menu/TBUr" to="Scripts/Menu" method="_on_tb_ur_pressed"]
 [connection signal="pressed" from="UI/Menu/TBUruk" to="Scripts/Menu" method="_on_tb_uruk_pressed"]
 [connection signal="pressed" from="UI/Menu/TBBarley" to="Scripts/Menu" method="_on_tb_barley_pressed"]
 [connection signal="pressed" from="UI/Menu/TBSoldiers" to="Scripts/Menu" method="_on_tb_soldiers_pressed"]
+[connection signal="pressed" from="UI/Navigation/BtnUp" to="Scripts/Navigation" method="_on_btn_up_pressed"]
+[connection signal="pressed" from="UI/Navigation/BtnDown" to="Scripts/Navigation" method="_on_btn_down_pressed"]
