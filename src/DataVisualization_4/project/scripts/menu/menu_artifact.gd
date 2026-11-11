@@ -16,6 +16,9 @@ extends Control
 @export var right_max: float = 660.0
 @export var right_start: float = right_min
 
+@export_group("3D Arrows")
+@export var arrow_script: ArtifactArrows
+
 var dragging: Control = null
 
 
@@ -28,7 +31,6 @@ func _ready() -> void:
 
 
 func _on_handle_input(event: InputEvent, handle: Control) -> void:
-	print(window_left.position.x)
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			dragging = handle
@@ -47,9 +49,11 @@ func _input(event: InputEvent) -> void:
 		if dragging == window_left:
 			dragging.position.x = clampf(mouse_x - dragging.size.x * 0.5, left_min, left_max)
 			normalized = inverse_lerp(left_max, left_min, dragging.position.x)
+			
+			arrow_script.set_left(normalized)
 
 		elif dragging == window_right:
 			dragging.position.x = clampf(mouse_x - dragging.size.x * 0.5, right_min, right_max)
 			normalized = inverse_lerp(right_min, right_max, dragging.position.x)
-
-		print(dragging.name, " normalized: ", snappedf(normalized, 0.001))
+			
+			arrow_script.set_right(normalized)

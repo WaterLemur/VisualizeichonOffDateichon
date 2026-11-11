@@ -24,12 +24,17 @@ font = ExtResource("4_krjpa")
 font_size = 78
 font_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_icmnb"]
+font = ExtResource("4_krjpa")
+font_size = 32
+font_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
+
 [node name="Sumer" type="Node" unique_id=1395858333]
 script = ExtResource("1_2ba16")
 
 [node name="UI" parent="." unique_id=58018528 instance=ExtResource("1_4x0l4")]
 
-[node name="MenuArtifact" type="Control" parent="UI" unique_id=768400370 node_paths=PackedStringArray("window_left", "window_right")]
+[node name="MenuArtifact" type="Control" parent="UI" unique_id=768400370 node_paths=PackedStringArray("window_left", "window_right", "arrow_script")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,6 +45,7 @@ mouse_filter = 2
 script = ExtResource("3_icmnb")
 window_left = NodePath("WindowL")
 window_right = NodePath("WindowR")
+arrow_script = NodePath("../../World/SumerArrows")
 
 [node name="Background" type="TextureRect" parent="UI/MenuArtifact" unique_id=1285821431]
 layout_mode = 0
@@ -57,16 +63,25 @@ offset_right = 816.0
 offset_bottom = 1680.0
 texture = ExtResource("3_rrar5")
 
-[node name="Label" type="Label" parent="UI/MenuArtifact/Tablet" unique_id=968547558]
+[node name="Cuneiform" type="Label" parent="UI/MenuArtifact/Tablet" unique_id=968547558]
 layout_mode = 0
-offset_left = 220.0
-offset_top = 71.0
-offset_right = 316.0
-offset_bottom = 170.0
-text = "XX"
+offset_left = 198.0
+offset_top = 4.0
+offset_right = 280.0
+offset_bottom = 183.0
+text = "𒌍"
 label_settings = SubResource("LabelSettings_07rhc")
-horizontal_alignment = 1
-vertical_alignment = 1
+
+[node name="Arabic" type="Label" parent="UI/MenuArtifact/Tablet" unique_id=180916282]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 136.0
+offset_right = 336.0
+offset_bottom = 178.0
+text = "33"
+label_settings = SubResource("LabelSettings_icmnb")
+horizontal_alignment = 2
+vertical_alignment = 2
 
 [node name="RedL" type="TextureRect" parent="UI/MenuArtifact" unique_id=191852602]
 layout_mode = 0

@@ -476,20 +476,20 @@ transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.9999998, 0, 10.304032
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactPrev/PosArtAmount" unique_id=93695623]
 
-[node name="PosArtifactTutorial" type="Node3D" parent="World/CameraRig" unique_id=770764113]
+[node name="PosArtifactTuto" type="Node3D" parent="World/CameraRig" unique_id=770764113]
 transform = Transform3D(-4.263584e-08, 0.262357, -0.9753942, 9.636967e-09, 1.1607192, 0.22046806, 1, 0, -4.3711395e-08, -138.39192, 98.02403, -60.82949)
 
-[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactTutorial" unique_id=1283766165]
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactTuto" unique_id=1283766165]
 
-[node name="PosArtWeight" type="Node3D" parent="World/CameraRig/PosArtifactTutorial" unique_id=80438979]
+[node name="PosArtWeight" type="Node3D" parent="World/CameraRig/PosArtifactTuto" unique_id=80438979]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0, 5.1520157, -20.648876)
 
-[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactTutorial/PosArtWeight" unique_id=1825489937]
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactTuto/PosArtWeight" unique_id=1825489937]
 
-[node name="PosArtAmount" type="Node3D" parent="World/CameraRig/PosArtifactTutorial" unique_id=492891721]
+[node name="PosArtAmount" type="Node3D" parent="World/CameraRig/PosArtifactTuto" unique_id=492891721]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.9999998, 0, 10.304032, -10.748337)
 
-[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactTutorial/PosArtAmount" unique_id=1498453607]
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactTuto/PosArtAmount" unique_id=1498453607]
 
 [node name="PosRackB" type="Node3D" parent="World/CameraRig" unique_id=908728399]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.99999994, 0, 0.99999994, 0, -4.3711385e-08, 1.71, 8.223999, -45.394997)
