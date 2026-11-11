@@ -391,7 +391,54 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13, 26)
 [node name="PosRackA" type="Node3D" parent="World/CameraRig" unique_id=849555301]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.71, 8.224, -45.395)
 
-[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA" unique_id=189691498]
+[node name="PosRackA" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=525802235]
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosRackA" unique_id=189691498]
+
+[node name="PosHistory1" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=766539940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045, 3.23, -6.97)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory1" unique_id=1533915419]
+
+[node name="PosHistory2" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=1395874391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.145, 3.21, -8.48)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory2" unique_id=1999234631]
+
+[node name="PosHistory3" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=822340723]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.755, 1.22, -8.025)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory3" unique_id=639863409]
+
+[node name="PosHistory4" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=658787095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.565, 1.025, -7.675)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory4" unique_id=98109474]
+
+[node name="PosHistory5" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=330240833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.415, 0.97, -7.93)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory5" unique_id=1805031105]
+
+[node name="PosHistory6" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=373771502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, -0.99, -9.11)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory6" unique_id=3445563]
+
+[node name="PosHistory7" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=536884772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.395, -1.05, -8.67)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory7" unique_id=134926681]
+
+[node name="PosHistory8" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=701650579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83, -0.99, -9.29)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory8" unique_id=1301293269]
+
+[node name="PosHistory9" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=25309310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12, -5.34, -6.01)
+
+[node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory9" unique_id=1364620983]
 
 [node name="PosArtifact" type="Node3D" parent="World/CameraRig" unique_id=131910881]
 transform = Transform3D(1, 0, 0, 0, 1.19, 0, 0, 0, 1, -1.82, 3.612, -35.442)
@@ -454,13 +501,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86, -6.665)
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosMap" unique_id=11808520]
 
 [node name="PosGraphBars" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=2056571179]
-transform = Transform3D(0.99999934, 0, 0, 0, 0.99999934, 0, 2.842171e-14, 0, 1, -1.8721657, -4.024995, -9.172645)
+transform = Transform3D(0.9999988, 0, 0, 0, 0.9999988, 0, 5.3290705e-14, 0, 1, -1.8912354, -4.0249906, -9.246111)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphBars" unique_id=2061057445]
 transform = Transform3D(1, 0, -2.4868996e-14, 0, 1, 0, 2.1316282e-14, 0, 1, -0.11236191, 0, -0.364707)
 
 [node name="PosGraphPies" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=1111515370]
-transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 7.1054274e-15, 0, 1, 0.703, -3.93, -9.335)
+transform = Transform3D(0.9999989, 0, 0, 0, 0.9999989, 0, 4.6185278e-14, 0, 1, 0.7550659, -3.7620773, -9.701947)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphPies" unique_id=761568993]
 
@@ -942,16 +989,19 @@ cast_shadow = 0
 texture = SubResource("ViewportTexture_07rhc")
 
 [node name="L3DTitle" type="Label3D" parent="World/Sprites/Graphs/Pie/SpritePie1" unique_id=1236100612]
-transform = Transform3D(1.0000033, 0, -1.1723955e-13, 0, 1.000004, 0, -4.973799e-14, 0, 1.0000004, -0.7979126, 2.7477036, 0)
+transform = Transform3D(1.0000033, 0, -1.1723955e-13, 0, 1.000004, 0, 0, 0, 1.0000004, 1.1286316, -1.2394333, 0)
 modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
 outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
-text = "Distribución de recursos 
+text = "Distribución
+ de recursos 
 en la 
-Antigua Mesopotamia
+Antigua 
+Mesopotamia
 2,550 A.C,"
 font = ExtResource("10_x6ptw")
 font_size = 48
 outline_size = 7
+horizontal_alignment = 0
 
 [node name="Tendency" type="Node3D" parent="World/Sprites/Graphs" unique_id=768737517]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.211, 0.181, -1.284)
@@ -1249,38 +1299,94 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7177277, 0, -53.14185)
 [node name="Sun" type="DirectionalLight3D" parent="World/Lights" unique_id=1218066317]
 transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, -2, 0)
 
-[node name="LightDataBases" type="SpotLight3D" parent="World/Lights" unique_id=116253877]
+[node name="LightsRackA" type="Node3D" parent="World/Lights" unique_id=1741217659]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="World/Lights/LightsRackA" unique_id=1029022509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.234, 7.124, -46.337)
+omni_range = 26.798342
+
+[node name="LightStory1" type="SpotLight3D" parent="World/Lights/LightsRackA" unique_id=1280841888]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.24, 11.874258, -45.87853)
+light_energy = 5.507
+spot_range = 5.091324
+spot_angle = 34.714718
+
+[node name="LightStory2" type="SpotLight3D" parent="World/Lights/LightsRackA" unique_id=837430326]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.24, 9.9104185, -44.244667)
+light_energy = 5.507
+spot_range = 5.091324
+spot_angle = 20.189934
+
+[node name="LightStory3" type="SpotLight3D" parent="World/Lights/LightsRackA" unique_id=2105908979]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.24, 9.364743, -47.043648)
+light_energy = 5.507
+spot_range = 5.091324
+spot_angle = 20.189934
+
+[node name="LightStory4" type="SpotLight3D" parent="World/Lights/LightsRackA" unique_id=1822684681]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.24, 7.2754116, -44.10561)
+light_energy = 5.507
+spot_range = 5.091324
+spot_angle = 14.669816
+
+[node name="LightStory5" type="SpotLight3D" parent="World/Lights/LightsRackA" unique_id=102090449]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.24, 7.3162985, -45.615788)
+light_energy = 5.507
+spot_range = 5.091324
+spot_angle = 15.922507
+
+[node name="LightStory6" type="SpotLight3D" parent="World/Lights/LightsRackA" unique_id=1752918301]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.24, 7.271557, -47.17451)
+light_energy = 5.507
+spot_range = 5.091324
+spot_angle = 10.247056
+
+[node name="LightStory7" type="SpotLight3D" parent="World/Lights/LightsRackA" unique_id=1991792627]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.24, 4.3905377, -44.88642)
+light_energy = 5.507
+spot_range = 5.091324
+spot_angle = 15.182428
+
+[node name="LightStory8" type="SpotLight3D" parent="World/Lights/LightsRackA" unique_id=116856660]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -8.24, 2.7913568, -45.99238)
+light_energy = 5.507
+spot_range = 5.091324
+spot_angle = 32.536243
+
+[node name="LightsRackB" type="Node3D" parent="World/Lights" unique_id=1096346450]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="World/Lights/LightsRackB" unique_id=1798087589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2337494, 7.12442, -46.33705)
+omni_range = 26.798342
+
+[node name="LightDataBases" type="SpotLight3D" parent="World/Lights/LightsRackB" unique_id=116253877]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.2397375, 11.413475, -46.32795)
 light_energy = 5.507
 spot_range = 5.091324
 spot_angle = 34.714718
 
-[node name="LightMap" type="SpotLight3D" parent="World/Lights" unique_id=130651291]
+[node name="LightMap" type="SpotLight3D" parent="World/Lights/LightsRackB" unique_id=130651291]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 8.487597, 8.154154, -45.298782)
 light_energy = 14.522
 spot_angle = 34.714718
 
-[node name="LightBars" type="SpotLight3D" parent="World/Lights" unique_id=1577810535]
+[node name="LightBars" type="SpotLight3D" parent="World/Lights/LightsRackB" unique_id=1577810535]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.921042, 4.7851634, -47.23963)
 light_energy = 2.804
 spot_range = 1.9578487
 spot_angle = 41.408833
 
-[node name="LightPie" type="SpotLight3D" parent="World/Lights" unique_id=196460770]
+[node name="LightPie" type="SpotLight3D" parent="World/Lights/LightsRackB" unique_id=196460770]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.921042, 4.8039207, -44.56545)
 light_energy = 3.255
 spot_range = 1.9578487
 spot_angle = 41.408833
 
-[node name="LightTendency" type="SpotLight3D" parent="World/Lights" unique_id=2141039133]
+[node name="LightTendency" type="SpotLight3D" parent="World/Lights/LightsRackB" unique_id=2141039133]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 10.921042, 2.8284497, -46.609188)
 light_energy = 3.479
 spot_range = 1.9578487
 spot_angle = 41.408833
-
-[node name="OmniLight3D" type="OmniLight3D" parent="World/Lights" unique_id=1798087589]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2337494, 7.12442, -46.33705)
-omni_range = 26.798342
 
 [node name="Sumer" parent="." unique_id=1395858333 instance=ExtResource("46_lmagj")]
 
