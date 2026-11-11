@@ -11,13 +11,13 @@ extends Control
 @export var r_offset_right: Vector2 = Vector2(-0.01,-0.05)
 
 @export_group("Left Range")
-@export var left_min:   float = 338.5
-@export var left_max:   float = 446.5
+@export var left_min:   float = 540.8
+@export var left_max:   float = 736.0
 @export var left_start: float = left_max
 
 @export_group("Right Range")
-@export var right_min:   float = 557.0
-@export var right_max:   float = 660.0
+@export var right_min:   float = 991.0
+@export var right_max:   float = 1200.0
 @export var right_start: float = right_min
 
 @export_group("3D Arrows")
@@ -32,7 +32,6 @@ func _ready() -> void:
 
 	window_left.position.x = left_start
 	window_right.position.x = right_start
-
 
 func _on_handle_input(event: InputEvent, handle: Control) -> void:
 	if event is InputEventMouseButton:
@@ -51,6 +50,7 @@ func _input(event: InputEvent) -> void:
 		var normalized: float
 
 		if dragging == window_left:
+			print(window_left.position.x)
 			dragging.position.x = clampf(mouse_x - dragging.size.x * 0.5, left_min, left_max)
 			normalized = inverse_lerp(left_max, left_min, dragging.position.x)
 			

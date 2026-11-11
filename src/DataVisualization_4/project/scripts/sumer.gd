@@ -17,3 +17,8 @@ func _process(delta: float) -> void:
 func show(state: bool) -> void:
 	ui.visible = state
 	world.visible = state
+
+
+func _on_button_t1_pressed() -> void:
+	$UI/Tutorial/T1.visible = false
+	$UI/Tutorial/T2.visible = true

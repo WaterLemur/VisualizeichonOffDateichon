@@ -19,8 +19,6 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 	var artifact := area.get_parent().get_parent() as SumerArrows
 	if not artifact: return
 	
-	print("ENTER Soldier: ", index, " Previous: ", artifact.is_counted[index])
-
 	plus_1.visible = true
 	artifact.is_counted[index] = true
 
@@ -28,7 +26,5 @@ func _on_area_3d_area_exited(area: Area3D) -> void:
 	var artifact := area.get_parent().get_parent() as SumerArrows
 	if not artifact: return
 	
-	print("EXIT Soldier: ", index, " Previous: ", artifact.is_counted[index])
-
 	plus_1.visible = false
 	artifact.is_counted[index] = false

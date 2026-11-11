@@ -9,25 +9,78 @@
 [ext_resource type="Script" uid="uid://pho5opgrr38l" path="res://project/scripts/menu/menu_artifact.gd" id="3_icmnb"]
 [ext_resource type="PackedScene" uid="uid://ccvdpt7qyyg1f" path="res://project/art/meshes/sumer/sumer_sun.tscn" id="4_4x0l4"]
 [ext_resource type="Texture2D" uid="uid://bk3hpserfq763" path="res://project/art/sprites/menu_artifact/artifact-menu-red-r.png" id="4_5ohfl"]
-[ext_resource type="PackedScene" uid="uid://bbdybv0jpsn3c" path="res://project/art/meshes/sumer/cmachine.glb" id="4_q2j8k"]
+[ext_resource type="Theme" uid="uid://ok88j7qigyr" path="res://project/art/themes/theme.tres" id="4_xp27b"]
 [ext_resource type="PackedScene" uid="uid://cf6rgfoutear0" path="res://project/art/meshes/sumer/sumer_arrows.tscn" id="5_4x0l4"]
 [ext_resource type="Texture2D" uid="uid://0bir6y4kl8d6" path="res://project/art/sprites/menu_artifact/menu-artifact-window-l.png" id="5_5ohfl"]
 [ext_resource type="PackedScene" uid="uid://1l46cuw7qjbq" path="res://project/art/meshes/sumer/sumer_barley_pile.glb" id="6_jiyb2"]
 [ext_resource type="Texture2D" uid="uid://1y2a3rfmhx4v" path="res://project/art/sprites/menu_artifact/menu-artifact-window-r.png" id="6_rrar5"]
 [ext_resource type="PackedScene" uid="uid://0woxue7po7qc" path="res://project/art/meshes/sumer/sumer_map.glb" id="7_5ohfl"]
+[ext_resource type="Texture2D" uid="uid://q3xe7ewgiw4m" path="res://project/art/sprites/maquina-para-calcular.png" id="9_icmnb"]
 [ext_resource type="Texture2D" uid="uid://b5adqcw3bh8kg" path="res://project/art/sprites/sumer/sumer-cloud.png" id="10_dlugq"]
 [ext_resource type="Script" uid="uid://dc6o54krosi28" path="res://project/scripts/clouds.gd" id="10_icmnb"]
+[ext_resource type="PackedScene" uid="uid://cqxojkhkh47tc" path="res://project/art/meshes/calculating_machine/cmachine.tscn" id="15_dlugq"]
 
 [node name="Sumer" type="Node" unique_id=1395858333]
 script = ExtResource("1_2ba16")
 
 [node name="UI" parent="." unique_id=58018528 instance=ExtResource("1_4x0l4")]
 
+[node name="Tutorial" type="Control" parent="UI" unique_id=1988147896]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="T1" type="Control" parent="UI/Tutorial" unique_id=571453378]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/Tutorial/T1" unique_id=432533548]
+layout_mode = 0
+offset_left = 1080.0
+offset_right = 3000.0
+offset_bottom = 1080.0
+rotation = 1.5707964
+texture = ExtResource("9_icmnb")
+
+[node name="Button_Continue" type="Button" parent="UI/Tutorial/T1/TextureRect" unique_id=38258045]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 0
+offset_left = 1494.0
+offset_top = 21.999931
+offset_right = 1894.0
+offset_bottom = 221.99994
+offset_transform_position = Vector2(0, -0.785)
+theme = ExtResource("4_xp27b")
+theme_override_font_sizes/font_size = 85
+text = "Continuar"
+
+[node name="T2" type="Control" parent="UI/Tutorial" unique_id=2137780589]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
 [node name="MenuArtifact" type="Control" parent="UI" unique_id=768400370 node_paths=PackedStringArray("window_left", "window_right", "red_left", "red_right", "arrow_script")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -41,42 +94,47 @@ arrow_script = NodePath("../../World/SumerArrows")
 
 [node name="Background" type="TextureRect" parent="UI/MenuArtifact" unique_id=1285821431]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 1601.0
-offset_right = 816.0
-offset_bottom = 1847.0
+offset_left = 394.0
+offset_top = 693.0
+offset_right = 938.0
+offset_bottom = 939.0
+scale = Vector2(2.13, 2.13)
 texture = ExtResource("2_d0y3r")
 
 [node name="RedL" type="TextureRect" parent="UI/MenuArtifact" unique_id=191852602]
 layout_mode = 0
-offset_left = 441.0
-offset_top = 1701.0
-offset_right = 562.0
-offset_bottom = 1761.0
+offset_left = 732.51
+offset_top = 905.84
+offset_right = 853.51
+offset_bottom = 965.84
+scale = Vector2(2.13, 2.13)
 texture = ExtResource("3_cv6fx")
 
 [node name="RedR" type="TextureRect" parent="UI/MenuArtifact" unique_id=1597093607]
 layout_mode = 0
-offset_left = 556.0
-offset_top = 1701.0
-offset_right = 677.0
-offset_bottom = 1761.0
+offset_left = 978.925
+offset_top = 906.0
+offset_right = 1099.9242
+offset_bottom = 966.0
+scale = Vector2(2.13, 2.13)
 texture = ExtResource("4_5ohfl")
 
 [node name="WindowL" type="TextureRect" parent="UI/MenuArtifact" unique_id=847002575]
 layout_mode = 0
-offset_left = 444.0
-offset_top = 1704.0
-offset_right = 559.0
-offset_bottom = 1758.0
+offset_left = 739.0
+offset_top = 913.0
+offset_right = 854.0
+offset_bottom = 967.0
+scale = Vector2(2.13, 2.13)
 texture = ExtResource("5_5ohfl")
 
 [node name="WindowR" type="TextureRect" parent="UI/MenuArtifact" unique_id=2120188966]
 layout_mode = 0
-offset_left = 559.0
-offset_top = 1704.0
-offset_right = 674.0
-offset_bottom = 1758.0
+offset_left = 982.0
+offset_top = 913.00006
+offset_right = 1097.0
+offset_bottom = 967.00006
+scale = Vector2(2.13, 2.13)
 texture = ExtResource("6_rrar5")
 
 [node name="World" type="Node3D" parent="." unique_id=421946308]
@@ -421,9 +479,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.5838, 0, 31.866123)
 [node name="SumerArrows" parent="World" unique_id=766834395 instance=ExtResource("5_4x0l4")]
 
 [node name="CMachinePile" parent="World" unique_id=2080429736 instance=ExtResource("3_5u6an")]
+visible = false
 
-[node name="cmachine" parent="World" unique_id=648605551 instance=ExtResource("4_q2j8k")]
+[node name="cmachine2" parent="World" unique_id=648605551 instance=ExtResource("15_dlugq")]
 
 [node name="Sun" parent="World" unique_id=353604116 instance=ExtResource("4_4x0l4")]
 
 [node name="SumerMap" parent="World" unique_id=1189475346 instance=ExtResource("7_5ohfl")]
+
+[connection signal="pressed" from="UI/Tutorial/T1/TextureRect/Button_Continue" to="." method="_on_button_t1_pressed"]

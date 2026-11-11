@@ -4,13 +4,21 @@
 [ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="2_hf4up"]
 [ext_resource type="Theme" uid="uid://ok88j7qigyr" path="res://project/art/themes/theme.tres" id="3_wk7yc"]
 [ext_resource type="FontFile" uid="uid://8qd7n2hmra5a" path="res://project/art/fonts/playbaill/Playball-Regular.ttf" id="4_xdtah"]
+[ext_resource type="FontFile" uid="uid://ohh3t6gft7es" path="res://project/art/fonts/NotoSansCuneiform-Regular.ttf" id="5_wj42e"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6rj13"]
 font = ExtResource("4_xdtah")
-font_size = 117
+font_size = 158
 font_color = Color(0.92156863, 0.78431374, 0.3764706, 1)
 outline_size = 8
 outline_color = Color(0.542, 0.463, 0.244, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_07rhc"]
+font = ExtResource("5_wj42e")
+font_size = 139
+font_color = Color(0.92156863, 0.78431374, 0.3764706, 1)
+outline_size = 60
+outline_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
 
 [node name="MainMenu" type="Node" unique_id=1321058017]
 script = ExtResource("1_wapgf")
@@ -22,15 +30,34 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -432.0
-offset_top = 388.0
-offset_right = 432.0
-offset_bottom = 532.0
+offset_left = -693.0
+offset_top = 49.755
+offset_right = 693.0
+offset_bottom = 248.755
 grow_horizontal = 2
 theme = ExtResource("3_wk7yc")
 theme_type_variation = &"HeaderLarge"
-text = "El viaje de Uanna"
+text = "La conquista de Akkad"
 label_settings = SubResource("LabelSettings_6rj13")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Title2" type="Label" parent="UI" unique_id=353260512]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -291.59003
+offset_top = 218.255
+offset_right = 1311.4099
+offset_bottom = 581.255
+grow_horizontal = 2
+scale = Vector2(0.38, 0.38)
+theme = ExtResource("3_wk7yc")
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 17
+text = "𒅗𒅆𒀉 𒀀𒂵𒉈𒆠"
+label_settings = SubResource("LabelSettings_07rhc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -41,43 +68,32 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -284.0
-offset_top = -276.0
-offset_right = 284.0
-offset_bottom = 276.0
+offset_left = -519.0
+offset_top = -47.015015
+offset_right = 519.0
+offset_bottom = 401.33496
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_wk7yc")
+theme_override_constants/separation = 81
 alignment = 1
 
 [node name="Button_Museum" type="Button" parent="UI/VBoxContainer" unique_id=1304623960]
 custom_minimum_size = Vector2(0, 125)
 layout_mode = 2
+size_flags_vertical = 3
 offset_transform_position = Vector2(0, -0.785)
 theme = ExtResource("3_wk7yc")
+theme_override_font_sizes/font_size = 83
 text = "Experiencia Interactiva"
-
-[node name="Button_Options" type="Button" parent="UI/VBoxContainer" unique_id=1596057111]
-visible = false
-custom_minimum_size = Vector2(0, 125)
-layout_mode = 2
-offset_transform_position = Vector2(0, -0.785)
-theme = ExtResource("3_wk7yc")
-text = "Options"
-
-[node name="Button_Info" type="Button" parent="UI/VBoxContainer" unique_id=1855918985]
-visible = false
-custom_minimum_size = Vector2(0, 125)
-layout_mode = 2
-offset_transform_position = Vector2(0, -0.785)
-theme = ExtResource("3_wk7yc")
-text = "Info"
 
 [node name="Button_Exit" type="Button" parent="UI/VBoxContainer" unique_id=1298650121]
 custom_minimum_size = Vector2(0, 125)
 layout_mode = 2
+size_flags_vertical = 3
 offset_transform_position = Vector2(0, -0.785)
 theme = ExtResource("3_wk7yc")
+theme_override_font_sizes/font_size = 83
 text = "Cerrar"
 
 [node name="World" type="Node3D" parent="." unique_id=366643053]
@@ -86,6 +102,4 @@ text = "Cerrar"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 
 [connection signal="pressed" from="UI/VBoxContainer/Button_Museum" to="." method="_on_button_museum_pressed"]
-[connection signal="pressed" from="UI/VBoxContainer/Button_Options" to="." method="_on_button_options_pressed"]
-[connection signal="pressed" from="UI/VBoxContainer/Button_Info" to="." method="_on_button_info_pressed"]
 [connection signal="pressed" from="UI/VBoxContainer/Button_Exit" to="." method="_on_button_exit_pressed"]

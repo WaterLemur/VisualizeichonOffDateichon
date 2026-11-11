@@ -54,7 +54,6 @@ func count() -> void:
 	for counted in is_counted:
 		if counted == true:
 			counter += 1
-	print(counter)
 	
 func update_labels() -> void:
 	Persistent.label_cuneiform.text = _translate(counter)

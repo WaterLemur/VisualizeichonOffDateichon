@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cqxojkhkh47tc"]
+
+[ext_resource type="PackedScene" uid="uid://bbdybv0jpsn3c" path="res://project/art/meshes/sumer/cmachine.glb" id="1_6cvgg"]
+
+[node name="cmachine" unique_id=648605551 instance=ExtResource("1_6cvgg")]
+
+[node name="cmachine_sand_pile" parent="." index="10" unique_id=185521696]
+visible = false

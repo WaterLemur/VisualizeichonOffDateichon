@@ -91,11 +91,12 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 22.0
-offset_top = 98.0
-offset_right = 211.0
-offset_bottom = 891.0
+offset_left = 2.2
+offset_top = -538.605
+offset_right = 191.2
+offset_bottom = 254.39478
 grow_vertical = 2
+scale = Vector2(1.735, 1.735)
 
 [node name="Background" type="TextureRect" parent="UI/Menu" unique_id=445560314]
 layout_mode = 0
@@ -342,29 +343,36 @@ texture = ExtResource("19_mygyo")
 
 [node name="Navigation" type="Control" parent="UI" unique_id=62483364]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
+anchor_bottom = 0.5
+offset_left = -1920.0
+offset_top = -540.0
+offset_right = -1920.0
+offset_bottom = -540.0
+grow_horizontal = 0
 grow_vertical = 2
+scale = Vector2(2.265, 2.265)
 mouse_filter = 2
 
 [node name="BtnUp" type="Button" parent="UI/Navigation" unique_id=534288493]
 layout_mode = 0
-offset_left = 929.0
-offset_top = 1246.0
-offset_right = 1007.0
-offset_bottom = 1309.0
+offset_left = 720.08813
+offset_top = 253.86313
+offset_right = 798.08813
+offset_bottom = 316.86313
 scale = Vector2(1.615, 1.615)
 icon = ExtResource("10_6rj13")
 flat = true
 
 [node name="BtnDown" type="Button" parent="UI/Navigation" unique_id=888703439]
 layout_mode = 0
-offset_left = 910.0
-offset_top = 1347.0
-offset_right = 1006.0
-offset_bottom = 1419.0
+offset_left = 701.5452
+offset_top = 359.15515
+offset_right = 797.5452
+offset_bottom = 431.15515
 rotation = 6.2831855
 scale = Vector2(1.615, 1.615)
 icon = ExtResource("11_qhkwt")
@@ -402,47 +410,47 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.7
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosRackA" unique_id=189691498]
 
 [node name="PosHistory1" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=766539940]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045, 3.23, -6.97)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025, 3.94, -9.285)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory1" unique_id=1533915419]
 
 [node name="PosHistory2" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=1395874391]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.145, 3.21, -8.48)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.145, 3.805, -9.71)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory2" unique_id=1999234631]
 
 [node name="PosHistory3" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=822340723]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.755, 1.22, -8.025)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.755, 1.695, -9.4)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory3" unique_id=639863409]
 
 [node name="PosHistory4" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=658787095]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.565, 1.025, -7.675)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.965, 1.42, -9.21)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory4" unique_id=98109474]
 
 [node name="PosHistory5" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=330240833]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.415, 0.97, -7.93)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24, 1.15, -9.6)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory5" unique_id=1805031105]
 
 [node name="PosHistory6" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=373771502]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, -0.99, -9.11)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, -0.915, -9.38)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory6" unique_id=3445563]
 
 [node name="PosHistory7" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=536884772]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.395, -1.05, -8.67)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.395, -0.805, -9.525)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory7" unique_id=134926681]
 
 [node name="PosHistory8" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=701650579]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83, -0.99, -9.29)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83, -0.99, -9.36)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory8" unique_id=1301293269]
 
 [node name="PosHistory9" type="Node3D" parent="World/CameraRig/PosRackA" unique_id=25309310]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12, -5.34, -6.01)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12, -4.8, -7.62)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackA/PosHistory9" unique_id=1364620983]
 
@@ -470,6 +478,7 @@ transform = Transform3D(-0.9299059, 0, -0.3677975, 0, 1.19, 0, 0.3677975, 0, -0.
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.99999994, 0, 5.1520157, -20.648876)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactPrev/PosArtWeight" unique_id=1345452230]
+transform = Transform3D(1, 0, 5.9604645e-08, 0, 0.8403362, 0, -2.9802322e-08, 0, 1.0000001, 11.863415, -2.4721336, -5.357712)
 
 [node name="PosArtAmount" type="Node3D" parent="World/CameraRig/PosArtifactPrev" unique_id=1024058943]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.9999998, 0, 10.304032, -10.748337)
@@ -497,28 +506,28 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 0.99999994, 0, 0.99999994, 0, -
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB" unique_id=713218546]
 
 [node name="PosDataBases" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=981028479]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.065, 2.86, -7.89)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.06, 3.255, -9.14)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosDataBases" unique_id=1627573802]
 
 [node name="PosMap" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=1810803901]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86, -6.665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.57, -7.92)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosMap" unique_id=11808520]
 
 [node name="PosGraphBars" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=2056571179]
-transform = Transform3D(0.9999988, 0, 0, 0, 0.9999988, 0, 5.3290705e-14, 0, 1, -1.8912354, -4.0249906, -9.246111)
+transform = Transform3D(0.9999986, 0, 0, 0, 0.9999986, 0, 6.039613e-14, 0, 1, -1.931, -3.725, -9.908)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphBars" unique_id=2061057445]
 transform = Transform3D(1, 0, -2.4868996e-14, 0, 1, 0, 2.1316282e-14, 0, 1, -0.11236191, 0, -0.364707)
 
 [node name="PosGraphPies" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=1111515370]
-transform = Transform3D(0.9999989, 0, 0, 0, 0.9999989, 0, 4.6185278e-14, 0, 1, 0.7550659, -3.7620773, -9.701947)
+transform = Transform3D(0.9999989, 0, 0, 0, 0.9999989, 0, 4.6185278e-14, 0, 1, 0.68, -3.542, -9.922)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphPies" unique_id=761568993]
 
 [node name="PosGraphTendency" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=232674560]
-transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 7.1054274e-15, 0, 1, -1.3357048, -5.583998, -9.552996)
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 7.1054274e-15, 0, 1, -1.461, -5.274, -10.153)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphTendency" unique_id=813011352]
 transform = Transform3D(1.0000002, 0, -1.4210855e-14, 0, 1.0000002, 0, 0, 0, 1, 0.00011062622, 0.0018854141, 0.00018596649)
