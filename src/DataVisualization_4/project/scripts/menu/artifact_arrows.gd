@@ -23,8 +23,8 @@ var rot_angle: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	collision_left.scale.z  = 0.1
-	collision_right.scale.z = 0.1
+	collision_left.scale.z  = min_angle_pi
+	collision_right.scale.z = min_angle_pi
 	is_counted.resize(30)
 	is_counted.fill(false)
 
@@ -35,12 +35,14 @@ func _process(delta: float) -> void:
 
 
 func set_left(normalized: float) -> void:
+	normalized = clamp(normalized, min_angle_pi, 2)
 	rot_angle = lerp(0.0, max_angle_pi, normalized)
 	arrow_left.rotation.y = rot_angle
 	collision_left.scale.z = normalized
 	#if rot_angle == 0.0 && arrow_right.rotation.y == 0.0: counter = 0
 	
 func set_right(normalized: float) -> void:
+	normalized = clamp(normalized, min_angle_pi, 2)
 	rot_angle = lerp(0.0, max_angle_pi, normalized)
 	arrow_right.rotation.y = -rot_angle
 	collision_right.scale.z = normalized
