@@ -3,17 +3,21 @@ extends Control
 
 
 @export_group("References")
-@export var window_left: Control
+@export var window_left:  Control
 @export var window_right: Control
+@export var red_left:     Control
+@export var red_right:    Control
+@export var r_offset_left: Vector2 = Vector2(-0.01,-0.05)
+@export var r_offset_right: Vector2 = Vector2(-0.01,-0.05)
 
 @export_group("Left Range")
-@export var left_min: float = 338.5
-@export var left_max: float = 446.5
+@export var left_min:   float = 338.5
+@export var left_max:   float = 446.5
 @export var left_start: float = left_max
 
 @export_group("Right Range")
-@export var right_min: float = 557.0
-@export var right_max: float = 660.0
+@export var right_min:   float = 557.0
+@export var right_max:   float = 660.0
 @export var right_start: float = right_min
 
 @export_group("3D Arrows")
@@ -51,9 +55,11 @@ func _input(event: InputEvent) -> void:
 			normalized = inverse_lerp(left_max, left_min, dragging.position.x)
 			
 			arrow_script.set_left(normalized)
+			red_left.position = window_left.position + r_offset_left
 
 		elif dragging == window_right:
 			dragging.position.x = clampf(mouse_x - dragging.size.x * 0.5, right_min, right_max)
 			normalized = inverse_lerp(right_min, right_max, dragging.position.x)
 			
 			arrow_script.set_right(normalized)
+			red_right.position = window_right.position + r_offset_left
