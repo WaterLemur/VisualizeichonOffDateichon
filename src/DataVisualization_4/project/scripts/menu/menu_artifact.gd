@@ -5,8 +5,6 @@ extends Control
 @export_group("References")
 @export var window_left: Control
 @export var window_right: Control
-@export var label_cuneiform: Label
-@export var label_arabic:    Label
 
 @export_group("Left Range")
 @export var left_min: float = 338.5

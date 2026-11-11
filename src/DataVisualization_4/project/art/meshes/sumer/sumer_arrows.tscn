@@ -3,7 +3,20 @@
 [ext_resource type="PackedScene" uid="uid://clliio4t11aah" path="res://project/art/meshes/sumer/sumer_arrows.glb" id="1_vxga1"]
 [ext_resource type="Material" uid="uid://fostqr34x724" path="res://project/art/materials/mat_arrow.tres" id="2_1uydx"]
 [ext_resource type="Script" uid="uid://c0jxpyufkepca" path="res://project/scripts/menu/artifact_arrows.gd" id="2_5negp"]
+[ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="3_spfu0"]
 [ext_resource type="Material" uid="uid://d1ou1ts1cmvgd" path="res://project/art/materials/mat_red_select.tres" id="4_5negp"]
+[ext_resource type="Texture2D" uid="uid://c5l3iglah7lq3" path="res://project/art/sprites/menu_artifact/artifact-menu-tablet.png" id="4_jhvgw"]
+[ext_resource type="FontFile" uid="uid://8qd7n2hmra5a" path="res://project/art/fonts/playbaill/Playball-Regular.ttf" id="5_7tbmh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m4ttg"]
+font = ExtResource("5_7tbmh")
+font_size = 81
+font_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v2j4w"]
+font = ExtResource("5_7tbmh")
+font_size = 32
+font_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dib1j"]
 
@@ -44,33 +57,65 @@ size = Vector3(13, 1, 49)
 [sub_resource type="BoxShape3D" id="BoxShape3D_dmqb7"]
 size = Vector3(13, 1, 49)
 
-[node name="sumer_arrows" unique_id=766834395 node_paths=PackedStringArray("arrow_left", "arrow_right", "pos_col_left", "pos_col_right", "collision_left", "collision_right") instance=ExtResource("1_vxga1")]
+[node name="sumer_arrows" unique_id=766834395 node_paths=PackedStringArray("arrow_left", "arrow_right", "label_cuneiform", "label_arabic", "pos_col_left", "pos_col_right", "collision_left", "collision_right") instance=ExtResource("1_vxga1")]
 script = ExtResource("2_5negp")
 arrow_left = NodePath("arrow_light_2")
 arrow_right = NodePath("ArrowRight")
+label_cuneiform = NodePath("UI/Tablet/Cuneiform")
+label_arabic = NodePath("UI/Tablet/Arabic")
 pos_col_left = NodePath("arrow_light_2/PosCollision")
 pos_col_right = NodePath("ArrowRight/arrow_light_3_r/PosCollision")
 collision_left = NodePath("CollisionL")
 collision_right = NodePath("CollisionR")
 
-[node name="arrow_barley_pile" parent="." index="0" unique_id=1343619156]
+[node name="UI" parent="." index="0" unique_id=58018528 instance=ExtResource("3_spfu0")]
+
+[node name="Tablet" type="TextureRect" parent="UI" index="0" unique_id=1721123952]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 1434.0
+offset_right = 816.0
+offset_bottom = 1680.0
+mouse_filter = 2
+texture = ExtResource("4_jhvgw")
+
+[node name="Cuneiform" type="Label" parent="UI/Tablet" index="0" unique_id=403205269]
+layout_mode = 0
+offset_left = 198.0
+offset_top = 4.0
+offset_right = 283.0
+offset_bottom = 190.0
+label_settings = SubResource("LabelSettings_m4ttg")
+
+[node name="Arabic" type="Label" parent="UI/Tablet" index="1" unique_id=53830043]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 136.0
+offset_right = 336.0
+offset_bottom = 178.0
+text = "33"
+label_settings = SubResource("LabelSettings_v2j4w")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="arrow_barley_pile" parent="." index="1" unique_id=1343619156]
 visible = false
 material_override = ExtResource("2_1uydx")
 
-[node name="arrow_barley_vase" parent="." index="1" unique_id=1101035211]
+[node name="arrow_barley_vase" parent="." index="2" unique_id=1101035211]
 visible = false
 material_override = ExtResource("2_1uydx")
 
-[node name="arrow_light_1" parent="." index="2" unique_id=155850047]
+[node name="arrow_light_1" parent="." index="3" unique_id=155850047]
 material_override = ExtResource("2_1uydx")
 
-[node name="arrow_light_2" parent="." index="3" unique_id=1775602255]
+[node name="arrow_light_2" parent="." index="4" unique_id=1775602255]
 material_override = ExtResource("2_1uydx")
 
 [node name="PosCollision" type="Node3D" parent="arrow_light_2" index="0" unique_id=89973231]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0, 0)
 
-[node name="ArrowRight" type="Node3D" parent="." index="4" unique_id=853287667]
+[node name="ArrowRight" type="Node3D" parent="." index="5" unique_id=853287667]
 
 [node name="arrow_light_3_r" type="MeshInstance3D" parent="ArrowRight" index="0" unique_id=938605075]
 transform = Transform3D(1, 0, 0, 0, -1, -1.509958e-07, 0, 1.509958e-07, -1, 1.135788, 0.42930928, 0)
@@ -80,7 +125,7 @@ mesh = SubResource("ArrayMesh_gmpu4")
 [node name="PosCollision" type="Node3D" parent="ArrowRight/arrow_light_3_r" index="0" unique_id=1582981519]
 transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 41, 0, 0)
 
-[node name="CollisionL" type="Node3D" parent="." index="5" unique_id=216600631]
+[node name="CollisionL" type="Node3D" parent="." index="6" unique_id=216600631]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.135788, 0.42930928, 0)
 
 [node name="Area3D" type="Area3D" parent="CollisionL" index="0" unique_id=1448255483]
@@ -93,7 +138,7 @@ mesh = SubResource("BoxMesh_305r8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24)
 shape = SubResource("BoxShape3D_dmqb7")
 
-[node name="CollisionR" type="Node3D" parent="." index="6" unique_id=1179028313]
+[node name="CollisionR" type="Node3D" parent="." index="7" unique_id=1179028313]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.135788, 0.42930928, 0)
 
 [node name="Area3D" type="Area3D" parent="CollisionR" index="0" unique_id=126942496]

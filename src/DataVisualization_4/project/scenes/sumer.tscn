@@ -7,10 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://y12dpl3nykb4" path="res://project/art/meshes/sumer/sumer_cmachine_pile.glb" id="3_5u6an"]
 [ext_resource type="Texture2D" uid="uid://bxqtimvfkmq6l" path="res://project/art/sprites/menu_artifact/artifact-menu-red-l.png" id="3_cv6fx"]
 [ext_resource type="Script" uid="uid://pho5opgrr38l" path="res://project/scripts/menu/menu_artifact.gd" id="3_icmnb"]
-[ext_resource type="Texture2D" uid="uid://c5l3iglah7lq3" path="res://project/art/sprites/menu_artifact/artifact-menu-tablet.png" id="3_rrar5"]
 [ext_resource type="PackedScene" uid="uid://ccvdpt7qyyg1f" path="res://project/art/meshes/sumer/sumer_sun.tscn" id="4_4x0l4"]
 [ext_resource type="Texture2D" uid="uid://bk3hpserfq763" path="res://project/art/sprites/menu_artifact/artifact-menu-red-r.png" id="4_5ohfl"]
-[ext_resource type="FontFile" uid="uid://8qd7n2hmra5a" path="res://project/art/fonts/playbaill/Playball-Regular.ttf" id="4_krjpa"]
 [ext_resource type="PackedScene" uid="uid://bbdybv0jpsn3c" path="res://project/art/meshes/sumer/cmachine.glb" id="4_q2j8k"]
 [ext_resource type="PackedScene" uid="uid://cf6rgfoutear0" path="res://project/art/meshes/sumer/sumer_arrows.tscn" id="5_4x0l4"]
 [ext_resource type="Texture2D" uid="uid://0bir6y4kl8d6" path="res://project/art/sprites/menu_artifact/menu-artifact-window-l.png" id="5_5ohfl"]
@@ -19,22 +17,13 @@
 [ext_resource type="PackedScene" uid="uid://0woxue7po7qc" path="res://project/art/meshes/sumer/sumer_map.glb" id="7_5ohfl"]
 [ext_resource type="Texture2D" uid="uid://b5adqcw3bh8kg" path="res://project/art/sprites/sumer/sumer-cloud.png" id="10_dlugq"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_07rhc"]
-font = ExtResource("4_krjpa")
-font_size = 78
-font_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_icmnb"]
-font = ExtResource("4_krjpa")
-font_size = 32
-font_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
-
-[node name="Sumer" type="Node" unique_id=1395858333]
+[node name="Sumer" type="Node" unique_id=1395858333 node_paths=PackedStringArray("label_arabic")]
 script = ExtResource("1_2ba16")
+label_arabic = NodePath("")
 
 [node name="UI" parent="." unique_id=58018528 instance=ExtResource("1_4x0l4")]
 
-[node name="MenuArtifact" type="Control" parent="UI" unique_id=768400370 node_paths=PackedStringArray("window_left", "window_right", "label_cuneiform", "label_arabic", "arrow_script")]
+[node name="MenuArtifact" type="Control" parent="UI" unique_id=768400370 node_paths=PackedStringArray("window_left", "window_right", "arrow_script")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,8 +34,6 @@ mouse_filter = 2
 script = ExtResource("3_icmnb")
 window_left = NodePath("WindowL")
 window_right = NodePath("WindowR")
-label_cuneiform = NodePath("Tablet/Cuneiform")
-label_arabic = NodePath("Tablet/Arabic")
 arrow_script = NodePath("../../World/SumerArrows")
 
 [node name="Background" type="TextureRect" parent="UI/MenuArtifact" unique_id=1285821431]
@@ -56,34 +43,6 @@ offset_top = 1601.0
 offset_right = 816.0
 offset_bottom = 1847.0
 texture = ExtResource("2_d0y3r")
-
-[node name="Tablet" type="TextureRect" parent="UI/MenuArtifact" unique_id=101754320]
-layout_mode = 0
-offset_left = 272.0
-offset_top = 1434.0
-offset_right = 816.0
-offset_bottom = 1680.0
-texture = ExtResource("3_rrar5")
-
-[node name="Cuneiform" type="Label" parent="UI/MenuArtifact/Tablet" unique_id=968547558]
-layout_mode = 0
-offset_left = 198.0
-offset_top = 4.0
-offset_right = 280.0
-offset_bottom = 183.0
-text = "𒌍"
-label_settings = SubResource("LabelSettings_07rhc")
-
-[node name="Arabic" type="Label" parent="UI/MenuArtifact/Tablet" unique_id=180916282]
-layout_mode = 0
-offset_left = 291.0
-offset_top = 136.0
-offset_right = 336.0
-offset_bottom = 178.0
-text = "33"
-label_settings = SubResource("LabelSettings_icmnb")
-horizontal_alignment = 2
-vertical_alignment = 2
 
 [node name="RedL" type="TextureRect" parent="UI/MenuArtifact" unique_id=191852602]
 layout_mode = 0
