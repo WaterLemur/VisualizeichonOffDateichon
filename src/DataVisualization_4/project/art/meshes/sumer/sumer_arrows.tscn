@@ -10,7 +10,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_m4ttg"]
 font = ExtResource("5_7tbmh")
-font_size = 81
+font_size = 52
 font_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_v2j4w"]
@@ -57,12 +57,13 @@ size = Vector3(13, 1, 49)
 [sub_resource type="BoxShape3D" id="BoxShape3D_dmqb7"]
 size = Vector3(13, 1, 49)
 
-[node name="sumer_arrows" unique_id=766834395 node_paths=PackedStringArray("arrow_left", "arrow_right", "label_cuneiform", "label_arabic", "pos_col_left", "pos_col_right", "collision_left", "collision_right") instance=ExtResource("1_vxga1")]
+[node name="sumer_arrows" unique_id=766834395 node_paths=PackedStringArray("arrow_left", "arrow_right", "label_cuneiform", "label_arabic", "ui", "pos_col_left", "pos_col_right", "collision_left", "collision_right") instance=ExtResource("1_vxga1")]
 script = ExtResource("2_5negp")
 arrow_left = NodePath("arrow_light_2")
 arrow_right = NodePath("ArrowRight")
 label_cuneiform = NodePath("UI/Tablet/Cuneiform")
 label_arabic = NodePath("UI/Tablet/Arabic")
+ui = NodePath("UI")
 pos_col_left = NodePath("arrow_light_2/PosCollision")
 pos_col_right = NodePath("ArrowRight/arrow_light_3_r/PosCollision")
 collision_left = NodePath("CollisionL")
@@ -72,28 +73,30 @@ collision_right = NodePath("CollisionR")
 
 [node name="Tablet" type="TextureRect" parent="UI" index="0" unique_id=1721123952]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 1434.0
-offset_right = 816.0
+offset_left = 65.0
+offset_top = 1413.0
+offset_right = 1023.0
 offset_bottom = 1680.0
 mouse_filter = 2
 texture = ExtResource("4_jhvgw")
 
 [node name="Cuneiform" type="Label" parent="UI/Tablet" index="0" unique_id=403205269]
 layout_mode = 0
-offset_left = 198.0
-offset_top = 4.0
-offset_right = 283.0
-offset_bottom = 190.0
+offset_left = 342.0
+offset_top = 45.0
+offset_right = 602.0
+offset_bottom = 164.0
+text = "𒌋𒌋𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹"
 label_settings = SubResource("LabelSettings_m4ttg")
+clip_text = true
 
 [node name="Arabic" type="Label" parent="UI/Tablet" index="1" unique_id=53830043]
 layout_mode = 0
-offset_left = 291.0
-offset_top = 136.0
-offset_right = 336.0
-offset_bottom = 178.0
-text = "33"
+offset_left = 553.0
+offset_top = 149.0
+offset_right = 598.0
+offset_bottom = 191.0
+text = "29"
 label_settings = SubResource("LabelSettings_v2j4w")
 horizontal_alignment = 2
 vertical_alignment = 2

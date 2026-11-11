@@ -4,6 +4,7 @@ extends Node
 
 @onready var ui    = $UI as Control
 @onready var world = $World as Node3D
+var ui_2: Control
 
 
 # Called when the node enters the scene tree for the first time.
@@ -16,8 +17,7 @@ func _process(delta: float) -> void:
 	pass
 
 func show(state: bool) -> void:
-	print("UI: ", ui)
-	print("World: ", world)
-
 	ui.visible = state
 	world.visible = state
+	
+	if(ui_2): ui_2.visible = state

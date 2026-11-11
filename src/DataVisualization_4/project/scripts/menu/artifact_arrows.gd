@@ -11,6 +11,7 @@ extends Node
 
 @export var label_cuneiform: Label
 @export var label_arabic:    Label
+@export var ui: Control
 
 var counter: int = 0
 var rot_angle: float
@@ -26,11 +27,16 @@ var rot_angle: float
 func _ready() -> void:
 	collision_left.scale.z  = 0
 	collision_right.scale.z = 0
+	
+	Sumer.ui_2 = ui
+	ui.visible = false
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	label_cuneiform.text = _translate(counter)
+	label_arabic.text = str(counter)
 
 func set_left(normalized: float) -> void:
 	rot_angle = lerp(0.0, max_angle_pi, normalized)
@@ -47,14 +53,51 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 	var soldier := area.get_parent() as Soldier
 	if soldier:
 		if arrow_left.rotation.y == 0 && arrow_right.rotation.y == 0: return
-		
 		soldier.plus_1.visible = true
 		counter += 1
-		label_cuneiform.text = str(counter)
+		label_arabic.text = str(counter)
+		label_cuneiform.text = _translate(counter)
+
 
 func _on_area_3d_area_exited(area: Area3D) -> void:
 	var soldier := area.get_parent() as Soldier
 	if soldier:
 		soldier.plus_1.visible = false
 		counter -= 1
-		label_cuneiform.text = str(counter)
+		label_cuneiform.text = _translate(counter)
+		label_arabic.text = str(counter)
+
+func _translate(arabic: int) -> String:
+	match arabic:
+		0: return ""
+		1: return "𒁹"
+		2: return "𒁹𒁹"
+		3: return "𒁹𒁹𒁹"
+		4: return "𒁹𒁹𒁹𒁹"
+		5: return "𒁹𒁹𒁹𒁹𒁹"
+		6: return "𒁹𒁹𒁹𒁹𒁹𒁹"
+		7: return "𒁹𒁹𒁹𒁹𒁹𒁹𒁹"
+		8: return "𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹"
+		9: return "𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹"
+		10: return "𒌋"
+		11: return "𒌋𒁹"
+		12: return "𒌋𒁹𒁹"
+		13: return "𒌋𒁹𒁹𒁹"
+		14: return "𒌋𒁹𒁹𒁹𒁹"
+		15: return "𒌋𒁹𒁹𒁹𒁹𒁹"
+		16: return "𒌋𒁹𒁹𒁹𒁹𒁹𒁹"
+		17: return "𒌋𒁹𒁹𒁹𒁹𒁹𒁹𒁹"
+		18: return "𒌋𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹"
+		19: return "𒌋𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹"
+		20: return "𒌋𒌋"
+		21: return "𒌋𒌋𒁹"
+		22: return "𒌋𒌋𒁹𒁹"
+		23: return "𒌋𒌋𒁹𒁹𒁹"
+		24: return "𒌋𒌋𒁹𒁹𒁹𒁹"
+		25: return "𒌋𒌋𒁹𒁹𒁹𒁹𒁹"
+		26: return "𒌋𒌋𒁹𒁹𒁹𒁹𒁹𒁹"
+		27: return "𒌋𒌋𒁹𒁹𒁹𒁹𒁹𒁹𒁹"
+		28: return "𒌋𒌋𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹"
+		29: return "𒌋𒌋𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹"
+		30: return "𒌋𒌋𒌋"
+	return ""
