@@ -7,9 +7,23 @@
 [ext_resource type="Theme" uid="uid://ok88j7qigyr" path="res://project/art/themes/theme.tres" id="3_gncwf"]
 [ext_resource type="AudioStream" uid="uid://desqje04a5ows" path="res://project/art/music/the_epic_of_gilgamesh.mp3" id="3_qhlmt"]
 [ext_resource type="AudioStream" uid="uid://bsx1vkvcjpi2q" path="res://project/art/music/hurrian_hymn_6.mp3" id="4_cr5m2"]
+[ext_resource type="Texture2D" uid="uid://c5l3iglah7lq3" path="res://project/art/sprites/menu_artifact/artifact-menu-tablet.png" id="8_cvp18"]
+[ext_resource type="FontFile" uid="uid://8qd7n2hmra5a" path="res://project/art/fonts/playbaill/Playball-Regular.ttf" id="9_2i0o2"]
 
-[node name="Persistent" type="Node" unique_id=1682141015]
+[sub_resource type="LabelSettings" id="LabelSettings_cxrsq"]
+font = ExtResource("9_2i0o2")
+font_size = 52
+font_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hefbg"]
+font = ExtResource("9_2i0o2")
+font_size = 32
+font_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
+
+[node name="Persistent" type="Node" unique_id=1682141015 node_paths=PackedStringArray("label_cuneiform", "label_arabic")]
 script = ExtResource("1_tq1j0")
+label_cuneiform = NodePath("UI/Tablet/Cuneiform")
+label_arabic = NodePath("UI/Tablet/Arabic")
 
 [node name="Managers" type="Node" parent="." unique_id=413182891]
 
@@ -57,6 +71,36 @@ theme = ExtResource("3_gncwf")
 theme_type_variation = &"PersistentInfo"
 text = "Visualización de datos - 2026"
 horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Tablet" type="TextureRect" parent="UI" unique_id=1742274989]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 1413.0
+offset_right = 1023.0
+offset_bottom = 1680.0
+mouse_filter = 2
+texture = ExtResource("8_cvp18")
+
+[node name="Cuneiform" type="Label" parent="UI/Tablet" unique_id=225421482]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 45.0
+offset_right = 602.0
+offset_bottom = 164.0
+text = "𒌋𒌋𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹"
+label_settings = SubResource("LabelSettings_cxrsq")
+clip_text = true
+
+[node name="Arabic" type="Label" parent="UI/Tablet" unique_id=1724124368]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 149.0
+offset_right = 598.0
+offset_bottom = 191.0
+text = "29"
+label_settings = SubResource("LabelSettings_hefbg")
+horizontal_alignment = 2
 vertical_alignment = 2
 
 [connection signal="finished" from="Managers/ManagerAudio/MusicHymn" to="Managers/ManagerAudio" method="_on_music_hymn_finished"]

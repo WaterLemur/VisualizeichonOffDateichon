@@ -4,6 +4,10 @@ extends Node
 
 @onready var label_scene = $UI/Scene as Label
 
+@export_category("References")
+@export var label_cuneiform: Label
+@export var label_arabic:    Label
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

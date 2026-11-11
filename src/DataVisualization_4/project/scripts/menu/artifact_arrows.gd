@@ -11,7 +11,6 @@ extends Node
 
 @export var label_cuneiform: Label
 @export var label_arabic:    Label
-@export var ui: Control
 
 var counter: int = 0
 var rot_angle: float
@@ -27,11 +26,6 @@ var rot_angle: float
 func _ready() -> void:
 	collision_left.scale.z  = 0
 	collision_right.scale.z = 0
-	
-	Sumer.ui_2 = ui
-	ui.visible = false
-	
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -58,14 +52,13 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 		label_arabic.text = str(counter)
 		label_cuneiform.text = _translate(counter)
 
-
 func _on_area_3d_area_exited(area: Area3D) -> void:
 	var soldier := area.get_parent() as Soldier
 	if soldier:
 		soldier.plus_1.visible = false
 		counter -= 1
-		label_cuneiform.text = _translate(counter)
-		label_arabic.text = str(counter)
+		Persistent.label_cuneiform.text = _translate(counter)
+		Persistent.label_arabic.text = str(counter)
 
 func _translate(arabic: int) -> String:
 	match arabic:
