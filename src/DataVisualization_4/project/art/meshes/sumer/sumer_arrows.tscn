@@ -106,3 +106,5 @@ shape = SubResource("BoxShape3D_dmqb7")
 
 [connection signal="area_entered" from="CollisionL/Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="CollisionL/Area3D" to="." method="_on_area_3d_area_exited"]
+[connection signal="area_entered" from="CollisionR/Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="CollisionR/Area3D" to="." method="_on_area_3d_area_exited"]
