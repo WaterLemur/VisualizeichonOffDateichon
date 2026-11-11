@@ -55,7 +55,7 @@ custom_minimum_size = Vector2(0, 125)
 layout_mode = 2
 offset_transform_position = Vector2(0, -0.785)
 theme = ExtResource("3_wk7yc")
-text = "Play"
+text = "Experiencia Interactiva"
 
 [node name="Button_Options" type="Button" parent="UI/VBoxContainer" unique_id=1596057111]
 visible = false
@@ -78,7 +78,7 @@ custom_minimum_size = Vector2(0, 125)
 layout_mode = 2
 offset_transform_position = Vector2(0, -0.785)
 theme = ExtResource("3_wk7yc")
-text = "Exit"
+text = "Cerrar"
 
 [node name="World" type="Node3D" parent="." unique_id=366643053]
 

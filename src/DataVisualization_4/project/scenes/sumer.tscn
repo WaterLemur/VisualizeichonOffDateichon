@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b3auuxs8p0x1o" path="res://project/scripts/sumer.gd" id="1_2ba16"]
 [ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="1_4x0l4"]
-[ext_resource type="PackedScene" uid="uid://ftrr5wbv07av" path="res://project/art/meshes/sumer/sumer_soldier.tscn" id="2_4x0l4"]
+[ext_resource type="PackedScene" uid="uid://ftrr5wbv07av" path="res://project/art/meshes/sumer/soldier.tscn" id="2_4x0l4"]
 [ext_resource type="Texture2D" uid="uid://dyj5wdoh31b1l" path="res://project/art/sprites/menu_artifact/artifact-menu-background.png" id="2_d0y3r"]
 [ext_resource type="PackedScene" uid="uid://y12dpl3nykb4" path="res://project/art/meshes/sumer/sumer_cmachine_pile.glb" id="3_5u6an"]
 [ext_resource type="Texture2D" uid="uid://bxqtimvfkmq6l" path="res://project/art/sprites/menu_artifact/artifact-menu-red-l.png" id="3_cv6fx"]

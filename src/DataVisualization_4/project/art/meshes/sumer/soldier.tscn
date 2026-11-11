@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ftrr5wbv07av"]
+
+[ext_resource type="PackedScene" uid="uid://cb1xtpukohxxg" path="res://project/art/meshes/sumer/soldier.glb" id="1_lpfju"]
+[ext_resource type="Script" uid="uid://csnedi7uhjrl6" path="res://project/scripts/soldier.gd" id="2_q7tpe"]
+[ext_resource type="FontFile" uid="uid://8qd7n2hmra5a" path="res://project/art/fonts/playbaill/Playball-Regular.ttf" id="3_3amsh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_07rhc"]
+size = Vector3(1.6898193, 5.473633, 2.4155273)
+
+[node name="Soldier" unique_id=155563088 node_paths=PackedStringArray("plus_1") instance=ExtResource("1_lpfju")]
+script = ExtResource("2_q7tpe")
+plus_1 = NodePath("Plus1")
+
+[node name="soldier_body" parent="." index="0" unique_id=943960467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20830536, 3.334886, 0.24958383)
+
+[node name="soldier_weapons" parent="." index="1" unique_id=1742476102]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.20830536, 4.985568, 0.24958383)
+
+[node name="Plus1" type="Label3D" parent="." index="2" unique_id=1168220490]
+transform = Transform3D(-1.0431722e-06, 0, 23.865, 0, 23.865, 0, -23.865, 0, -1.0431722e-06, 0, 7.887824, 0.4367063)
+modulate = Color(1, 0, 0, 1)
+text = "+"
+font = ExtResource("3_3amsh")
+font_size = 42
+outline_size = 5
+
+[node name="Area3D" type="Area3D" parent="." index="3" unique_id=1330963173]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=1401169573]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38739014, 2.7114258, 0.24804688)
+shape = SubResource("BoxShape3D_07rhc")
