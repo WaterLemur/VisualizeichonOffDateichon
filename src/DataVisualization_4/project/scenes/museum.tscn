@@ -51,6 +51,10 @@
 [sub_resource type="LabelSettings" id="LabelSettings_xbnxe"]
 font = ExtResource("9_6rj13")
 
+[sub_resource type="Environment" id="Environment_lmagj"]
+background_mode = 1
+background_color = Color(0.18979344, 0.40759233, 0.7078164, 1)
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_o2eaj"]
 viewport_path = NodePath("World/Sprites/Graphs/Bar1/SVBar1")
 
@@ -375,6 +379,8 @@ flat = true
 [node name="CameraRig" type="Node3D" parent="World" unique_id=829160146]
 
 [node name="MainCamera" type="Camera3D" parent="World/CameraRig" unique_id=1993890512]
+transform = Transform3D(1, 0, 0, 0, 0.8506646, 0.5257088, 0, -0.5257088, 0.8506646, 0, 41.314064, 28.586525)
+environment = SubResource("Environment_lmagj")
 current = true
 
 [node name="PosMainMenu" type="Node3D" parent="World/CameraRig" unique_id=922637394]
@@ -456,7 +462,7 @@ transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.9999998, 0, 10.304032
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifact/PosArtAmount" unique_id=103011689]
 
 [node name="PosArtifactPrev" type="Node3D" parent="World/CameraRig" unique_id=621854005]
-transform = Transform3D(-0.9299059, 0, -0.3677975, 0, 1.19, 0, 0.3677975, 0, -0.9299059, -36.16979, 22.195824, -94.31883)
+transform = Transform3D(-0.9299059, 0, -0.3677975, 0, 1.19, 0, 0.3677975, 0, -0.9299059, -41.99, 22.211, -106.104)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosArtifactPrev" unique_id=1926655727]
 

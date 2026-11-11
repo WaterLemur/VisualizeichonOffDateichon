@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dyj5wdoh31b1l" path="res://project/art/sprites/menu_artifact/artifact-menu-background.png" id="2_d0y3r"]
 [ext_resource type="PackedScene" uid="uid://y12dpl3nykb4" path="res://project/art/meshes/sumer/sumer_cmachine_pile.glb" id="3_5u6an"]
 [ext_resource type="Texture2D" uid="uid://bxqtimvfkmq6l" path="res://project/art/sprites/menu_artifact/artifact-menu-red-l.png" id="3_cv6fx"]
+[ext_resource type="Script" uid="uid://pho5opgrr38l" path="res://project/scripts/menu/menu_artifact.gd" id="3_icmnb"]
 [ext_resource type="Texture2D" uid="uid://c5l3iglah7lq3" path="res://project/art/sprites/menu_artifact/artifact-menu-tablet.png" id="3_rrar5"]
 [ext_resource type="PackedScene" uid="uid://ccvdpt7qyyg1f" path="res://project/art/meshes/sumer/sumer_sun.tscn" id="4_4x0l4"]
 [ext_resource type="Texture2D" uid="uid://bk3hpserfq763" path="res://project/art/sprites/menu_artifact/artifact-menu-red-r.png" id="4_5ohfl"]
@@ -16,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://1l46cuw7qjbq" path="res://project/art/meshes/sumer/sumer_barley_pile.glb" id="6_jiyb2"]
 [ext_resource type="Texture2D" uid="uid://1y2a3rfmhx4v" path="res://project/art/sprites/menu_artifact/menu-artifact-window-r.png" id="6_rrar5"]
 [ext_resource type="PackedScene" uid="uid://0woxue7po7qc" path="res://project/art/meshes/sumer/sumer_map.glb" id="7_5ohfl"]
+[ext_resource type="Texture2D" uid="uid://b5adqcw3bh8kg" path="res://project/art/sprites/sumer/sumer-cloud.png" id="10_dlugq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_07rhc"]
 font = ExtResource("4_krjpa")
@@ -27,7 +29,7 @@ script = ExtResource("1_2ba16")
 
 [node name="UI" parent="." unique_id=58018528 instance=ExtResource("1_4x0l4")]
 
-[node name="Menu" type="Control" parent="UI" unique_id=768400370]
+[node name="MenuArtifact" type="Control" parent="UI" unique_id=768400370 node_paths=PackedStringArray("window_left", "window_right")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,8 +37,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("3_icmnb")
+window_left = NodePath("WindowL")
+window_right = NodePath("WindowR")
 
-[node name="Background" type="TextureRect" parent="UI/Menu" unique_id=1285821431]
+[node name="Background" type="TextureRect" parent="UI/MenuArtifact" unique_id=1285821431]
 layout_mode = 0
 offset_left = 272.0
 offset_top = 1601.0
@@ -44,7 +49,7 @@ offset_right = 816.0
 offset_bottom = 1847.0
 texture = ExtResource("2_d0y3r")
 
-[node name="Tablet" type="TextureRect" parent="UI/Menu" unique_id=101754320]
+[node name="Tablet" type="TextureRect" parent="UI/MenuArtifact" unique_id=101754320]
 layout_mode = 0
 offset_left = 272.0
 offset_top = 1434.0
@@ -52,7 +57,7 @@ offset_right = 816.0
 offset_bottom = 1680.0
 texture = ExtResource("3_rrar5")
 
-[node name="Label" type="Label" parent="UI/Menu/Tablet" unique_id=968547558]
+[node name="Label" type="Label" parent="UI/MenuArtifact/Tablet" unique_id=968547558]
 layout_mode = 0
 offset_left = 220.0
 offset_top = 71.0
@@ -63,40 +68,110 @@ label_settings = SubResource("LabelSettings_07rhc")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RedL" type="TextureRect" parent="UI/Menu" unique_id=603111559]
+[node name="RedL" type="TextureRect" parent="UI/MenuArtifact" unique_id=191852602]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 1601.0
-offset_right = 816.0
-offset_bottom = 1847.0
+offset_left = 441.0
+offset_top = 1701.0
+offset_right = 562.0
+offset_bottom = 1761.0
 texture = ExtResource("3_cv6fx")
 
-[node name="RedR" type="TextureRect" parent="UI/Menu" unique_id=1259013250]
+[node name="RedR" type="TextureRect" parent="UI/MenuArtifact" unique_id=1597093607]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 1601.0
-offset_right = 816.0
-offset_bottom = 1847.0
+offset_left = 558.0
+offset_top = 1701.0
+offset_right = 679.0
+offset_bottom = 1761.0
 texture = ExtResource("4_5ohfl")
 
-[node name="WindowL" type="TextureRect" parent="UI/Menu" unique_id=402762928]
+[node name="WindowL" type="TextureRect" parent="UI/MenuArtifact" unique_id=847002575]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 1601.0
-offset_right = 816.0
-offset_bottom = 1847.0
+offset_left = 444.0
+offset_top = 1704.0
+offset_right = 559.0
+offset_bottom = 1758.0
 texture = ExtResource("5_5ohfl")
 
-[node name="WindowR" type="TextureRect" parent="UI/Menu" unique_id=2061541587]
+[node name="WindowR" type="TextureRect" parent="UI/MenuArtifact" unique_id=2120188966]
 layout_mode = 0
-offset_left = 272.0
-offset_top = 1601.0
-offset_right = 816.0
-offset_bottom = 1847.0
+offset_left = 559.0
+offset_top = 1704.0
+offset_right = 674.0
+offset_bottom = 1758.0
 texture = ExtResource("6_rrar5")
 
 [node name="World" type="Node3D" parent="." unique_id=421946308]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -56.883186)
+
+[node name="Background" type="Node3D" parent="World" unique_id=1430272706]
+
+[node name="Cloud1" type="Sprite3D" parent="World/Background" unique_id=1738794961]
+transform = Transform3D(-1.9014453e-07, 0, -4.35, 0, 4.35, 0, 4.35, 0, -1.9014453e-07, 64.38437, 48.48149, -2.8143302e-06)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud2" type="Sprite3D" parent="World/Background" unique_id=2038732933]
+transform = Transform3D(-2.6882503e-07, 0, -6.15, 0, 6.15, 0, 6.15, 0, -2.6882503e-07, 64.38437, 45.225685, 15.304361)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud3" type="Sprite3D" parent="World/Background" unique_id=39661315]
+transform = Transform3D(-1.6212486e-07, 9.9350245e-08, -4.35, 2.2728686, 3.7089846, 0, 3.7089846, -2.2728686, -1.9014453e-07, 64.38437, 58.58994, 51.840725)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud4" type="Sprite3D" parent="World/Background" unique_id=164522299]
+transform = Transform3D(-1.9014453e-07, 0, -4.35, 0, 4.35, 0, 4.35, 0, -1.9014453e-07, 64.38437, 52.47859, -65.55324)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud5" type="Sprite3D" parent="World/Background" unique_id=890713929]
+transform = Transform3D(-1.7867741e-07, -6.5033255e-08, -4.35, -1.4877875, 4.0876627, 0, 4.0876627, 1.4877875, -1.9014453e-07, 64.38436, 54.985813, -51.811657)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud6" type="Sprite3D" parent="World/Background" unique_id=1168979934]
+transform = Transform3D(-9.8970624e-08, -4.934493e-08, -2.53, -1.1288804, 2.264184, 0, 2.264184, 1.1288804, -1.1058981e-07, 64.38436, 39.061317, -36.95763)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud13" type="Sprite3D" parent="World/Background" unique_id=362453433]
+transform = Transform3D(-1.08408e-07, 2.1858886e-08, -2.53, 0.500073, 2.480086, 0, 2.480086, -0.500073, -1.1058981e-07, 64.38436, 11.611389, -11.814919)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud14" type="Sprite3D" parent="World/Background" unique_id=741477124]
+transform = Transform3D(-1.08408e-07, 2.1858886e-08, -2.53, 0.500073, 2.480086, 0, 2.480086, -0.500073, -1.1058981e-07, 64.38436, 10.805222, 26.74616)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud15" type="Sprite3D" parent="World/Background" unique_id=989073843]
+transform = Transform3D(-1.0701878e-07, -2.7876306e-08, -2.53, -0.63773555, 2.4483042, 0, 2.4483042, 0.63773555, -1.1058981e-07, 64.38436, 17.103775, -45.21671)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud16" type="Sprite3D" parent="World/Background" unique_id=1832016409]
+transform = Transform3D(-1.0701878e-07, -2.7876306e-08, -2.53, -0.63773555, 2.4483042, 0, 2.4483042, 0.63773555, -1.1058981e-07, 64.38436, 101.21025, -55.257168)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud17" type="Sprite3D" parent="World/Background" unique_id=1559421058]
+transform = Transform3D(-8.386589e-08, 2.4683073e-08, -2, 0.5646829, 1.918628, 0, 1.918628, -0.5646829, -8.742278e-08, 64.38436, 101.19985, -2.8940341)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud9" type="Sprite3D" parent="World/Background" unique_id=454192688]
+transform = Transform3D(-1.1058981e-07, 0, -2.53, 0, 2.53, 0, 2.53, 0, -1.1058981e-07, 64.38436, 61.038536, 25.704603)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud10" type="Sprite3D" parent="World/Background" unique_id=1193930469]
+transform = Transform3D(-1.1058981e-07, 0, -2.53, 0, 2.53, 0, 2.53, 0, -1.1058981e-07, 64.38436, 30.66507, 37.396465)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud11" type="Sprite3D" parent="World/Background" unique_id=1777832983]
+transform = Transform3D(-1.1058981e-07, 0, -2.53, 0, 2.53, 0, 2.53, 0, -1.1058981e-07, 64.38436, 97.004, 36.480766)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud12" type="Sprite3D" parent="World/Background" unique_id=1007386909]
+transform = Transform3D(-1.7498732e-07, -3.0854988e-08, -4.065, -0.70587987, 4.0032434, 0, 4.0032434, 0.70587987, -1.776868e-07, 64.38436, 82.66738, 29.589117)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud7" type="Sprite3D" parent="World/Background" unique_id=886628690]
+transform = Transform3D(-1.9014453e-07, 0, -4.35, 0, 4.35, 0, 4.35, 0, -1.9014453e-07, 64.38436, 33.64788, 80.47682)
+texture = ExtResource("10_dlugq")
+
+[node name="Cloud8" type="Sprite3D" parent="World/Background" unique_id=752057094]
+transform = Transform3D(-4.3429193e-07, -1.5379085e-07, -10.54, -3.5183244, 9.935441, 0, 9.935441, 3.5183244, -4.6071804e-07, 64.38436, 78.359604, -23.972902)
+texture = ExtResource("10_dlugq")
 
 [node name="Lights" type="Node3D" parent="World" unique_id=760864706]
 
