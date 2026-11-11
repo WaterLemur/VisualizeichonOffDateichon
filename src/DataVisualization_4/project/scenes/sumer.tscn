@@ -164,90 +164,119 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 0)
 
 [node name="Soldier2" parent="World/Resources/Soldiers" unique_id=1364708105 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 3.6240044)
+index = 1
 
 [node name="Soldier3" parent="World/Resources/Soldiers" unique_id=1142264920 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 7.4438725)
+index = 2
 
 [node name="Soldier4" parent="World/Resources/Soldiers" unique_id=1482912649 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 11.440155)
+index = 3
 
 [node name="Soldier5" parent="World/Resources/Soldiers" unique_id=1200240566 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449715, 0, 18.456593)
+index = 4
 
 [node name="Soldier6" parent="World/Resources/Soldiers" unique_id=1410673534 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 24.02708)
+index = 5
 
 [node name="Soldier7" parent="World/Resources/Soldiers" unique_id=603548234 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 28.090712)
+index = 6
 
 [node name="Soldier8" parent="World/Resources/Soldiers" unique_id=1689118525 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 34.850662)
+index = 7
 
 [node name="Soldier9" parent="World/Resources/Soldiers" unique_id=24240083 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 38.690304)
+index = 8
 
 [node name="Soldier10" parent="World/Resources/Soldiers" unique_id=862263558 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 42.963608)
+index = 9
 
 [node name="Soldier11" parent="World/Resources/Soldiers" unique_id=1136060132 instance=ExtResource("2_4x0l4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 55.216045)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449715, 0, 56.216045)
+index = 10
 
 [node name="Soldier12" parent="World/Resources/Soldiers" unique_id=1397761995 instance=ExtResource("2_4x0l4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 66.969376)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 66.423515)
+index = 11
 
 [node name="Soldier13" parent="World/Resources/Soldiers" unique_id=165532842 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 69.866806)
+index = 12
 
 [node name="Soldier14" parent="World/Resources/Soldiers" unique_id=1450506614 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15449905, 0, 73.6544)
+index = 13
 
 [node name="Soldier15" parent="World/Resources/Soldiers" unique_id=1393942597 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920837, 0, 5.1607704)
+index = 14
 
 [node name="Soldier16" parent="World/Resources/Soldiers" unique_id=1138527969 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920837, 0, 9.417591)
+index = 15
 
 [node name="Soldier17" parent="World/Resources/Soldiers" unique_id=1032531840 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920866, 0, 21.989048)
+index = 16
 
 [node name="Soldier18" parent="World/Resources/Soldiers" unique_id=473518378 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920837, 0, 28.213568)
+index = 17
 
 [node name="Soldier19" parent="World/Resources/Soldiers" unique_id=752657575 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.292083, 0, 19.288605)
+index = 18
 
 [node name="Soldier20" parent="World/Resources/Soldiers" unique_id=998935827 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920837, 0, 37.521263)
+index = 19
 
 [node name="Soldier21" parent="World/Resources/Soldiers" unique_id=790684308 instance=ExtResource("2_4x0l4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920837, 0, 41.51767)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2920847, 0, 57.51767)
+index = 20
 
 [node name="Soldier22" parent="World/Resources/Soldiers" unique_id=495404824 instance=ExtResource("2_4x0l4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920837, 0, 40.51767)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920837, 0, 41.51767)
+index = 21
 
 [node name="Soldier23" parent="World/Resources/Soldiers" unique_id=335053489 instance=ExtResource("2_4x0l4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920847, 0, 45.019238)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920866, 0, 45.51123)
+index = 22
 
 [node name="Soldier24" parent="World/Resources/Soldiers" unique_id=1572588547 instance=ExtResource("2_4x0l4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920837, 0, 54.05652)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920847, 0, 55.05652)
+index = 23
 
 [node name="Soldier25" parent="World/Resources/Soldiers" unique_id=1172806846 instance=ExtResource("2_4x0l4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920837, 0, 57.715714)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920837, 0, 59.715714)
+index = 24
 
 [node name="Soldier26" parent="World/Resources/Soldiers" unique_id=2102881304 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2920837, 0, 72.20631)
+index = 25
 
 [node name="Soldier27" parent="World/Resources/Soldiers" unique_id=890106935 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1204834, 0, -8.50378)
+index = 26
 
 [node name="Soldier28" parent="World/Resources/Soldiers" unique_id=1688112108 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1204863, 0, 24.11876)
+index = 27
 
 [node name="Soldier29" parent="World/Resources/Soldiers" unique_id=656496715 instance=ExtResource("2_4x0l4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1204834, 0, 39.666183)
+index = 28
 
 [node name="Soldier30" parent="World/Resources/Soldiers" unique_id=1511014432 instance=ExtResource("2_4x0l4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1204844, 0, 48.188267)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.120487, 0, 47.593246)
+index = 29
 
 [node name="BarleyPile" parent="World/Resources" unique_id=520369305 instance=ExtResource("6_jiyb2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.5838, 0, 31.866123)

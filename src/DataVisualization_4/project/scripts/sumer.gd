@@ -5,8 +5,6 @@ extends Node
 @onready var ui    = $UI as Control
 @onready var world = $World as Node3D
 
-var amount: int = 0
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

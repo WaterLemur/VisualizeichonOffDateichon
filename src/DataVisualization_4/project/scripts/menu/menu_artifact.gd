@@ -17,7 +17,7 @@ extends Control
 @export var right_start: float = right_min
 
 @export_group("3D Arrows")
-@export var arrow_script: ArtifactArrows
+@export var arrow_script: SumerArrows
 
 var dragging: Control = null
 
