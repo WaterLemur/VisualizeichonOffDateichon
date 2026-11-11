@@ -29,8 +29,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	label_cuneiform.text = _translate(counter)
-	label_arabic.text = str(counter)
+	pass
 
 func set_left(normalized: float) -> void:
 	rot_angle = lerp(0.0, max_angle_pi, normalized)
@@ -49,16 +48,18 @@ func _on_area_3d_area_entered(area: Area3D) -> void:
 		if arrow_left.rotation.y == 0 && arrow_right.rotation.y == 0: return
 		soldier.plus_1.visible = true
 		counter += 1
-		label_arabic.text = str(counter)
-		label_cuneiform.text = _translate(counter)
-
+		_update_labels()
+		
 func _on_area_3d_area_exited(area: Area3D) -> void:
 	var soldier := area.get_parent() as Soldier
 	if soldier:
 		soldier.plus_1.visible = false
 		counter -= 1
-		Persistent.label_cuneiform.text = _translate(counter)
-		Persistent.label_arabic.text = str(counter)
+		_update_labels()
+		
+func _update_labels() ->void:
+	Persistent.label_cuneiform.text = _translate(counter)
+	Persistent.label_arabic.text = str(counter)
 
 func _translate(arabic: int) -> String:
 	match arabic:

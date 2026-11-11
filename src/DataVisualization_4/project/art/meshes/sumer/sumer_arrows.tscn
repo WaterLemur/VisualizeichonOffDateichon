@@ -5,18 +5,6 @@
 [ext_resource type="Script" uid="uid://c0jxpyufkepca" path="res://project/scripts/menu/artifact_arrows.gd" id="2_5negp"]
 [ext_resource type="PackedScene" uid="uid://copavx6jiae3d" path="res://project/scenes/ui.tscn" id="3_spfu0"]
 [ext_resource type="Material" uid="uid://d1ou1ts1cmvgd" path="res://project/art/materials/mat_red_select.tres" id="4_5negp"]
-[ext_resource type="Texture2D" uid="uid://c5l3iglah7lq3" path="res://project/art/sprites/menu_artifact/artifact-menu-tablet.png" id="4_jhvgw"]
-[ext_resource type="FontFile" uid="uid://8qd7n2hmra5a" path="res://project/art/fonts/playbaill/Playball-Regular.ttf" id="5_7tbmh"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_m4ttg"]
-font = ExtResource("5_7tbmh")
-font_size = 52
-font_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_v2j4w"]
-font = ExtResource("5_7tbmh")
-font_size = 32
-font_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dib1j"]
 
@@ -61,45 +49,14 @@ size = Vector3(13, 1, 49)
 script = ExtResource("2_5negp")
 arrow_left = NodePath("arrow_light_2")
 arrow_right = NodePath("ArrowRight")
-label_cuneiform = NodePath("UI/Tablet/Cuneiform")
-label_arabic = NodePath("UI/Tablet/Arabic")
+label_cuneiform = NodePath("")
+label_arabic = NodePath("")
 pos_col_left = NodePath("arrow_light_2/PosCollision")
 pos_col_right = NodePath("ArrowRight/arrow_light_3_r/PosCollision")
 collision_left = NodePath("CollisionL")
 collision_right = NodePath("CollisionR")
 
 [node name="UI" parent="." index="0" unique_id=58018528 instance=ExtResource("3_spfu0")]
-
-[node name="Tablet" type="TextureRect" parent="UI" index="0" unique_id=1721123952]
-visible = false
-layout_mode = 0
-offset_left = 65.0
-offset_top = 1413.0
-offset_right = 1023.0
-offset_bottom = 1680.0
-mouse_filter = 2
-texture = ExtResource("4_jhvgw")
-
-[node name="Cuneiform" type="Label" parent="UI/Tablet" index="0" unique_id=403205269]
-layout_mode = 0
-offset_left = 342.0
-offset_top = 45.0
-offset_right = 602.0
-offset_bottom = 164.0
-text = "𒌋𒌋𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹𒁹"
-label_settings = SubResource("LabelSettings_m4ttg")
-clip_text = true
-
-[node name="Arabic" type="Label" parent="UI/Tablet" index="1" unique_id=53830043]
-layout_mode = 0
-offset_left = 553.0
-offset_top = 149.0
-offset_right = 598.0
-offset_bottom = 191.0
-text = "29"
-label_settings = SubResource("LabelSettings_v2j4w")
-horizontal_alignment = 2
-vertical_alignment = 2
 
 [node name="arrow_barley_pile" parent="." index="1" unique_id=1343619156]
 visible = false
