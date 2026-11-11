@@ -6,12 +6,23 @@
 [ext_resource type="FontFile" uid="uid://8qd7n2hmra5a" path="res://project/art/fonts/playbaill/Playball-Regular.ttf" id="4_xdtah"]
 [ext_resource type="FontFile" uid="uid://ohh3t6gft7es" path="res://project/art/fonts/NotoSansCuneiform-Regular.ttf" id="5_wj42e"]
 
+[sub_resource type="Gradient" id="Gradient_wj42e"]
+offsets = PackedFloat32Array(0, 0.255, 0.58, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.3764706, 0.28627452, 0.078431375, 1, 0.92156863, 0.78431374, 0.3764706, 1, 0.92, 0.92, 0.92, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_07rhc"]
+gradient = SubResource("Gradient_wj42e")
+width = 85
+height = 55
+fill_from = Vector2(0.202, 0.793)
+fill_to = Vector2(0.85, 0)
+
 [sub_resource type="LabelSettings" id="LabelSettings_6rj13"]
 font = ExtResource("4_xdtah")
 font_size = 158
 font_color = Color(0.92156863, 0.78431374, 0.3764706, 1)
-outline_size = 8
-outline_color = Color(0.542, 0.463, 0.244, 1)
+outline_size = 21
+outline_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_07rhc"]
 font = ExtResource("5_wj42e")
@@ -24,6 +35,15 @@ outline_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
 script = ExtResource("1_wapgf")
 
 [node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_hf4up")]
+
+[node name="TextureRect" type="TextureRect" parent="UI" unique_id=1841911077]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_07rhc")
 
 [node name="Title" type="Label" parent="UI" unique_id=1008142225]
 layout_mode = 1

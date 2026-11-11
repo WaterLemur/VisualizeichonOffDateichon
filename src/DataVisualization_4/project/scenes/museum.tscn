@@ -527,7 +527,7 @@ transform = Transform3D(0.9999989, 0, 0, 0, 0.9999989, 0, 4.6185278e-14, 0, 1, 0
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphPies" unique_id=761568993]
 
 [node name="PosGraphTendency" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=232674560]
-transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 7.1054274e-15, 0, 1, -1.461, -5.274, -10.153)
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 7.1054274e-15, 0, 1, -1.426, -5.274, -10.153)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphTendency" unique_id=813011352]
 transform = Transform3D(1.0000002, 0, -1.4210855e-14, 0, 1.0000002, 0, 0, 0, 1, 0.00011062622, 0.0018854141, 0.00018596649)
