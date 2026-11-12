@@ -24,6 +24,8 @@ func _on_button_museum_pressed() -> void:
 	ManagerScene.scene_unload(main_menu)
 	
 	Persistent.tutorial_menu.visible = true
+	Museum.ui.visible = true
+	Museum.nav_obj.visible = false
 
 func _on_button_options_pressed() -> void:
 	print("MainMenu: Button = Options")

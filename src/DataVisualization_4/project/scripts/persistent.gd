@@ -38,7 +38,7 @@ func set_scene_label(scene_name: String) -> void:
 
 func _on_btn_tuto_menu_pressed() -> void:
 	tutorial_menu.visible = false
-	Museum.ui.visible = true
+	Museum.nav_obj.visible = true
 
 
 func _on_btn_tuto_artifact_pressed() -> void:

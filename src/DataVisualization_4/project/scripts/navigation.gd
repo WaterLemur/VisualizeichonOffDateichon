@@ -170,7 +170,6 @@ func camera_transition(nav: Nav) -> void:
 			sumer.show(false)
 				
 			if nav == Nav.LEFT:
-				ui.visible = false
 				Persistent.tablet.visible = false
 				
 				state_rack = State_Rack.ARTIFACT
