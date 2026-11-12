@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c5l3iglah7lq3" path="res://project/art/sprites/menu_artifact/artifact-menu-tablet.png" id="8_cvp18"]
 [ext_resource type="FontFile" uid="uid://8qd7n2hmra5a" path="res://project/art/fonts/playbaill/Playball-Regular.ttf" id="9_2i0o2"]
 [ext_resource type="FontFile" uid="uid://ohh3t6gft7es" path="res://project/art/fonts/NotoSansCuneiform-Regular.ttf" id="9_cxrsq"]
+[ext_resource type="Texture2D" uid="uid://bjrtutod1u7pc" path="res://project/art/sprites/tutorial/tutorial-arrow.png" id="11_cxrsq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cxrsq"]
 font = ExtResource("9_cxrsq")
@@ -21,11 +22,19 @@ font = ExtResource("9_2i0o2")
 font_size = 32
 font_color = Color(0.3764706, 0.28627452, 0.078431375, 1)
 
-[node name="Persistent" type="Node" unique_id=1682141015 node_paths=PackedStringArray("label_cuneiform", "label_arabic", "tablet")]
+[sub_resource type="LabelSettings" id="LabelSettings_07rhc"]
+font = ExtResource("9_2i0o2")
+font_size = 56
+font_color = Color(0, 0, 0, 1)
+
+[node name="Persistent" type="Node" unique_id=1682141015 node_paths=PackedStringArray("label_cuneiform", "label_arabic", "tablet", "tutorial_menu", "tutorial_artifact", "tutorial_navigation")]
 script = ExtResource("1_tq1j0")
 label_cuneiform = NodePath("UI/Tablet/Cuneiform")
 label_arabic = NodePath("UI/Tablet/Arabic")
 tablet = NodePath("UI/Tablet")
+tutorial_menu = NodePath("UI/Tutorials/Menu")
+tutorial_artifact = NodePath("UI/Tutorials/Artifact")
+tutorial_navigation = NodePath("UI/Tutorials/Navegation")
 
 [node name="Managers" type="Node" parent="." unique_id=413182891]
 
@@ -131,5 +140,225 @@ label_settings = SubResource("LabelSettings_hefbg")
 horizontal_alignment = 2
 vertical_alignment = 2
 
+[node name="Tutorials" type="Control" parent="UI" unique_id=1628283203]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Menu" type="Control" parent="UI/Tutorials" unique_id=1822716631]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Background" type="ColorRect" parent="UI/Tutorials/Menu" unique_id=995020635]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.7, 0.4849833, 0.02099998, 0.81960785)
+
+[node name="TextureRect" type="TextureRect" parent="UI/Tutorials/Menu" unique_id=221390087]
+modulate = Color(1, 0, 0, 1)
+z_index = 10
+layout_mode = 0
+offset_left = 373.0
+offset_top = 481.0
+offset_right = 558.0
+offset_bottom = 598.0
+texture = ExtResource("11_cxrsq")
+
+[node name="TextureRect2" type="TextureRect" parent="UI/Tutorials/Menu" unique_id=1983171674]
+modulate = Color(1, 0, 0, 1)
+z_index = 10
+layout_mode = 0
+offset_left = 351.0
+offset_top = 830.0
+offset_right = 536.0
+offset_bottom = 947.0
+texture = ExtResource("11_cxrsq")
+
+[node name="TextureRect3" type="TextureRect" parent="UI/Tutorials/Menu" unique_id=135632754]
+modulate = Color(1, 0, 0, 1)
+z_index = 10
+layout_mode = 0
+offset_left = 348.0
+offset_top = 79.0
+offset_right = 533.0
+offset_bottom = 196.0
+texture = ExtResource("11_cxrsq")
+
+[node name="TextureRect4" type="TextureRect" parent="UI/Tutorials/Menu" unique_id=2045305905]
+modulate = Color(1, 0, 0, 1)
+z_index = 10
+layout_mode = 0
+offset_left = 191.0
+offset_top = 314.0
+offset_right = 376.0
+offset_bottom = 431.0
+texture = ExtResource("11_cxrsq")
+
+[node name="Label" type="Label" parent="UI/Tutorials/Menu" unique_id=780737092]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 474.0
+offset_right = 1225.0
+offset_bottom = 545.0
+text = "Activa/Desactiva las ciudades"
+label_settings = SubResource("LabelSettings_07rhc")
+
+[node name="Label2" type="Label" parent="UI/Tutorials/Menu" unique_id=1581525105]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 820.0
+offset_right = 1205.0
+offset_bottom = 891.0
+text = "Activa/Desactiva los recursos"
+label_settings = SubResource("LabelSettings_07rhc")
+
+[node name="Label3" type="Label" parent="UI/Tutorials/Menu" unique_id=645447846]
+layout_mode = 0
+offset_left = 571.0
+offset_top = 76.0
+offset_right = 1195.0
+offset_bottom = 147.0
+text = "Ayuda/Repetir tutorial"
+label_settings = SubResource("LabelSettings_07rhc")
+
+[node name="Label4" type="Label" parent="UI/Tutorials/Menu" unique_id=770973441]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 302.0
+offset_right = 1041.0
+offset_bottom = 373.0
+text = "Línea de tiempo"
+label_settings = SubResource("LabelSettings_07rhc")
+
+[node name="BtnContinue" type="Button" parent="UI/Tutorials/Menu" unique_id=1060820971]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 0
+offset_left = 1340.0
+offset_top = 737.0
+offset_right = 1867.0
+offset_bottom = 962.0
+size_flags_vertical = 3
+offset_transform_position = Vector2(0, -0.785)
+theme = ExtResource("3_gncwf")
+theme_override_font_sizes/font_size = 117
+text = "Continue"
+
+[node name="Artifact" type="Control" parent="UI/Tutorials" unique_id=554368198]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/Tutorials/Artifact" unique_id=347303641]
+modulate = Color(1, 0, 0, 1)
+z_index = 10
+layout_mode = 0
+offset_left = 373.0
+offset_top = 481.0
+offset_right = 558.0
+offset_bottom = 598.0
+texture = ExtResource("11_cxrsq")
+
+[node name="Label" type="Label" parent="UI/Tutorials/Artifact" unique_id=1200409179]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 474.0
+offset_right = 1225.0
+offset_bottom = 545.0
+text = "Activa/Desactiva las ciudades"
+label_settings = SubResource("LabelSettings_07rhc")
+
+[node name="Background" type="ColorRect" parent="UI/Tutorials/Artifact" unique_id=1629228021]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.7, 0.4849833, 0.02099998, 0.81960785)
+
+[node name="BtnContinue" type="Button" parent="UI/Tutorials/Artifact" unique_id=1754155683]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 0
+offset_left = 1340.0
+offset_top = 737.0
+offset_right = 1867.0
+offset_bottom = 962.0
+size_flags_vertical = 3
+offset_transform_position = Vector2(0, -0.785)
+theme = ExtResource("3_gncwf")
+theme_override_font_sizes/font_size = 117
+text = "Continue"
+
+[node name="Navegation" type="Control" parent="UI/Tutorials" unique_id=758810577]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Background" type="ColorRect" parent="UI/Tutorials/Navegation" unique_id=515667853]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.7, 0.4849833, 0.02099998, 0.81960785)
+
+[node name="TextureRect" type="TextureRect" parent="UI/Tutorials/Navegation" unique_id=380928171]
+modulate = Color(1, 0, 0, 1)
+z_index = 10
+layout_mode = 0
+offset_left = 373.0
+offset_top = 481.0
+offset_right = 558.0
+offset_bottom = 598.0
+texture = ExtResource("11_cxrsq")
+
+[node name="Label" type="Label" parent="UI/Tutorials/Navegation" unique_id=558466891]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 474.0
+offset_right = 1225.0
+offset_bottom = 545.0
+text = "Activa/Desactiva las ciudades"
+label_settings = SubResource("LabelSettings_07rhc")
+
+[node name="BtnContinue" type="Button" parent="UI/Tutorials/Navegation" unique_id=1764747699]
+custom_minimum_size = Vector2(0, 125)
+layout_mode = 0
+offset_left = 1340.0
+offset_top = 737.0
+offset_right = 1867.0
+offset_bottom = 962.0
+size_flags_vertical = 3
+offset_transform_position = Vector2(0, -0.785)
+theme = ExtResource("3_gncwf")
+theme_override_font_sizes/font_size = 117
+text = "Continue"
+
 [connection signal="finished" from="Managers/ManagerAudio/MusicHymn" to="Managers/ManagerAudio" method="_on_music_hymn_finished"]
 [connection signal="finished" from="Managers/ManagerAudio/MusicGilgamesh" to="Managers/ManagerAudio" method="_on_music_gilgamesh_finished"]
+[connection signal="pressed" from="UI/Tutorials/Menu/BtnContinue" to="." method="_on_btn_tuto_menu_pressed"]

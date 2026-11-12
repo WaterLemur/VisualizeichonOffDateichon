@@ -158,6 +158,11 @@ func camera_transition(nav: Nav) -> void:
 				Persistent.set_scene_label("Artefacto - Funcionamiento")
 				Persistent.tablet.visible = true
 				set_camera_pos(pos_artifact_prev)
+				
+				if Persistent.first_time_tuto_artifact: 
+					Persistent.first_time_tuto_artifact = false
+					Persistent.tutorial_artifact.visible = true
+					ui.visible = false
 				return
 		State_Rack.ARTIFACT_PREVIEW:
 			museum.visible = true
@@ -189,6 +194,11 @@ func camera_transition(nav: Nav) -> void:
 				state_rack = State_Rack.ARTIFACT_PREVIEW
 				Persistent.set_scene_label("Artefacto - Funcionamiento")
 				set_camera_pos(pos_artifact_prev)
+				
+				if Persistent.first_time_tuto_artifact: 
+					Persistent.first_time_tuto_artifact = false
+					Persistent.tutorial_artifact.visible = true
+					ui.visible = false
 				return
 			if nav == Nav.RIGHT:
 				state_rack = State_Rack.DIAG_1
