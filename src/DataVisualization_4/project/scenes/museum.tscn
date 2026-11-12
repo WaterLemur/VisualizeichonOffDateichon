@@ -1114,6 +1114,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.48751736)
 
 [node name="Beginning" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=1879219627]
 transform = Transform3D(0.41214386, -0.04860488, -1.2484547e-10, 0.04860488, 0.41214386, 2.1245867e-09, -1.2484574e-10, -2.1245867e-09, 0.415, -0.160923, 12.4393425, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "La Antigua Sumeria era un lugar fascinante donde comenzó la civilización humana, 
 wpero sólo recientemente hemos tenido la suerte de descubrir su existencia. 
 Un grupo de arqueólogos encontró unas ruinas, en lo que es hoy en día Irak. 
@@ -1126,6 +1128,8 @@ outline_size = 5
 
 [node name="Beginning2" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=2106144921]
 transform = Transform3D(0.31779766, -0.03747846, -9.626639e-11, 0.03747846, 0.31779766, 1.6382355e-09, -9.62666e-11, -1.6382355e-09, 0.32, 1.0153961, 12.102977, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "En la región como la Creciente Fértil, 
 pequeños asentamientos se fueron convirtiéndose en ciudades que no sólo 
 brindaban protección sino que permitían construir y generar cultura. 
@@ -1139,6 +1143,8 @@ outline_size = 5
 
 [node name="Middle" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=429238187]
 transform = Transform3D(0.66743225, -0.058601964, -1.1224057e-10, 0.058601964, 0.66743225, 2.5615732e-09, -1.1223916e-10, -2.5615734e-09, 0.67, -0.89899445, 10.336073, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Uruk fue la primera ciudad, 
 brindando protección frente a los Gutianos 
 (tribus caníbales y bandidos).
@@ -1149,6 +1155,8 @@ outline_size = 5
 
 [node name="Middle2" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=1442673590]
 transform = Transform3D(0.41351762, -0.15034352, -1.1575843e-09, 0.15034352, 0.41351762, 6.571724e-09, -1.1575843e-09, -6.571724e-09, 0.44, 0.42033768, 9.9116535, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Ur, al estar conectada al río Éufrates su puerto brindaba grandes 
 riquezas, le permitía conectarse de manera fácil y rápida con distintas regiones 
 de la Creciente Fértil.
@@ -1159,6 +1167,8 @@ outline_size = 5
 
 [node name="Middle6" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=431337704]
 transform = Transform3D(0.5294679, 0.07673865, -2.4181918e-10, -0.07673865, 0.5294679, -3.3543528e-09, -2.418187e-10, 3.3543528e-09, 0.535, -1.343914, 9.627903, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Kish fue la primera 
 ciudad en tener un 
 rey, mostrando hegemonía 
@@ -1171,6 +1181,8 @@ outline_size = 5
 
 [node name="Middle4" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=906777742]
 transform = Transform3D(0.34098223, 0.09877304, -6.1273653e-10, -0.09877304, 0.34098223, -4.317506e-09, -6.1273475e-10, 4.317506e-09, 0.355, 1.6709824, 9.863196, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Lagash, la primera potencia militar que 
 tuvo el primer conflicto registrado de la
  historia contra Umma, Aunque no fue una 
@@ -1183,6 +1195,8 @@ outline_size = 5
 
 [node name="Middle5" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=1325874142]
 transform = Transform3D(0.3642013, 0.024133291, -3.4914058e-11, -0.024133291, 0.3642013, -1.0548996e-09, -3.4910835e-11, 1.0548997e-09, 0.365, 1.1234055, 9.435285, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Akkad no pertenecía a la Antigua Sumeria. Era una ciudad 
 completamente diferente, con otra cultura e incluso idioma 
 y sin escritura. Al estar tan alejado no disfruta de las comodidades 
@@ -1194,6 +1208,8 @@ outline_size = 5
 
 [node name="End" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=436673852]
 transform = Transform3D(0.3944267, -0.021273535, -2.505868e-11, 0.021273535, 0.3944267, 9.2989566e-10, -2.5059123e-11, -9.298956e-10, 0.395, -1.2209282, 7.329685, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Algunas de las tabletas cuentan
  la historia de Uanna, desde joven
  aprendió a escribir y tuvo gran 
@@ -1216,6 +1232,8 @@ outline_size = 5
 
 [node name="End2" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=537932826]
 transform = Transform3D(0.3636094, 0.03183099, -6.0785155e-11, -0.03183099, 0.3636094, -1.3913766e-09, -6.0785155e-11, 1.3913767e-09, 0.36499998, 0.21556091, 7.410394, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Uanna nació en la ciudad de Uruk, en el año 2,500 a.C. 
 Su padre, Engar-dug, era granjero. Su madre, Ushar, 
 trabajaba fabricando y esculpiendo vasijas de arcilla.
@@ -1237,6 +1255,8 @@ outline_size = 5
 
 [node name="End3" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=1032851752]
 transform = Transform3D(0.30838412, 0.11747019, -9.448611e-10, -0.11747019, 0.30838412, -5.1347855e-09, -9.448611e-10, 5.1347855e-09, 0.33, 1.6165314, 7.2081685, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "Al norte de la región, muy 
 distante y no considerado 
 como parte de la antigua 
@@ -1263,6 +1283,8 @@ outline_size = 5
 
 [node name="PlotTwist1" type="Label3D" parent="World/Meshes/Racks/RackHistory/Text" unique_id=144162357]
 transform = Transform3D(0.415, 0, 0, 0, 0.415, 0, 0, 0, 0.415, -0.00850296, 3.4429884, 0.24104118)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
 text = "En el año 2,487 a.C., Sargón de Akkad planeaba conquistar toda Sumeria  Le hace plegarias, tributos y 
 sacrificios sin precedentes a Ishtar, la diosa de Akkad y reúne un gran ejército para iniciar su ofensiva.
 
