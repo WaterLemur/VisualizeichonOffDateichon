@@ -150,6 +150,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="Menu" type="Control" parent="UI/Tutorials" unique_id=1822716631]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -255,7 +256,7 @@ size_flags_vertical = 3
 offset_transform_position = Vector2(0, -0.785)
 theme = ExtResource("3_gncwf")
 theme_override_font_sizes/font_size = 117
-text = "Continue"
+text = "Continuar"
 
 [node name="Artifact" type="Control" parent="UI/Tutorials" unique_id=554368198]
 layout_mode = 1
@@ -266,25 +267,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="UI/Tutorials/Artifact" unique_id=347303641]
-modulate = Color(1, 0, 0, 1)
-z_index = 10
-layout_mode = 0
-offset_left = 373.0
-offset_top = 481.0
-offset_right = 558.0
-offset_bottom = 598.0
-texture = ExtResource("11_cxrsq")
-
-[node name="Label" type="Label" parent="UI/Tutorials/Artifact" unique_id=1200409179]
-layout_mode = 0
-offset_left = 593.0
-offset_top = 474.0
-offset_right = 1225.0
-offset_bottom = 545.0
-text = "Activa/Desactiva las ciudades"
-label_settings = SubResource("LabelSettings_07rhc")
-
 [node name="Background" type="ColorRect" parent="UI/Tutorials/Artifact" unique_id=1629228021]
 layout_mode = 1
 anchors_preset = 15
@@ -292,10 +274,40 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 color = Color(0.7, 0.4849833, 0.02099998, 0.81960785)
 
+[node name="TextureRect" type="TextureRect" parent="UI/Tutorials/Artifact" unique_id=347303641]
+modulate = Color(1, 0, 0, 1)
+z_index = 10
+layout_mode = 0
+offset_left = 1031.0
+offset_top = 775.0
+offset_right = 1216.0
+offset_bottom = 892.0
+texture = ExtResource("11_cxrsq")
+
+[node name="TextureRect2" type="TextureRect" parent="UI/Tutorials/Artifact" unique_id=1327025978]
+modulate = Color(1, 0, 0, 1)
+z_index = 10
+layout_mode = 0
+offset_left = 916.0
+offset_top = 774.0
+offset_right = 1101.0
+offset_bottom = 891.0
+scale = Vector2(-1, 1)
+texture = ExtResource("11_cxrsq")
+
+[node name="Label" type="Label" parent="UI/Tutorials/Artifact" unique_id=1200409179]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 618.0
+offset_right = 1504.0
+offset_bottom = 689.0
+text = "Mueve las ventanas para cambiar su rango de efecto"
+label_settings = SubResource("LabelSettings_07rhc")
+
 [node name="BtnContinue" type="Button" parent="UI/Tutorials/Artifact" unique_id=1754155683]
+z_index = 15
 custom_minimum_size = Vector2(0, 125)
 layout_mode = 0
 offset_left = 1340.0
@@ -306,9 +318,10 @@ size_flags_vertical = 3
 offset_transform_position = Vector2(0, -0.785)
 theme = ExtResource("3_gncwf")
 theme_override_font_sizes/font_size = 117
-text = "Continue"
+text = "Continuar"
 
 [node name="Navegation" type="Control" parent="UI/Tutorials" unique_id=758810577]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -357,8 +370,9 @@ size_flags_vertical = 3
 offset_transform_position = Vector2(0, -0.785)
 theme = ExtResource("3_gncwf")
 theme_override_font_sizes/font_size = 117
-text = "Continue"
+text = "Continuar"
 
 [connection signal="finished" from="Managers/ManagerAudio/MusicHymn" to="Managers/ManagerAudio" method="_on_music_hymn_finished"]
 [connection signal="finished" from="Managers/ManagerAudio/MusicGilgamesh" to="Managers/ManagerAudio" method="_on_music_gilgamesh_finished"]
 [connection signal="pressed" from="UI/Tutorials/Menu/BtnContinue" to="." method="_on_btn_tuto_menu_pressed"]
+[connection signal="pressed" from="UI/Tutorials/Artifact/BtnContinue" to="." method="_on_btn_tuto_artifact_pressed"]

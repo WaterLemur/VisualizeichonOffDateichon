@@ -5,6 +5,7 @@ extends Node
 @onready var ui   = $UI           as Control
 @onready var menu = $Scripts/Menu as Node
 @onready var nav  = $Scripts/Navigation
+@export var nav_obj: Control
 
 var main_menu: String = "res://project/scenes/main_menu.tscn"
 

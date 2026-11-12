@@ -14,7 +14,8 @@ extends Node
 @export var tutorial_menu:       Control
 @export var tutorial_artifact:   Control
 @export var tutorial_navigation: Control
-var first_time_tuto_artifact = true
+var first_time_tuto_artifact: bool = true
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -38,3 +39,9 @@ func set_scene_label(scene_name: String) -> void:
 func _on_btn_tuto_menu_pressed() -> void:
 	tutorial_menu.visible = false
 	Museum.ui.visible = true
+
+
+func _on_btn_tuto_artifact_pressed() -> void:
+	tutorial_artifact.visible = false
+	Museum.ui.visible = true
+	Museum.nav_obj.visible = true

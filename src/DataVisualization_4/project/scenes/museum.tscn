@@ -73,8 +73,9 @@ viewport_path = NodePath("World/Sprites/Graphs/Pie/SVPie")
 [sub_resource type="ViewportTexture" id="ViewportTexture_u6vr8"]
 viewport_path = NodePath("World/Sprites/Graphs/Tendency/SVTendency")
 
-[node name="Museum" type="Node" unique_id=2077953294]
+[node name="Museum" type="Node" unique_id=2077953294 node_paths=PackedStringArray("nav_obj")]
 script = ExtResource("1_beg0u")
+nav_obj = NodePath("UI/Navigation")
 
 [node name="Scripts" type="Node" parent="." unique_id=2126725658]
 

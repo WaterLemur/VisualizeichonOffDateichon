@@ -162,7 +162,7 @@ func camera_transition(nav: Nav) -> void:
 				if Persistent.first_time_tuto_artifact: 
 					Persistent.first_time_tuto_artifact = false
 					Persistent.tutorial_artifact.visible = true
-					ui.visible = false
+					Museum.nav_obj.visible = false
 				return
 		State_Rack.ARTIFACT_PREVIEW:
 			museum.visible = true
@@ -198,7 +198,7 @@ func camera_transition(nav: Nav) -> void:
 				if Persistent.first_time_tuto_artifact: 
 					Persistent.first_time_tuto_artifact = false
 					Persistent.tutorial_artifact.visible = true
-					ui.visible = false
+					Museum.nav_obj.visible = false
 				return
 			if nav == Nav.RIGHT:
 				state_rack = State_Rack.DIAG_1
