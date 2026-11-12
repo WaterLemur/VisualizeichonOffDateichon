@@ -8,7 +8,10 @@ enum State_Rack    { DATA_BASES, MAP, BARS, PIE, TENDENCY,
 					 STORY_0, 
 					 STORY_1, STORY_2, STORY_3, 
 					 STORY_4, STORY_5, STORY_6, 
-					 STORY_7, STORY_8, STORY_9 }
+					 STORY_7, STORY_8, STORY_9,
+					
+					 DIAG_0, DIAG_1, DIAG_2, 
+					 DIAG_3, DIAG_4, DIAG_5 }
 
 var cam_index = 0 as int
 var cam_target: Transform3D
@@ -17,7 +20,7 @@ var cam_snap_time: float = 0.33
 var cam_elapsed: float = 0.0
 var cam_start: Transform3D
 
-var state_rack:     State_Rack     = State_Rack.DATA_BASES
+var state_rack:     State_Rack     = State_Rack.MAP
 
 @onready var camera  = $"../../World/CameraRig/MainCamera" as Camera3D
 @onready var museum  = $"../../World"                      as Node3D
@@ -52,6 +55,14 @@ var state_rack:     State_Rack     = State_Rack.DATA_BASES
 @onready var pos_story_7        = $"../../World/CameraRig/PosRackA/PosHistory7"      as Node3D
 @onready var pos_story_8        = $"../../World/CameraRig/PosRackA/PosHistory8"      as Node3D
 @onready var pos_story_9        = $"../../World/CameraRig/PosRackA/PosHistory9"      as Node3D
+
+@export_category("DIAGRAMS")
+@export var pos_diag_0: Node3D
+@export var pos_diag_1: Node3D
+@export var pos_diag_2: Node3D
+@export var pos_diag_3: Node3D
+@export var pos_diag_4: Node3D
+@export var pos_diag_5: Node3D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -165,11 +176,11 @@ func camera_transition(nav: Nav) -> void:
 				ui.visible = false
 				Persistent.tablet.visible = false
 				
-				state_rack = State_Rack.STORY_0
-				Persistent.set_scene_label("Historia")
-				set_camera_pos(pos_story_0)
+				state_rack = State_Rack.DIAG_0
+				Persistent.set_scene_label("Diagramas")
+				set_camera_pos(pos_diag_0)
 				return
-		State_Rack.STORY_0:
+		State_Rack.DIAG_0:
 			if nav == Nav.LEFT:
 				museum.visible = false
 				ui.visible = false
@@ -178,6 +189,76 @@ func camera_transition(nav: Nav) -> void:
 				state_rack = State_Rack.ARTIFACT_PREVIEW
 				Persistent.set_scene_label("Artefacto - Funcionamiento")
 				set_camera_pos(pos_artifact_prev)
+				return
+			if nav == Nav.RIGHT:
+				state_rack = State_Rack.DIAG_1
+				Persistent.set_scene_label("Diagrama - 1")
+				set_camera_pos(pos_diag_1)
+				return
+		State_Rack.DIAG_1:
+			if nav == Nav.LEFT:
+				state_rack = State_Rack.DIAG_0
+				Persistent.set_scene_label("Diagramas")
+				set_camera_pos(pos_diag_0)
+				return
+			if nav == Nav.RIGHT:
+				state_rack = State_Rack.DIAG_2
+				Persistent.set_scene_label("Diagrama - 2")
+				set_camera_pos(pos_diag_2)
+				return
+				
+		State_Rack.DIAG_2:
+			if nav == Nav.LEFT:
+				state_rack = State_Rack.DIAG_1
+				Persistent.set_scene_label("Diagrama - 1")
+				set_camera_pos(pos_diag_1)
+				return
+			if nav == Nav.RIGHT:
+				state_rack = State_Rack.DIAG_3
+				Persistent.set_scene_label("Diagrama - 3")
+				set_camera_pos(pos_diag_3)
+				return
+		State_Rack.DIAG_3:
+			if nav == Nav.LEFT:
+				state_rack = State_Rack.DIAG_2
+				Persistent.set_scene_label("Diagrama - 2")
+				set_camera_pos(pos_diag_2)
+				return
+			if nav == Nav.RIGHT:
+				state_rack = State_Rack.DIAG_4
+				Persistent.set_scene_label("Diagrama - 4")
+				set_camera_pos(pos_diag_4)
+				return
+				
+		State_Rack.DIAG_4:
+			if nav == Nav.LEFT:
+				state_rack = State_Rack.DIAG_3
+				Persistent.set_scene_label("Diagrama - 3")
+				set_camera_pos(pos_diag_3)
+				return
+			if nav == Nav.RIGHT:
+				state_rack = State_Rack.DIAG_5
+				Persistent.set_scene_label("Diagrama - 5")
+				set_camera_pos(pos_diag_5)
+				return
+				
+		State_Rack.DIAG_5:
+			if nav == Nav.LEFT:
+				state_rack = State_Rack.DIAG_4
+				Persistent.set_scene_label("Diagrama - 4")
+				set_camera_pos(pos_diag_4)
+				return
+			if nav == Nav.RIGHT:
+				state_rack = State_Rack.STORY_0
+				Persistent.set_scene_label("Story")
+				set_camera_pos(pos_story_0)
+				return
+			
+		State_Rack.STORY_0:
+			if nav == Nav.LEFT:
+				state_rack = State_Rack.DIAG_5
+				Persistent.set_scene_label("Diagrama - 5")
+				set_camera_pos(pos_diag_5)
 				return
 			if nav == Nav.RIGHT:
 				state_rack = State_Rack.STORY_1
@@ -283,6 +364,7 @@ func camera_transition(nav: Nav) -> void:
 				Persistent.set_scene_label("Base de datos")
 				set_camera_pos(pos_db)
 				return
+				
 
 
 func set_camera_pos(new_target: Node3D) -> void:

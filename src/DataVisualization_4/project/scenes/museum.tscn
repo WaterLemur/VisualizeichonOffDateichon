@@ -46,8 +46,13 @@
 [ext_resource type="PackedScene" uid="uid://lot84ohkitwv" path="res://project/art/meshes/rack_a/rack_a_m.tscn" id="31_qhkwt"]
 [ext_resource type="PackedScene" uid="uid://brcaf5lrvrhg" path="res://project/art/meshes/calculating_machine/calculating_machine_m.tscn" id="38_kfoow"]
 [ext_resource type="PackedScene" uid="uid://0tdw2khukdda" path="res://project/scenes/meshes/museum_2.tscn" id="39_lmagj"]
-[ext_resource type="PackedScene" uid="uid://cqxojkhkh47tc" path="res://project/art/meshes/calculating_machine/cmachine.tscn" id="46_i7if8"]
+[ext_resource type="Texture2D" uid="uid://csaduvrr21bcd" path="res://project/art/sprites/diagrams/Akkads conquest.PNG" id="42_garkd"]
+[ext_resource type="Texture2D" uid="uid://b5sb68jlc6sm6" path="res://project/art/sprites/diagrams/Cities.PNG" id="43_oeedo"]
+[ext_resource type="Texture2D" uid="uid://ddfblwiqic5t2" path="res://project/art/sprites/diagrams/el viaje de uanna.PNG" id="44_oeedo"]
+[ext_resource type="Texture2D" uid="uid://nyg1dspvypxl" path="res://project/art/sprites/diagrams/Family.PNG" id="45_0q0o7"]
 [ext_resource type="PackedScene" uid="uid://bp5hefhfg5evq" path="res://project/scenes/sumer.tscn" id="46_lmagj"]
+[ext_resource type="Texture2D" uid="uid://c7hwooj18n5ye" path="res://project/art/sprites/diagrams/Resources.PNG" id="46_tnd1f"]
+[ext_resource type="Texture2D" uid="uid://xy6rg76y0f46" path="res://project/art/sprites/diagrams/Timeline.PNG" id="47_tnd1f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xbnxe"]
 font = ExtResource("9_6rj13")
@@ -98,8 +103,14 @@ script = ExtResource("3_xg8yu")
 [node name="Timeline" type="Node" parent="Scripts/Menu" unique_id=254018081]
 script = ExtResource("4_rp2ow")
 
-[node name="Navigation" type="Node" parent="Scripts" unique_id=1364097148]
+[node name="Navigation" type="Node" parent="Scripts" unique_id=1364097148 node_paths=PackedStringArray("pos_diag_0", "pos_diag_1", "pos_diag_2", "pos_diag_3", "pos_diag_4", "pos_diag_5")]
 script = ExtResource("2_t28hp")
+pos_diag_0 = NodePath("../../World/Meshes/Racks/RackDiagrams/PosDiagrams")
+pos_diag_1 = NodePath("../../World/Meshes/Racks/RackDiagrams/PosDiagrams/PosDiagrams2")
+pos_diag_2 = NodePath("../../World/Meshes/Racks/RackDiagrams/PosDiagrams/PosDiagrams3")
+pos_diag_3 = NodePath("../../World/Meshes/Racks/RackDiagrams/PosDiagrams/PosDiagrams4")
+pos_diag_4 = NodePath("../../World/Meshes/Racks/RackDiagrams/PosDiagrams/PosDiagrams5")
+pos_diag_5 = NodePath("../../World/Meshes/Racks/RackDiagrams/PosDiagrams/PosDiagrams6")
 
 [node name="UI" parent="." unique_id=58018528 instance=ExtResource("2_wiwei")]
 
@@ -1305,6 +1316,89 @@ font = ExtResource("10_x6ptw")
 font_size = 34
 outline_size = 5
 
+[node name="RackDiagrams" parent="World/Meshes/Racks" unique_id=260405982 instance=ExtResource("6_hv6mn")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12.488, 0, 9)
+
+[node name="rack_b" parent="World/Meshes/Racks/RackDiagrams" unique_id=1263121391 instance=ExtResource("7_hv6mn")]
+
+[node name="PosDiagrams" type="Node3D" parent="World/Meshes/Racks/RackDiagrams" unique_id=1002903594]
+transform = Transform3D(0.115, 0, 0, 0, 0.115, 0, 0, 0, 0.115, -0.048, 3.613, 3.476)
+
+[node name="ViewCamera" type="Camera3D" parent="World/Meshes/Racks/RackDiagrams/PosDiagrams" unique_id=758558386]
+
+[node name="PosDiagrams2" type="Node3D" parent="World/Meshes/Racks/RackDiagrams/PosDiagrams" unique_id=1798875293]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, -5.975, 8.835, -14.785)
+
+[node name="ViewCamera" type="Camera3D" parent="World/Meshes/Racks/RackDiagrams/PosDiagrams/PosDiagrams2" unique_id=984961405]
+
+[node name="PosDiagrams3" type="Node3D" parent="World/Meshes/Racks/RackDiagrams/PosDiagrams" unique_id=1707884025]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, 6.87, 10.28, -14.785)
+
+[node name="ViewCamera" type="Camera3D" parent="World/Meshes/Racks/RackDiagrams/PosDiagrams/PosDiagrams3" unique_id=1422962501]
+
+[node name="PosDiagrams4" type="Node3D" parent="World/Meshes/Racks/RackDiagrams/PosDiagrams" unique_id=975388810]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, 4.335, 0.77, -16.55)
+
+[node name="ViewCamera" type="Camera3D" parent="World/Meshes/Racks/RackDiagrams/PosDiagrams/PosDiagrams4" unique_id=31093842]
+
+[node name="PosDiagrams5" type="Node3D" parent="World/Meshes/Racks/RackDiagrams/PosDiagrams" unique_id=1201646008]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, -10.27, -4.71, -17.045)
+
+[node name="ViewCamera" type="Camera3D" parent="World/Meshes/Racks/RackDiagrams/PosDiagrams/PosDiagrams5" unique_id=733439481]
+
+[node name="PosDiagrams6" type="Node3D" parent="World/Meshes/Racks/RackDiagrams/PosDiagrams" unique_id=235841583]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, 5.225, -12.475, -9.48)
+
+[node name="ViewCamera" type="Camera3D" parent="World/Meshes/Racks/RackDiagrams/PosDiagrams/PosDiagrams6" unique_id=365928181]
+
+[node name="Diagrams" type="Node3D" parent="World/Meshes/Racks/RackDiagrams" unique_id=1150087306]
+transform = Transform3D(0.115, 0, 0, 0, 0.115, 0, 0, 0, 0.115, -0.77848434, 3.1021242, 0.7068825)
+
+[node name="L3DDiagrams" type="Label3D" parent="World/Meshes/Racks/RackDiagrams/Diagrams" unique_id=574210675]
+transform = Transform3D(6.965, 0, 0, 0, 6.965, 0, 0, 0, 6.965, 8.825867, 2.9843407, -0.22148132)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+outline_modulate = Color(0.92156863, 0.78431374, 0.3764706, 1)
+text = "Diagramas"
+font = ExtResource("10_x6ptw")
+font_size = 116
+outline_size = 5
+
+[node name="AkkadsConquest" type="Sprite3D" parent="World/Meshes/Racks/RackDiagrams/Diagrams" unique_id=823204879]
+transform = Transform3D(1.155, 0, -7.1054274e-15, 0, 1.155, 0, 7.1054274e-15, 0, 1.155, 2.5685425, 12.341879, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+texture = ExtResource("42_garkd")
+
+[node name="Cities" type="Sprite3D" parent="World/Meshes/Racks/RackDiagrams/Diagrams" unique_id=610152192]
+transform = Transform3D(0.59, 0, -8.881784e-15, 0, 0.59, 0, 8.881784e-15, 0, 0.59, 2.4894714, 17.089495, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+texture = ExtResource("43_oeedo")
+
+[node name="UannasJourney" type="Sprite3D" parent="World/Meshes/Racks/RackDiagrams/Diagrams" unique_id=1509561771]
+transform = Transform3D(1.235, 0, -3.5527137e-14, 0, 1.235, 0, 3.5527137e-14, 0, 1.235, 10.234741, 14.724108, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+texture = ExtResource("44_oeedo")
+
+[node name="Family" type="Sprite3D" parent="World/Meshes/Racks/RackDiagrams/Diagrams" unique_id=224468061]
+transform = Transform3D(0.72999996, 0, -2.842171e-14, 0, 0.72999996, 0, 2.4868996e-14, 0, 0.73, -3.5761414, -0.20505333, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+texture = ExtResource("45_0q0o7")
+
+[node name="Resources" type="Sprite3D" parent="World/Meshes/Racks/RackDiagrams/Diagrams" unique_id=820182088]
+transform = Transform3D(1.185, 0, -4.6185278e-14, 0, 1.185, 0, 4.6185278e-14, 0, 1.185, 16.791626, 8.851938, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+texture = ExtResource("46_tnd1f")
+
+[node name="Timeline" type="Sprite3D" parent="World/Meshes/Racks/RackDiagrams/Diagrams" unique_id=1205998530]
+transform = Transform3D(1.185, 0, -4.6185278e-14, 0, 1.185, 0, 4.6185278e-14, 0, 1.185, 11.693085, -7.5441914, 0)
+modulate = Color(0.3764706, 0.28627452, 0.078431375, 1)
+texture = ExtResource("47_tnd1f")
+
+[node name="LightMap" type="SpotLight3D" parent="World/Meshes/Racks/RackDiagrams" unique_id=375774618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.06777191, 3.2419457, 4.0404463)
+light_energy = 14.522
+spot_range = 5.6039615
+spot_angle = 45.73859
+
 [node name="RackGraph" parent="World/Meshes/Racks" unique_id=2039546496 instance=ExtResource("6_hv6mn")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 12.488, 0, 0)
 
@@ -1325,9 +1419,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7177277, 0, -53.14185)
 [node name="Info" type="Node3D" parent="World/Meshes" unique_id=2112922655]
 
 [node name="Exit" type="Node3D" parent="World/Meshes" unique_id=467039694]
-
-[node name="cmachine" parent="World/Meshes" unique_id=648605551 instance=ExtResource("46_i7if8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -46)
 
 [node name="Lights" type="Node3D" parent="World" unique_id=1265559525]
 
