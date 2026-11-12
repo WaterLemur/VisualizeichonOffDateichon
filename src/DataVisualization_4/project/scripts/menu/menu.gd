@@ -5,6 +5,24 @@ extends Node
 @onready var timeline = $Timeline
 @onready var map      = $Map
 
+@export_category("References")
+@export var map_akkad_barley: Sprite3D
+@export var map_akkad_soldiers: Sprite3D
+@export var map_ur_barley: Sprite3D
+@export var map_ur_soldiers: Sprite3D
+@export var map_uruk_barley: Sprite3D
+@export var map_uruk_soldiers: Sprite3D
+@export var map_legend_akkad_1: Sprite3D
+@export var map_legend_akkad_2: Sprite3D
+@export var map_legend_ur_1: Sprite3D
+@export var map_legend_ur_2: Sprite3D
+@export var map_legend_uruk_1: Sprite3D
+@export var map_legend_uruk_2: Sprite3D
+@export var map_legend_barley_1: Sprite3D
+@export var map_legend_barley_2: Sprite3D
+@export var map_legend_soldiers_1: Sprite3D
+@export var map_legend_soldiers_2: Sprite3D
+
 
 var tutorial: bool = false
 var info:     bool = false
@@ -54,6 +72,10 @@ func set_akkad() -> void:
 	akkad = not akkad
 	
 	map.set_akkad(akkad)
+	map_akkad_barley.visible = akkad
+	map_akkad_soldiers.visible = akkad
+	map_legend_akkad_1.visible = akkad
+	map_legend_akkad_2.visible = akkad
 	
 	bar_1.show_akkad = akkad
 	bar_1.update_chart()
@@ -69,6 +91,10 @@ func set_ur() -> void:
 	ur = not ur
 	
 	map.set_ur(ur)
+	map_ur_barley.visible = ur
+	map_ur_soldiers.visible = ur
+	map_legend_ur_1.visible = ur
+	map_legend_ur_2.visible = ur
 	
 	bar_1.show_ur = ur
 	bar_1.update_chart()
@@ -83,6 +109,10 @@ func set_uruk() -> void:
 	uruk = not uruk
 	
 	map.set_uruk(uruk)
+	map_uruk_barley.visible = uruk
+	map_uruk_soldiers.visible = uruk
+	map_legend_uruk_1.visible = uruk
+	map_legend_uruk_2.visible = uruk
 	
 	bar_1.show_uruk = uruk
 	bar_1.update_chart()
@@ -96,6 +126,11 @@ func set_uruk() -> void:
 func set_barley() -> void:
 	barley = not barley
 	
+	map_legend_barley_1.visible = barley
+	map_legend_barley_2.visible = barley
+	map_akkad_barley.visible = barley
+	map_ur_barley.visible = barley
+	map_uruk_barley.visible = barley
 	#map.set_barley(barley)
 	
 	bar_1.show_barley = barley
@@ -110,6 +145,11 @@ func set_barley() -> void:
 func set_soldiers() -> void:
 	soldiers = not soldiers
 	
+	map_legend_soldiers_1.visible = soldiers
+	map_legend_soldiers_2.visible = soldiers
+	map_akkad_soldiers.visible = soldiers
+	map_ur_soldiers.visible = soldiers
+	map_uruk_soldiers.visible = soldiers
 	#map.set_soldiers(soldiers)
 	
 	bar_1.show_soldiers = soldiers

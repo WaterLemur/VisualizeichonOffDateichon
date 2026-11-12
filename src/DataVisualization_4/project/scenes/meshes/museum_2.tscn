@@ -1,0 +1,130 @@
+[gd_scene format=4 uid="uid://0tdw2khukdda"]
+
+[ext_resource type="PackedScene" uid="uid://drvdd4pnuktls" path="res://project/art/meshes/museum/museum_2.glb" id="1_xe5iq"]
+[ext_resource type="Texture2D" uid="uid://dfb10u01ve652" path="res://project/art/meshes/museum/museum_2_brick_wall.png" id="2_5qxst"]
+[ext_resource type="PackedScene" uid="uid://brcaf5lrvrhg" path="res://project/art/meshes/calculating_machine/calculating_machine_m.tscn" id="3_5qxst"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g5sia"]
+resource_name = "BrickWall"
+cull_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("2_5qxst")
+metadata/_gltf_primary_texture_coord = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qqt8i"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -2.650097, 2, 7.6709, 9.174347),
+"format": 34896613377,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAQADAAQAAAACAAUAAAAFAAYAAgABAAcAAQAEAAcAAgAHAAUABgAHAAQABgAFAAcA"),
+"name": "BrickWall",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("//8AAP//AAAAAP////8AAP///////wAAAAAAAP//AAAAAAAAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_xvcdr"]
+resource_name = "museum_2_wall_sides"
+_surfaces = [{
+"aabb": AABB(-1, -1, -2.650097, 2, 7.6709, 9.174347),
+"attribute_data": PackedByteArray("PgHXCugdyHg+Ach46B3XCg491wpkIMh4ZCDXCg49yHjA/sD+FuJEe8D+RHsW4sD+Lm/A/j4BRHsub0R7PgHA/qpxRHua38D+qnHA/prfRHs="),
+"format": 34896613399,
+"index_count": 30,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEA"),
+"material": SubResource("StandardMaterial3D_g5sia"),
+"name": "BrickWall",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 20,
+"vertex_data": PackedByteArray("//8AAP////8AAP//////////////////AAAAAP///////wAAAAD//wAA//8AAP//AAAAAAAA////////AAD///////////+/AAD//wAA/7//////AAD/vwAA//////+///8AAP//VNX/////AABU1f//AAAAAFTV////////VNUAAP////9U1QAAAAAAAFTVAAD//wAAVNUAAAAA//9U1f9//3//f/9//3//f/9//3////9/////f////3////9/////f////3////9/////f6qqVFWqqlRVqqpVVaqqVFVUVamqVFWpqlRVqapUVamq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qqt8i")
+
+[node name="museum_2" unique_id=1323718162 instance=ExtResource("1_xe5iq")]
+
+[node name="wall_sides" type="MeshInstance3D" parent="wall_sides" parent_id_path=PackedInt32Array(831028749) index="0" unique_id=1145113477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.208071)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides2" type="MeshInstance3D" parent="wall_sides" parent_id_path=PackedInt32Array(831028749) index="1" unique_id=561012761]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18.202204)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides3" type="MeshInstance3D" parent="wall_sides" parent_id_path=PackedInt32Array(831028749) index="2" unique_id=443208293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27.321606)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides4" type="MeshInstance3D" parent="wall_sides" parent_id_path=PackedInt32Array(831028749) index="3" unique_id=1803343752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36.565594)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides5" type="MeshInstance3D" parent="wall_sides" parent_id_path=PackedInt32Array(831028749) index="4" unique_id=2082068356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45.64803)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides6" type="MeshInstance3D" parent="wall_sides" parent_id_path=PackedInt32Array(831028749) index="5" unique_id=1275748734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -54.790146)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides7" type="MeshInstance3D" parent="wall_sides" parent_id_path=PackedInt32Array(831028749) index="6" unique_id=1685317429]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -63.93146)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides2" type="MeshInstance3D" parent="." index="19" unique_id=1351482608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.613415, 1, -6.0998344)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides" type="MeshInstance3D" parent="wall_sides2" index="0" unique_id=625240579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.208071)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides2" type="MeshInstance3D" parent="wall_sides2" index="1" unique_id=555636114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18.202204)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides3" type="MeshInstance3D" parent="wall_sides2" index="2" unique_id=1333693960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27.321606)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides4" type="MeshInstance3D" parent="wall_sides2" index="3" unique_id=555670221]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36.565594)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides5" type="MeshInstance3D" parent="wall_sides2" index="4" unique_id=875682048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45.64803)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides6" type="MeshInstance3D" parent="wall_sides2" index="5" unique_id=860673669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -54.790146)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides7" type="MeshInstance3D" parent="wall_sides2" index="6" unique_id=896938607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -63.93146)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides3" type="MeshInstance3D" parent="." index="20" unique_id=875781017]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.4994583, 1, -73.01679)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides" type="MeshInstance3D" parent="wall_sides3" index="0" unique_id=97083132]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.208071)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides2" type="MeshInstance3D" parent="wall_sides3" index="1" unique_id=1872583071]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18.202204)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides3" type="MeshInstance3D" parent="wall_sides3" index="2" unique_id=1978752895]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27.321606)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="wall_sides4" type="MeshInstance3D" parent="wall_sides3" index="3" unique_id=1469443079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -36.565594)
+mesh = SubResource("ArrayMesh_xvcdr")
+
+[node name="calculating_machine2" parent="." index="21" unique_id=274704578 instance=ExtResource("3_5qxst")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.8718815, 1.0000019, -50.3459)
+timer_max = 2.0

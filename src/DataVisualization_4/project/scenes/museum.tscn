@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://botuthtd084ls" path="res://project/art/meshes/rack_b/rack_b.glb" id="7_hv6mn"]
 [ext_resource type="PackedScene" uid="uid://c1c4nipfojugn" path="res://project/art/meshes/rack_a/rack_a.glb" id="7_qrkhr"]
 [ext_resource type="PackedScene" uid="uid://bmmi80m00t211" path="res://tools/infinity_ga8es/range_slider/range_slider_v.tscn" id="8_8jx6j"]
-[ext_resource type="PackedScene" uid="uid://drvdd4pnuktls" path="res://project/art/meshes/museum/museum_2.glb" id="8_eelwi"]
 [ext_resource type="PackedScene" uid="uid://cakged56oldtr" path="res://project/art/meshes/stylus/stylus.glb" id="8_ntp17"]
 [ext_resource type="PackedScene" uid="uid://cp7jmspfqlgpg" path="res://project/art/meshes/lectern/lectern_2.tscn" id="8_qrkhr"]
 [ext_resource type="FontFile" uid="uid://6lt8q2h5lfv7" path="res://tools/infinity_ga8es/fonts/OCR-A Regular.otf" id="9_6rj13"]
@@ -46,6 +45,8 @@
 [ext_resource type="Texture2D" uid="uid://djumdmfnqeo2e" path="res://project/art/sprites/map/map-legend-soldiers.png" id="30_8vk3a"]
 [ext_resource type="PackedScene" uid="uid://lot84ohkitwv" path="res://project/art/meshes/rack_a/rack_a_m.tscn" id="31_qhkwt"]
 [ext_resource type="PackedScene" uid="uid://brcaf5lrvrhg" path="res://project/art/meshes/calculating_machine/calculating_machine_m.tscn" id="38_kfoow"]
+[ext_resource type="PackedScene" uid="uid://0tdw2khukdda" path="res://project/scenes/meshes/museum_2.tscn" id="39_lmagj"]
+[ext_resource type="PackedScene" uid="uid://cqxojkhkh47tc" path="res://project/art/meshes/calculating_machine/cmachine.tscn" id="46_i7if8"]
 [ext_resource type="PackedScene" uid="uid://bp5hefhfg5evq" path="res://project/scenes/sumer.tscn" id="46_lmagj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xbnxe"]
@@ -72,8 +73,24 @@ script = ExtResource("1_beg0u")
 
 [node name="Scripts" type="Node" parent="." unique_id=2126725658]
 
-[node name="Menu" type="Node" parent="Scripts" unique_id=1817570172]
+[node name="Menu" type="Node" parent="Scripts" unique_id=1817570172 node_paths=PackedStringArray("map_akkad_barley", "map_akkad_soldiers", "map_ur_barley", "map_ur_soldiers", "map_uruk_barley", "map_uruk_soldiers", "map_legend_akkad_1", "map_legend_akkad_2", "map_legend_ur_1", "map_legend_ur_2", "map_legend_uruk_1", "map_legend_uruk_2", "map_legend_barley_1", "map_legend_barley_2", "map_legend_soldiers_1", "map_legend_soldiers_2")]
 script = ExtResource("3_u6vr8")
+map_akkad_barley = NodePath("../../World/Sprites/Map/ResourceCircles/AkkadCircleBarley")
+map_akkad_soldiers = NodePath("../../World/Sprites/Map/ResourceCircles/AkkadCircleSoldiers")
+map_ur_barley = NodePath("../../World/Sprites/Map/ResourceCircles/UrCircleBarley")
+map_ur_soldiers = NodePath("../../World/Sprites/Map/ResourceCircles/UrCircleSoldiers")
+map_uruk_barley = NodePath("../../World/Sprites/Map/ResourceCircles/UrukCircleBarley")
+map_uruk_soldiers = NodePath("../../World/Sprites/Map/ResourceCircles/UrukCircleSoldiers")
+map_legend_akkad_1 = NodePath("../../World/Sprites/Map/Legend/AkkadLabel")
+map_legend_akkad_2 = NodePath("../../World/Sprites/Map/Legend/AkkadSymbol")
+map_legend_ur_1 = NodePath("../../World/Sprites/Map/Legend/UrLabel")
+map_legend_ur_2 = NodePath("../../World/Sprites/Map/Legend/UrSymbol")
+map_legend_uruk_1 = NodePath("../../World/Sprites/Map/Legend/UrukLabel")
+map_legend_uruk_2 = NodePath("../../World/Sprites/Map/Legend/UrukSymbol")
+map_legend_barley_1 = NodePath("../../World/Sprites/Map/Legend/BarleyLabel")
+map_legend_barley_2 = NodePath("../../World/Sprites/Map/Legend/BarleySymbol")
+map_legend_soldiers_1 = NodePath("../../World/Sprites/Map/Legend/SoldiersLabel")
+map_legend_soldiers_2 = NodePath("../../World/Sprites/Map/Legend/SoldiersSymbol")
 
 [node name="Map" type="Node" parent="Scripts/Menu" unique_id=1394822183]
 script = ExtResource("3_xg8yu")
@@ -527,7 +544,7 @@ transform = Transform3D(0.9999989, 0, 0, 0, 0.9999989, 0, 4.6185278e-14, 0, 1, 0
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphPies" unique_id=761568993]
 
 [node name="PosGraphTendency" type="Node3D" parent="World/CameraRig/PosRackB" unique_id=232674560]
-transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 7.1054274e-15, 0, 1, -1.426, -5.274, -10.153)
+transform = Transform3D(0.9999997, 8.97614e-10, -9.219292e-12, -8.9761415e-10, 0.9997888, -0.020535018, -9.208634e-12, 0.020535016, 0.9997891, -1.4259987, -5.2739997, -10.153)
 
 [node name="ViewCamera" type="Camera3D" parent="World/CameraRig/PosRackB/PosGraphTendency" unique_id=813011352]
 transform = Transform3D(1.0000002, 0, -1.4210855e-14, 0, 1.0000002, 0, 0, 0, 1, 0.00011062622, 0.0018854141, 0.00018596649)
@@ -834,23 +851,23 @@ transform = Transform3D(1, 0, -3.5527137e-15, 0, 1, 0, 3.5527137e-15, 0, 1, -1.3
 modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
 texture = ExtResource("29_wyfxm")
 
-[node name="UrCircleSoldiers" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=909684366]
+[node name="UrCircleSoldiers" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=1854919709]
+transform = Transform3D(0.505, 0, -1.7763568e-15, 0, 0.505, 0, 1.7763568e-15, 0, 0.505, 0.24899292, -1.9119987, 0.020000458)
+modulate = Color(0.7764706, 0.25882354, 0.2901961, 1)
+texture = ExtResource("29_wyfxm")
+
+[node name="UrCircleBarley" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=1644682605]
+transform = Transform3D(1, 0, -1.4210855e-14, 0, 1, 0, 1.4210855e-14, 0, 1, 0.24899292, -1.9119987, 0.0099983215)
+modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
+texture = ExtResource("29_wyfxm")
+
+[node name="UrukCircleSoldiers" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=909684366]
 transform = Transform3D(0.505, 0, -1.7763568e-15, 0, 0.505, 0, 1.7763568e-15, 0, 0.505, 1.576, -1.09, 0.02)
 modulate = Color(0.7764706, 0.25882354, 0.2901961, 1)
 texture = ExtResource("29_wyfxm")
 
-[node name="UrCircleBarley" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=1067893859]
+[node name="UrukCircleBarley" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=1067893859]
 transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 7.1054274e-15, 0, 1, 1.576, -1.09, 0.01)
-modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
-texture = ExtResource("29_wyfxm")
-
-[node name="UrukCircleSoldiers" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=1854919709]
-transform = Transform3D(0.505, 0, -1.7763568e-15, 0, 0.505, 0, 1.7763568e-15, 0, 0.505, 0.249, -1.912, 0.02)
-modulate = Color(0.7764706, 0.25882354, 0.2901961, 1)
-texture = ExtResource("29_wyfxm")
-
-[node name="UrukCircleBarley" type="Sprite3D" parent="World/Sprites/Map/ResourceCircles" unique_id=1644682605]
-transform = Transform3D(1, 0, -1.0658141e-14, 0, 1, 0, 1.0658141e-14, 0, 1, 0.249, -1.912, 0.01)
 modulate = Color(0.22352941, 0.5372549, 0.36078432, 1)
 texture = ExtResource("29_wyfxm")
 
@@ -1069,8 +1086,8 @@ outline_size = 0
 
 [node name="Meshes" type="Node3D" parent="World" unique_id=1324747115]
 
-[node name="Museum" parent="World/Meshes" unique_id=924389842 instance=ExtResource("8_eelwi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.290178, -1.9073486e-06, 8.041159)
+[node name="museum_2" parent="World/Meshes" unique_id=1323718162 instance=ExtResource("39_lmagj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.202964, 0, 0)
 
 [node name="Racks" type="Node3D" parent="World/Meshes" unique_id=1007738466]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45.530144)
@@ -1308,6 +1325,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7177277, 0, -53.14185)
 [node name="Info" type="Node3D" parent="World/Meshes" unique_id=2112922655]
 
 [node name="Exit" type="Node3D" parent="World/Meshes" unique_id=467039694]
+
+[node name="cmachine" parent="World/Meshes" unique_id=648605551 instance=ExtResource("46_i7if8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -46)
 
 [node name="Lights" type="Node3D" parent="World" unique_id=1265559525]
 

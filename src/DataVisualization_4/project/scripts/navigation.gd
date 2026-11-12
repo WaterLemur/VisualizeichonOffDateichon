@@ -76,12 +76,16 @@ func camera_transition(nav: Nav) -> void:
 				set_camera_pos(pos_story_9)
 				return
 			if nav == Nav.RIGHT:
+				ui.visible = true
+				
 				state_rack = State_Rack.MAP
 				Persistent.set_scene_label("Mapa")
 				set_camera_pos(pos_map)
 				return
 		State_Rack.MAP:
 			if nav == Nav.LEFT:
+				ui.visible = false
+				
 				state_rack = State_Rack.DATA_BASES
 				Persistent.set_scene_label("Base de datos")
 				set_camera_pos(pos_db)
@@ -120,12 +124,16 @@ func camera_transition(nav: Nav) -> void:
 				set_camera_pos(pos_graph_pie)
 				return
 			if nav == Nav.RIGHT:
+				ui.visible = false
+				
 				state_rack = State_Rack.ARTIFACT
 				Persistent.set_scene_label("Artefacto")
 				set_camera_pos(pos_artifact)
 				return
 		State_Rack.ARTIFACT:
 			if nav == Nav.LEFT:
+				ui.visible = true
+				
 				state_rack = State_Rack.TENDENCY
 				Persistent.set_scene_label("Tendencia")
 				set_camera_pos(pos_graph_tendency)
@@ -137,6 +145,7 @@ func camera_transition(nav: Nav) -> void:
 				
 				state_rack = State_Rack.ARTIFACT_PREVIEW
 				Persistent.set_scene_label("Artefacto - Funcionamiento")
+				Persistent.tablet.visible = true
 				set_camera_pos(pos_artifact_prev)
 				return
 		State_Rack.ARTIFACT_PREVIEW:
@@ -145,11 +154,17 @@ func camera_transition(nav: Nav) -> void:
 			sumer.show(false)
 				
 			if nav == Nav.LEFT:
+				ui.visible = false
+				Persistent.tablet.visible = false
+				
 				state_rack = State_Rack.ARTIFACT
 				Persistent.set_scene_label("Artefacto")
 				set_camera_pos(pos_artifact)
 				return
 			if nav == Nav.RIGHT:
+				ui.visible = false
+				Persistent.tablet.visible = false
+				
 				state_rack = State_Rack.STORY_0
 				Persistent.set_scene_label("Historia")
 				set_camera_pos(pos_story_0)

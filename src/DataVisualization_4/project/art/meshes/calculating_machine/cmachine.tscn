@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://cqxojkhkh47tc"]
 
 [ext_resource type="PackedScene" uid="uid://bbdybv0jpsn3c" path="res://project/art/meshes/sumer/cmachine.glb" id="1_6cvgg"]
+[ext_resource type="Script" uid="uid://hveso25h7jg8" path="res://project/scripts/calculating_machine.gd" id="2_q22u5"]
 
 [node name="cmachine" unique_id=648605551 instance=ExtResource("1_6cvgg")]
+script = ExtResource("2_q22u5")
 
 [node name="cmachine_sand_pile" parent="." index="10" unique_id=185521696]
 visible = false

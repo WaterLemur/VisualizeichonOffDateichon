@@ -8,6 +8,7 @@ extends Node
 @export var label_cuneiform: Label
 @export var label_arabic:    Label
 
+@export var tablet: TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

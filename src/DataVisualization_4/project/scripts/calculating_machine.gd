@@ -3,8 +3,9 @@ extends Node
 
 @onready var animation_player = $AnimationPlayer  as AnimationPlayer
 
+@export_category("Variables")
+@export var timer_max = 2.5 as float
 var index     = 0         as int
-var timer_max = 1.5       as int
 var timer     = timer_max as int
 
 
